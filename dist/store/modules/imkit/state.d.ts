@@ -1,0 +1,74 @@
+import { default as Config } from '../../../classes/config';
+import { AxiosInstance } from 'axios';
+import { Socket } from 'socket.io-client';
+import { default as User } from '../../../classes/user';
+import { default as Room } from '../../../classes/room';
+import { default as Message } from '../../../classes/message';
+import { default as LinkPreview } from '../../../classes/linkPreview';
+import { default as Folder } from '../../../classes/folder';
+import { ServerToClientEvents, ClientToServerEvents } from '../../../socket';
+import { Cache } from 'runtime-memcache';
+import { SearchType } from '../../../enums/searchType';
+import { default as MessageMultiList } from '../../../classes/messageMultiList';
+
+export type IMState = {
+    count: number;
+    config: Config;
+    uid: string;
+    axios: AxiosInstance;
+    isRequesting: {
+        [api: string]: Date | null;
+    };
+    socket: Socket<ServerToClientEvents, ClientToServerEvents>;
+    imageCache: Cache<string>;
+    translationCache: Cache<string>;
+    users: {
+        [uid: string]: User;
+    };
+    rooms: {
+        [id: string]: Room;
+    };
+    sortedRooms: Room[];
+    numberOfFetchedRooms: number;
+    numberOfTotalRooms: number;
+    uploadProgresses: {
+        [id: string]: number;
+    };
+    downloadProgresses: {
+        [id: string]: number;
+    };
+    linkPreviews: {
+        [url: string]: LinkPreview;
+    };
+    actionMenuRoomId: string;
+    folders: {
+        [id: string]: Folder;
+    };
+    sortedFolderIds: string[];
+    roomIdsInFolders: {
+        [roomId: string]: boolean;
+    };
+    selectedRoomIdsForCreateFolder: {
+        [roomId: string]: Date;
+    };
+    selectedFolderId: string;
+    searchKeyword: string;
+    searchType: SearchType;
+    searchRooms: {
+        [type: string]: Room[] | Folder[];
+    };
+    roomTag: string;
+    deliveringMessages: Map<string, Message>;
+    selectedRoomId: string;
+    messageMultiList: MessageMultiList;
+    numberOfTotalMessages: number;
+    replyId: string;
+    navigationTargetId: string;
+    isRoomInfoVisible: boolean;
+    isTyping: {
+        [uid: string]: number;
+    };
+    isSearchInRoomMode: boolean;
+    messageSearchKeyword: string;
+};
+export declare const state: IMState;

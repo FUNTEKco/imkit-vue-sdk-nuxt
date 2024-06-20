@@ -49,6 +49,7 @@ declare const i18n: VueI18n.I18n<{
         editFolder: string;
         addToFolder: string;
         numberOfChatroom: string;
+        "no-chatroom": string;
         roomName: string;
         roomMember: string;
         roomPrefTags: string;
@@ -62,6 +63,13 @@ declare const i18n: VueI18n.I18n<{
         confirmToDeleteFolder: string;
         hide: string;
         delete: string;
+        cancel: string;
+        create: string;
+        save: string;
+        createTag: string;
+        confirmDeleteTag: string;
+        editTag: string;
+        chooseColor: string;
         tryOldSdk: string;
         tryOldSdkDescription: string;
         tryOldSdkGoTo: string;
@@ -115,6 +123,7 @@ declare const i18n: VueI18n.I18n<{
         editFolder: string;
         addToFolder: string;
         numberOfChatroom: string;
+        "no-chatroom": string;
         roomName: string;
         roomMember: string;
         roomPrefTags: string;
@@ -128,6 +137,13 @@ declare const i18n: VueI18n.I18n<{
         confirmToDeleteFolder: string;
         hide: string;
         delete: string;
+        cancel: string;
+        create: string;
+        save: string;
+        createTag: string;
+        confirmDeleteTag: string;
+        editTag: string;
+        chooseColor: string;
         tryOldSdk: string;
         tryOldSdkDescription: string;
         tryOldSdkGoTo: string;
@@ -181,6 +197,7 @@ declare const i18n: VueI18n.I18n<{
         editFolder: string;
         addToFolder: string;
         numberOfChatroom: string;
+        "no-chatroom": string;
         roomName: string;
         roomMember: string;
         roomPrefTags: string;
@@ -194,6 +211,13 @@ declare const i18n: VueI18n.I18n<{
         confirmToDeleteFolder: string;
         hide: string;
         delete: string;
+        cancel: string;
+        create: string;
+        save: string;
+        createTag: string;
+        confirmDeleteTag: string;
+        editTag: string;
+        chooseColor: string;
         tryOldSdk: string;
         tryOldSdkDescription: string;
         tryOldSdkGoTo: string;

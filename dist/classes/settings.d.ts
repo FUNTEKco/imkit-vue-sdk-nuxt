@@ -12,5 +12,6 @@ type Settings = {
     customRoomInfoIframeUrl: string;
     showLeaveRoomButton: boolean;
     massTextingEnabled: boolean;
+    showDarkModeSwitch: boolean;
 };
 export default Settings;

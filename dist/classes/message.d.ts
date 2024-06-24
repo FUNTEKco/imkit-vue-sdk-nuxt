@@ -1,7 +1,7 @@
+import { default as Autolinker } from 'autolinker/dist/Autolinker.js';
 import { default as IMImage } from './image';
 import { default as IMVideo } from './video';
 import { default as User } from './user';
-import { default as Autolinker } from 'autolinker/dist/Autolinker.js';
 
 export declare enum MessageType {
     Text = "text",
@@ -19,7 +19,8 @@ export declare enum MessageType {
     AddMember = "addMember",
     DeleteMember = "deleteMember",
     AddMembers = "addMembers",
-    Announcement = "announcement"
+    Announcement = "announcement",
+    Typing = "typing"
 }
 export default class Message {
     id: string;

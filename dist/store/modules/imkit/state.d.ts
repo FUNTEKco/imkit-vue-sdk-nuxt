@@ -1,15 +1,15 @@
-import { default as Config } from '../../../classes/config';
-import { AxiosInstance } from 'axios';
+import { ClientToServerEvents, ServerToClientEvents } from '../../../socket';
 import { Socket } from 'socket.io-client';
-import { default as User } from '../../../classes/user';
-import { default as Room } from '../../../classes/room';
-import { default as Message } from '../../../classes/message';
-import { default as LinkPreview } from '../../../classes/linkPreview';
-import { default as Folder } from '../../../classes/folder';
-import { ServerToClientEvents, ClientToServerEvents } from '../../../socket';
+import { AxiosInstance } from 'axios';
 import { Cache } from 'runtime-memcache';
-import { SearchType } from '../../../enums/searchType';
+import { default as Config } from '../../../classes/config';
+import { default as Folder } from '../../../classes/folder';
+import { default as LinkPreview } from '../../../classes/linkPreview';
+import { default as Message } from '../../../classes/message';
 import { default as MessageMultiList } from '../../../classes/messageMultiList';
+import { default as Room } from '../../../classes/room';
+import { SearchType } from '../../../enums/searchType';
+import { default as User } from '../../../classes/user';
 
 export type IMState = {
     count: number;

@@ -1,9 +1,9 @@
-import { MutationTree } from 'vuex';
 import { IMState } from './state';
-import { IMMutationTypes as MutationTypes } from './mutation-types';
-import { default as Room } from '../../../classes/room';
 import { default as Message } from '../../../classes/message';
 import { default as MessageLinkedList } from '../../../classes/messageLinkedList';
+import { MutationTree } from 'vuex';
+import { IMMutationTypes as MutationTypes } from './mutation-types';
+import { default as Room } from '../../../classes/room';
 
 export type Mutations<S = IMState> = {
     [MutationTypes.increment](state: S): void;

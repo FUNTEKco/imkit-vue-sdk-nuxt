@@ -22,6 +22,11 @@ export declare enum MessageType {
     Announcement = "announcement",
     Typing = "typing"
 }
+type MessageTemplate = {
+    quickReply: {
+        items: any[];
+    };
+};
 export default class Message {
     id: string;
     roomId: string;
@@ -31,6 +36,7 @@ export default class Message {
     updatedAt: number;
     groupId: string;
     dateId: number;
+    template?: MessageTemplate;
     prev: Message | null;
     next: Message | null;
     _string(uid: string, users: {
@@ -115,3 +121,4 @@ export declare class AudioMessage extends Message {
     duration: number;
     constructor(raw: any);
 }
+export {};

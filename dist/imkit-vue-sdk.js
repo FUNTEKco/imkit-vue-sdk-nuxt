@@ -43662,7 +43662,7 @@ const e$ = /* @__PURE__ */ ee("div", { class: "absolute inset-0 bg-gray-800 bg-o
               }])
             }, $e(!o.thumbnailImageUrl && !o.title ? o.text.substring(0, 160) : o.text.substring(0, 60)), 3)) : Ue("", !0)
           ], 8, x$),
-          o.actions.length > 0 ? (J(), ae("div", w$, [
+          o.actions.length > 0 && o.openQuickReply ? (J(), ae("div", w$, [
             (J(!0), ae(At, null, sr(o.actions, (c) => (J(), ae("div", {
               key: c.label,
               class: ht(["flex items-center justify-center p-0.5 text-sm", {

@@ -1,6 +1,6 @@
 import { Socket } from 'socket.io-client';
-import { Store } from 'vuex';
 import { default as Config } from './classes/config';
+import { Store } from 'vuex';
 
 export interface ServerToClientEvents {
     'chat message': (res: Record<string, unknown>) => void;

@@ -1,12 +1,12 @@
-import { ActionTree, ActionContext } from 'vuex';
-import { RootState } from '../../../store';
-import { IMState } from './state';
+import { ActionContext, ActionTree } from 'vuex';
+import { default as Message } from '../../../classes/message';
 import { IMActionTypes } from './action-types';
+import { default as IMImage } from '../../../classes/image';
+import { IMState } from './state';
+import { default as LinkPreview } from '../../../classes/linkPreview';
 import { Mutations } from './mutations';
 import { default as Room } from '../../../classes/room';
-import { default as IMImage } from '../../../classes/image';
-import { default as Message } from '../../../classes/message';
-import { default as LinkPreview } from '../../../classes/linkPreview';
+import { RootState } from '../../../store';
 
 type AugmentedActionContext = {
     commit<K extends keyof Mutations>(key: K, payload?: Parameters<Mutations[K]>[1]): ReturnType<Mutations[K]>;
@@ -88,6 +88,7 @@ export interface Actions {
     [IMActionTypes.batchSendMessage](context: AugmentedActionContext, payload: Record<string, unknown>): void;
     [IMActionTypes.toggleNotification](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.removeRoom](context: AugmentedActionContext, roomId: string): void;
+    [IMActionTypes.translateMessage](context: AugmentedActionContext, message: Message): void;
 }
 export declare const actions: ActionTree<IMState, RootState> & Actions;
 export {};

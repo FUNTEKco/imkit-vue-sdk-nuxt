@@ -53858,10 +53858,7 @@ const XW = {
 }), ks = (t) => {
   if (console.log(t), t.type === "uri")
     return window.open(t.uri, "_blank");
-  if (t.type === "text") {
-    debugger;
-    HT && HT.dispatch("imkit/quickReply", t);
-  }
+  (t.type === "message" || t.type === "text") && HT && HT.dispatch("imkit/quickReply", t);
 }, tG = { class: "w-[250px] cursor-pointer overflow-hidden text-base" }, rG = ["src"], nG = {
   key: 1,
   class: "flex flex-col gap-2 border-t py-3"

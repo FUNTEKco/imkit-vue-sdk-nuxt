@@ -70,9 +70,6 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
-        tryOldSdk: string;
-        tryOldSdkDescription: string;
-        tryOldSdkGoTo: string;
     };
     'zh-TW': {
         close: string;
@@ -143,10 +140,6 @@ declare const i18n: VueI18n.I18n<{
         createTag: string;
         confirmDeleteTag: string;
         editTag: string;
-        chooseColor: string;
-        tryOldSdk: string;
-        tryOldSdkDescription: string;
-        tryOldSdkGoTo: string;
     };
     'ja-JP': {
         close: string;
@@ -218,9 +211,6 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
-        tryOldSdk: string;
-        tryOldSdkDescription: string;
-        tryOldSdkGoTo: string;
     };
 }, {}, {}, string, false>;
 export default i18n;

@@ -66,11 +66,7 @@ declare const _default: {
   "save": "儲存",
   "createTag": "建立標籤",
   "confirmDeleteTag": "確認刪除標籤?",
-  "editTag": "編輯標籤",
-  "chooseColor": "選擇顏色",
-  "tryOldSdk": "返回舊版聊天室介面",
-  "tryOldSdkDescription": "您可以從這裡回到舊版介面，且隨時可以再次切到新版介面。",
-  "tryOldSdkGoTo": "前往"
+  "editTag": "編輯標籤"
 }
 ;
 

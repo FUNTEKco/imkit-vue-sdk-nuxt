@@ -67,10 +67,7 @@ declare const _default: {
   "createTag": "タグを作成",
   "confirmDeleteTag": "タグを削除してよろしいですか？",
   "editTag": "タグを編集",
-  "chooseColor": "色を選択",
-  "tryOldSdk": "舊版介面",
-  "tryOldSdkDescription": "舊版介面をご利用いただけます。",
-  "tryOldSdkGoTo": "舊版介面へ"
+  "chooseColor": "色を選択"
 }
 ;
 

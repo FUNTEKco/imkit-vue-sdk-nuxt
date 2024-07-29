@@ -67,10 +67,7 @@ declare const _default: {
   "createTag": "Create Tag",
   "confirmDeleteTag": "Confirm Delete Tag?",
   "editTag": "Edit Tag",
-  "chooseColor": "Choose Color",
-  "tryOldSdk": "Return to the Old Chat Room Interface",
-  "tryOldSdkDescription": "You can return to the old interface from here and switch back to the new one anytime.",
-  "tryOldSdkGoTo": "Proceed"
+  "chooseColor": "Choose Color"
 }
 ;
 

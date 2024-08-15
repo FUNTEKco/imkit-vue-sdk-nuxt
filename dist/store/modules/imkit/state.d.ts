@@ -59,6 +59,7 @@ export type IMState = {
     };
     roomTag: string;
     deliveringMessages: Map<string, Message>;
+    processingMessages: Map<string, Message>;
     selectedRoomId: string;
     messageMultiList: MessageMultiList;
     numberOfTotalMessages: number;

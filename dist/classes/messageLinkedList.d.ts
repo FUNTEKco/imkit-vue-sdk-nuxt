@@ -12,6 +12,7 @@ export default class MessageLinkedList {
     constructor(data: Array<Record<string, unknown>>);
     append(message: Message): void;
     insertMessageToGroup(message: Message): void;
+    remove(id: string): void;
     replace(id: string, message: Message): void;
     concate(linkedList: MessageLinkedList): void;
     unshift(linkedList: MessageLinkedList): void;

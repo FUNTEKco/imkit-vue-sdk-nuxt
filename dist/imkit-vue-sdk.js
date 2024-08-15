@@ -5101,7 +5101,7 @@ const HO = Object.prototype.hasOwnProperty;
 function Lh(t, e) {
   return HO.call(t, e);
 }
-const dr = Array.isArray, ir = (t) => typeof t == "function", Qe = (t) => typeof t == "string", Mt = (t) => typeof t == "boolean", Vt = (t) => t !== null && typeof t == "object", VO = (t) => Vt(t) && ir(t.then) && ir(t.catch), IC = Object.prototype.toString, kC = (t) => IC.call(t), At = (t) => {
+const dr = Array.isArray, ir = (t) => typeof t == "function", Ye = (t) => typeof t == "string", Mt = (t) => typeof t == "boolean", Vt = (t) => t !== null && typeof t == "object", VO = (t) => Vt(t) && ir(t.then) && ir(t.catch), IC = Object.prototype.toString, kC = (t) => IC.call(t), At = (t) => {
   if (!Vt(t))
     return !1;
   const e = Object.getPrototypeOf(t);
@@ -6461,21 +6461,21 @@ function $N(t, e) {
   e.count || (e.count = t), e.n || (e.n = t);
 }
 function zN(t = {}) {
-  const e = t.locale, r = jN(t), n = Vt(t.pluralRules) && Qe(e) && ir(t.pluralRules[e]) ? t.pluralRules[e] : Xb, i = Vt(t.pluralRules) && Qe(e) && ir(t.pluralRules[e]) ? Xb : void 0, s = (v) => v[n(r, v.length, i)], o = t.list || [], a = (v) => o[v], l = t.named || {};
+  const e = t.locale, r = jN(t), n = Vt(t.pluralRules) && Ye(e) && ir(t.pluralRules[e]) ? t.pluralRules[e] : Xb, i = Vt(t.pluralRules) && Ye(e) && ir(t.pluralRules[e]) ? Xb : void 0, s = (v) => v[n(r, v.length, i)], o = t.list || [], a = (v) => o[v], l = t.named || {};
   Gr(t.pluralIndex) && $N(r, l);
   const c = (v) => l[v];
   function f(v) {
     const T = ir(t.messages) ? t.messages(v) : Vt(t.messages) ? t.messages[v] : !1;
     return T || (t.parent ? t.parent.message(v) : PN);
   }
-  const u = (v) => t.modifiers ? t.modifiers[v] : RN, d = At(t.processor) && ir(t.processor.normalize) ? t.processor.normalize : FN, h = At(t.processor) && ir(t.processor.interpolate) ? t.processor.interpolate : UN, p = At(t.processor) && Qe(t.processor.type) ? t.processor.type : BN, y = {
+  const u = (v) => t.modifiers ? t.modifiers[v] : RN, d = At(t.processor) && ir(t.processor.normalize) ? t.processor.normalize : FN, h = At(t.processor) && ir(t.processor.interpolate) ? t.processor.interpolate : UN, p = At(t.processor) && Ye(t.processor.type) ? t.processor.type : BN, y = {
     list: a,
     named: c,
     plural: s,
     linked: (v, ...T) => {
       const [C, S] = T;
       let k = "text", E = "";
-      T.length === 1 ? Vt(C) ? (E = C.modifier || E, k = C.type || k) : Qe(C) && (E = C || E) : T.length === 2 && (Qe(C) && (E = C || E), Qe(S) && (k = S || k));
+      T.length === 1 ? Vt(C) ? (E = C.modifier || E, k = C.type || k) : Ye(C) && (E = C || E) : T.length === 2 && (Ye(C) && (E = C || E), Ye(S) && (k = S || k));
       const N = f(v)(y), D = (
         // The message in vnode resolved with linked are returned as an array by processor.nomalize
         k === "vnode" && dr(N) && E ? N[0] : N
@@ -6573,7 +6573,7 @@ function Pv(t, e) {
 }
 let bg;
 function Jb(t) {
-  if (Qe(t))
+  if (Ye(t))
     return t;
   if (ir(t)) {
     if (t.resolvedOnce && bg != null)
@@ -6591,11 +6591,11 @@ function Jb(t) {
 function YN(t, e, r) {
   return [.../* @__PURE__ */ new Set([
     r,
-    ...dr(e) ? e : Vt(e) ? Object.keys(e) : Qe(e) ? [e] : [r]
+    ...dr(e) ? e : Vt(e) ? Object.keys(e) : Ye(e) ? [e] : [r]
   ])];
 }
 function PC(t, e, r) {
-  const n = Qe(r) ? r : lu, i = t;
+  const n = Ye(r) ? r : lu, i = t;
   i.__localeChainCache || (i.__localeChainCache = /* @__PURE__ */ new Map());
   let s = i.__localeChainCache.get(n);
   if (!s) {
@@ -6604,7 +6604,7 @@ function PC(t, e, r) {
     for (; dr(o); )
       o = Zb(s, o, e);
     const a = dr(e) || !At(e) ? e : e.default ? e.default : null;
-    o = Qe(a) ? [a] : a, dr(o) && Zb(s, o, !1), i.__localeChainCache.set(n, s);
+    o = Ye(a) ? [a] : a, dr(o) && Zb(s, o, !1), i.__localeChainCache.set(n, s);
   }
   return s;
 }
@@ -6612,7 +6612,7 @@ function Zb(t, e, r) {
   let n = !0;
   for (let i = 0; i < e.length && Mt(n); i++) {
     const s = e[i];
-    Qe(s) && (n = KN(t, e[i], r));
+    Ye(s) && (n = KN(t, e[i], r));
   }
   return n;
 }
@@ -6637,9 +6637,9 @@ function XN(t, e, r) {
 const JN = "9.13.1", Up = -1, lu = "en-US", Ph = "", e_ = (t) => `${t.charAt(0).toLocaleUpperCase()}${t.substr(1)}`;
 function ZN() {
   return {
-    upper: (t, e) => e === "text" && Qe(t) ? t.toUpperCase() : e === "vnode" && Vt(t) && "__v_isVNode" in t ? t.children.toUpperCase() : t,
-    lower: (t, e) => e === "text" && Qe(t) ? t.toLowerCase() : e === "vnode" && Vt(t) && "__v_isVNode" in t ? t.children.toLowerCase() : t,
-    capitalize: (t, e) => e === "text" && Qe(t) ? e_(t) : e === "vnode" && Vt(t) && "__v_isVNode" in t ? e_(t.children) : t
+    upper: (t, e) => e === "text" && Ye(t) ? t.toUpperCase() : e === "vnode" && Vt(t) && "__v_isVNode" in t ? t.children.toUpperCase() : t,
+    lower: (t, e) => e === "text" && Ye(t) ? t.toLowerCase() : e === "vnode" && Vt(t) && "__v_isVNode" in t ? t.children.toLowerCase() : t,
+    capitalize: (t, e) => e === "text" && Ye(t) ? e_(t) : e === "vnode" && Vt(t) && "__v_isVNode" in t ? e_(t.children) : t
   };
 }
 let BC;
@@ -6664,7 +6664,7 @@ const r_ = (t) => {
 }, iL = () => $C;
 let n_ = 0;
 function sL(t = {}) {
-  const e = ir(t.onWarn) ? t.onWarn : Qr, r = Qe(t.version) ? t.version : JN, n = Qe(t.locale) || ir(t.locale) ? t.locale : lu, i = ir(n) ? lu : n, s = dr(t.fallbackLocale) || At(t.fallbackLocale) || Qe(t.fallbackLocale) || t.fallbackLocale === !1 ? t.fallbackLocale : i, o = At(t.messages) ? t.messages : { [i]: {} }, a = At(t.datetimeFormats) ? t.datetimeFormats : { [i]: {} }, l = At(t.numberFormats) ? t.numberFormats : { [i]: {} }, c = an({}, t.modifiers || {}, ZN()), f = t.pluralRules || {}, u = ir(t.missing) ? t.missing : null, d = Mt(t.missingWarn) || $o(t.missingWarn) ? t.missingWarn : !0, h = Mt(t.fallbackWarn) || $o(t.fallbackWarn) ? t.fallbackWarn : !0, p = !!t.fallbackFormat, g = !!t.unresolving, y = ir(t.postTranslation) ? t.postTranslation : null, v = At(t.processor) ? t.processor : null, T = Mt(t.warnHtmlMessage) ? t.warnHtmlMessage : !0, C = !!t.escapeParameter, S = ir(t.messageCompiler) ? t.messageCompiler : BC;
+  const e = ir(t.onWarn) ? t.onWarn : Qr, r = Ye(t.version) ? t.version : JN, n = Ye(t.locale) || ir(t.locale) ? t.locale : lu, i = ir(n) ? lu : n, s = dr(t.fallbackLocale) || At(t.fallbackLocale) || Ye(t.fallbackLocale) || t.fallbackLocale === !1 ? t.fallbackLocale : i, o = At(t.messages) ? t.messages : { [i]: {} }, a = At(t.datetimeFormats) ? t.datetimeFormats : { [i]: {} }, l = At(t.numberFormats) ? t.numberFormats : { [i]: {} }, c = an({}, t.modifiers || {}, ZN()), f = t.pluralRules || {}, u = ir(t.missing) ? t.missing : null, d = Mt(t.missingWarn) || $o(t.missingWarn) ? t.missingWarn : !0, h = Mt(t.fallbackWarn) || $o(t.fallbackWarn) ? t.fallbackWarn : !0, p = !!t.fallbackFormat, g = !!t.unresolving, y = ir(t.postTranslation) ? t.postTranslation : null, v = At(t.processor) ? t.processor : null, T = Mt(t.warnHtmlMessage) ? t.warnHtmlMessage : !0, C = !!t.escapeParameter, S = ir(t.messageCompiler) ? t.messageCompiler : BC;
   process.env.NODE_ENV !== "production" && ir(t.messageCompiler) && DC(Ga(Cn.EXPERIMENTAL_CUSTOM_MESSAGE_COMPILER));
   const k = ir(t.messageResolver) ? t.messageResolver : FC || NN, E = ir(t.localeFallbacker) ? t.localeFallbacker : UC || YN, N = Vt(t.fallbackContext) ? t.fallbackContext : void 0, D = t, x = Vt(D.__datetimeFormatters) ? D.__datetimeFormatters : /* @__PURE__ */ new Map(), R = Vt(D.__numberFormatters) ? D.__numberFormatters : /* @__PURE__ */ new Map(), $ = Vt(D.__meta) ? D.__meta : {};
   n_++;
@@ -6713,7 +6713,7 @@ function Bv(t, e, r, n, i) {
   }
   if (s !== null) {
     const a = s(t, r, e, i);
-    return Qe(a) ? a : e;
+    return Ye(a) ? a : e;
   } else
     return process.env.NODE_ENV !== "production" && zC(n, e) && o(Ga(Cn.NOT_FOUND_KEY, { key: e, locale: r })), e;
 }
@@ -6811,7 +6811,7 @@ function GC(t, e = {}) {
   }, { ...CN(t, e), detectError: r };
 }
 const uL = /* @__NO_SIDE_EFFECTS__ */ (t, e) => {
-  if (!Qe(t))
+  if (!Ye(t))
     throw As(Jr.NOT_SUPPORT_NON_STRING_MESSAGE);
   process.env.NODE_ENV !== "production" && (e.onWarn = WC);
   {
@@ -6825,7 +6825,7 @@ const uL = /* @__NO_SIDE_EFFECTS__ */ (t, e) => {
   }
 };
 function cL(t, e) {
-  if (process.env.NODE_ENV !== "production" && (e.onWarn = WC), __INTLIFY_JIT_COMPILATION__ && !__INTLIFY_DROP_MESSAGE_COMPILER__ && Qe(t)) {
+  if (process.env.NODE_ENV !== "production" && (e.onWarn = WC), __INTLIFY_JIT_COMPILATION__ && !__INTLIFY_DROP_MESSAGE_COMPILER__ && Ye(t)) {
     const r = Mt(e.warnHtmlMessage) ? e.warnHtmlMessage : !0;
     process.env.NODE_ENV !== "production" && VC(t, r);
     const i = (e.onCacheKey || qC)(t), s = Bl[i];
@@ -6850,16 +6850,16 @@ function cL(t, e) {
 }
 const s_ = () => "", _i = (t) => ir(t);
 function o_(t, ...e) {
-  const { fallbackFormat: r, postTranslation: n, unresolving: i, messageCompiler: s, fallbackLocale: o, messages: a } = t, [l, c] = q0(...e), f = Mt(c.missingWarn) ? c.missingWarn : t.missingWarn, u = Mt(c.fallbackWarn) ? c.fallbackWarn : t.fallbackWarn, d = Mt(c.escapeParameter) ? c.escapeParameter : t.escapeParameter, h = !!c.resolvedMessage, p = Qe(c.default) || Mt(c.default) ? Mt(c.default) ? s ? l : () => l : c.default : r ? s ? l : () => l : "", g = r || p !== "", y = Pv(t, c);
+  const { fallbackFormat: r, postTranslation: n, unresolving: i, messageCompiler: s, fallbackLocale: o, messages: a } = t, [l, c] = q0(...e), f = Mt(c.missingWarn) ? c.missingWarn : t.missingWarn, u = Mt(c.fallbackWarn) ? c.fallbackWarn : t.fallbackWarn, d = Mt(c.escapeParameter) ? c.escapeParameter : t.escapeParameter, h = !!c.resolvedMessage, p = Ye(c.default) || Mt(c.default) ? Mt(c.default) ? s ? l : () => l : c.default : r ? s ? l : () => l : "", g = r || p !== "", y = Pv(t, c);
   d && fL(c);
   let [v, T, C] = h ? [
     l,
     y,
     a[y] || {}
   ] : QC(t, l, y, o, u, f), S = v, k = l;
-  if (!h && !(Qe(S) || zo(S) || _i(S)) && g && (S = p, k = S), !h && (!(Qe(S) || zo(S) || _i(S)) || !Qe(T)))
+  if (!h && !(Ye(S) || zo(S) || _i(S)) && g && (S = p, k = S), !h && (!(Ye(S) || zo(S) || _i(S)) || !Ye(T)))
     return i ? Up : l;
-  if (process.env.NODE_ENV !== "production" && Qe(S) && t.messageCompiler == null)
+  if (process.env.NODE_ENV !== "production" && Ye(S) && t.messageCompiler == null)
     return Qr(`The message format compilation is not supported in this build. Because message compiler isn't included. You need to pre-compilation all message format. So translate function return '${l}'.`), l;
   let E = !1;
   const N = () => {
@@ -6871,9 +6871,9 @@ function o_(t, ...e) {
   if (process.env.NODE_ENV !== "production" || __INTLIFY_PROD_DEVTOOLS__) {
     const P = {
       timestamp: Date.now(),
-      key: Qe(l) ? l : _i(S) ? S.key : "",
+      key: Ye(l) ? l : _i(S) ? S.key : "",
       locale: T || (_i(S) ? S.locale : ""),
-      format: Qe(S) ? S : _i(S) ? S.source : "",
+      format: Ye(S) ? S : _i(S) ? S.source : "",
       message: j
     };
     P.meta = an({}, t.__meta, /* @__PURE__ */ nL() || {}), qN(P);
@@ -6881,8 +6881,8 @@ function o_(t, ...e) {
   return j;
 }
 function fL(t) {
-  dr(t.list) ? t.list = t.list.map((e) => Qe(e) ? Hb(e) : e) : Vt(t.named) && Object.keys(t.named).forEach((e) => {
-    Qe(t.named[e]) && (t.named[e] = Hb(t.named[e]));
+  dr(t.list) ? t.list = t.list.map((e) => Ye(e) ? Hb(e) : e) : Vt(t.named) && Object.keys(t.named).forEach((e) => {
+    Ye(t.named[e]) && (t.named[e] = Hb(t.named[e]));
   });
 }
 function QC(t, e, r, n, i, s) {
@@ -6915,7 +6915,7 @@ function QC(t, e, r, n, i, s) {
         groupId: `${y}:${e}`
       }), C && S && ui && Wa && (ui(S), Wa("intlify message resolve", C, S));
     }
-    if (Qe(h) || zo(h) || _i(h))
+    if (Ye(h) || zo(h) || _i(h))
       break;
     if (!oL(d, f)) {
       const k = Bv(
@@ -6973,10 +6973,10 @@ function dL(t, e, r) {
 }
 function q0(...t) {
   const [e, r, n] = t, i = {};
-  if (!Qe(e) && !Gr(e) && !_i(e) && !zo(e))
+  if (!Ye(e) && !Gr(e) && !_i(e) && !zo(e))
     throw As(Jr.INVALID_ARGUMENT);
   const s = Gr(e) ? String(e) : (_i(e), e);
-  return Gr(r) ? i.plural = r : Qe(r) ? i.default = r : At(r) && !Pp(r) ? i.named = r : dr(r) && (i.list = r), Gr(n) ? i.plural = n : Qe(n) ? i.default = n : At(n) && an(i, n), [s, i];
+  return Gr(r) ? i.plural = r : Ye(r) ? i.default = r : At(r) && !Pp(r) ? i.named = r : dr(r) && (i.list = r), Gr(n) ? i.plural = n : Ye(n) ? i.default = n : At(n) && an(i, n), [s, i];
 }
 function hL(t, e, r, n, i, s) {
   return {
@@ -7001,7 +7001,7 @@ ${c}` : l);
   };
 }
 function pL(t) {
-  if (Qe(t))
+  if (Ye(t))
     return t;
   if (t.loc && t.loc.source)
     return t.loc.source;
@@ -7017,7 +7017,7 @@ function mL(t, e, r, n) {
         const [, , g] = QC(f, h, e, a, l, c);
         p = o(g, h);
       }
-      if (Qe(p) || zo(p)) {
+      if (Ye(p) || zo(p)) {
         let g = !1;
         const v = YC(t, h, e, p, h, () => {
           g = !0;
@@ -7042,7 +7042,7 @@ function l_(t, ...e) {
     i,
     g
   );
-  if (!Qe(l) || l === "")
+  if (!Ye(l) || l === "")
     return new Intl.DateTimeFormat(g, u).format(c);
   let v = {}, T, C = null, S = g, k = null;
   const E = "datetime format";
@@ -7064,7 +7064,7 @@ function l_(t, ...e) {
       break;
     Bv(t, l, T, d, E), S = k;
   }
-  if (!At(C) || !Qe(T))
+  if (!At(C) || !Ye(T))
     return n ? Up : l;
   let N = `${T}__${l}`;
   Pp(u) || (N = `${N}__${JSON.stringify(u)}`);
@@ -7096,7 +7096,7 @@ const XC = [
 function W0(...t) {
   const [e, r, n, i] = t, s = {};
   let o = {}, a;
-  if (Qe(e)) {
+  if (Ye(e)) {
     const l = e.match(/(\d{4}-\d{2}-\d{2})(T|\s)?(.*)/);
     if (!l)
       throw As(Jr.INVALID_ISO_DATE_ARGUMENT);
@@ -7115,9 +7115,9 @@ function W0(...t) {
     a = e;
   else
     throw As(Jr.INVALID_ARGUMENT);
-  return Qe(r) ? s.key = r : At(r) && Object.keys(r).forEach((l) => {
+  return Ye(r) ? s.key = r : At(r) && Object.keys(r).forEach((l) => {
     XC.includes(l) ? o[l] = r[l] : s[l] = r[l];
-  }), Qe(n) ? s.locale = n : At(n) && (o = n), At(i) && (o = i), [s.key || "", a, s, o];
+  }), Ye(n) ? s.locale = n : At(n) && (o = n), At(i) && (o = i), [s.key || "", a, s, o];
 }
 function u_(t, e, r) {
   const n = t;
@@ -7136,7 +7136,7 @@ function c_(t, ...e) {
     i,
     g
   );
-  if (!Qe(l) || l === "")
+  if (!Ye(l) || l === "")
     return new Intl.NumberFormat(g, u).format(c);
   let v = {}, T, C = null, S = g, k = null;
   const E = "number format";
@@ -7158,7 +7158,7 @@ function c_(t, ...e) {
       break;
     Bv(t, l, T, d, E), S = k;
   }
-  if (!At(C) || !Qe(T))
+  if (!At(C) || !Ye(T))
     return n ? Up : l;
   let N = `${T}__${l}`;
   Pp(u) || (N = `${N}__${JSON.stringify(u)}`);
@@ -7193,9 +7193,9 @@ function G0(...t) {
   if (!Gr(e))
     throw As(Jr.INVALID_ARGUMENT);
   const a = e;
-  return Qe(r) ? s.key = r : At(r) && Object.keys(r).forEach((l) => {
+  return Ye(r) ? s.key = r : At(r) && Object.keys(r).forEach((l) => {
     JC.includes(l) ? o[l] = r[l] : s[l] = r[l];
-  }), Qe(n) ? s.locale = n : At(n) && (o = n), At(i) && (o = i), [s.key || "", a, s, o];
+  }), Ye(n) ? s.locale = n : At(n) && (o = n), At(i) && (o = i), [s.key || "", a, s, o];
 }
 function f_(t, e, r) {
   const n = t;
@@ -7342,7 +7342,7 @@ function $p(t, e) {
       const { locale: l, resource: c } = a;
       l ? (o[l] = o[l] || {}, ch(c, o[l])) : ch(c, o);
     } else
-      Qe(a) && ch(JSON.parse(a), o);
+      Ye(a) && ch(JSON.parse(a), o);
   }), i == null && s)
     for (const a in o)
       Lh(o, a) && vf(o[a]);
@@ -7395,10 +7395,10 @@ function Fv(t = {}, e) {
   let l = Mt(t.inheritLocale) ? t.inheritLocale : !0;
   const c = o(
     // prettier-ignore
-    r && l ? r.locale.value : Qe(t.locale) ? t.locale : lu
+    r && l ? r.locale.value : Ye(t.locale) ? t.locale : lu
   ), f = o(
     // prettier-ignore
-    r && l ? r.fallbackLocale.value : Qe(t.fallbackLocale) || dr(t.fallbackLocale) || At(t.fallbackLocale) || t.fallbackLocale === !1 ? t.fallbackLocale : c.value
+    r && l ? r.fallbackLocale.value : Ye(t.fallbackLocale) || dr(t.fallbackLocale) || At(t.fallbackLocale) || t.fallbackLocale === !1 ? t.fallbackLocale : c.value
   ), u = o($p(c.value, t)), d = o(At(t.datetimeFormats) ? t.datetimeFormats : { [c.value]: {} }), h = o(At(t.numberFormats) ? t.numberFormats : { [c.value]: {} });
   let p = r ? r.missingWarn : Mt(t.missingWarn) || $o(t.missingWarn) ? t.missingWarn : !0, g = r ? r.fallbackWarn : Mt(t.fallbackWarn) || $o(t.fallbackWarn) ? t.fallbackWarn : !0, y = r ? r.fallbackRoot : Mt(t.fallbackRoot) ? t.fallbackRoot : !0, v = !!t.fallbackFormat, T = ir(t.missing) ? t.missing : null, C = ir(t.missing) ? g_(t.missing) : null, S = ir(t.postTranslation) ? t.postTranslation : null, k = r ? r.warnHtmlMessage : Mt(t.warnHtmlMessage) ? t.warnHtmlMessage : !0, E = !!t.escapeParameter;
   const N = r ? r.modifiers : At(t.modifiers) ? t.modifiers : {};
@@ -7474,7 +7474,7 @@ function Fv(t = {}, e) {
     if (tt !== "translate exists" && // for not `te` (e.g `t`)
     Gr(Kt) && Kt === Up || tt === "translate exists" && !Kt) {
       const [Ot, Ar] = Me();
-      if (process.env.NODE_ENV !== "production" && r && Qe(Ot) && w(tt, Ar) && (y && (jp(g, Ot) || zC(p, Ot)) && Qr(zn(br.FALLBACK_TO_ROOT, {
+      if (process.env.NODE_ENV !== "production" && r && Ye(Ot) && w(tt, Ar) && (y && (jp(g, Ot) || zC(p, Ot)) && Qr(zn(br.FALLBACK_TO_ROOT, {
         key: Ot,
         type: tt
       })), process.env.NODE_ENV !== "production")) {
@@ -7494,7 +7494,7 @@ function Fv(t = {}, e) {
     }
   };
   function Y(...be) {
-    return z((Me) => Reflect.apply(o_, null, [Me, ...be]), () => q0(...be), "translate", (Me) => Reflect.apply(Me.t, Me, [...be]), (Me) => Me, (Me) => Qe(Me));
+    return z((Me) => Reflect.apply(o_, null, [Me, ...be]), () => q0(...be), "translate", (Me) => Reflect.apply(Me.t, Me, [...be]), (Me) => Me, (Me) => Ye(Me));
   }
   function Q(...be) {
     const [Me, tt, yt] = be;
@@ -7503,13 +7503,13 @@ function Fv(t = {}, e) {
     return Y(Me, tt, an({ resolvedMessage: !0 }, yt || {}));
   }
   function G(...be) {
-    return z((Me) => Reflect.apply(l_, null, [Me, ...be]), () => W0(...be), "datetime format", (Me) => Reflect.apply(Me.d, Me, [...be]), () => Ph, (Me) => Qe(Me));
+    return z((Me) => Reflect.apply(l_, null, [Me, ...be]), () => W0(...be), "datetime format", (Me) => Reflect.apply(Me.d, Me, [...be]), () => Ph, (Me) => Ye(Me));
   }
   function ue(...be) {
-    return z((Me) => Reflect.apply(c_, null, [Me, ...be]), () => G0(...be), "number format", (Me) => Reflect.apply(Me.n, Me, [...be]), () => Ph, (Me) => Qe(Me));
+    return z((Me) => Reflect.apply(c_, null, [Me, ...be]), () => G0(...be), "number format", (Me) => Reflect.apply(Me.n, Me, [...be]), () => Ph, (Me) => Ye(Me));
   }
   function oe(be) {
-    return be.map((Me) => Qe(Me) || Gr(Me) || Mt(Me) ? d_(String(Me)) : Me);
+    return be.map((Me) => Ye(Me) || Gr(Me) || Mt(Me) ? d_(String(Me)) : Me);
   }
   const ve = {
     normalize: oe,
@@ -7544,7 +7544,7 @@ function Fv(t = {}, e) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (Me) => Me[K0](...be),
       p_,
-      (Me) => Qe(Me) || dr(Me)
+      (Me) => Ye(Me) || dr(Me)
     );
   }
   function de(...be) {
@@ -7555,7 +7555,7 @@ function Fv(t = {}, e) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (Me) => Me[Y0](...be),
       p_,
-      (Me) => Qe(Me) || dr(Me)
+      (Me) => Ye(Me) || dr(Me)
     );
   }
   function we(be) {
@@ -7565,8 +7565,8 @@ function Fv(t = {}, e) {
     return z(() => {
       if (!be)
         return !1;
-      const tt = Qe(Me) ? Me : c.value, yt = ge(tt), Nt = x.messageResolver(yt, be);
-      return a ? Nt != null : zo(Nt) || _i(Nt) || Qe(Nt);
+      const tt = Ye(Me) ? Me : c.value, yt = ge(tt), Nt = x.messageResolver(yt, be);
+      return a ? Nt != null : zo(Nt) || _i(Nt) || Ye(Nt);
     }, () => [be], "translate exists", (tt) => Reflect.apply(tt.te, tt, [be, Me]), _L, (tt) => Mt(tt));
   }
   function Se(be) {
@@ -7704,7 +7704,7 @@ function Fv(t = {}, e) {
   }), rt;
 }
 function TL(t) {
-  const e = Qe(t.locale) ? t.locale : lu, r = Qe(t.fallbackLocale) || dr(t.fallbackLocale) || At(t.fallbackLocale) || t.fallbackLocale === !1 ? t.fallbackLocale : e, n = ir(t.missing) ? t.missing : void 0, i = Mt(t.silentTranslationWarn) || $o(t.silentTranslationWarn) ? !t.silentTranslationWarn : !0, s = Mt(t.silentFallbackWarn) || $o(t.silentFallbackWarn) ? !t.silentFallbackWarn : !0, o = Mt(t.fallbackRoot) ? t.fallbackRoot : !0, a = !!t.formatFallbackMessages, l = At(t.modifiers) ? t.modifiers : {}, c = t.pluralizationRules, f = ir(t.postTranslation) ? t.postTranslation : void 0, u = Qe(t.warnHtmlInMessage) ? t.warnHtmlInMessage !== "off" : !0, d = !!t.escapeParameterHtml, h = Mt(t.sync) ? t.sync : !0;
+  const e = Ye(t.locale) ? t.locale : lu, r = Ye(t.fallbackLocale) || dr(t.fallbackLocale) || At(t.fallbackLocale) || t.fallbackLocale === !1 ? t.fallbackLocale : e, n = ir(t.missing) ? t.missing : void 0, i = Mt(t.silentTranslationWarn) || $o(t.silentTranslationWarn) ? !t.silentTranslationWarn : !0, s = Mt(t.silentFallbackWarn) || $o(t.silentFallbackWarn) ? !t.silentFallbackWarn : !0, o = Mt(t.fallbackRoot) ? t.fallbackRoot : !0, a = !!t.formatFallbackMessages, l = At(t.modifiers) ? t.modifiers : {}, c = t.pluralizationRules, f = ir(t.postTranslation) ? t.postTranslation : void 0, u = Ye(t.warnHtmlInMessage) ? t.warnHtmlInMessage !== "off" : !0, d = !!t.escapeParameterHtml, h = Mt(t.sync) ? t.sync : !0;
   process.env.NODE_ENV !== "production" && t.formatter && Qr(zn(br.NOT_SUPPORTED_FORMATTER)), process.env.NODE_ENV !== "production" && t.preserveDirectiveContent && Qr(zn(br.NOT_SUPPORTED_PRESERVE_DIRECTIVE));
   let p = t.messages;
   if (At(t.sharedMessages)) {
@@ -7863,10 +7863,10 @@ function J0(t = {}, e) {
       t(...s) {
         const [o, a, l] = s, c = {};
         let f = null, u = null;
-        if (!Qe(o))
+        if (!Ye(o))
           throw Yr(jt.INVALID_ARGUMENT);
         const d = o;
-        return Qe(a) ? c.locale = a : dr(a) ? f = a : At(a) && (u = a), dr(l) ? f = l : At(l) && (u = l), Reflect.apply(r.t, r, [
+        return Ye(a) ? c.locale = a : dr(a) ? f = a : At(a) && (u = a), dr(l) ? f = l : At(l) && (u = l), Reflect.apply(r.t, r, [
           d,
           f || u || {},
           c
@@ -7879,10 +7879,10 @@ function J0(t = {}, e) {
       tc(...s) {
         const [o, a, l] = s, c = { plural: 1 };
         let f = null, u = null;
-        if (!Qe(o))
+        if (!Ye(o))
           throw Yr(jt.INVALID_ARGUMENT);
         const d = o;
-        return Qe(a) ? c.locale = a : Gr(a) ? c.plural = a : dr(a) ? f = a : At(a) && (u = a), Qe(l) ? c.locale = l : dr(l) ? f = l : At(l) && (u = l), Reflect.apply(r.t, r, [
+        return Ye(a) ? c.locale = a : Gr(a) ? c.plural = a : dr(a) ? f = a : At(a) && (u = a), Ye(l) ? c.locale = l : dr(l) ? f = l : At(l) && (u = l), Reflect.apply(r.t, r, [
           d,
           f || u || {},
           c
@@ -8009,28 +8009,28 @@ const wL = /* @__PURE__ */ Ge({
     });
     return () => {
       const s = Object.keys(r).filter((u) => u !== "_"), o = {};
-      t.locale && (o.locale = t.locale), t.plural !== void 0 && (o.plural = Qe(t.plural) ? +t.plural : t.plural);
-      const a = xL(e, s), l = i[Q0](t.keypath, a, o), c = an({}, n), f = Qe(t.tag) || Vt(t.tag) ? t.tag : sS();
+      t.locale && (o.locale = t.locale), t.plural !== void 0 && (o.plural = Ye(t.plural) ? +t.plural : t.plural);
+      const a = xL(e, s), l = i[Q0](t.keypath, a, o), c = an({}, n), f = Ye(t.tag) || Vt(t.tag) ? t.tag : sS();
       return Ut(f, c, l);
     };
   }
 }), Ag = wL;
 function CL(t) {
-  return dr(t) && !Qe(t[0]);
+  return dr(t) && !Ye(t[0]);
 }
 function oS(t, e, r, n) {
   const { slots: i, attrs: s } = e;
   return () => {
     const o = { part: !0 };
     let a = {};
-    t.locale && (o.locale = t.locale), Qe(t.format) ? o.key = t.format : Vt(t.format) && (Qe(t.format.key) && (o.key = t.format.key), a = Object.keys(t.format).reduce((d, h) => r.includes(h) ? an({}, d, { [h]: t.format[h] }) : d, {}));
+    t.locale && (o.locale = t.locale), Ye(t.format) ? o.key = t.format : Vt(t.format) && (Ye(t.format.key) && (o.key = t.format.key), a = Object.keys(t.format).reduce((d, h) => r.includes(h) ? an({}, d, { [h]: t.format[h] }) : d, {}));
     const l = n(t.value, o, a);
     let c = [o.key];
     dr(l) ? c = l.map((d, h) => {
       const p = i[d.type], g = p ? p({ [d.type]: d.value, index: h, parts: l }) : [d.value];
       return CL(g) && (g[0].key = `${d.type}-${h}`), g;
-    }) : Qe(l) && (c = [l]);
-    const f = an({}, s), u = Qe(t.tag) || Vt(t.tag) ? t.tag : sS();
+    }) : Ye(l) && (c = [l]);
+    const f = an({}, s), u = Ye(t.tag) || Vt(t.tag) ? t.tag : sS();
     return Ut(u, f, c);
   };
 }
@@ -8130,7 +8130,7 @@ function kL(t) {
   };
 }
 function b_(t) {
-  if (Qe(t))
+  if (Ye(t))
     return { path: t };
   if (At(t)) {
     if (!("path" in t))
@@ -8141,7 +8141,7 @@ function b_(t) {
 }
 function __(t) {
   const { path: e, locale: r, args: n, choice: i, plural: s } = t, o = {}, a = n || {};
-  return Qe(r) && (o.locale = r), Gr(i) && (o.plural = i), Gr(s) && (o.plural = s), [e, a, o];
+  return Ye(r) && (o.locale = r), Gr(i) && (o.plural = i), Gr(s) && (o.plural = s), [e, a, o];
 }
 function DL(t, e, ...r) {
   const n = At(r[0]) ? r[0] : {}, i = !!n.useI18nComponentName, s = Mt(n.globalInstall) ? n.globalInstall : !0;
@@ -8421,7 +8421,7 @@ function HL(t, e) {
   const r = uS(t.nodeId, e);
   if (r) {
     const [n] = t.path;
-    n === "locale" && Qe(t.state.value) ? r.locale.value = t.state.value : n === "fallbackLocale" && (Qe(t.state.value) || dr(t.state.value) || Vt(t.state.value)) ? r.fallbackLocale.value = t.state.value : n === "inheritLocale" && Mt(t.state.value) && (r.inheritLocale = t.state.value);
+    n === "locale" && Ye(t.state.value) ? r.locale.value = t.state.value : n === "fallbackLocale" && (Ye(t.state.value) || dr(t.state.value) || Vt(t.state.value)) ? r.fallbackLocale.value = t.state.value : n === "inheritLocale" && Mt(t.state.value) && (r.inheritLocale = t.state.value);
   }
 }
 function VL(t, e, r) {
@@ -8638,12 +8638,12 @@ function e9(t, e, r, n = {}) {
   const i = e === "local", s = Mp(null);
   if (i && t.proxy && !(t.proxy.$options.i18n || t.proxy.$options.__i18n))
     throw Yr(jt.MUST_DEFINE_I18N_OPTION_IN_ALLOW_COMPOSITION);
-  const o = Mt(n.inheritLocale) ? n.inheritLocale : !Qe(n.locale), a = Ce(
+  const o = Mt(n.inheritLocale) ? n.inheritLocale : !Ye(n.locale), a = Ce(
     // prettier-ignore
-    !i || o ? r.locale.value : Qe(n.locale) ? n.locale : lu
+    !i || o ? r.locale.value : Ye(n.locale) ? n.locale : lu
   ), l = Ce(
     // prettier-ignore
-    !i || o ? r.fallbackLocale.value : Qe(n.fallbackLocale) || dr(n.fallbackLocale) || At(n.fallbackLocale) || n.fallbackLocale === !1 ? n.fallbackLocale : a.value
+    !i || o ? r.fallbackLocale.value : Ye(n.fallbackLocale) || dr(n.fallbackLocale) || At(n.fallbackLocale) || n.fallbackLocale === !1 ? n.fallbackLocale : a.value
   ), c = Ce($p(a.value, n)), f = Ce(At(n.datetimeFormats) ? n.datetimeFormats : { [a.value]: {} }), u = Ce(At(n.numberFormats) ? n.numberFormats : { [a.value]: {} }), d = i ? r.missingWarn : Mt(n.missingWarn) || $o(n.missingWarn) ? n.missingWarn : !0, h = i ? r.fallbackWarn : Mt(n.fallbackWarn) || $o(n.fallbackWarn) ? n.fallbackWarn : !0, p = i ? r.fallbackRoot : Mt(n.fallbackRoot) ? n.fallbackRoot : !0, g = !!n.fallbackFormat, y = ir(n.missing) ? n.missing : null, v = ir(n.postTranslation) ? n.postTranslation : null, T = i ? r.warnHtmlMessage : Mt(n.warnHtmlMessage) ? n.warnHtmlMessage : !0, C = !!n.escapeParameter, S = i ? r.modifiers : At(n.modifiers) ? n.modifiers : {}, k = n.pluralRules || i && r.pluralRules;
   function E() {
     return [
@@ -47972,6 +47972,7 @@ const vI = {
   searchRooms: {},
   roomTag: "",
   deliveringMessages: /* @__PURE__ */ new Map(),
+  processingMessages: /* @__PURE__ */ new Map(),
   // chatroom
   selectedRoomId: "",
   messageMultiList: new gI(),
@@ -50977,7 +50978,7 @@ class Dl {
     };
   }
 }
-var Ke = /* @__PURE__ */ ((t) => (t.increment = "increment", t.fetchRooms = "fetchRooms", t.fetchRoom = "fetchRoom", t.loadMessages = "loadMessages", t.updateLastRead = "updateLastRead", t.handleMessageFromSocket = "handleMessageFromSocket", t.handleRoomFromSocket = "handleRoomFromSocket", t.handleLastReadFromSocket = "handleLastReadFromSocket", t.sendMessage = "sendMessage", t.recallMessage = "recallMessage", t.uploadMedia = "uploadMedia", t.fetchLinkPreview = "fetchLinkPreview", t.handleLinkPreviews = "handleLinkPreviews", t.fetchVideoBlob = "fetchVideoBlob", t.navigateToMessage = "navigateToMessage", t.uploadImage = "uploadImage", t.updateRoomPrefs = "updateRoomPrefs", t.fetchPrefs = "fetchPrefs", t.updatePref = "updatePref", t.deletePref = "deletePref", t.updateFolder = "updateFolder", t.removeFolder = "removeFolder", t.handlePrefChangeFromSocket = "handlePrefChangeFromSocket", t.handlePrefDeleteFromSocket = "handlePrefDeleteFromSocket", t.aggregateRoomsAndFolders = "aggregateRoomsAndFolders", t.removeMembers = "removeMembers", t.handleTypingFromSocket = "handleTypingFromSocket", t.insertUnreadMessage = "insertUnreadMessage", t.translate = "translate", t.searchRooms = "searchRooms", t.subscribe = "subscribe", t.unsubscribe = "unsubscribe", t.removeRoomFromFolder = "removeRoomFromFolder", t.addRoomToFolder = "addRoomToFolder", t.fetchRoomsInFolders = "fetchRoomsInFolders", t.batchSendMessage = "batchSendMessage", t.toggleNotification = "toggleNotification", t.removeRoom = "removeRoom", t.translateMessage = "translateMessage", t.quickReply = "quickReply", t))(Ke || {}), Ye = /* @__PURE__ */ ((t) => (t.increment = "increment", t.setState = "setState", t.updateField = "updateField", t.deleteField = "deleteField", t.updateRoom = "updateRoom", t.updateLastRead = "updateLastRead", t.pushMessage = "pushMessage", t.replaceMessage = "replaceMessage", t.clearChatRoom = "clearChatRoom", t.deleteRoom = "deleteRoom", t.setMap = "setMap", t.deleteMap = "deleteMap", t.insertMessageLinkedList = "insertMessageLinkedList", t.concateMessageLinkedList = "concateMessageLinkedList", t.unshiftMessageLinkedList = "unshiftMessageLinkedList", t))(Ye || {});
+var Ke = /* @__PURE__ */ ((t) => (t.increment = "increment", t.fetchRooms = "fetchRooms", t.fetchRoom = "fetchRoom", t.loadMessages = "loadMessages", t.updateLastRead = "updateLastRead", t.handleMessageFromSocket = "handleMessageFromSocket", t.handleRoomFromSocket = "handleRoomFromSocket", t.handleLastReadFromSocket = "handleLastReadFromSocket", t.sendMessage = "sendMessage", t.recallMessage = "recallMessage", t.uploadMedia = "uploadMedia", t.fetchLinkPreview = "fetchLinkPreview", t.handleLinkPreviews = "handleLinkPreviews", t.fetchVideoBlob = "fetchVideoBlob", t.navigateToMessage = "navigateToMessage", t.uploadImage = "uploadImage", t.updateRoomPrefs = "updateRoomPrefs", t.fetchPrefs = "fetchPrefs", t.updatePref = "updatePref", t.deletePref = "deletePref", t.updateFolder = "updateFolder", t.removeFolder = "removeFolder", t.handlePrefChangeFromSocket = "handlePrefChangeFromSocket", t.handlePrefDeleteFromSocket = "handlePrefDeleteFromSocket", t.aggregateRoomsAndFolders = "aggregateRoomsAndFolders", t.removeMembers = "removeMembers", t.handleTypingFromSocket = "handleTypingFromSocket", t.insertUnreadMessage = "insertUnreadMessage", t.translate = "translate", t.searchRooms = "searchRooms", t.subscribe = "subscribe", t.unsubscribe = "unsubscribe", t.removeRoomFromFolder = "removeRoomFromFolder", t.addRoomToFolder = "addRoomToFolder", t.fetchRoomsInFolders = "fetchRoomsInFolders", t.batchSendMessage = "batchSendMessage", t.toggleNotification = "toggleNotification", t.removeRoom = "removeRoom", t.translateMessage = "translateMessage", t.quickReply = "quickReply", t))(Ke || {}), Qe = /* @__PURE__ */ ((t) => (t.increment = "increment", t.setState = "setState", t.updateField = "updateField", t.deleteField = "deleteField", t.updateRoom = "updateRoom", t.updateLastRead = "updateLastRead", t.pushMessage = "pushMessage", t.replaceMessage = "replaceMessage", t.clearChatRoom = "clearChatRoom", t.deleteRoom = "deleteRoom", t.setMap = "setMap", t.deleteMap = "deleteMap", t.insertMessageLinkedList = "insertMessageLinkedList", t.concateMessageLinkedList = "concateMessageLinkedList", t.unshiftMessageLinkedList = "unshiftMessageLinkedList", t))(Qe || {});
 class PW {
   constructor(e) {
     Ve(this, "head");
@@ -51029,6 +51030,18 @@ class PW {
       this.messageGroups.set(e.groupId, [e]);
     const r = this.firstMessageOfDate.get(e.dateId);
     (!r || r.createdAt > e.createdAt) && this.firstMessageOfDate.set(e.dateId, e);
+  }
+  remove(e) {
+    var i, s;
+    const r = this.finds(e);
+    if (!r) return;
+    r.prev ? r.prev.next = r.next : this.head = r.next, r.next ? r.next.prev = r.prev : this.tail = r.prev, this.map.delete(e), this.length--;
+    const n = this.messageGroups.get(r.groupId);
+    if (n) {
+      const o = n.indexOf(r);
+      o >= 0 && (n.splice(o, 1), n.length === 0 && this.messageGroups.delete(r.groupId));
+    }
+    ((i = this.firstMessageOfDate.get(r.dateId)) == null ? void 0 : i.id) === r.id && (r.dateId === ((s = r.next) == null ? void 0 : s.dateId) ? this.firstMessageOfDate.set(r.dateId, r.next) : this.firstMessageOfDate.delete(r.dateId));
   }
   replace(e, r) {
     var i;
@@ -53064,7 +53077,7 @@ function KW(t) {
 }
 const XW = {
   [Ke.increment]({ commit: t }) {
-    t(Ye.increment);
+    t(Qe.increment);
   },
   async [Ke.fetchRooms]({ state: t, commit: e, dispatch: r }, { pageSize: n } = { pageSize: void 0 }) {
     if (t.isRequesting[bs.FetchRooms]) return;
@@ -53085,7 +53098,7 @@ const XW = {
       for (const h of d.members)
         u[h.id] || (u[h.id] = new Bo(h));
     }
-    e(Ye.updateField, { key: "rooms", value: f }), e(Ye.updateField, { key: "users", value: u }), e(Ye.setState, {
+    e(Qe.updateField, { key: "rooms", value: f }), e(Qe.updateField, { key: "users", value: u }), e(Qe.setState, {
       numberOfTotalRooms: c,
       numberOfFetchedRooms: i + o
     }), r(Ke.aggregateRoomsAndFolders);
@@ -53094,14 +53107,14 @@ const XW = {
     let i = t.rooms[n.roomId];
     if (i) {
       const { id: s, numberOfUnread: o } = i;
-      n.roomId === t.selectedRoomId ? (await r(Ke.handleLinkPreviews, [n]), e(Ye.pushMessage, n), e(Ye.updateRoom, {
+      n.roomId === t.selectedRoomId ? (t.processingMessages.has(n.id) || (await r(Ke.handleLinkPreviews, [n]), e(Qe.pushMessage, n)), e(Qe.updateRoom, {
         id: s,
         updatedAt: n.createdAt,
         lastMessage: n,
         numberOfUnread: 0
-      }), r(Ke.updateLastRead, s), e(Ye.setState, {
+      }), r(Ke.updateLastRead, s), e(Qe.setState, {
         numberOfTotalMessages: t.numberOfTotalMessages + 1
-      })) : e(Ye.updateRoom, {
+      })) : e(Qe.updateRoom, {
         id: s,
         updatedAt: n.createdAt,
         lastMessage: n,
@@ -53131,21 +53144,21 @@ const XW = {
     }), c = {};
     for (const p of l.data)
       c[p.sender.id] || (c[p.sender.id] = new Bo(p.sender));
-    e(Ye.updateField, { key: "users", value: c });
+    e(Qe.updateField, { key: "users", value: c });
     const { data: f, totalCount: u } = l;
     s && f.shift();
     const d = new PW(f), h = d.array();
-    return await r(Ke.handleLinkPreviews, h), e(i ? Ye.unshiftMessageLinkedList : s ? Ye.concateMessageLinkedList : Ye.insertMessageLinkedList, d), u > t.numberOfTotalMessages && e(Ye.setState, { numberOfTotalMessages: u }), f;
+    return await r(Ke.handleLinkPreviews, h), e(i ? Qe.unshiftMessageLinkedList : s ? Qe.concateMessageLinkedList : Qe.insertMessageLinkedList, d), u > t.numberOfTotalMessages && e(Qe.setState, { numberOfTotalMessages: u }), f;
   },
   async [Ke.fetchRoom]({ state: t, commit: e }, r) {
     const {
       data: { result: n }
     } = await t.axios.get(`/rooms/${r}`), i = new sf(n, t.uid), s = {};
-    s[i.id] = i, e(Ye.updateField, { key: "rooms", value: s });
+    s[i.id] = i, e(Qe.updateField, { key: "rooms", value: s });
     const o = {};
     n.members.flatMap((a) => Array.isArray(a.members) ? [...a.members, a] : [a]).forEach((a) => {
       o[a.id] || (o[a.id] = new Bo(a));
-    }), e(Ye.updateField, { key: "users", value: o });
+    }), e(Qe.updateField, { key: "users", value: o });
   },
   async [Ke.updateLastRead]({ state: t, commit: e }, r) {
     var o;
@@ -53156,28 +53169,28 @@ const XW = {
     } = await t.axios.put(n, {
       message: (o = i.lastMessage) == null ? void 0 : o.id
     });
-    s && e(Ye.updateRoom, {
+    s && e(Qe.updateRoom, {
       id: r,
       numberOfUnread: 0
     });
   },
   async [Ke.handleRoomFromSocket]({ commit: t, dispatch: e }, r) {
     const n = {};
-    n[r.id] = r, await t(Ye.updateField, { key: "rooms", value: n }), e(Ke.aggregateRoomsAndFolders);
+    n[r.id] = r, await t(Qe.updateField, { key: "rooms", value: n }), e(Ke.aggregateRoomsAndFolders);
   },
   async [Ke.handleLastReadFromSocket]({ commit: t }, e) {
-    t(Ye.updateLastRead, e);
+    t(Qe.updateLastRead, e);
   },
   async [Ke.sendMessage]({ state: t, commit: e, dispatch: r }, n) {
     const { roomId: i } = n;
     if (!i) return;
     const s = xr.fromPayload(n, t.uid);
     if (!s) return;
-    if (e(Ye.setMap, {
+    if (e(Qe.setMap, {
       mapName: "deliveringMessages",
       key: s.id,
       value: s
-    }), e(Ye.pushMessage, s), n.messageType === at.Image) {
+    }), e(Qe.pushMessage, s), n.messageType === at.Image) {
       const { files: l } = n, c = await Promise.all(
         n.images.map(
           (u, d) => r(Ke.uploadImage, {
@@ -53194,10 +53207,10 @@ const XW = {
           thumbnailUrl: c[d].thumbnailUrl,
           width: p,
           height: g
-        }), e(Ye.deleteField, {
+        }), e(Qe.deleteField, {
           key: "uploadProgresses",
           value: `${h}-original`
-        }), e(Ye.deleteField, {
+        }), e(Qe.deleteField, {
           key: "uploadProgresses",
           value: `${h}-thumbnail`
         });
@@ -53215,7 +53228,7 @@ const XW = {
           file: l
         })
       ]);
-      n.width = c.width, n.height = c.height, n.duration = c.duration, n.thumbnailUrl = u[0], n.originalUrl = u[1], t.imageCache.set(u[0], c.thumbnailUrl), delete n.file, e(Ye.deleteField, {
+      n.width = c.width, n.height = c.height, n.duration = c.duration, n.thumbnailUrl = u[0], n.originalUrl = u[1], t.imageCache.set(u[0], c.thumbnailUrl), delete n.file, e(Qe.deleteField, {
         key: "uploadProgresses",
         value: c.id
       });
@@ -53224,7 +53237,7 @@ const XW = {
         id: s.id,
         file: l
       });
-      n.originalUrl = c, delete n.file, e(Ye.deleteField, {
+      n.originalUrl = c, delete n.file, e(Qe.deleteField, {
         key: "uploadProgresses",
         value: s.id
       });
@@ -53233,7 +53246,7 @@ const XW = {
         id: s.id,
         file: l
       });
-      n.originalUrl = c, delete n.file, e(Ye.deleteField, {
+      n.originalUrl = c, delete n.file, e(Qe.deleteField, {
         key: "uploadProgresses",
         value: s.id
       });
@@ -53242,16 +53255,23 @@ const XW = {
       data: { result: o }
     } = await t.axios.post(`/rooms/${i}/message`, n), a = xr.fromRaw(o);
     if (a)
-      return e(Ye.deleteMap, {
+      return e(Qe.setMap, {
+        mapName: "processingMessages",
+        key: a.id,
+        value: a
+      }), e(Qe.deleteMap, {
         mapName: "deliveringMessages",
         key: s.id
-      }), await r(Ke.handleLinkPreviews, [a]), a.roomId === t.selectedRoomId ? e(Ye.replaceMessage, {
+      }), await r(Ke.handleLinkPreviews, [a]), a.roomId === t.selectedRoomId ? e(Qe.replaceMessage, {
         message: a,
         targetMessageId: s.id
-      }) : e(Ye.updateRoom, {
+      }) : e(Qe.updateRoom, {
         id: a.roomId,
         updatedAt: a.createdAt,
         lastMessage: a
+      }), e(Qe.deleteMap, {
+        mapName: "processingMessages",
+        key: a.id
       }), a;
   },
   async [Ke.batchSendMessage]({ state: t }, e) {
@@ -53263,7 +53283,7 @@ const XW = {
     const {
       data: { result: i }
     } = await t.axios.post(`/rooms/${n}/message`, r), s = xr.fromRaw(i);
-    s && e(Ye.replaceMessage, {
+    s && e(Qe.replaceMessage, {
       targetMessageId: s.id,
       message: s
     });
@@ -53281,7 +53301,7 @@ const XW = {
       },
       onUploadProgress: (o) => {
         const { total: a } = o;
-        a && e(Ye.updateField, {
+        a && e(Qe.updateField, {
           key: "uploadProgresses",
           value: { [r]: o.loaded / a }
         });
@@ -53334,7 +53354,7 @@ const XW = {
       i.map((a) => r(Ke.fetchLinkPreview, a))
     )).forEach((a, l) => {
       a.status === "fulfilled" && (s[i[l]] = a.value);
-    }), e(Ye.updateField, {
+    }), e(Qe.updateField, {
       key: "linkPreviews",
       value: s
     });
@@ -53345,19 +53365,19 @@ const XW = {
   },
   async [Ke.navigateToMessage]({ state: t, commit: e, dispatch: r }, n) {
     var i;
-    (i = t.messageMultiList.main) != null && i.contains(n) ? e(Ye.setState, {
+    (i = t.messageMultiList.main) != null && i.contains(n) ? e(Qe.setState, {
       navigationTargetId: n
     }) : (await r(Ke.loadMessages, {
       roomId: t.selectedRoomId,
       targetMessageId: n
-    }), await e(Ye.setState, {
+    }), await e(Qe.setState, {
       navigationTargetId: n
     }));
   },
   async [Ke.updateRoomPrefs]({ state: t, commit: e, dispatch: r }, { roomId: n, prefs: i }) {
     await t.axios.post(`/roomPrefs/${n}`, i);
     const s = t.rooms[n];
-    s && (e(Ye.updateRoom, {
+    s && (e(Qe.updateRoom, {
       id: n,
       pref: { ...s.pref, ...i }
     }), r(Ke.aggregateRoomsAndFolders));
@@ -53382,7 +53402,7 @@ const XW = {
       for (const c of o[l] || [])
         a[c] = !0;
     }
-    e(Ye.setState, {
+    e(Qe.setState, {
       folders: n,
       sortedFolderIds: i,
       roomIdsInFolders: a
@@ -53421,7 +53441,7 @@ const XW = {
           type: "room"
         }))
       }
-    }), t.folders[n] && r(Ye.updateField, {
+    }), t.folders[n] && r(Qe.updateField, {
       key: "roomIdsInFolders",
       value: t.folders[n].roomIds.reduce(
         (a, l) => (a[l] = !1, a),
@@ -53429,18 +53449,18 @@ const XW = {
       )
     });
     const o = new Dl(n, i, s);
-    r(Ye.updateField, {
+    r(Qe.updateField, {
       key: "folders",
       value: {
         [n]: o
       }
-    }), r(Ye.updateField, {
+    }), r(Qe.updateField, {
       key: "roomIdsInFolders",
       value: s.reduce(
         (a, l) => (a[l] = !0, a),
         {}
       )
-    }), r(Ye.setState, {
+    }), r(Qe.setState, {
       sortedFolderIds: [.../* @__PURE__ */ new Set([...t.sortedFolderIds, n])],
       selectedRoomIdsForCreateFolder: {}
     }), e(Ke.aggregateRoomsAndFolders);
@@ -53462,7 +53482,7 @@ const XW = {
         const f = t.folders[l] || new Dl(l, c, []);
         o[l] = f, a.push(l);
       }
-      e(Ye.setState, {
+      e(Qe.setState, {
         folders: o,
         sortedFolderIds: a
       });
@@ -53472,12 +53492,12 @@ const XW = {
         const l = s.children.map(
           (f) => f.id
         ), c = new Dl(o, a, l);
-        e(Ye.updateField, {
+        e(Qe.updateField, {
           key: "folders",
           value: {
             [i]: c
           }
-        }), e(Ye.updateField, {
+        }), e(Qe.updateField, {
           key: "roomIdsInFolders",
           value: l.reduce(
             (f, u) => (f[u] = !0, f),
@@ -53495,13 +53515,13 @@ const XW = {
     const s = {};
     for (const o of i.roomIds)
       s[o] = !1;
-    e(Ye.deleteField, {
+    e(Qe.deleteField, {
       key: "folders",
       value: n
-    }), e(Ye.updateField, {
+    }), e(Qe.updateField, {
       key: "roomIdsInFolders",
       value: s
-    }), e(Ye.setState, {
+    }), e(Qe.setState, {
       sortedFolderIds: t.sortedFolderIds.filter((o) => o !== n)
     }), r(Ke.aggregateRoomsAndFolders);
   },
@@ -53515,7 +53535,7 @@ const XW = {
         return ((s = n.pref) == null ? void 0 : s.sticky) === ((o = i.pref) == null ? void 0 : o.sticky) ? i.updatedAt - n.updatedAt : (a = n.pref) != null && a.sticky ? -1 : 1;
       }
     );
-    e(Ye.setState, {
+    e(Qe.setState, {
       sortedRooms: r
     });
   },
@@ -53525,11 +53545,11 @@ const XW = {
       systemMessage: !0,
       members: n
     }), n.includes(t.uid))) {
-      e(Ye.deleteRoom, r);
+      e(Qe.deleteRoom, r);
       const o = (s = t.sortedRooms.find(
         (a) => a.numberOfUnread === 0
       )) == null ? void 0 : s.id;
-      o && e(Ye.setState, {
+      o && e(Qe.setState, {
         selectedRoomId: o
       });
     }
@@ -53540,12 +53560,12 @@ const XW = {
     const s = t.isTyping[i];
     s !== void 0 && clearTimeout(s);
     const o = setTimeout(() => {
-      e(Ye.deleteField, {
+      e(Qe.deleteField, {
         key: "isTyping",
         value: i
       });
     }, 6e3);
-    e(Ye.updateField, {
+    e(Qe.updateField, {
       key: "isTyping",
       value: { [i]: o }
     });
@@ -53567,7 +53587,7 @@ const XW = {
       },
       t.uid
     );
-    s && e(Ye.pushMessage, s);
+    s && e(Qe.pushMessage, s);
   },
   async [Ke.translate]({ state: t }, e) {
     if (t.translationCache.has(e))
@@ -53670,7 +53690,7 @@ const XW = {
     for (const f of Object.values(t.folders))
       f.name.includes(r) && (a[Ti.RoomPrefFolder] || (a[Ti.RoomPrefFolder] = []), a[Ti.RoomPrefFolder].push(f));
     const l = Object.keys(a), c = l.length > 0 ? l[0] : Ti.RoomName;
-    e(Ye.updateField, { key: "rooms", value: s }), e(Ye.updateField, { key: "users", value: o }), e(Ye.setState, {
+    e(Qe.updateField, { key: "rooms", value: s }), e(Qe.updateField, { key: "users", value: o }), e(Qe.setState, {
       searchRooms: a,
       searchType: c,
       searchKeyword: r
@@ -53711,12 +53731,12 @@ const XW = {
       }
     });
     const a = new Dl(s, i.name, o);
-    e(Ye.updateField, {
+    e(Qe.updateField, {
       key: "folders",
       value: {
         [s]: a
       }
-    }), e(Ye.updateField, {
+    }), e(Qe.updateField, {
       key: "roomIdsInFolders",
       value: { [n]: !1 }
     }), r(Ke.aggregateRoomsAndFolders);
@@ -53735,32 +53755,32 @@ const XW = {
       }
     });
     const a = new Dl(i, s.name, o);
-    e(Ye.updateField, {
+    e(Qe.updateField, {
       key: "folders",
       value: {
         [i]: a
       }
-    }), e(Ye.updateField, {
+    }), e(Qe.updateField, {
       key: "roomIdsInFolders",
       value: { [n]: !0 }
     }), r(Ke.aggregateRoomsAndFolders);
   },
   async [Ke.toggleNotification]({ state: t, commit: e }, r) {
     const n = t.rooms[r];
-    n && (n.muted ? await t.axios.delete(`/me/mute/${r}`) : await t.axios.post(`/me/mute/${r}`), e(Ye.updateRoom, {
+    n && (n.muted ? await t.axios.delete(`/me/mute/${r}`) : await t.axios.post(`/me/mute/${r}`), e(Qe.updateRoom, {
       id: r,
       muted: !n.muted
     }));
   },
   async [Ke.removeRoom]({ state: t, commit: e }, r) {
-    await t.axios.delete(`/rooms/${r}`), e(Ye.deleteRoom, r);
+    await t.axios.delete(`/rooms/${r}`), e(Qe.deleteRoom, r);
   },
   async [Ke.translateMessage]({ state: t, commit: e, dispatch: r }, n) {
     if (t.config.translationApiKey && n.type === at.Text && n.senderId !== t.uid) {
       const i = n.text;
       try {
         const s = await r(Ke.translate, i);
-        n.translatedText = s !== i ? s : null, e(Ye.replaceMessage, {
+        n.translatedText = s !== i ? s : null, e(Qe.replaceMessage, {
           message: n,
           targetMessageId: n.id
         });
@@ -53790,58 +53810,58 @@ const XW = {
     ) : [];
   }
 }, ZW = {
-  [Ye.increment](t) {
+  [Qe.increment](t) {
     t.count++;
   },
-  [Ye.setState](t, e) {
+  [Qe.setState](t, e) {
     Object.assign(t, e);
   },
-  [Ye.updateField](t, e) {
+  [Qe.updateField](t, e) {
     const { key: r, value: n } = e;
     Object.assign(t[r], n);
   },
-  [Ye.deleteField](t, e) {
+  [Qe.deleteField](t, e) {
     const { key: r, value: n } = e;
     delete t[r][n];
   },
-  [Ye.updateRoom](t, e) {
+  [Qe.updateRoom](t, e) {
     const { id: r } = e, n = t.rooms[r];
     n && Object.assign(n, e);
   },
-  [Ye.updateLastRead](t, e) {
+  [Qe.updateLastRead](t, e) {
     const { roomId: r, uid: n, messageId: i } = e, s = t.rooms[r];
     s && (s.lastReadMessageId[n] = i);
   },
-  [Ye.pushMessage](t, e) {
+  [Qe.pushMessage](t, e) {
     var r;
     e.roomId === t.selectedRoomId && ((r = t.messageMultiList.main) == null || r.append(e));
   },
-  [Ye.replaceMessage](t, e) {
-    var i;
+  [Qe.replaceMessage](t, e) {
+    var i, s;
     const { targetMessageId: r, message: n } = e;
-    (i = t.messageMultiList.main) == null || i.replace(r, n);
+    (i = t.messageMultiList.main) != null && i.contains(n.id) && t.messageMultiList.main.remove(n.id), (s = t.messageMultiList.main) == null || s.replace(r, n);
   },
-  [Ye.clearChatRoom](t) {
+  [Qe.clearChatRoom](t) {
     t.messageMultiList = new gI(), t.numberOfTotalMessages = -1, t.replyId = "", t.navigationTargetId = "", t.isRoomInfoVisible = !1, t.isTyping = {}, t.isSearchInRoomMode = !1, t.messageSearchKeyword = "";
   },
-  [Ye.deleteRoom](t, e) {
+  [Qe.deleteRoom](t, e) {
     delete t.rooms[e], delete t.roomIdsInFolders[e], delete t.selectedRoomIdsForCreateFolder[e], t.sortedRooms = t.sortedRooms.filter((r) => r.id !== e);
   },
-  [Ye.setMap](t, e) {
+  [Qe.setMap](t, e) {
     const { mapName: r, key: n, value: i } = e;
     t[r].set(n, i);
   },
-  [Ye.deleteMap](t, e) {
+  [Qe.deleteMap](t, e) {
     const { mapName: r, key: n } = e;
     t[r].delete(n);
   },
-  [Ye.insertMessageLinkedList](t, e) {
+  [Qe.insertMessageLinkedList](t, e) {
     t.messageMultiList.insert(e), t.messageMultiList.merge();
   },
-  [Ye.concateMessageLinkedList](t, e) {
+  [Qe.concateMessageLinkedList](t, e) {
     t.messageMultiList.concate(e), t.messageMultiList.merge();
   },
-  [Ye.unshiftMessageLinkedList](t, e) {
+  [Qe.unshiftMessageLinkedList](t, e) {
     t.messageMultiList.unshift(e), t.messageMultiList.merge();
   }
 }, dk = {

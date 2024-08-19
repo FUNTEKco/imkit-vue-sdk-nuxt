@@ -1870,7 +1870,7 @@ function so(t) {
 function Oh(t) {
   return typeof t == "object" && t !== null ? "component" in t : !1;
 }
-const P8 = ["innerHTML"], n1e = /* @__PURE__ */ Ge({
+const P8 = ["innerHTML"], i1e = /* @__PURE__ */ Ge({
   __name: "ModalsContainer",
   setup(t) {
     const { modalsContainers: e, dynamicModals: r } = Vn(), n = Symbol("ModalsContainer"), i = ce(() => {
@@ -47437,22 +47437,22 @@ gr.getAdapter = cI.getAdapter;
 gr.HttpStatusCode = W1;
 gr.default = gr;
 const {
-  Axios: o1e,
-  AxiosError: a1e,
-  CanceledError: l1e,
-  isCancel: u1e,
-  CancelToken: c1e,
-  VERSION: f1e,
-  all: d1e,
-  Cancel: h1e,
-  isAxiosError: p1e,
-  spread: m1e,
-  toFormData: g1e,
+  Axios: a1e,
+  AxiosError: l1e,
+  CanceledError: u1e,
+  isCancel: c1e,
+  CancelToken: f1e,
+  VERSION: d1e,
+  all: h1e,
+  Cancel: p1e,
+  isAxiosError: m1e,
+  spread: g1e,
+  toFormData: v1e,
   AxiosHeaders: TT,
-  HttpStatusCode: v1e,
-  formToJSON: y1e,
-  getAdapter: b1e,
-  mergeConfig: _1e
+  HttpStatusCode: y1e,
+  formToJSON: b1e,
+  getAdapter: _1e,
+  mergeConfig: A1e
 } = gr;
 var pI = {}, mI = {}, Zy = {}, Jf = {};
 Object.defineProperty(Jf, "__esModule", { value: !0 });
@@ -81207,7 +81207,7 @@ const Rte = "n", Pte = `.${Rte}-`, Bte = "__", Fte = "--", t6 = Nte(), r6 = Lte(
   modifierPrefix: Fte
 });
 t6.use(r6);
-const { c: hn, find: k1e } = t6, { cB: xp, cE: Lt, cM: Vi, cNotM: fw } = r6;
+const { c: hn, find: D1e } = t6, { cB: xp, cE: Lt, cM: Vi, cNotM: fw } = r6;
 function Ute(t, e) {
   return gt(t, (r) => {
     r !== void 0 && (e.value = r);
@@ -86613,7 +86613,7 @@ const mce = {
       ], 32)) : Ue("", !0);
     };
   }
-}), D1e = /* @__PURE__ */ as(_fe, [["__scopeId", "data-v-6100a60a"]]);
+}), M1e = /* @__PURE__ */ as(_fe, [["__scopeId", "data-v-6100a60a"]]);
 var Z6 = { exports: {} };
 (function(t, e) {
   (function(r, n) {
@@ -86641,7 +86641,7 @@ var Afe = Z6.exports;
 const q2 = /* @__PURE__ */ On(Afe), Tfe = { class: "flex flex-col divide-y bg-white dark:divide-zinc-700 dark:bg-zinc-800" }, xfe = { class: "flex h-[60px] items-center gap-4 px-3" }, wfe = { class: "relative h-[50px] w-[50px]" }, Cfe = { class: "overflow-hidden overflow-ellipsis whitespace-nowrap text-base text-gray-900 dark:text-gray-200" }, Sfe = { class: "flex flex-col gap-4 overflow-auto p-2" }, Efe = { class: "mb-2 text-base text-gray-500 dark:text-gray-300" }, Ife = { class: "flex flex-col gap-3" }, kfe = { class: "relative h-[50px] w-[50px]" }, Dfe = { class: "flex flex-col overflow-hidden overflow-ellipsis whitespace-nowrap text-base" }, Mfe = { class: "text-base text-gray-900 dark:text-gray-100" }, Ofe = {
   key: 0,
   class: "text-sm text-gray-500 dark:text-gray-400"
-}, Nfe = { class: "text-gray-500 dark:text-gray-300" }, Lfe = { class: "text-gray-500 dark:text-gray-300" }, Rfe = ["src"], M1e = /* @__PURE__ */ Ge({
+}, Nfe = { class: "text-gray-500 dark:text-gray-300" }, Lfe = { class: "text-gray-500 dark:text-gray-300" }, Rfe = ["src"], O1e = /* @__PURE__ */ Ge({
   __name: "ChatRoomInfo",
   setup(t) {
     Fr.extend(q2);
@@ -87861,7 +87861,7 @@ const ede = { class: "mb-1 mt-3 text-base" }, tde = { class: "divide-y rounded b
       ])
     ]));
   }
-}), O1e = /* @__PURE__ */ as(dpe, [["__scopeId", "data-v-c798849d"]]);
+}), N1e = /* @__PURE__ */ as(dpe, [["__scopeId", "data-v-c798849d"]]);
 function ah(t, e, r) {
   const { url: n } = e, i = n == null ? void 0 : n.split("?")[0];
   if (!i) return;
@@ -88167,8 +88167,9 @@ const gpe = "Close", vpe = "Confirm", ype = "Folder Name", bpe = "Create Folder"
   legacy: !1,
   locale: navigator.language in zw ? navigator.language : "en-US",
   messages: zw
-}), N1e = {
+}), t1e = "1.72.0", L1e = {
   install: async (t, e) => {
+    console.log("IMKit Version:", t1e);
     const { store: r, config: n } = e;
     r.hasModule("imkit") || r.registerModule("imkit", dk);
     let i = "";
@@ -88220,9 +88221,9 @@ const gpe = "Close", vpe = "Confirm", ype = "Folder Name", bpe = "Create Folder"
   }
 };
 export {
-  D1e as ChatRoom,
-  M1e as ChatRoomInfo,
-  n1e as ModalsContainer,
-  O1e as RoomList,
-  N1e as default
+  M1e as ChatRoom,
+  O1e as ChatRoomInfo,
+  i1e as ModalsContainer,
+  N1e as RoomList,
+  L1e as default
 };

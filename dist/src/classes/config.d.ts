@@ -1,6 +1,5 @@
 import { default as Settings } from './settings';
 import { default as Styles } from './styles';
-
 type Config = {
     domain: string;
     clientKey: string;

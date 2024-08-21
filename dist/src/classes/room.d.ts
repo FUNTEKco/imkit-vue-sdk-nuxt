@@ -1,6 +1,5 @@
 import { default as Message } from './message';
 import { default as User } from './user';
-
 export declare enum RoomType {
     Direct = "direct",
     Group = "group"

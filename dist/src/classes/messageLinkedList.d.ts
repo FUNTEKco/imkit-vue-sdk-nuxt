@@ -1,5 +1,4 @@
 import { default as Message } from './message';
-
 export default class MessageLinkedList {
     head: Message | null;
     tail: Message | null;

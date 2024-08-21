@@ -10,7 +10,6 @@ import { default as MessageMultiList } from '../../../classes/messageMultiList';
 import { default as Room } from '../../../classes/room';
 import { SearchType } from '../../../enums/searchType';
 import { default as User } from '../../../classes/user';
-
 export type IMState = {
     count: number;
     config: Config;

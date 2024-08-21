@@ -4,7 +4,6 @@ import { Actions } from './actions';
 import { Getters } from './getters';
 import { Mutations } from './mutations';
 import { IMState } from './state';
-
 export { IMState };
 export type IMStore<S = IMState> = Omit<VuexStore<S>, 'getters' | 'commit' | 'dispatch'> & {
     commit<K extends keyof Mutations, P extends Parameters<Mutations[K]>[1]>(key: K, payload: P, options?: CommitOptions): ReturnType<Mutations[K]>;

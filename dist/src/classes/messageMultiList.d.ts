@@ -1,5 +1,4 @@
 import { default as MessageLinkedList } from './messageLinkedList';
-
 export default class MessageMultiList {
     head: MessageLinkedList | null;
     tail: MessageLinkedList | null;

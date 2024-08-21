@@ -7,7 +7,6 @@ import { default as LinkPreview } from '../../../classes/linkPreview';
 import { Mutations } from './mutations';
 import { default as Room } from '../../../classes/room';
 import { RootState } from '../../../store';
-
 type AugmentedActionContext = {
     commit<K extends keyof Mutations>(key: K, payload?: Parameters<Mutations[K]>[1]): ReturnType<Mutations[K]>;
 } & Omit<ActionContext<IMState, RootState>, 'commit'>;

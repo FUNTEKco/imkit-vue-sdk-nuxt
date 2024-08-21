@@ -1,5 +1,4 @@
 import { IMStore, IMState } from './modules/imkit';
-
 export type RootState = {
     imkit: IMState;
 };

@@ -5,7 +5,6 @@ import { default as ChatRoomInfo } from './components/ChatRoomInfo.vue';
 import { default as Config } from './classes/config';
 import { default as RoomList } from './components/RoomList.vue';
 import { Store } from 'vuex';
-
 type Options = {
     store: Store<any>;
     config: Config;

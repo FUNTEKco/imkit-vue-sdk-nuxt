@@ -31,7 +31,10 @@ export interface Actions {
         messageId: string;
     }): void;
     [IMActionTypes.sendMessage](context: AugmentedActionContext, payload: Record<string, unknown>): void;
-    [IMActionTypes.recallMessage](context: AugmentedActionContext, payload: Record<string, unknown>): void;
+    [IMActionTypes.recallMessage](context: AugmentedActionContext, payload: {
+        roomId: string;
+        _id: string;
+    }): void;
     [IMActionTypes.uploadMedia](context: AugmentedActionContext, payload: {
         id: string;
         file: File;

@@ -79116,7 +79116,7 @@ const v6 = (t) => (Yo("data-v-c9c51bc0"), t = t(), Ko(), t), rte = { class: "rel
       _: 1
     }));
   }
-}), dte = /* @__PURE__ */ $r(fte, [["__scopeId", "data-v-c9c51bc0"]]), y6 = "1.74.2", hte = /* @__PURE__ */ Ge({
+}), dte = /* @__PURE__ */ $r(fte, [["__scopeId", "data-v-c9c51bc0"]]), y6 = "1.75.0", hte = /* @__PURE__ */ Ge({
   __name: "VersionModal",
   setup(t) {
     const e = Ln(), r = () => {
@@ -88615,7 +88615,7 @@ const Fde = { class: "mb-1 mt-3 text-base" }, Ude = { class: "divide-y rounded b
           Z("div", Pde, [
             or(Z("input", {
               type: "text",
-              class: "w-32 grow rounded-md bg-gray-100 p-2 text-base outline-none dark:bg-zinc-700",
+              class: "w-32 grow rounded-md bg-gray-100 p-2 text-base placeholder-gray-400 outline-none dark:bg-zinc-700",
               placeholder: f.value === !0 ? R.$t("createTag") : R.$t("editTag"),
               onInput: $[1] || ($[1] = (B) => C()),
               "onUpdate:modelValue": $[2] || ($[2] = (B) => l.value = B)
@@ -88642,7 +88642,7 @@ const Fde = { class: "mb-1 mt-3 text-base" }, Ude = { class: "divide-y rounded b
                 }, "   ", 4),
                 or(Z("input", {
                   type: "text",
-                  class: "w-50 h-8 grow rounded-md bg-gray-100 p-2 text-base outline-none dark:bg-zinc-700",
+                  class: "w-50 h-8 grow rounded-md bg-gray-100 p-2 text-base placeholder-gray-400 outline-none dark:bg-zinc-700",
                   placeholder: R.$t("inputTagPlaceholder"),
                   maxlength: "7",
                   pattern: "^#[0-9a-fA-F]{6}$",
@@ -89265,7 +89265,7 @@ const dpe = /* @__PURE__ */ $r(ape, [["render", fpe]]), hpe = { class: "relative
         Z("div", Fpe, Pe(i.value ? c.$t("editFolder") : c.$t("createFolder")), 1),
         or(Z("input", {
           type: "text",
-          class: "grow rounded-md bg-gray-100 p-2 outline-none dark:bg-zinc-700",
+          class: "grow rounded-md bg-gray-100 p-2 placeholder-gray-400 outline-none dark:bg-zinc-700",
           placeholder: c.$t("folderName"),
           "onUpdate:modelValue": f[0] || (f[0] = (u) => s.value = u)
         }, null, 8, Upe), [
@@ -89426,7 +89426,7 @@ const dpe = /* @__PURE__ */ $r(ape, [["render", fpe]]), hpe = { class: "relative
       source: e.source
     }, null, 8, ["source"]));
   }
-}), eb = (t) => (Yo("data-v-63517750"), t = t(), Ko(), t), nme = { class: "mb-1 flex items-center justify-between text-xl font-medium text-gray-700 dark:text-gray-300" }, ime = ["placeholder"], sme = { class: "mb-2 flex h-12 items-center gap-2 rounded-lg bg-gray-100 p-3 dark:bg-zinc-700" }, ome = /* @__PURE__ */ eb(() => /* @__PURE__ */ Z("img", {
+}), eb = (t) => (Yo("data-v-4b24a960"), t = t(), Ko(), t), nme = { class: "mb-1 flex items-center justify-between text-xl font-medium text-gray-700 dark:text-gray-300" }, ime = ["placeholder"], sme = { class: "mb-2 flex h-12 items-center gap-2 rounded-lg bg-gray-100 p-3 dark:bg-zinc-700" }, ome = /* @__PURE__ */ eb(() => /* @__PURE__ */ Z("img", {
   class: "h-6 w-6 cursor-pointer",
   src: zp
 }, null, -1)), ame = { class: "grow overflow-hidden" }, lme = ["placeholder"], ume = {
@@ -89481,7 +89481,7 @@ const dpe = /* @__PURE__ */ $r(ape, [["render", fpe]]), hpe = { class: "relative
         Z("div", nme, Pe(h.$t("massTexting")), 1),
         or(Z("textarea", {
           rows: "3",
-          class: "grow rounded-md bg-gray-100 p-2 outline-none dark:bg-zinc-700",
+          class: "grow rounded-md bg-gray-100 p-2 placeholder-gray-400 outline-none dark:bg-zinc-700",
           placeholder: h.$t("inputMessage"),
           "onUpdate:modelValue": p[0] || (p[0] = (g) => n.value = g)
         }, null, 8, ime), [
@@ -89501,7 +89501,7 @@ const dpe = /* @__PURE__ */ $r(ape, [["render", fpe]]), hpe = { class: "relative
               Z("div", ame, [
                 or(Z("input", {
                   ref: "searchInput",
-                  class: "bg-gray-100 outline-none dark:bg-zinc-700",
+                  class: "bg-gray-100 placeholder-gray-400 outline-none dark:bg-zinc-700",
                   "onUpdate:modelValue": p[1] || (p[1] = (g) => o.value = g),
                   placeholder: h.$t("search"),
                   onCompositionstart: p[2] || (p[2] = (g) => a.value = !0),
@@ -89547,7 +89547,7 @@ const dpe = /* @__PURE__ */ $r(ape, [["render", fpe]]), hpe = { class: "relative
       _: 1
     }));
   }
-}), gme = /* @__PURE__ */ $r(mme, [["__scopeId", "data-v-63517750"]]), vme = {}, yme = {
+}), gme = /* @__PURE__ */ $r(mme, [["__scopeId", "data-v-4b24a960"]]), vme = {}, yme = {
   xmlns: "http://www.w3.org/2000/svg",
   "xmlns:xlink": "http://www.w3.org/1999/xlink",
   viewBox: "0 0 50 50",
@@ -89565,7 +89565,7 @@ const dpe = /* @__PURE__ */ $r(ape, [["render", fpe]]), hpe = { class: "relative
 function Tme(t, e) {
   return X(), ie("svg", yme, _me);
 }
-const xme = /* @__PURE__ */ $r(vme, [["render", Tme]]), Jm = (t) => (Yo("data-v-a3da8985"), t = t(), Ko(), t), Ame = { class: "relative overflow-auto" }, wme = { class: "mb-2 flex h-12 items-center gap-2 rounded-lg bg-gray-100 p-3 dark:bg-zinc-700" }, Cme = /* @__PURE__ */ Jm(() => /* @__PURE__ */ Z("img", {
+const xme = /* @__PURE__ */ $r(vme, [["render", Tme]]), Jm = (t) => (Yo("data-v-13165148"), t = t(), Ko(), t), Ame = { class: "relative overflow-auto" }, wme = { class: "mb-2 flex h-12 items-center gap-2 rounded-lg bg-gray-100 p-3 dark:bg-zinc-700" }, Cme = /* @__PURE__ */ Jm(() => /* @__PURE__ */ Z("img", {
   class: "h-6 w-6 cursor-pointer",
   src: zp
 }, null, -1)), Sme = { class: "grow overflow-hidden" }, Eme = ["placeholder"], Ime = {
@@ -89669,7 +89669,7 @@ const xme = /* @__PURE__ */ $r(vme, [["render", Tme]]), Jm = (t) => (Yo("data-v-
               or(Z("input", {
                 ref_key: "searchInput",
                 ref: s,
-                class: "w-full bg-gray-100 outline-none dark:bg-zinc-700",
+                class: "w-full bg-gray-100 placeholder-gray-400 outline-none dark:bg-zinc-700",
                 "onUpdate:modelValue": R[0] || (R[0] = ($) => r.value = $),
                 placeholder: C.$t("search"),
                 onCompositionstart: R[1] || (R[1] = ($) => i.value = !0),
@@ -89744,7 +89744,7 @@ const xme = /* @__PURE__ */ $r(vme, [["render", Tme]]), Jm = (t) => (Yo("data-v-
       ])
     ]));
   }
-}), lye = /* @__PURE__ */ $r(Fme, [["__scopeId", "data-v-a3da8985"]]);
+}), lye = /* @__PURE__ */ $r(Fme, [["__scopeId", "data-v-13165148"]]);
 function aC(t) {
   return t.type.indexOf("mouse") !== -1 ? t.clientX : t.touches[0].clientX;
 }

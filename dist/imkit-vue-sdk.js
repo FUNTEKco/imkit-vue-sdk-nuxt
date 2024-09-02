@@ -79116,7 +79116,7 @@ const v6 = (t) => (Yo("data-v-c9c51bc0"), t = t(), Ko(), t), rte = { class: "rel
       _: 1
     }));
   }
-}), dte = /* @__PURE__ */ $r(fte, [["__scopeId", "data-v-c9c51bc0"]]), y6 = "1.75.0", hte = /* @__PURE__ */ Ge({
+}), dte = /* @__PURE__ */ $r(fte, [["__scopeId", "data-v-c9c51bc0"]]), y6 = "1.75.1", hte = /* @__PURE__ */ Ge({
   __name: "VersionModal",
   setup(t) {
     const e = Ln(), r = () => {
@@ -88656,11 +88656,11 @@ const Fde = { class: "mb-1 mt-3 text-base" }, Ude = { class: "divide-y rounded b
           ]),
           Z("div", Vde, [
             Z("button", {
-              class: "h-10 grow rounded-lg border bg-white text-base text-black",
+              class: "h-10 grow rounded-lg border bg-white text-base text-black dark:bg-transparent dark:text-white",
               onClick: $[6] || ($[6] = (B) => k())
             }, Pe(R.$t("cancel")), 1),
             Z("button", {
-              class: "h-10 w-[40%] grow rounded-lg bg-gray-600 text-base text-white disabled:cursor-not-allowed disabled:bg-gray-200",
+              class: "h-10 w-[40%] grow rounded-lg bg-blue-400 text-base text-white disabled:cursor-not-allowed disabled:bg-gray-200 dark:disabled:bg-gray-700 dark:disabled:text-gray-500",
               disabled: !l.value || !c.value || !h.value,
               onClick: $[7] || ($[7] = () => {
                 y(), g(R.roomId), k();

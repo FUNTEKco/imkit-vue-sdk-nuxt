@@ -1,4 +1,4 @@
-import { IMStore, IMState } from './modules/imkit';
+import { IMState, IMStore } from './modules/imkit';
 export type RootState = {
     imkit: IMState;
 };

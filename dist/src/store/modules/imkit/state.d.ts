@@ -70,5 +70,8 @@ export type IMState = {
     };
     isSearchInRoomMode: boolean;
     messageSearchKeyword: string;
+    blockedUsers: {
+        [uid: string]: boolean;
+    };
 };
 export declare const state: IMState;

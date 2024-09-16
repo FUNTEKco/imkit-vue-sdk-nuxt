@@ -70,6 +70,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        block: string;
+        unblock: string;
     };
     'zh-TW': {
         close: string;
@@ -140,6 +142,9 @@ declare const i18n: VueI18n.I18n<{
         createTag: string;
         confirmDeleteTag: string;
         editTag: string;
+        chooseColor: string;
+        block: string;
+        unblock: string;
     };
     'ja-JP': {
         close: string;
@@ -211,6 +216,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        block: string;
+        unblock: string;
     };
 }, {}, {}, string, false>;
 export default i18n;

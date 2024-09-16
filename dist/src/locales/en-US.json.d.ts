@@ -67,7 +67,9 @@ declare const _default: {
   "createTag": "Create Tag",
   "confirmDeleteTag": "Confirm Delete Tag?",
   "editTag": "Edit Tag",
-  "chooseColor": "Choose Color"
+  "chooseColor": "Choose Color",
+  "block": "Block",
+  "unblock": "Unblock"
 }
 ;
 

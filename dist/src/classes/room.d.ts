@@ -35,6 +35,7 @@ declare class Room {
     roomTags: string[];
     extra: Record<string, unknown>;
     muted: boolean;
+    ownerId: string | null;
     description: string;
     constructor(raw: any, uid: string);
     get memberIdsWithoutMeAndMyGroup(): string[];

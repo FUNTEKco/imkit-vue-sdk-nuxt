@@ -38,5 +38,8 @@ export declare enum IMActionTypes {
     toggleNotification = "toggleNotification",
     removeRoom = "removeRoom",
     translateMessage = "translateMessage",
+    blockUser = "blockUser",
+    unblockUser = "unblockUser",
+    getBlockList = "getBlockList",
     quickReply = "quickReply"
 }

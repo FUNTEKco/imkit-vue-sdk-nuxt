@@ -67,7 +67,9 @@ declare const _default: {
   "createTag": "タグを作成",
   "confirmDeleteTag": "タグを削除してよろしいですか？",
   "editTag": "タグを編集",
-  "chooseColor": "色を選択"
+  "chooseColor": "色を選択",
+  "block": "ブロック",
+  "unblock": "ブロック解除​"
 }
 ;
 

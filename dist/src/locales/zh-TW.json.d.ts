@@ -66,7 +66,10 @@ declare const _default: {
   "save": "儲存",
   "createTag": "建立標籤",
   "confirmDeleteTag": "確認刪除標籤?",
-  "editTag": "編輯標籤"
+  "editTag": "編輯標籤",
+  "chooseColor": "選擇顏色",
+  "block": "封鎖",
+  "unblock": "解封鎖"
 }
 ;
 

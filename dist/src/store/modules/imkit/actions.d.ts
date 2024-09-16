@@ -91,6 +91,15 @@ export interface Actions {
     [IMActionTypes.toggleNotification](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.removeRoom](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.translateMessage](context: AugmentedActionContext, message: Message): void;
+    [IMActionTypes.blockUser](context: AugmentedActionContext, payload: {
+        roomId: string;
+        uid: string;
+    }): void;
+    [IMActionTypes.unblockUser](context: AugmentedActionContext, payload: {
+        roomId: string;
+        uid: string;
+    }): void;
+    [IMActionTypes.getBlockList](context: AugmentedActionContext, roomId: string): void;
 }
 export declare const actions: ActionTree<IMState, RootState> & Actions;
 export {};

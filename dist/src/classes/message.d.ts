@@ -54,9 +54,9 @@ export declare class TextMessage extends Message {
     translatedText: string | null;
     replyId: string | null;
     urls: string[];
-    html: string;
     get string(): string;
     static autolinker: Autolinker;
+    get html(): string;
     constructor(raw: any);
     static linkfy(text: string): string;
 }

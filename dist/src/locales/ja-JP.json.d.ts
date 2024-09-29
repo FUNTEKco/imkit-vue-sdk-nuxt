@@ -69,7 +69,8 @@ declare const _default: {
   "editTag": "タグを編集",
   "chooseColor": "色を選択",
   "block": "ブロック",
-  "unblock": "ブロック解除​"
+  "unblock": "ブロック解除​",
+  "textareaBlockedHint": "このユーザーはブロックされました。"
 }
 ;
 

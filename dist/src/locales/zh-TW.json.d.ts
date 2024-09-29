@@ -69,7 +69,8 @@ declare const _default: {
   "editTag": "編輯標籤",
   "chooseColor": "選擇顏色",
   "block": "封鎖",
-  "unblock": "解封鎖"
+  "unblock": "解封鎖",
+  "textareaBlockedHint": "此用戶已被封鎖。"
 }
 ;
 

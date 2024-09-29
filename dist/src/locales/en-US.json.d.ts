@@ -69,7 +69,8 @@ declare const _default: {
   "editTag": "Edit Tag",
   "chooseColor": "Choose Color",
   "block": "Block",
-  "unblock": "Unblock"
+  "unblock": "Unblock",
+  "textareaBlockedHint": "This user has been blocked"
 }
 ;
 

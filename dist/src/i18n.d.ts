@@ -72,6 +72,7 @@ declare const i18n: VueI18n.I18n<{
         chooseColor: string;
         block: string;
         unblock: string;
+        textareaBlockedHint: string;
     };
     'zh-TW': {
         close: string;
@@ -145,6 +146,7 @@ declare const i18n: VueI18n.I18n<{
         chooseColor: string;
         block: string;
         unblock: string;
+        textareaBlockedHint: string;
     };
     'ja-JP': {
         close: string;
@@ -218,6 +220,7 @@ declare const i18n: VueI18n.I18n<{
         chooseColor: string;
         block: string;
         unblock: string;
+        textareaBlockedHint: string;
     };
 }, {}, {}, string, false>;
 export default i18n;

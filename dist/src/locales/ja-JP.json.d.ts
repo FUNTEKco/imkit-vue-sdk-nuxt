@@ -70,8 +70,9 @@ declare const _default: {
   "chooseColor": "色を選択",
   "block": "ブロック",
   "unblock": "ブロック解除​",
-  "textareaBlockedHint": "このユーザーはブロックされました。"
-}
-;
+  "textareaBlockedHint": "このユーザーはブロックされました。",
+  "online-status-online": "アクティブ",
+  "online-status-offline": "ないオンライン"
+};
 
 export default _default;

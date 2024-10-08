@@ -70,8 +70,9 @@ declare const _default: {
   "chooseColor": "選擇顏色",
   "block": "封鎖",
   "unblock": "解封鎖",
-  "textareaBlockedHint": "此用戶已被封鎖。"
-}
-;
+  "textareaBlockedHint": "此用戶已被封鎖。",
+  "online-status-online": "上線中",
+  "online-status-offline": "離線中"
+};
 
 export default _default;

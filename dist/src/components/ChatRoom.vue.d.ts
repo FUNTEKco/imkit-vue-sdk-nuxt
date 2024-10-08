@@ -1,12 +1,14 @@
 declare const _default: import('vue').DefineComponent<__VLS_TypePropsToOption<{
     isTestPreview?: boolean;
     pinchatLink?: string;
+    chatStyle?: any;
 }>, {}, unknown, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     send: (...args: any[]) => void;
     goBack: (...args: any[]) => void;
 }, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<__VLS_TypePropsToOption<{
     isTestPreview?: boolean;
     pinchatLink?: string;
+    chatStyle?: any;
 }>>> & {
     onSend?: ((...args: any[]) => any) | undefined;
     onGoBack?: ((...args: any[]) => any) | undefined;

@@ -73,6 +73,8 @@ declare const i18n: VueI18n.I18n<{
         block: string;
         unblock: string;
         textareaBlockedHint: string;
+        "online-status-online": string;
+        "online-status-offline": string;
     };
     'zh-TW': {
         close: string;
@@ -147,6 +149,8 @@ declare const i18n: VueI18n.I18n<{
         block: string;
         unblock: string;
         textareaBlockedHint: string;
+        "online-status-online": string;
+        "online-status-offline": string;
     };
     'ja-JP': {
         close: string;
@@ -221,6 +225,8 @@ declare const i18n: VueI18n.I18n<{
         block: string;
         unblock: string;
         textareaBlockedHint: string;
+        "online-status-online": string;
+        "online-status-offline": string;
     };
 }, {}, {}, string, false>;
 export default i18n;

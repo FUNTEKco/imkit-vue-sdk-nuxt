@@ -72,7 +72,20 @@ declare const _default: {
   "unblock": "解封鎖",
   "textareaBlockedHint": "此用戶已被封鎖。",
   "online-status-online": "上線中",
-  "online-status-offline": "離線中"
-};
+  "online-status-offline": "離線中",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "已送出Email",
+        "placeholder": "輸入信箱"
+      },
+      "phone": {
+        "placeholder": "輸入手機號碼",
+        "submit": "已送出手機號碼"
+      }
+    }
+  }
+}
+;
 
 export default _default;

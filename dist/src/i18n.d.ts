@@ -75,6 +75,18 @@ declare const i18n: VueI18n.I18n<{
         textareaBlockedHint: string;
         "online-status-online": string;
         "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+            };
+        };
     };
     'zh-TW': {
         close: string;
@@ -151,6 +163,18 @@ declare const i18n: VueI18n.I18n<{
         textareaBlockedHint: string;
         "online-status-online": string;
         "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+            };
+        };
     };
     'ja-JP': {
         close: string;
@@ -227,6 +251,18 @@ declare const i18n: VueI18n.I18n<{
         textareaBlockedHint: string;
         "online-status-online": string;
         "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+            };
+        };
     };
 }, {}, {}, string, false>;
 export default i18n;

@@ -72,7 +72,20 @@ declare const _default: {
   "unblock": "ブロック解除​",
   "textareaBlockedHint": "このユーザーはブロックされました。",
   "online-status-online": "アクティブ",
-  "online-status-offline": "ないオンライン"
-};
+  "online-status-offline": "ないオンライン",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "メールが送信されます",
+        "placeholder": "メールアドレスを入力する"
+      },
+      "phone": {
+        "placeholder": "電話番号を入力する",
+        "submit": "電話番号が送信されます"
+      }
+    }
+  }
+}
+;
 
 export default _default;

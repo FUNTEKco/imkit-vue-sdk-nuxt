@@ -72,7 +72,20 @@ declare const _default: {
   "unblock": "Unblock",
   "textareaBlockedHint": "This user has been blocked",
   "online-status-online": "Active",
-  "online-status-offline": "Away"
-};
+  "online-status-offline": "Away",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "Email is sent",
+        "placeholder": "Enter your email"
+      },
+      "phone": {
+        "placeholder": "Enter your phone number",
+        "submit": "Phone number is sent"
+      }
+    }
+  }
+}
+;
 
 export default _default;

@@ -1,7 +1,7 @@
 {
   "name": "imkit-vue-sdk",
   "private": true,
-  "version": "1.79.1",
+  "version": "1.79.2",
   "type": "module",
   "files": [
     "*"
@@ -89,7 +89,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-vue": "^9.27.0",
-    "husky": "9.1.5",
+    "husky": "9.1.6",
     "is-ci": "^3.0.1",
     "lint-staged": "15.2.9",
     "postcss": "^8.4.41",

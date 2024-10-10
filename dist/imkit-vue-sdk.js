@@ -89445,7 +89445,7 @@ const y8 = (t) => (to("data-v-c9c51bc0"), t = t(), no(), t), kme = { class: "rel
       _: 1
     }));
   }
-}), Hme = /* @__PURE__ */ Hn(Ume, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.1", jme = /* @__PURE__ */ et({
+}), Hme = /* @__PURE__ */ Hn(Ume, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.2", jme = /* @__PURE__ */ et({
   __name: "VersionModal",
   setup(t) {
     const e = si(), n = () => {

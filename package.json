@@ -1,7 +1,7 @@
 {
   "name": "imkit-vue-sdk",
   "private": true,
-  "version": "1.79.0",
+  "version": "1.79.1",
   "type": "module",
   "files": [
     "*"
@@ -22,7 +22,7 @@
     "build": "vue-tsc --noEmit && vite build --config vite.config.ts",
     "build:lib": "vue-tsc --noEmit && vite build --config vite-lib.config.ts",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test": "vitest run tests/*",
     "prepare": "is-ci || husky install",
     "upstream:merge": "./scripts/upstream-merge.sh",
     "project:init": "./scripts/project-init.sh",
@@ -31,7 +31,7 @@
   "dependencies": {
     "@vueuse/components": "^11.0.1",
     "@vueuse/core": "^11.0.1",
-    "autolinker": "github:imkit/Autolinker.js#de65847cab0112ad47a64a0ce013ff8c14b6057b",
+    "autolinker": "github:imkit/Autolinker.js#e247fd33d312613c6bc0dae444b88399534c7a06",
     "axios": "^1.7.4",
     "browser-image-compression": "^2.0.2",
     "cheerio": "^1.0.0",

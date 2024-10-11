@@ -65964,7 +65964,7 @@ const Gue = /* @__PURE__ */ K("div", { class: "absolute inset-0 bg-gray-800 bg-o
         class: bt([
           "text-gray-900 dark:text-gray-100",
           r.content.weight === "bold" ? "font-bold" : "font-normal",
-          r.content.wrapb ? "overflow-hidden overflow-clip whitespace-normal break-words" : "overflow-hidden truncate whitespace-nowrap"
+          r.content.wrap ? "overflow-hidden overflow-clip whitespace-normal break-words" : "overflow-hidden truncate whitespace-nowrap"
         ]),
         style: on({ fontSize: n.value, color: r.content.color, "text-size-adjust": "100%" })
       }, ze(r.content.text), 7)

@@ -60,6 +60,7 @@ declare const _default: {
   "today": "Today",
   "confirmToDeleteFolder": "Confirm Delete Folder",
   "hide": "Hide",
+  "unhide": "Unhide",
   "delete": "Delete",
   "cancel": "Cancel",
   "create": "Create",
@@ -71,6 +72,8 @@ declare const _default: {
   "block": "Block",
   "unblock": "Unblock",
   "textareaBlockedHint": "This user has been blocked",
+  "mute": "Mute",
+  "unmute": "Unmute",
   "online-status-online": "Active",
   "online-status-offline": "Away",
   "Request": {

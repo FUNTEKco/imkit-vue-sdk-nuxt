@@ -60,6 +60,7 @@ declare const _default: {
   "today": "今天",
   "confirmToDeleteFolder": "刪除資料夾？",
   "hide": "隱藏",
+  "unhide": "取消隱藏",
   "delete": "刪除",
   "cancel": "取消",
   "create": "建立",
@@ -71,6 +72,8 @@ declare const _default: {
   "block": "封鎖",
   "unblock": "解封鎖",
   "textareaBlockedHint": "此用戶已被封鎖。",
+  "mute": "關閉通知",
+  "unmute": "開啟通知",
   "online-status-online": "上線中",
   "online-status-offline": "離線中",
   "Request": {

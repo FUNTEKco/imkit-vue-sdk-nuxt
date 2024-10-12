@@ -62,6 +62,7 @@ declare const i18n: VueI18n.I18n<{
         today: string;
         confirmToDeleteFolder: string;
         hide: string;
+        unhide: string;
         delete: string;
         cancel: string;
         create: string;
@@ -73,6 +74,8 @@ declare const i18n: VueI18n.I18n<{
         block: string;
         unblock: string;
         textareaBlockedHint: string;
+        mute: string;
+        unmute: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -150,6 +153,7 @@ declare const i18n: VueI18n.I18n<{
         today: string;
         confirmToDeleteFolder: string;
         hide: string;
+        unhide: string;
         delete: string;
         cancel: string;
         create: string;
@@ -161,6 +165,8 @@ declare const i18n: VueI18n.I18n<{
         block: string;
         unblock: string;
         textareaBlockedHint: string;
+        mute: string;
+        unmute: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -238,6 +244,7 @@ declare const i18n: VueI18n.I18n<{
         today: string;
         confirmToDeleteFolder: string;
         hide: string;
+        unhide: string;
         delete: string;
         cancel: string;
         create: string;
@@ -249,6 +256,8 @@ declare const i18n: VueI18n.I18n<{
         block: string;
         unblock: string;
         textareaBlockedHint: string;
+        mute: string;
+        unmute: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {

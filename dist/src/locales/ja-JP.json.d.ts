@@ -60,6 +60,7 @@ declare const _default: {
   "today": "今日",
   "confirmToDeleteFolder": "フォルダを削除しますか？",
   "hide": "非表示",
+  "unhide": "非表示を解除",
   "delete": "削除",
   "cancel": "キャンセル",
   "create": "作成",
@@ -71,6 +72,8 @@ declare const _default: {
   "block": "ブロック",
   "unblock": "ブロック解除​",
   "textareaBlockedHint": "このユーザーはブロックされました。",
+  "mute": "通知をミュート",
+  "unmute": "通知をオンにする",
   "online-status-online": "アクティブ",
   "online-status-offline": "ないオンライン",
   "Request": {

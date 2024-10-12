@@ -65641,7 +65641,7 @@ const Gue = /* @__PURE__ */ K("div", { class: "absolute inset-0 bg-gray-800 bg-o
   }
 }), ile = /* @__PURE__ */ Hn(rle, [["__scopeId", "data-v-5248b347"]]), ha = (t, e) => {
   switch (e.type) {
-    case "text": {
+    case "message": {
       const n = {
         roomId: t,
         messageType: "text",
@@ -89456,7 +89456,7 @@ const y8 = (t) => (Fo("data-v-c9c51bc0"), t = t(), Uo(), t), Dme = { class: "rel
       _: 1
     }));
   }
-}), Ume = /* @__PURE__ */ Hn(Fme, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.4", Hme = /* @__PURE__ */ et({
+}), Ume = /* @__PURE__ */ Hn(Fme, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.5", Hme = /* @__PURE__ */ et({
   __name: "VersionModal",
   setup(t) {
     const e = si(), n = () => {

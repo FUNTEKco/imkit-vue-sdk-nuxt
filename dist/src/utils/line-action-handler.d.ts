@@ -1,8 +1,7 @@
-declare const _default: (action: {
+declare const _default: (roomId: string, action: {
     type: string;
-    label?: string;
-    uri?: string;
-    roomId: string;
-    message: string;
-}) => Window | null | undefined;
+    label: string;
+    uri: string;
+    text: string;
+}) => void;
 export default _default;

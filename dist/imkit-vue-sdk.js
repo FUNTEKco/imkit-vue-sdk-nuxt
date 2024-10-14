@@ -89471,7 +89471,7 @@ const y8 = (t) => (Fo("data-v-c9c51bc0"), t = t(), Uo(), t), Fme = { class: "rel
       _: 1
     }));
   }
-}), Gme = /* @__PURE__ */ Hn(Qme, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.6", Yme = /* @__PURE__ */ et({
+}), Gme = /* @__PURE__ */ Hn(Qme, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.7", Yme = /* @__PURE__ */ et({
   __name: "VersionModal",
   setup(t) {
     const e = si(), n = () => {
@@ -100014,7 +100014,7 @@ const mSe = /* @__PURE__ */ Hn(cSe, [["render", pSe]]), gSe = { class: "relative
         }
       });
     }, C = async () => {
-      await i.dispatch("imkit/updateRoomPrefs", {
+      i.commit("imkit/setState", { actionMenuRoomId: "" }), i.dispatch("imkit/updateRoomPrefs", {
         roomId: e.source.id,
         prefs: {
           hidden: !h.value

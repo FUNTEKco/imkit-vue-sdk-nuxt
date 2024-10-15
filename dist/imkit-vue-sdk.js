@@ -65656,7 +65656,8 @@ const rle = /* @__PURE__ */ K("div", { class: "absolute inset-0 bg-gray-800 bg-o
   }
 }), hle = /* @__PURE__ */ Hn(fle, [["__scopeId", "data-v-5248b347"]]), ha = (t, e) => {
   switch (e.type) {
-    case "message": {
+    case "message":
+    case "text": {
       const n = {
         roomId: t,
         messageType: "text",

@@ -1,3 +1,4 @@
+import { default as Callbacks } from './callbacks';
 import { default as Settings } from './settings';
 import { default as Styles } from './styles';
 type Config = {
@@ -19,5 +20,6 @@ type Config = {
     firebaseVapidKey: string | undefined;
     settings: Settings;
     styles: Styles;
+    callbacks: Callbacks;
 };
 export default Config;

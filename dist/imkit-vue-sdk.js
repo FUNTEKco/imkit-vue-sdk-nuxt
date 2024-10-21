@@ -28672,24 +28672,27 @@ const Vee = {
     }), n(rt.aggregateRoomsAndFolders);
   },
   async [rt.handleMessageFromSocket]({ state: t, commit: e, dispatch: n }, r) {
-    var s;
+    var s, a;
     let i = t.rooms[r.roomId];
     if (i) {
-      const { id: a, numberOfUnread: o } = i;
-      r.roomId === t.selectedRoomId ? (t.processingMessages.has(r.id) || (await n(rt.handleLinkPreviews, [r]), e(Je.pushMessage, r)), e(Je.updateRoom, {
-        id: a,
+      const { id: o, numberOfUnread: u } = i;
+      r.roomId === t.selectedRoomId ? (t.processingMessages.has(r.id) || (await n(rt.handleLinkPreviews, [r]), (s = t.messageMultiList.main) != null && s.contains(r.id) ? e(Je.replaceMessage, {
+        targetMessageId: r.id,
+        message: r
+      }) : e(Je.pushMessage, r)), e(Je.updateRoom, {
+        id: o,
         updatedAt: r.createdAt,
         lastMessage: r,
         numberOfUnread: 0
-      }), n(rt.updateLastRead, a), e(Je.setState, {
+      }), n(rt.updateLastRead, o), e(Je.setState, {
         numberOfTotalMessages: t.numberOfTotalMessages + 1
       })) : e(Je.updateRoom, {
-        id: a,
+        id: o,
         updatedAt: r.createdAt,
         lastMessage: r,
-        numberOfUnread: r.senderId !== t.uid ? o + 1 : o
-      }), (s = i.pref) != null && s.hidden && n(rt.updateRoomPrefs, {
-        roomId: a,
+        numberOfUnread: r.senderId !== t.uid ? u + 1 : u
+      }), (a = i.pref) != null && a.hidden && n(rt.updateRoomPrefs, {
+        roomId: o,
         prefs: {
           hidden: !1
         }
@@ -89460,7 +89463,7 @@ const y8 = (t) => (Fo("data-v-c9c51bc0"), t = t(), Uo(), t), Hme = { class: "rel
       _: 1
     }));
   }
-}), Xme = /* @__PURE__ */ Hn(Yme, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.7", Kme = /* @__PURE__ */ et({
+}), Xme = /* @__PURE__ */ Hn(Yme, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.8", Kme = /* @__PURE__ */ et({
   __name: "VersionModal",
   setup(t) {
     const e = si(), n = () => {

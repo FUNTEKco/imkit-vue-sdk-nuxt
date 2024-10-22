@@ -29451,9 +29451,9 @@ const zee = {
     e.roomId === t.selectedRoomId && ((n = t.messageMultiList.main) == null || n.append(e));
   },
   [Je.replaceMessage](t, e) {
-    var i, s;
+    var i;
     const { targetMessageId: n, message: r } = e;
-    n === r.id && ((i = t.messageMultiList.main) != null && i.contains(r.id)) && t.messageMultiList.main.remove(r.id), (s = t.messageMultiList.main) == null || s.replace(n, r);
+    r.roomId === t.selectedRoomId && ((i = t.messageMultiList.main) == null || i.replace(n, r));
   },
   [Je.clearChatRoom](t) {
     t.messageMultiList = new bD(), t.numberOfTotalMessages = -1, t.replyId = "", t.navigationTargetId = "", t.isTyping = {}, t.isSearchInRoomMode = !1, t.messageSearchKeyword = "", t.blockedUsers = {};
@@ -74930,7 +74930,7 @@ const dhe = (t, e, n = Nn()) => {
   setup(t) {
     const e = t;
     ja("messageId", e.source.id);
-    const n = Hs(), r = e.source, i = {
+    const n = Hs(), r = he(() => e.source), i = {
       [mt.Text]: co,
       [mt.Image]: Hte,
       [mt.Sticker]: bk,
@@ -74958,16 +74958,16 @@ const dhe = (t, e, n = Nn()) => {
       }).reduce((U, j) => j && j.createdAt >= e.source.createdAt ? U + 1 : U, 0) : 0;
     }), o = he(() => e.source.isIncoming), u = he(() => !o.value), c = he(() => {
       var H;
-      if (r.type === mt.Typing)
+      if (r.value.type === mt.Typing)
         return !0;
-      const L = (((H = s.state.imkit.messageMultiList.main) == null ? void 0 : H.messageGroups) ?? /* @__PURE__ */ new Map()).get(r.groupId);
-      return L ? L[0].id === r.id : !1;
+      const L = (((H = s.state.imkit.messageMultiList.main) == null ? void 0 : H.messageGroups) ?? /* @__PURE__ */ new Map()).get(r.value.groupId);
+      return L ? L[0].id === r.value.id : !1;
     }), d = he(() => {
       var H;
-      if (r.type === mt.Typing)
+      if (r.value.type === mt.Typing)
         return !0;
-      const L = (((H = s.state.imkit.messageMultiList.main) == null ? void 0 : H.messageGroups) ?? /* @__PURE__ */ new Map()).get(r.groupId);
-      return L ? L[L.length - 1].id === r.id : !1;
+      const L = (((H = s.state.imkit.messageMultiList.main) == null ? void 0 : H.messageGroups) ?? /* @__PURE__ */ new Map()).get(r.value.groupId);
+      return L ? L[L.length - 1].id === r.value.id : !1;
     }), l = he(() => {
       var k, L;
       return ((L = (k = e.source.template) == null ? void 0 : k.quickReply) == null ? void 0 : L.items) || [];
@@ -75085,10 +75085,10 @@ const dhe = (t, e, n = Nn()) => {
                 o.value && k.source.type === Pe(mt).Flex || (f.value = !0);
               })
             }, [
-              (K(), Mt(Lu(i[k.source.type]), { message: Pe(r) }, null, 8, ["message"]))
+              (K(), Mt(Lu(i[k.source.type]), { message: r.value }, null, 8, ["message"]))
             ], 38)
           ]),
-          o.value && d.value && !f.value && Pe(r).type !== Pe(mt).Typing ? (K(), ie("div", Ehe, ze(Pe(Nn)(k.source.createdAt).format("H:mm")), 1)) : qe("", !0),
+          o.value && d.value && !f.value && r.value.type !== Pe(mt).Typing ? (K(), ie("div", Ehe, ze(Pe(Nn)(k.source.createdAt).format("H:mm")), 1)) : qe("", !0),
           o.value && f.value ? (K(), ie("div", {
             key: 7,
             class: bt(["flex items-center justify-center gap-2", { "mt-5": c.value }])
@@ -75113,7 +75113,7 @@ const dhe = (t, e, n = Nn()) => {
       ], 64);
     };
   }
-}), xhe = /* @__PURE__ */ Rn(Che, [["__scopeId", "data-v-61966647"]]), She = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, whe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, Ihe = ["src", "onClick"], Dhe = {
+}), xhe = /* @__PURE__ */ Rn(Che, [["__scopeId", "data-v-fec9fb76"]]), She = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, whe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, Ihe = ["src", "onClick"], Dhe = {
   key: 0,
   class: "flex h-14 w-full flex-shrink-0 gap-4 overflow-x-auto p-3"
 }, khe = ["src", "onClick"], Nhe = /* @__PURE__ */ et({
@@ -89463,7 +89463,7 @@ const y8 = (t) => (Fo("data-v-c9c51bc0"), t = t(), Uo(), t), Ume = { class: "rel
       _: 1
     }));
   }
-}), Yme = /* @__PURE__ */ Rn(Gme, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.8", Xme = /* @__PURE__ */ et({
+}), Yme = /* @__PURE__ */ Rn(Gme, [["__scopeId", "data-v-c9c51bc0"]]), _8 = "1.79.9", Xme = /* @__PURE__ */ et({
   __name: "VersionModal",
   setup(t) {
     const e = si(), n = () => {

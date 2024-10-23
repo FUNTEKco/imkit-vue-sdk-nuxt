@@ -98873,7 +98873,7 @@ const j3e = /* @__PURE__ */ Lr(H3e), z3e = {
 function G3e(t, e) {
   return K(), ie("svg", q3e, Q3e);
 }
-const Y3e = /* @__PURE__ */ Rn(V3e, [["render", G3e]]), DL = (t) => (Fo("data-v-013c5576"), t = t(), Uo(), t), X3e = {
+const Y3e = /* @__PURE__ */ Rn(V3e, [["render", G3e]]), DL = (t) => (Fo("data-v-f2a4d9d6"), t = t(), Uo(), t), X3e = {
   key: 2,
   class: "relative h-10 w-10"
 }, K3e = /* @__PURE__ */ DL(() => /* @__PURE__ */ Y("div", { class: "flex-grow" }, null, -1)), Z3e = {
@@ -99164,7 +99164,7 @@ const Y3e = /* @__PURE__ */ Rn(V3e, [["render", G3e]]), DL = (t) => (Fo("data-v-
           r.isTestPreview ? qe("", !0) : (K(), ie(Dt, { key: 1 }, [
             f.value ? (K(), ie("div", {
               key: 0,
-              class: "p-[6px] hover:bg-[#00000020]",
+              class: "cursor-pointer rounded p-[6px] hover:bg-[#00000020]",
               style: Xt(`color: ${r.chatStyle.header.color}`)
             }, [
               ft(Y3e, { onClick: He })
@@ -99425,7 +99425,7 @@ const Y3e = /* @__PURE__ */ Rn(V3e, [["render", G3e]]), DL = (t) => (Fo("data-v-
       ], 32)) : qe("", !0);
     };
   }
-}), q4e = /* @__PURE__ */ Rn(gCe, [["__scopeId", "data-v-013c5576"]]);
+}), q4e = /* @__PURE__ */ Rn(gCe, [["__scopeId", "data-v-f2a4d9d6"]]);
 var kL = { exports: {} };
 (function(t, e) {
   (function(n, r) {

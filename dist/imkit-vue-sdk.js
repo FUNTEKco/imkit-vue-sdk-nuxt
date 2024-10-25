@@ -98901,15 +98901,15 @@ const G3e = /* @__PURE__ */ Dn(z3e, [["render", Q3e]]), Y3e = {}, X3e = {
 function tCe(t, e) {
   return X(), ie("svg", X3e, eCe);
 }
-const nCe = /* @__PURE__ */ Dn(Y3e, [["render", tCe]]), DL = (t) => (Fo("data-v-c725b116"), t = t(), Uo(), t), rCe = {
+const nCe = /* @__PURE__ */ Dn(Y3e, [["render", tCe]]), DL = (t) => (Fo("data-v-067d6824"), t = t(), Uo(), t), rCe = {
   key: 2,
   class: "relative h-10 w-10"
 }, iCe = /* @__PURE__ */ DL(() => /* @__PURE__ */ Y("div", { class: "flex-grow" }, null, -1)), sCe = {
   key: 3,
-  class: "flex h-9 w-9 cursor-pointer items-center justify-center rounded hover:bg-[#00000020]"
+  class: "flex h-9 w-9 cursor-pointer items-center justify-center rounded-[5px] hover:bg-[#00000033]"
 }, aCe = {
   key: 4,
-  class: "flex h-9 w-9 cursor-pointer items-center justify-center rounded hover:bg-[#00000020]"
+  class: "flex h-9 w-9 cursor-pointer items-center justify-center rounded-[5px] hover:bg-[#00000033]"
 }, oCe = {
   key: 0,
   slot: "header",
@@ -99184,7 +99184,7 @@ const nCe = /* @__PURE__ */ Dn(Y3e, [["render", tCe]]), DL = (t) => (Fo("data-v-
           f.value ? qe("", !0) : (X(), ie("img", {
             key: 0,
             src: a4,
-            class: "flex cursor-pointer rounded hover:bg-[#00000020] sm:!hidden",
+            class: "flex cursor-pointer rounded-[5px] hover:bg-[#00000033] sm:!hidden",
             width: "36",
             height: "36",
             onClick: ye
@@ -99192,7 +99192,7 @@ const nCe = /* @__PURE__ */ Dn(Y3e, [["render", tCe]]), DL = (t) => (Fo("data-v-
           r.isTestPreview ? qe("", !0) : (X(), ie(Dt, { key: 1 }, [
             f.value ? (X(), ie("div", {
               key: 0,
-              class: "cursor-pointer rounded p-[6px] hover:bg-[#00000020]",
+              class: "cursor-pointer rounded-[5px] p-[6px] hover:bg-[#00000033]",
               style: Kt(`color: ${(st = (Ve = r.chatStyle) == null ? void 0 : Ve.header) == null ? void 0 : st.color}`)
             }, [
               ft(G3e, { onClick: He })
@@ -99451,7 +99451,7 @@ const nCe = /* @__PURE__ */ Dn(Y3e, [["render", tCe]]), DL = (t) => (Fo("data-v-
       ], 32)) : qe("", !0);
     };
   }
-}), K4e = /* @__PURE__ */ Dn(ECe, [["__scopeId", "data-v-c725b116"]]);
+}), K4e = /* @__PURE__ */ Dn(ECe, [["__scopeId", "data-v-067d6824"]]);
 var kL = { exports: {} };
 (function(t, e) {
   (function(n, r) {
@@ -101024,7 +101024,7 @@ function u4e(t, e) {
     (i) => {
       Q0(0, i, e);
       const s = new P3({
-        "IM-Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InBpbmNoYXRfYmV0YV92M18xX2FnZW50XzIwMjIwMjE0MDUyNSIsImV4cCI6MTc2MTA3MTA5NiwiaWF0IjoxNzI5NTM1MDk2fQ.kz7v1VHRu-_Coa1BtsYRxvYpZ7HfwNxT9YxNN9tCEao",
+        "IM-Authorization": e.state.imkit.config.token,
         "IM-Client-Key": e.state.imkit.config.clientKey
       });
       return i.headers = s, i;
@@ -101043,7 +101043,7 @@ function u4e(t, e) {
       if (Q0(1, s, e), i.response.status === 401) {
         await o4e();
         const a = new P3({
-          "IM-Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InBpbmNoYXRfYmV0YV92M18xX2FnZW50XzIwMjIwMjE0MDUyNSIsImV4cCI6MTc2MTA3MTA5NiwiaWF0IjoxNzI5NTM1MDk2fQ.kz7v1VHRu-_Coa1BtsYRxvYpZ7HfwNxT9YxNN9tCEao",
+          "IM-Authorization": e.state.imkit.config.token,
           "IM-Client-Key": e.state.imkit.config.clientKey
         });
         return s.headers = a, Pn.request(s);

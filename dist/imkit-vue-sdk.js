@@ -29983,7 +29983,7 @@ class tte extends zn {
     this.mimeType = a, this.fileName = o, this.bytes = u, this.fileExtension = c, this.duration = s;
   }
 }
-const Ak = (t) => (Fo("data-v-ec2f62b9"), t = t(), Uo(), t), nte = { class: "flex gap-3" }, rte = { class: "flex flex-col gap-1" }, ite = { class: "text-sm font-bold text-gray-600 dark:text-gray-300" }, ste = { class: "multiline-ellipsis text-xs text-gray-500 dark:text-gray-300" }, ate = {
+const Ak = (t) => (Fo("data-v-f149cc7d"), t = t(), Uo(), t), nte = { class: "flex gap-3" }, rte = { class: "flex flex-col gap-1" }, ite = { class: "text-sm font-bold text-gray-600 dark:text-gray-300" }, ste = { class: "multiline-ellipsis text-xs text-gray-500 dark:text-gray-300" }, ate = {
   key: 0,
   class: "ml-auto h-10 w-10 rounded object-cover"
 }, ote = /* @__PURE__ */ Ak(() => /* @__PURE__ */ Y("div", { class: "-mx-4 h-px bg-gray-200 dark:bg-zinc-600" }, null, -1)), ute = ["innerHTML"], lte = ["innerHTML"], cte = ["innerHTML"], dte = {
@@ -30069,18 +30069,18 @@ const Ak = (t) => (Fo("data-v-ec2f62b9"), t = t(), Uo(), t), nte = { class: "fle
           ]),
           ote,
           Y("div", {
-            class: "break-all",
+            class: "break-words",
             innerHTML: d.value
           }, null, 8, ute)
         ])) : (X(), ie("div", {
           key: 1,
-          class: "break-all",
+          class: "break-words",
           innerHTML: d.value,
           onClick: c
         }, null, 8, lte)),
         s.value && h.message.translatedText ? (X(), ie("div", {
           key: 2,
-          class: "break-all text-gray-400",
+          class: "break-words text-gray-400",
           innerHTML: h.$t("translation") + ": " + h.message.translatedText
         }, null, 8, cte)) : qe("", !0),
         a.value.length > 0 ? (X(), ie("div", dte, [
@@ -30104,7 +30104,7 @@ const Ak = (t) => (Fo("data-v-ec2f62b9"), t = t(), Uo(), t), nte = { class: "fle
       ], 64);
     };
   }
-}), co = /* @__PURE__ */ Dn(bte, [["__scopeId", "data-v-ec2f62b9"]]);
+}), co = /* @__PURE__ */ Dn(bte, [["__scopeId", "data-v-f149cc7d"]]);
 function vte() {
   return Math.random().toString(16).substring(2);
 }
@@ -65597,10 +65597,10 @@ const nle = /* @__PURE__ */ Y("div", { class: "absolute inset-0 bg-gray-800 bg-o
       ], 4);
     };
   }
-}), ale = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABV0lEQVR4nO3aMUpDQRSF4VmI1m5HtLCxkMxxA86JazAz2Ygi2LkgbVWMpQpKFCyihSZ33r0x58As4GP+F17gpaRp2sbs6GS6nUu7RGlPYHuzPrm029HJdDdFwYL1vgd0Af2Sx5MDb2/6uNnO2FBodMr4C8n6HAqN/re6t4gG62tmPfyX4PT52MRBYwBwKDQGAodBY0BwCDQGBruj4QB2RcMJ7IaGI9gFDWfwfMes+z+9kXX5w4HOYJyebS2LBuvN2oEz6/Uq6LUDY4BH4k/zBglM3bDtECBbPcPUj5bdECBbJU0lbTcEyFZJU0nbDQGyVdJU0nZDgGyVNJW03RAgWyVNJW03BMhWSVNJ2w0BslXSVNJ2Q4BslTSVtN2wcUmXvh+XrnJyaY/2YNarsGDWc3PwaDzZyaU9eOO+ndLufvupxHJfxZd2AdaZO5R1Nr/ZblhN01LEvQM/68r6Ex4bqgAAAABJRU5ErkJggg==", jM = (t) => (Fo("data-v-5248b347"), t = t(), Uo(), t), ole = /* @__PURE__ */ jM(() => /* @__PURE__ */ Y("img", {
+}), ale = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABV0lEQVR4nO3aMUpDQRSF4VmI1m5HtLCxkMxxA86JazAz2Ygi2LkgbVWMpQpKFCyihSZ33r0x58As4GP+F17gpaRp2sbs6GS6nUu7RGlPYHuzPrm029HJdDdFwYL1vgd0Af2Sx5MDb2/6uNnO2FBodMr4C8n6HAqN/re6t4gG62tmPfyX4PT52MRBYwBwKDQGAodBY0BwCDQGBruj4QB2RcMJ7IaGI9gFDWfwfMes+z+9kXX5w4HOYJyebS2LBuvN2oEz6/Uq6LUDY4BH4k/zBglM3bDtECBbPcPUj5bdECBbJU0lbTcEyFZJU0nbDQGyVdJU0nZDgGyVNJW03RAgWyVNJW03BMhWSVNJ2w0BslXSVNJ2Q4BslTSVtN2wcUmXvh+XrnJyaY/2YNarsGDWc3PwaDzZyaU9eOO+ndLufvupxHJfxZd2AdaZO5R1Nr/ZblhN01LEvQM/68r6Ex4bqgAAAABJRU5ErkJggg==", jM = (t) => (Fo("data-v-540b3010"), t = t(), Uo(), t), ole = /* @__PURE__ */ jM(() => /* @__PURE__ */ Y("img", {
   class: "w-8 object-contain",
   src: ale
-}, null, -1)), ule = { class: "flex flex-col gap-0.5 font-normal" }, lle = { class: "break-all text-base" }, cle = /* @__PURE__ */ jM(() => /* @__PURE__ */ Y("div", { class: "absolute inset-0 -m-2 bg-gray-800 bg-opacity-50 fill-blue-300" }, null, -1)), dle = /* @__PURE__ */ et({
+}, null, -1)), ule = { class: "flex flex-col gap-0.5 font-normal" }, lle = { class: "break-words text-base" }, cle = /* @__PURE__ */ jM(() => /* @__PURE__ */ Y("div", { class: "absolute inset-0 -m-2 bg-gray-800 bg-opacity-50 fill-blue-300" }, null, -1)), dle = /* @__PURE__ */ et({
   __name: "FileMessageContent",
   props: {
     message: {}
@@ -65657,7 +65657,7 @@ const nle = /* @__PURE__ */ Y("div", { class: "absolute inset-0 bg-gray-800 bg-o
       ], 64)) : qe("", !0)
     ]));
   }
-}), fle = /* @__PURE__ */ Dn(dle, [["__scopeId", "data-v-5248b347"]]), fa = (t, e) => {
+}), fle = /* @__PURE__ */ Dn(dle, [["__scopeId", "data-v-540b3010"]]), fa = (t, e) => {
   switch (e.type) {
     case "message":
     case "text": {
@@ -89463,7 +89463,7 @@ const yO = (t) => (Fo("data-v-c9c51bc0"), t = t(), Uo(), t), Fme = { class: "rel
       _: 1
     }));
   }
-}), Gme = /* @__PURE__ */ Dn(Qme, [["__scopeId", "data-v-c9c51bc0"]]), _O = "1.79.9", Yme = /* @__PURE__ */ et({
+}), Gme = /* @__PURE__ */ Dn(Qme, [["__scopeId", "data-v-c9c51bc0"]]), _O = "1.79.10", Yme = /* @__PURE__ */ et({
   __name: "VersionModal",
   setup(t) {
     const e = si(), n = () => {

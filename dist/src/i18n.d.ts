@@ -88,6 +88,10 @@ declare const i18n: VueI18n.I18n<{
                     placeholder: string;
                     submit: string;
                 };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
             };
         };
     };
@@ -179,6 +183,10 @@ declare const i18n: VueI18n.I18n<{
                     placeholder: string;
                     submit: string;
                 };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
             };
         };
     };
@@ -269,6 +277,10 @@ declare const i18n: VueI18n.I18n<{
                 phone: {
                     placeholder: string;
                     submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
                 };
             };
         };

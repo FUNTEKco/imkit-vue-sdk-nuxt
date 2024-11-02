@@ -18583,6 +18583,10 @@ const $q = "Close", Wq = "Confirm", Qq = "Folder Name", Gq = "Create Folder", Yq
     phone: {
       placeholder: "Enter your phone number",
       submit: "Phone number is sent"
+    },
+    text: {
+      submit: "Text is sent",
+      placeholder: "Enter text content"
     }
   }
 }, cW = {
@@ -18673,6 +18677,10 @@ const $q = "Close", Wq = "Confirm", Qq = "Folder Name", Gq = "Create Folder", Yq
     phone: {
       placeholder: "電話番号を入力する",
       submit: "電話番号が送信されます"
+    },
+    text: {
+      submit: "テキストが送信される",
+      placeholder: "テキストの内容を入力してください"
     }
   }
 }, kQ = {
@@ -18763,6 +18771,10 @@ const $q = "Close", Wq = "Confirm", Qq = "Folder Name", Gq = "Create Folder", Yq
     phone: {
       placeholder: "輸入手機號碼",
       submit: "已送出手機號碼"
+    },
+    text: {
+      submit: "已送出文字回覆",
+      placeholder: "輸入文字回覆"
     }
   }
 }, XG = {

@@ -85,10 +85,13 @@ declare const _default: {
       "phone": {
         "placeholder": "輸入手機號碼",
         "submit": "已送出手機號碼"
+      },
+      "text": {
+        "submit": "已送出文字回覆",
+        "placeholder": "輸入文字回覆"
       }
     }
   }
-}
-;
+};
 
 export default _default;

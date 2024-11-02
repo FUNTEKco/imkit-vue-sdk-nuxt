@@ -85,10 +85,13 @@ declare const _default: {
       "phone": {
         "placeholder": "Enter your phone number",
         "submit": "Phone number is sent"
+      },
+      "text": {
+        "submit": "Text is sent",
+        "placeholder": "Enter text content"
       }
     }
   }
-}
-;
+};
 
 export default _default;

@@ -91,7 +91,9 @@ declare const _default: {
         "placeholder": "Enter text content"
       }
     }
-  }
-};
+  },
+  "emailFromatError": "Please enter correct format"
+}
+;
 
 export default _default;

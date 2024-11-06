@@ -91,7 +91,9 @@ declare const _default: {
         "placeholder": "輸入文字回覆"
       }
     }
-  }
-};
+  },
+  "emailFromatError": "請輸入正確格式"
+}
+;
 
 export default _default;

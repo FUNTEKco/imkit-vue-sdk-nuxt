@@ -91,7 +91,9 @@ declare const _default: {
         "placeholder": "テキストの内容を入力してください"
       }
     }
-  }
-};
+  },
+  "emailFromatError": "正しい形式を入力してください"
+}
+;
 
 export default _default;

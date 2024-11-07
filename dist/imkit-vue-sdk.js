@@ -66051,7 +66051,7 @@ const Zle = /* @__PURE__ */ Dn(Qle, [["render", Kle]]), Jle = { class: "flex ite
   alt: ""
 }, rce = {
   key: 0,
-  class: "mt-2 text-[#be7b7a]"
+  class: "mt-2 text-[#fe4d4f]"
 }, ice = /* @__PURE__ */ et({
   __name: "FlexMessageInputComponent",
   props: {
@@ -66066,7 +66066,7 @@ const Zle = /* @__PURE__ */ Dn(Qle, [["render", Kle]]), Jle = { class: "flex ite
         return (c = i.state.imkit.messageMultiList.main) == null ? void 0 : c.map.get(a);
       }
     ), u = () => {
-      if (alert(e.content.completed), !e.content.completed) {
+      if (!e.content.completed) {
         if (e.content.subtype === "email") {
           if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(n.value)) {
             r.value = !0;
@@ -66098,7 +66098,7 @@ const Zle = /* @__PURE__ */ Dn(Qle, [["render", Kle]]), Jle = { class: "flex ite
       r.value ? (X(), ie("div", rce, ze(c.$t("emailFromatError")), 1)) : qe("", !0)
     ], 64));
   }
-}), sce = /* @__PURE__ */ Dn(ice, [["__scopeId", "data-v-92e12313"]]), sf = /* @__PURE__ */ et({
+}), sce = /* @__PURE__ */ Dn(ice, [["__scopeId", "data-v-95bce50d"]]), sf = /* @__PURE__ */ et({
   __name: "FlexMessageComponent",
   props: {
     content: {}

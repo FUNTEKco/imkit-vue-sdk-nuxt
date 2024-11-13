@@ -13,5 +13,6 @@ type Settings = {
     showLeaveRoomButton: boolean;
     massTextingEnabled: boolean;
     showDarkModeSwitch: boolean;
+    fixedRoomEnabled: boolean;
 };
 export default Settings;

@@ -99619,7 +99619,7 @@ const nT = /* @__PURE__ */ Lr(LCe), RCe = { class: "flex flex-col divide-y bg-wh
           G("div", XCe, He(h.$t("createdAt")) + " " + He(Le(Ln)(n.value.createdAt).format("lll")), 1),
           G("div", KCe, He(h.$t("updatedAt")) + " " + He(Le(Ln)(n.value.updatedAt).format("lll")), 1)
         ]),
-        !n.value.isSuperuser && s.value.showLeaveRoomButton ? (X(), ie("button", {
+        !n.value.isSuperuser && s.value.showLeaveRoomButton && !i.value.endsWith("_sub") ? (X(), ie("button", {
           key: 0,
           class: "w-full rounded-lg border p-2 text-gray-500 dark:text-gray-300",
           onClick: p[0] || (p[0] = (g) => Le(e).dispatch("imkit/removeMembers", {

@@ -99597,7 +99597,7 @@ const nT = /* @__PURE__ */ Lr(LCe), RCe = { class: "flex flex-col divide-y bg-wh
                 G("div", qCe, He(r.value[g].nickname), 1),
                 r.value[g].city && r.value[g].country ? (X(), ie("div", $Ce, He(r.value[g].city) + ", " + He(r.value[g].country), 1)) : qe("", !0)
               ]),
-              n.value.isSuperuser && g != i.value && !f.value ? (X(), ie(Dt, { key: 0 }, [
+              n.value.isSuperuser && g != i.value && !f.value && !g.endsWith("_sub") && g !== "BOT" ? (X(), ie(Dt, { key: 0 }, [
                 u.value[g] ? (X(), ie("div", WCe, [
                   G("button", {
                     onClick: (A) => l(g),

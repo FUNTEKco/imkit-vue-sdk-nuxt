@@ -26777,7 +26777,7 @@ class Tf {
       }
     } = fn();
     return this.memberIds.filter(
-      (r) => r !== e && !n[r].memberIds[e]
+      (r) => r !== e && !n[r].memberIds[e] && r !== "BOT" && !r.endsWith("_sub")
     );
   }
   _displayName(e, n) {
@@ -26807,7 +26807,9 @@ class Tf {
       if (this.type == "direct")
         return (r = this.memberIdsWithoutMeAndMyGroup.map((i) => n[i])[0]) == null ? void 0 : r.nickname;
       if (this.type == "group")
-        return this.memberIds.filter((i) => i !== e).map((i) => n[i].nickname).join(", ");
+        return this.memberIds.filter(
+          (i) => i !== e && i !== "BOT" && !i.endsWith("_sub")
+        ).map((i) => n[i].nickname).join(", ");
     }
     return "";
   }

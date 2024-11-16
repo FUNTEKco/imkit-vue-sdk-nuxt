@@ -76,6 +76,8 @@ declare const i18n: VueI18n.I18n<{
         textareaBlockedHint: string;
         mute: string;
         unmute: string;
+        chatroomDeleteConfirmationTitle: string;
+        chatroomDeleteConfirmationMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -172,6 +174,8 @@ declare const i18n: VueI18n.I18n<{
         textareaBlockedHint: string;
         mute: string;
         unmute: string;
+        chatroomDeleteConfirmationTitle: string;
+        chatroomDeleteConfirmationMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -268,6 +272,8 @@ declare const i18n: VueI18n.I18n<{
         textareaBlockedHint: string;
         mute: string;
         unmute: string;
+        chatroomDeleteConfirmationTitle: string;
+        chatroomDeleteConfirmationMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {

@@ -74,6 +74,8 @@ declare const _default: {
   "textareaBlockedHint": "このユーザーはブロックされました。",
   "mute": "通知をミュート",
   "unmute": "通知をオンにする",
+  "chatroomDeleteConfirmationTitle": "チャットルームの削除を確認？",
+  "chatroomDeleteConfirmationMessage": "チャットルームを削除すると、そのチャットルームの過去のチャットを閲覧することができなくなります。他の視聴者のコーナーにあるチャットルームは影響を受けず、新しいメッセージを送信することができます。",
   "online-status-online": "アクティブ",
   "online-status-offline": "ないオンライン",
   "Request": {

@@ -89,7 +89,6 @@ export interface Actions {
     }): void;
     [IMActionTypes.batchSendMessage](context: AugmentedActionContext, payload: Record<string, unknown>): void;
     [IMActionTypes.toggleNotification](context: AugmentedActionContext, roomId: string): void;
-    [IMActionTypes.removeRoom](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.translateMessage](context: AugmentedActionContext, message: Message): void;
     [IMActionTypes.blockUser](context: AugmentedActionContext, payload: {
         roomId: string;
@@ -100,6 +99,7 @@ export interface Actions {
         uid: string;
     }): void;
     [IMActionTypes.getBlockList](context: AugmentedActionContext, roomId: string): void;
+    [IMActionTypes.hideMessagesFromUserInRoom](context: AugmentedActionContext, roomId: string): void;
 }
 export declare const actions: ActionTree<IMState, RootState> & Actions;
 export {};

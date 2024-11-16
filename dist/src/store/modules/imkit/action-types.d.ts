@@ -36,10 +36,10 @@ export declare enum IMActionTypes {
     fetchRoomsInFolders = "fetchRoomsInFolders",
     batchSendMessage = "batchSendMessage",
     toggleNotification = "toggleNotification",
-    removeRoom = "removeRoom",
     translateMessage = "translateMessage",
     blockUser = "blockUser",
     unblockUser = "unblockUser",
     getBlockList = "getBlockList",
+    hideMessagesFromUserInRoom = "hideMessagesFromUserInRoom",
     quickReply = "quickReply"
 }

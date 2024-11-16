@@ -74,6 +74,8 @@ declare const _default: {
   "textareaBlockedHint": "此用戶已被封鎖。",
   "mute": "關閉通知",
   "unmute": "開啟通知",
+  "chatroomDeleteConfirmationTitle": "確認要刪除聊天室嗎？",
+  "chatroomDeleteConfirmationMessage": "刪除聊天室後，您將無法再檢視此聊天室過去的聊天記錄。對方視角下的聊天室將不受任何影響，且還是可以傳新訊息給您。",
   "online-status-online": "上線中",
   "online-status-offline": "離線中",
   "Request": {

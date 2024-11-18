@@ -74776,17 +74776,17 @@ const Ofe = (t, e, n = Mn()) => {
         return (q = P.main) == null ? void 0 : q.finds(j);
       }).reduce((H, j) => j && j.createdAt >= e.source.createdAt ? H + 1 : H, 0) : 0;
     }), o = pe(() => e.source.isIncoming), u = pe(() => !o.value), c = pe(() => {
-      var P;
+      var P, U;
       if (r.value.type === pt.Typing)
         return !0;
       const R = (((P = s.state.imkit.messageMultiList.main) == null ? void 0 : P.messageGroups) ?? /* @__PURE__ */ new Map()).get(r.value.groupId);
-      return R ? R[0].id === r.value.id : !1;
+      return R ? R[0].id === r.value.id || ((U = r.value.prev) == null ? void 0 : U.senderId) !== r.value.senderId : !1;
     }), d = pe(() => {
-      var P;
+      var P, U;
       if (r.value.type === pt.Typing)
         return !0;
       const R = (((P = s.state.imkit.messageMultiList.main) == null ? void 0 : P.messageGroups) ?? /* @__PURE__ */ new Map()).get(r.value.groupId);
-      return R ? R[R.length - 1].id === r.value.id : !1;
+      return R ? R[R.length - 1].id === r.value.id || ((U = r.value.next) == null ? void 0 : U.senderId) !== r.value.senderId : !1;
     }), l = pe(() => {
       var N, R;
       return ((R = (N = e.source.template) == null ? void 0 : N.quickReply) == null ? void 0 : R.items) || [];
@@ -74932,7 +74932,7 @@ const Ofe = (t, e, n = Mn()) => {
       ], 64);
     };
   }
-}), $fe = /* @__PURE__ */ Dn(qfe, [["__scopeId", "data-v-fec9fb76"]]), Wfe = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, Qfe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, Gfe = ["src", "onClick"], Yfe = {
+}), $fe = /* @__PURE__ */ Dn(qfe, [["__scopeId", "data-v-74d3b5e3"]]), Wfe = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, Qfe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, Gfe = ["src", "onClick"], Yfe = {
   key: 0,
   class: "flex h-14 w-full flex-shrink-0 gap-4 overflow-x-auto p-3"
 }, Xfe = ["src", "onClick"], Kfe = /* @__PURE__ */ et({

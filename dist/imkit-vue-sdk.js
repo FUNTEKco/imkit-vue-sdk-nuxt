@@ -99638,7 +99638,7 @@ const H3e = { class: "mb-1 mt-3 text-base" }, j3e = { class: "divide-y rounded b
       uh('<g clip-path="url(#ovlhak8zza)" fill="#FF4D4F"><path d="M25 0C11.215 0 0 11.215 0 25s11.215 25 25 25 25-11.215 25-25S38.785 0 25 0zm0 45.161C13.883 45.161 4.839 36.117 4.839 25S13.883 4.839 25 4.839 45.161 13.883 45.161 25 36.117 45.161 25 45.161z"></path><path d="M25 12.299a2.419 2.419 0 0 0-2.42 2.42v13.219a2.42 2.42 0 0 0 4.839 0v-13.22a2.419 2.419 0 0 0-2.42-2.42zM25 37.12a2.42 2.42 0 1 0 0-4.84 2.42 2.42 0 0 0 0 4.84z"></path></g><defs><clipPath id="ovlhak8zza"><path fill="#fff" d="M0 0h50v50H0z"></path></clipPath></defs>', 2)
     ]), 8, uCe));
   }
-}, cCe = { class: "w-full" }, dCe = { class: "text-base font-medium text-stone-800 dark:text-stone-300" }, fCe = { class: "text-sm font-normal text-stone-700 dark:text-stone-400" }, hCe = { class: "flex w-full gap-3" }, pCe = /* @__PURE__ */ et({
+}, cCe = { class: "w-full" }, dCe = { class: "text-center text-base font-medium text-stone-800 dark:text-stone-300" }, fCe = { class: "text-sm font-normal text-stone-700 dark:text-stone-400" }, hCe = { class: "flex w-full gap-3" }, pCe = /* @__PURE__ */ et({
   __name: "DeleteRoomModal",
   props: {
     roomId: {}

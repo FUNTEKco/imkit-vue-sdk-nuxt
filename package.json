@@ -29,6 +29,7 @@
     "generate:token": "./scripts/generate-token.sh"
   },
   "dependencies": {
+    "@vueform/toggle": "^2.1.4",
     "@vueuse/components": "^11.2.0",
     "@vueuse/core": "^11.2.0",
     "autolinker": "github:imkit/Autolinker.js#e247fd33d312613c6bc0dae444b88399534c7a06",

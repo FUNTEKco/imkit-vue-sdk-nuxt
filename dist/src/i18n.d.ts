@@ -97,6 +97,8 @@ declare const i18n: VueI18n.I18n<{
             };
         };
         emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'zh-TW': {
         close: string;
@@ -195,6 +197,8 @@ declare const i18n: VueI18n.I18n<{
             };
         };
         emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'ja-JP': {
         close: string;
@@ -293,6 +297,8 @@ declare const i18n: VueI18n.I18n<{
             };
         };
         emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
 }, {}, {}, string, false>;
 export default i18n;

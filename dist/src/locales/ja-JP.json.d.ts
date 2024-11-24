@@ -94,7 +94,9 @@ declare const _default: {
       }
     }
   },
-  "emailFromatError": "正しい形式を入力してください"
+  "emailFromatError": "正しい形式を入力してください",
+  "chatbotSwitch": "チャットボット",
+  "chatbotSwitchDescription": "チャットボットをオンにすると、チャットボットが設定したフローに従って他のパーティーに応答します。チャットボットをオフにすると、実際の人間の返信モードに入ることができます。"
 }
 ;
 

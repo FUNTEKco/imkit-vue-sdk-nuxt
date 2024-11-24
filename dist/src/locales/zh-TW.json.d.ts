@@ -94,7 +94,9 @@ declare const _default: {
       }
     }
   },
-  "emailFromatError": "請輸入正確格式"
+  "emailFromatError": "請輸入正確格式",
+  "chatbotSwitch": "聊天機器人開關",
+  "chatbotSwitchDescription": "開啟聊天機器人，機器人會依照您設定的流程回應對方。關閉機器人，可以進入真人回覆模式"
 }
 ;
 

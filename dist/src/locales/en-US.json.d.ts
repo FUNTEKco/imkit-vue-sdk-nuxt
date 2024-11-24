@@ -94,7 +94,9 @@ declare const _default: {
       }
     }
   },
-  "emailFromatError": "Please enter correct format"
+  "emailFromatError": "Please enter correct format",
+  "chatbotSwitch": "Chatbot",
+  "chatbotSwitchDescription": "Turn on the chatbot, the chatbot will respond to the other party according to the flow you set. Turn off the chatbot, you can enter the real person reply mode."
 }
 ;
 

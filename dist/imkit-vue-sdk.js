@@ -65588,14 +65588,14 @@ const Vue = { class: "absolute bottom-2 right-2 rounded-full bg-black bg-opacity
             class: "flex flex-col gap-1 p-3 text-sm",
             onClick: (c) => Le(ca)(i.message.roomId, a.defaultAction)
           }, [
-            q("div", null, Ue((u = a.title) == null ? void 0 : u.substring(0, 40)), 1),
+            q("div", null, Ue((u = a.title) == null ? void 0 : u.substring(0, 100)), 1),
             a.text ? (Q(), se("div", {
               key: 0,
               class: mt(["text-sm", {
                 "text-gray-500 dark:text-gray-300": n.value,
                 "text-gray-100": r.value
               }])
-            }, Ue(!a.thumbnailImageUrl && !a.title ? a.text.substring(0, 160) : a.text.substring(0, 60)), 3)) : Ve("", !0)
+            }, Ue(!a.thumbnailImageUrl && !a.title ? a.text.substring(0, 160) : a.text.substring(0, 300)), 3)) : Ve("", !0)
           ], 8, ule),
           a.actions.length > 0 ? (Q(), se("div", lle, [
             (Q(!0), se(It, null, gn(a.actions, (c) => (Q(), se("div", {

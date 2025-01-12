@@ -76,6 +76,7 @@ export interface Actions {
     [IMActionTypes.handleTypingFromSocket](context: AugmentedActionContext, payload: {
         room: string;
         sender: string;
+        senderInfo: Record<string, unknown>;
     }): void;
     [IMActionTypes.insertUnreadMessage](context: AugmentedActionContext): void;
     [IMActionTypes.translate](context: AugmentedActionContext, text: string): Promise<string>;

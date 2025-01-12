@@ -89301,7 +89301,7 @@ const mme = { class: "relative flex justify-center" }, gme = {
       _: 1
     }));
   }
-}), Tme = /* @__PURE__ */ Sn(_me, [["__scopeId", "data-v-c9c51bc0"]]), UO = "1.81.1", Eme = /* @__PURE__ */ tt({
+}), Tme = /* @__PURE__ */ Sn(_me, [["__scopeId", "data-v-c9c51bc0"]]), UO = "1.81.2", Eme = /* @__PURE__ */ tt({
   __name: "VersionModal",
   setup(t) {
     const e = Ur(), n = () => {
@@ -101052,8 +101052,10 @@ function xSe(t, e) {
   }), s.on("disconnect", (a) => {
     console.log(a);
   }), s.on("chat message", (a) => {
-    const o = {}, u = new na(a.sender);
-    o[u.id] = u, e.commit("imkit/updateField", { key: "users", value: o }), e.dispatch("imkit/handleMessageFromSocket", jn.fromRaw(a));
+    const o = jn.fromRaw(a);
+    e.state.imkit.config.callbacks.onMessageReceived(o);
+    const c = {}, d = new na(a.sender);
+    c[d.id] = d, e.commit("imkit/updateField", { key: "users", value: c }), e.dispatch("imkit/handleMessageFromSocket", o);
   }), s.on("room", (a) => {
     const o = new hf(a, e.state.uid);
     if (!o.id) return;

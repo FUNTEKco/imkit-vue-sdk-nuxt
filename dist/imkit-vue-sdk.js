@@ -98968,7 +98968,9 @@ const e3e = /* @__PURE__ */ Sn(KEe, [["render", JEe]]), t3e = {
       }
     )), Y = pe(() => {
       var ae;
-      return !((ae = u.value) != null && ae.isSuperuser) || u.value.memberIds.length <= 1 ? !1 : u.value.memberIds.filter((ve) => ve !== i.state.imkit.uid).reduce((ve, Ne) => ve && i.state.imkit.blockedUsers[Ne], !0);
+      return !((ae = u.value) != null && ae.isSuperuser) || u.value.memberIds.length <= 1 ? !1 : u.value.memberIds.filter(
+        (ve) => ve !== i.state.imkit.uid && !ve.endsWith("_sub")
+      ).reduce((ve, Ne) => ve && i.state.imkit.blockedUsers[Ne], !0);
     });
     return (ae, ve) => {
       var Fe, ge, Oe, ot, Ze, Tt, Wt, Ht, ft;
@@ -99275,7 +99277,7 @@ const e3e = /* @__PURE__ */ Sn(KEe, [["render", JEe]]), t3e = {
       ], 32)) : Ve("", !0);
     };
   }
-}), hwe = /* @__PURE__ */ Sn(g3e, [["__scopeId", "data-v-868c7b5a"]]);
+}), hwe = /* @__PURE__ */ Sn(g3e, [["__scopeId", "data-v-db157f5a"]]);
 var Q2 = { name: "Toggle", emits: ["input", "update:modelValue", "change"], props: { value: { validator: function(t) {
   return (e) => ["number", "string", "boolean"].indexOf(typeof e) !== -1 || e == null;
 }, required: !1 }, modelValue: { validator: function(t) {

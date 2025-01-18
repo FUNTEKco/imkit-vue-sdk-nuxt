@@ -28423,15 +28423,18 @@ const Pee = {
     } = await t.axios.get(`/rooms/${n}`), i = new hf(r, t.uid), s = {};
     s[i.id] = i, e(et.updateField, { key: "rooms", value: s });
     const a = {};
-    r.members.flatMap((c) => Array.isArray(c.members) ? [...c.members, c] : [c]).forEach((c) => {
-      a[c.id] || (a[c.id] = new na(c));
+    r.members.flatMap((d) => Array.isArray(d.members) ? [...d.members, d] : [d]).forEach((d) => {
+      a[d.id] || (a[d.id] = new na(d));
     });
     const o = i.extra.clientName;
-    for (const c in o)
-      a[c] && (a[c].nickname = o[c]);
+    for (const d in o)
+      a[d] && (a[d].nickname = o[d]);
     const u = i.extra.clientAvatar;
-    for (const c in u)
-      a[c] && (a[c].avatarUrl = u[c]);
+    for (const d in u)
+      a[d] && (a[d].avatarUrl = u[d]);
+    const c = i.extra.subAccountShareAvatars;
+    for (const d in a)
+      c[d] && (a[d].avatarUrl = i.extra.clientAvatar[i.extra.agentId], a[d].nickname = i.extra.clientName[i.extra.agentId]);
     e(et.updateField, { key: "users", value: a });
   },
   async [rt.updateLastRead]({ state: t, commit: e }, n) {

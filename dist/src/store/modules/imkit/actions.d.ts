@@ -5,7 +5,6 @@ import { default as IMImage } from '../../../classes/image';
 import { IMState } from './state';
 import { default as LinkPreview } from '../../../classes/linkPreview';
 import { Mutations } from './mutations';
-import { default as Room } from '../../../classes/room';
 import { RootState } from '../../../store';
 type AugmentedActionContext = {
     commit<K extends keyof Mutations>(key: K, payload?: Parameters<Mutations[K]>[1]): ReturnType<Mutations[K]>;
@@ -24,7 +23,7 @@ export interface Actions {
     [IMActionTypes.fetchRoom](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.updateLastRead](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.handleMessageFromSocket](context: AugmentedActionContext, message: Message): void;
-    [IMActionTypes.handleRoomFromSocket](context: AugmentedActionContext, room: Room): void;
+    [IMActionTypes.handleRoomFromSocket](context: AugmentedActionContext, room: Record<string, unknown>): void;
     [IMActionTypes.handleLastReadFromSocket](context: AugmentedActionContext, event: {
         roomId: string;
         uid: string;

@@ -65902,16 +65902,16 @@ const Ole = /* @__PURE__ */ Sn(Dle, [["render", Nle]]), Mle = { class: "flex ite
         ]),
         q("button", {
           disabled: !n.value,
-          class: "rounded-lg bg-[#02b13f] p-[6px] disabled:cursor-not-allowed disabled:bg-gray-400",
+          class: mt(["rounded-lg p-[6px] disabled:cursor-not-allowed disabled:bg-gray-400", { "bg-[#02b13f]": !c.content.completed }]),
           onClick: u
         }, [
           c.content.completed ? (Q(), se("img", Ple)) : (Q(), kt(Ole, { key: 0 }))
-        ], 8, Rle)
+        ], 10, Rle)
       ]),
       r.value ? (Q(), se("div", Ble, Ue(c.$t("emailFromatError")), 1)) : Ve("", !0)
     ], 64));
   }
-}), Ule = /* @__PURE__ */ Sn(Fle, [["__scopeId", "data-v-ecf5759b"]]), Yd = /* @__PURE__ */ et({
+}), Ule = /* @__PURE__ */ Sn(Fle, [["__scopeId", "data-v-a79fc6c7"]]), Yd = /* @__PURE__ */ et({
   __name: "FlexMessageComponent",
   props: {
     content: {}

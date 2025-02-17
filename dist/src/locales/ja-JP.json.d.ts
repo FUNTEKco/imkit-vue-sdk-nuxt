@@ -65,7 +65,7 @@ declare const _default: {
   "cancel": "キャンセル",
   "create": "作成",
   "save": "保存",
-  "createTag": "タグを作成",
+  "createTag": "タグ名を入力してください",
   "confirmDeleteTag": "タグを削除してよろしいですか？",
   "editTag": "タグを編集",
   "chooseColor": "色を選択",

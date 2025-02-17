@@ -65,7 +65,7 @@ declare const _default: {
   "cancel": "Cancel",
   "create": "Create",
   "save": "Save",
-  "createTag": "Create Tag",
+  "createTag": "Enter tag name",
   "confirmDeleteTag": "Confirm Delete Tag?",
   "editTag": "Edit Tag",
   "chooseColor": "Choose Color",

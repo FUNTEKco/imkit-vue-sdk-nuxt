@@ -65,7 +65,7 @@ declare const _default: {
   "cancel": "取消",
   "create": "建立",
   "save": "儲存",
-  "createTag": "建立標籤",
+  "createTag": "輸入標籤名稱",
   "confirmDeleteTag": "確認刪除標籤?",
   "editTag": "編輯標籤",
   "chooseColor": "選擇顏色",

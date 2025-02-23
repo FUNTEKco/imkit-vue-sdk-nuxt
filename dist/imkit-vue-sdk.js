@@ -74829,7 +74829,7 @@ const Yfe = (t, e, n = On()) => {
 }, the = { key: 0 }, nhe = {
   key: 5,
   class: "w-[30px]"
-}, rhe = { class: "flex max-w-[70%] flex-col items-start sm:max-w-[60%]" }, ihe = {
+}, rhe = { class: "flex flex-col items-start" }, ihe = {
   key: 0,
   class: "mb-1 ml-1 text-xs font-medium text-gray-500 dark:text-gray-300"
 }, she = { class: "flex gap-2" }, ahe = {
@@ -74837,7 +74837,7 @@ const Yfe = (t, e, n = On()) => {
   class: "self-end text-xs text-gray-500 dark:text-gray-300"
 }, ohe = {
   key: 1,
-  class: "flex items-center justify-center gap-2"
+  class: "flex shrink-0 items-center justify-center gap-2"
 }, uhe = /* @__PURE__ */ Ze({
   inheritAttrs: !1,
   __name: "MessageCell",
@@ -74952,19 +74952,19 @@ const Yfe = (t, e, n = On()) => {
           u.value && f.value ? (Q(), ie("img", {
             key: 0,
             src: U7,
-            class: "my-auto h-5 w-5 cursor-pointer",
+            class: "my-auto h-5 w-5 shrink-0 cursor-pointer",
             onClick: b
           })) : Ve("", !0),
           u.value && f.value ? (Q(), ie("img", {
             key: 1,
             src: QT,
-            class: "my-auto h-5 w-5 cursor-pointer",
+            class: "my-auto h-5 w-5 shrink-0 cursor-pointer",
             onClick: m
           })) : Ve("", !0),
           u.value && f.value ? (Q(), ie("img", {
             key: 2,
             src: GT,
-            class: "my-auto h-5 w-5 cursor-pointer",
+            class: "my-auto h-5 w-5 shrink-0 cursor-pointer",
             onClick: p
           })) : Ve("", !0),
           u.value && d.value && !f.value ? (Q(), ie("div", ehe, [
@@ -74981,7 +74981,7 @@ const Yfe = (t, e, n = On()) => {
             o.value && c.value ? (Q(), ie("div", ihe, Ue(((U = S.value) == null ? void 0 : U.nickname) ?? ""), 1)) : Ve("", !0),
             q("div", she, [
               q("div", {
-                class: gt(["relative overflow-hidden rounded bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-gray-100", [
+                class: gt(["relative max-w-[70%] overflow-hidden rounded bg-gray-100 text-gray-900 dark:bg-zinc-700 dark:text-gray-100 sm:max-w-[60%]", [
                   o.value ? "rounded-r-xl" : "rounded-l-xl",
                   u.value && c.value ? "rounded-tr-xl" : "",
                   u.value && d.value ? "rounded-br-xl" : "",
@@ -75029,7 +75029,7 @@ const Yfe = (t, e, n = On()) => {
       ], 64);
     };
   }
-}), lhe = /* @__PURE__ */ Tn(uhe, [["__scopeId", "data-v-507931a3"]]), che = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, dhe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, fhe = ["src", "onClick"], hhe = {
+}), lhe = /* @__PURE__ */ Tn(uhe, [["__scopeId", "data-v-53b1cd47"]]), che = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, dhe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, fhe = ["src", "onClick"], hhe = {
   key: 0,
   class: "flex h-14 w-full flex-shrink-0 gap-4 overflow-x-auto p-3"
 }, phe = ["src", "onClick"], mhe = /* @__PURE__ */ Ze({

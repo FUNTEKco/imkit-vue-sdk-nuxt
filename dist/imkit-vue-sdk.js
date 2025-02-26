@@ -74832,7 +74832,7 @@ const Yfe = (t, e, n = On()) => {
 }, rhe = { class: "flex max-w-[75%] flex-col items-start sm:max-w-[60%]" }, ihe = {
   key: 0,
   class: "mb-1 ml-1 text-xs font-medium text-gray-500 dark:text-gray-300"
-}, she = { class: "flex gap-2" }, ahe = {
+}, she = { class: "flex max-w-full gap-2" }, ahe = {
   key: 0,
   class: "self-end text-xs text-gray-500 dark:text-gray-300"
 }, ohe = {
@@ -75029,7 +75029,7 @@ const Yfe = (t, e, n = On()) => {
       ], 64);
     };
   }
-}), lhe = /* @__PURE__ */ Tn(uhe, [["__scopeId", "data-v-996a0779"]]), che = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, dhe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, fhe = ["src", "onClick"], hhe = {
+}), lhe = /* @__PURE__ */ Tn(uhe, [["__scopeId", "data-v-e6210db3"]]), che = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, dhe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, fhe = ["src", "onClick"], hhe = {
   key: 0,
   class: "flex h-14 w-full flex-shrink-0 gap-4 overflow-x-auto p-3"
 }, phe = ["src", "onClick"], mhe = /* @__PURE__ */ Ze({

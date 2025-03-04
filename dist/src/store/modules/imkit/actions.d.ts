@@ -52,6 +52,7 @@ export interface Actions {
     [IMActionTypes.updateRoomPrefs](context: AugmentedActionContext, payload: {
         roomId: string;
         prefs: Record<string, unknown>;
+        roomTag?: string;
     }): void;
     [IMActionTypes.fetchPrefs](context: AugmentedActionContext): void;
     [IMActionTypes.fetchRoomsInFolders](context: AugmentedActionContext): void;

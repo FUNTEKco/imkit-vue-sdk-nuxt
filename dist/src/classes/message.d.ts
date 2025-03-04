@@ -36,6 +36,7 @@ export default class Message {
     groupId: string;
     dateId: number;
     template?: MessageTemplate;
+    text?: string;
     prev: Message | null;
     next: Message | null;
     _string(uid: string, users: {

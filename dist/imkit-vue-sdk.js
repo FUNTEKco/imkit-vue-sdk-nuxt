@@ -75002,7 +75002,7 @@ const Xfe = (t, e, n = On()) => {
                 ]]),
                 style: Qt([
                   u.value ? w.value.incomingMessageCell : w.value.outgoingMessageCell,
-                  i.value > 69 ? "max-width: calc(100% - 60px)" : ""
+                  i.value > 69 && u.value ? "max-width: calc(100% - 60px)" : ""
                 ]),
                 onContextmenu: p,
                 onMouseenter: R[0] || (R[0] = () => {
@@ -75035,7 +75035,7 @@ const Xfe = (t, e, n = On()) => {
       ], 64);
     };
   }
-}), che = /* @__PURE__ */ Tn(lhe, [["__scopeId", "data-v-e97dbf49"]]), dhe = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, fhe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, hhe = ["src", "onClick"], phe = {
+}), che = /* @__PURE__ */ Tn(lhe, [["__scopeId", "data-v-f251cbc3"]]), dhe = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, fhe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, hhe = ["src", "onClick"], phe = {
   key: 0,
   class: "flex h-14 w-full flex-shrink-0 gap-4 overflow-x-auto p-3"
 }, mhe = ["src", "onClick"], ghe = /* @__PURE__ */ Ze({

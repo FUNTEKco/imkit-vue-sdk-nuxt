@@ -89381,7 +89381,7 @@ const Cme = { class: "relative flex justify-center" }, xme = {
       _: 1
     }));
   }
-}), Nme = /* @__PURE__ */ Tn(kme, [["__scopeId", "data-v-c9c51bc0"]]), UM = "1.83.1", Mme = /* @__PURE__ */ Ze({
+}), Nme = /* @__PURE__ */ Tn(kme, [["__scopeId", "data-v-c9c51bc0"]]), UM = "1.83.2", Mme = /* @__PURE__ */ Ze({
   __name: "VersionModal",
   setup(t) {
     const e = Ur(), n = () => {

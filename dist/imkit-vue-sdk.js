@@ -65895,7 +65895,7 @@ const Ole = /* @__PURE__ */ Tn(kle, [["render", Mle]]), Lle = { class: "flex ite
     return (c, d) => (Q(), ie(Dt, null, [
       $("div", Lle, [
         dn($("input", {
-          class: "flex-1",
+          class: "max-w-[calc(100%-36px)]",
           "onUpdate:modelValue": d[0] || (d[0] = (l) => n.value = l),
           placeholder: c.$t(`Request.Message.${c.content.subtype}.placeholder`),
           onKeypress: Em(u, ["enter"])
@@ -65913,7 +65913,7 @@ const Ole = /* @__PURE__ */ Tn(kle, [["render", Mle]]), Lle = { class: "flex ite
       r.value ? (Q(), ie("div", Fle, Ue(c.$t("emailFromatError")), 1)) : Ve("", !0)
     ], 64));
   }
-}), Hle = /* @__PURE__ */ Tn(Ule, [["__scopeId", "data-v-a79fc6c7"]]), jle = {
+}), Hle = /* @__PURE__ */ Tn(Ule, [["__scopeId", "data-v-1171a987"]]), jle = {
   key: 0,
   "aria-hidden": "true",
   focusable: "false",

@@ -92,6 +92,7 @@ export declare enum FlexMessageType {
 export declare class FlexMessage extends Message {
     contents: any;
     flexType: FlexMessageType;
+    extra: Record<string, unknown>;
     constructor(raw: any);
 }
 export declare class LocationMessage extends Message {

@@ -29611,13 +29611,14 @@ class Gee extends zn {
     Je(this, "contents");
     // eslint-disable-line @typescript-eslint/no-explicit-any
     Je(this, "flexType");
-    const { contents: r } = n;
+    Je(this, "extra");
+    const { contents: r, extra: i } = n;
     try {
       this.contents = typeof r == "object" ? r : JSON.parse(r);
-      const { type: i } = this.contents;
-      this.flexType = i;
-    } catch (i) {
-      console.log(n), console.error(i), this.contents = {}, this.flexType = "bubble";
+      const { type: s } = this.contents;
+      this.flexType = s, this.extra = i;
+    } catch (s) {
+      console.log(n), console.error(s), this.contents = {}, this.flexType = "bubble", this.extra = {};
     }
   }
 }

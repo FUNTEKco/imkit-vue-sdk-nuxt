@@ -75,7 +75,28 @@ declare const _default: {
   "unmute": "Bật thông báo",
   "chatroomDeleteConfirmationTitle": "Xác nhận xóa phòng trò chuyện?",
   "chatroomDeleteConfirmationMessage": "Sau khi xóa phòng trò chuyện, bạn sẽ không thể xem lịch sử trò chuyện trước đó. Phòng trò chuyện từ góc nhìn của người khác sẽ không bị ảnh hưởng và họ vẫn có thể gửi tin nhắn mới cho bạn.",
-  "unreadMessages": "Dưới đây là các tin nhắn chưa đọc"
+  "unreadMessages": "Dưới đây là các tin nhắn chưa đọc",
+  "online-status-online": "Đang hoạt động",
+  "online-status-offline": "Không hoạt động",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "Email đã được gửi",
+        "placeholder": "Nhập email của bạn"
+      },
+      "phone": {
+        "placeholder": "Nhập số điện thoại của bạn",
+        "submit": "Số điện thoại đã được gửi"
+      },
+      "text": {
+        "submit": "Văn bản đã được gửi",
+        "placeholder": "Nhập nội dung văn bản"
+      }
+    }
+  },
+  "emailFromatError": "Vui lòng nhập đúng định dạng",
+  "chatbotSwitch": "Bot trò chuyện",
+  "chatbotSwitchDescription": "Bật bot trò chuyện, bot sẽ phản hồi người khác theo quy trình bạn đã thiết lập. Tắt bot trò chuyện, bạn có thể vào chế độ phản hồi của người thật."
 }
 ;
 

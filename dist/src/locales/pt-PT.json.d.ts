@@ -75,7 +75,28 @@ declare const _default: {
   "unmute": "Ativar notificações",
   "chatroomDeleteConfirmationTitle": "Confirmar eliminação da sala de chat?",
   "chatroomDeleteConfirmationMessage": "Após eliminar a sala de chat, não poderá visualizar o histórico de conversas anterior. A sala de chat da perspetiva da outra pessoa não será afetada e ainda poderão enviar-lhe novas mensagens.",
-  "unreadMessages": "Mensagens não lidas abaixo"
+  "unreadMessages": "Mensagens não lidas abaixo",
+  "online-status-online": "Ativo",
+  "online-status-offline": "Ausente",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "Email enviado",
+        "placeholder": "Introduza o seu email"
+      },
+      "phone": {
+        "placeholder": "Introduza o seu número de telefone",
+        "submit": "Número de telefone enviado"
+      },
+      "text": {
+        "submit": "Texto enviado",
+        "placeholder": "Introduza o conteúdo do texto"
+      }
+    }
+  },
+  "emailFromatError": "Por favor, introduza o formato correto",
+  "chatbotSwitch": "Chatbot",
+  "chatbotSwitchDescription": "Ative o chatbot, e este responderá à outra parte de acordo com o fluxo que definiu. Desative o chatbot para entrar no modo de resposta humana."
 }
 ;
 

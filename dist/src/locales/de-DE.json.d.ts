@@ -75,7 +75,28 @@ declare const _default: {
   "unmute": "Benachrichtigungen aktivieren",
   "chatroomDeleteConfirmationTitle": "Chatraum wirklich löschen?",
   "chatroomDeleteConfirmationMessage": "Nach dem Löschen können Sie die bisherigen Nachrichten dieses Chatraums nicht mehr sehen. Auf der Gegenseite bleibt der Chatraum erhalten, und die andere Person kann Ihnen weiterhin neue Nachrichten senden.",
-  "unreadMessages": "Ungelesene Nachrichten unten"
+  "unreadMessages": "Ungelesene Nachrichten unten",
+  "online-status-online": "Aktiv",
+  "online-status-offline": "Abwesend",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "E-Mail wurde gesendet",
+        "placeholder": "E-Mail eingeben"
+      },
+      "phone": {
+        "placeholder": "Telefonnummer eingeben",
+        "submit": "Telefonnummer wurde gesendet"
+      },
+      "text": {
+        "submit": "Text wurde gesendet",
+        "placeholder": "Textinhalt eingeben"
+      }
+    }
+  },
+  "emailFromatError": "Bitte korrektes Format eingeben",
+  "chatbotSwitch": "Chatbot",
+  "chatbotSwitchDescription": "Wenn der Chatbot eingeschaltet ist, antwortet er dem Gesprächspartner gemäß Ihren Einstellungen. Wenn der Chatbot ausgeschaltet ist, können Sie in den Modus für persönliche Antworten wechseln."
 }
 ;
 

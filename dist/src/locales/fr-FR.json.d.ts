@@ -75,7 +75,28 @@ declare const _default: {
   "unmute": "Activer les notifications",
   "chatroomDeleteConfirmationTitle": "Confirmer la suppression du salon de discussion ?",
   "chatroomDeleteConfirmationMessage": "Après avoir supprimé le salon de discussion, vous ne pourrez plus voir l'historique des conversations précédentes. Le salon de discussion du point de vue de l'autre personne ne sera pas affecté et ils pourront toujours vous envoyer de nouveaux messages.",
-  "unreadMessages": "Messages non lus ci-dessous"
+  "unreadMessages": "Messages non lus ci-dessous",
+  "online-status-online": "En ligne",
+  "online-status-offline": "Hors ligne",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "E-mail envoyé",
+        "placeholder": "Entrez votre e-mail"
+      },
+      "phone": {
+        "placeholder": "Entrez votre numéro de téléphone",
+        "submit": "Numéro de téléphone envoyé"
+      },
+      "text": {
+        "submit": "Texte envoyé",
+        "placeholder": "Entrez le contenu du texte"
+      }
+    }
+  },
+  "emailFromatError": "Veuillez entrer un format correct",
+  "chatbotSwitch": "Chatbot",
+  "chatbotSwitchDescription": "Activez le chatbot, il répondra à l'autre partie selon le flux que vous avez défini. Désactivez le chatbot pour passer en mode de réponse humaine."
 }
 ;
 

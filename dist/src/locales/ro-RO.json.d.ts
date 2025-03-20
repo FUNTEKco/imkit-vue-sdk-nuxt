@@ -75,7 +75,28 @@ declare const _default: {
   "unmute": "Activează notificările",
   "chatroomDeleteConfirmationTitle": "Confirmați ștergerea camerei de chat?",
   "chatroomDeleteConfirmationMessage": "După ștergerea camerei de chat, nu veți mai putea vizualiza istoricul conversațiilor anterioare. Camera de chat din perspectiva celeilalte persoane nu va fi afectată și aceasta va putea în continuare să vă trimită mesaje noi.",
-  "unreadMessages": "Mai jos sunt mesajele necitite"
+  "unreadMessages": "Mai jos sunt mesajele necitite",
+  "online-status-online": "Activ",
+  "online-status-offline": "Inactiv",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "E-mail trimis",
+        "placeholder": "Introduceți e-mailul"
+      },
+      "phone": {
+        "placeholder": "Introduceți numărul de telefon",
+        "submit": "Număr de telefon trimis"
+      },
+      "text": {
+        "submit": "Text trimis",
+        "placeholder": "Introduceți conținutul text"
+      }
+    }
+  },
+  "emailFromatError": "Vă rugăm să introduceți formatul corect",
+  "chatbotSwitch": "Chatbot",
+  "chatbotSwitchDescription": "Când chatbot-ul este pornit, acesta va răspunde celeilalte părți conform fluxului pe care l-ați setat. Când chatbot-ul este oprit, puteți intra în modul de răspuns personal."
 }
 ;
 

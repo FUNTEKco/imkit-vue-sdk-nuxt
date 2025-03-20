@@ -75,7 +75,28 @@ declare const _default: {
   "unmute": "알림 켜기",
   "chatroomDeleteConfirmationTitle": "채팅방을 삭제하시겠습니까?",
   "chatroomDeleteConfirmationMessage": "채팅방을 삭제하면 이전 채팅 기록을 볼 수 없게 됩니다. 상대방의 관점에서의 채팅방은 영향을 받지 않으며, 여전히 새 메시지를 보낼 수 있습니다.",
-  "unreadMessages": "아래는 읽지 않은 메시지입니다"
+  "unreadMessages": "아래는 읽지 않은 메시지입니다",
+  "online-status-online": "온라인",
+  "online-status-offline": "오프라인",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "이메일이 전송되었습니다",
+        "placeholder": "이메일 입력"
+      },
+      "phone": {
+        "placeholder": "전화번호 입력",
+        "submit": "전화번호가 전송되었습니다"
+      },
+      "text": {
+        "submit": "텍스트가 전송되었습니다",
+        "placeholder": "텍스트 내용 입력"
+      }
+    }
+  },
+  "emailFromatError": "올바른 형식을 입력해 주세요",
+  "chatbotSwitch": "챗봇",
+  "chatbotSwitchDescription": "챗봇을 켜면 설정한 흐름에 따라 상대방에게 응답합니다. 챗봇을 끄면 실제 사람이 응답하는 모드로 전환됩니다."
 }
 ;
 

@@ -75,7 +75,28 @@ declare const _default: {
   "unmute": "开启通知",
   "chatroomDeleteConfirmationTitle": "确认要删除聊天室吗？",
   "chatroomDeleteConfirmationMessage": "删除聊天室后，您将无法再检视此聊天室过去的聊天记录。对方视角下的聊天室将不受任何影响，且还是可以传新讯息给您。",
-  "unreadMessages": "以下为尚未阅读的讯息"
+  "unreadMessages": "以下为尚未阅读的讯息",
+  "online-status-online": "上线中",
+  "online-status-offline": "离线中",
+  "Request": {
+    "Message": {
+      "email": {
+        "submit": "已送出Email",
+        "placeholder": "输入信箱"
+      },
+      "phone": {
+        "placeholder": "输入手机号码",
+        "submit": "已送出手机号码"
+      },
+      "text": {
+        "submit": "已送出文字回复",
+        "placeholder": "输入文字回复"
+      }
+    }
+  },
+  "emailFromatError": "请输入正确格式",
+  "chatbotSwitch": "聊天机器人开关",
+  "chatbotSwitchDescription": "开启聊天机器人，机器人会依照您设定的流程回应对方。关闭机器人，可以进入真人回复模式"
 }
 ;
 

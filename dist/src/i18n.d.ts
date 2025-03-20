@@ -78,6 +78,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'en-US': {
         close: string;
@@ -258,6 +279,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'fr-FR': {
         close: string;
@@ -337,6 +379,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'ja-JP': {
         close: string;
@@ -517,6 +580,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'pt-PT': {
         close: string;
@@ -596,6 +680,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'ro-RO': {
         close: string;
@@ -675,6 +780,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'th-TH': {
         close: string;
@@ -754,6 +880,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'vi-VN': {
         close: string;
@@ -833,6 +980,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'zh-CN': {
         close: string;
@@ -912,6 +1080,27 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        "online-status-online": string;
+        "online-status-offline": string;
+        Request: {
+            Message: {
+                email: {
+                    submit: string;
+                    placeholder: string;
+                };
+                phone: {
+                    placeholder: string;
+                    submit: string;
+                };
+                text: {
+                    submit: string;
+                    placeholder: string;
+                };
+            };
+        };
+        emailFromatError: string;
+        chatbotSwitch: string;
+        chatbotSwitchDescription: string;
     };
     'zh-TW': {
         close: string;

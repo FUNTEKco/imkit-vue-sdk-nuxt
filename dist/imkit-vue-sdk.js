@@ -100049,7 +100049,7 @@ const SNe = /* @__PURE__ */ wn(ENe, [["render", xNe]]), wNe = {
             }))
           }, [
             ut(INe, {
-              color: (qt = (pn = r.chatStyle) == null ? void 0 : pn.header) == null ? void 0 : qt.color
+              color: ((qt = (pn = r.chatStyle) == null ? void 0 : pn.header) == null ? void 0 : qt.color) ?? "#6c727f"
             }, null, 8, ["color"])
           ])) : $e("", !0)
         ], 4)), [
@@ -100257,7 +100257,7 @@ const SNe = /* @__PURE__ */ wn(ENe, [["render", xNe]]), wNe = {
       ], 32)) : $e("", !0);
     };
   }
-}), jRe = /* @__PURE__ */ wn(qNe, [["__scopeId", "data-v-03654653"]]);
+}), jRe = /* @__PURE__ */ wn(qNe, [["__scopeId", "data-v-4dff3245"]]);
 var Q2 = { name: "Toggle", emits: ["input", "update:modelValue", "change"], props: { value: { validator: function(t) {
   return (e) => ["number", "string", "boolean"].indexOf(typeof e) !== -1 || e == null;
 }, required: !1 }, modelValue: { validator: function(t) {

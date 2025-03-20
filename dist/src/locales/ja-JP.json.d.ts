@@ -76,6 +76,7 @@ declare const _default: {
   "unmute": "通知をオンにする",
   "chatroomDeleteConfirmationTitle": "チャットルームの削除を確認？",
   "chatroomDeleteConfirmationMessage": "チャットルームを削除すると、そのチャットルームの過去のチャットを閲覧することができなくなります。他の視聴者のコーナーにあるチャットルームは影響を受けず、新しいメッセージを送信することができます。",
+  "unreadMessages": "以下は未読メッセージです",
   "online-status-online": "アクティブ",
   "online-status-offline": "ないオンライン",
   "Request": {

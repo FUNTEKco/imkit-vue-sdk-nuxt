@@ -76,6 +76,7 @@ declare const _default: {
   "unmute": "Unmute",
   "chatroomDeleteConfirmationTitle": "Are you sure you want to delete this chatroom?",
   "chatroomDeleteConfirmationMessage": "After deleting this chatroom, you will not be able to view the chat history in the chatroom. For the other user in the chatroom, their chat history will not be affected, and they can still send you new messages.",
+  "unreadMessages": "Below are unread messages",
   "online-status-online": "Active",
   "online-status-offline": "Away",
   "Request": {

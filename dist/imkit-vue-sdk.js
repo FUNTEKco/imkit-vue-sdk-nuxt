@@ -66715,7 +66715,7 @@ const fve = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtA
         "3xl": "35px",
         "4xl": "48px",
         "5xl": "74px"
-      }[r] ?? "14px";
+      }[r] ?? "16px";
     });
     return (r, i) => (Q(), ie("div", {
       class: "basis-0",

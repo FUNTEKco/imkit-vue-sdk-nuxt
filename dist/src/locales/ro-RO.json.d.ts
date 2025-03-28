@@ -76,6 +76,12 @@ declare const _default: {
   "chatroomDeleteConfirmationTitle": "Confirmați ștergerea camerei de chat?",
   "chatroomDeleteConfirmationMessage": "După ștergerea camerei de chat, nu veți mai putea vizualiza istoricul conversațiilor anterioare. Camera de chat din perspectiva celeilalte persoane nu va fi afectată și aceasta va putea în continuare să vă trimită mesaje noi.",
   "unreadMessages": "Mai jos sunt mesajele necitite",
+  "deleteMessageConfirmation": "Cum doriți să ștergeți acest mesaj?",
+  "deleteForEveryone": "Șterge pentru toată lumea",
+  "deleteForMe": "Șterge doar pentru mine",
+  "confirmDeleteMessage": "Confirmați ștergerea mesajului?",
+  "deleteForEveryoneWarning": "Mesajul selectat va fi șters din toate camerele de chat. Această acțiune nu poate fi anulată.",
+  "deleteForMeWarning": "Mesajul selectat va fi șters doar din camera dvs. de chat. Cealaltă persoană va putea în continuare să vadă mesajul în camera de chat. Această acțiune nu poate fi anulată.",
   "online-status-online": "Activ",
   "online-status-offline": "Inactiv",
   "Request": {

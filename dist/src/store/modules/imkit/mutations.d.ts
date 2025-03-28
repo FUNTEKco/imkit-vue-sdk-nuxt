@@ -26,6 +26,7 @@ export type Mutations<S = IMState> = {
         targetMessageId: string;
         message: Message;
     }): void;
+    [MutationTypes.deleteMessages](state: S, messageIds: string[]): void;
     [MutationTypes.clearChatRoom](state: S): void;
     [MutationTypes.deleteRoom](state: S, roomId: string): void;
     [MutationTypes.setMap](state: S, payload: {

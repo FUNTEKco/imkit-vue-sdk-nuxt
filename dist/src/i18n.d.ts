@@ -78,6 +78,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -179,6 +185,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -279,6 +291,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -379,6 +397,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -480,6 +504,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -580,6 +610,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -680,6 +716,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -780,6 +822,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -880,6 +928,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -980,6 +1034,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1080,6 +1140,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1181,6 +1247,12 @@ declare const i18n: VueI18n.I18n<{
         chatroomDeleteConfirmationTitle: string;
         chatroomDeleteConfirmationMessage: string;
         unreadMessages: string;
+        deleteMessageConfirmation: string;
+        deleteForEveryone: string;
+        deleteForMe: string;
+        confirmDeleteMessage: string;
+        deleteForEveryoneWarning: string;
+        deleteForMeWarning: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {

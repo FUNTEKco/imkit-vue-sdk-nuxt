@@ -76,6 +76,12 @@ declare const _default: {
   "chatroomDeleteConfirmationTitle": "ยืนยันการลบห้องแชท?",
   "chatroomDeleteConfirmationMessage": "หลังจากลบห้องแชทแล้ว คุณจะไม่สามารถดูประวัติการแชทก่อนหน้านี้ได้ ห้องแชทจากมุมมองของอีกฝ่ายจะไม่ได้รับผลกระทบและพวกเขายังคงสามารถส่งข้อความใหม่ถึงคุณได้",
   "unreadMessages": "ด้านล่างนี้คือข้อความที่ยังไม่ได้อ่าน",
+  "deleteMessageConfirmation": "คุณต้องการลบข้อความนี้อย่างไร?",
+  "deleteForEveryone": "ลบสำหรับทุกคน",
+  "deleteForMe": "ลบสำหรับฉันเท่านั้น",
+  "confirmDeleteMessage": "ยืนยันการลบข้อความ?",
+  "deleteForEveryoneWarning": "ข้อความที่คุณเลือกจะถูกลบออกจากห้องแชททั้งหมด การกระทำนี้ไม่สามารถเรียกคืนได้",
+  "deleteForMeWarning": "ข้อความที่คุณเลือกจะถูกลบออกจากห้องแชทของคุณ อีกฝ่ายจะยังคงสามารถเห็นข้อความในห้องแชทได้ การกระทำนี้ไม่สามารถเรียกคืนได้",
   "online-status-online": "ออนไลน์",
   "online-status-offline": "ออฟไลน์",
   "Request": {

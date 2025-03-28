@@ -77,6 +77,12 @@ declare const _default: {
   "chatroomDeleteConfirmationTitle": "確認要刪除聊天室嗎？",
   "chatroomDeleteConfirmationMessage": "刪除聊天室後，您將無法再檢視此聊天室過去的聊天記錄。對方視角下的聊天室將不受任何影響，且還是可以傳新訊息給您。",
   "unreadMessages": "以下為尚未閱讀的訊息",
+  "deleteMessageConfirmation": "您想如何刪除訊息？",
+  "deleteForEveryone": "為所有人刪除",
+  "deleteForMe": "只為自己刪除",
+  "confirmDeleteMessage": "確認要刪除這則訊息嗎？",
+  "deleteForEveryoneWarning": "您選擇的訊息會從所有人的聊天室中刪除。此操作無法復原。",
+  "deleteForMeWarning": "您選擇的訊息只會從您的聊天室刪除，對方還是可以在聊天室內看到訊息。此操作無法復原。",
   "online-status-online": "上線中",
   "online-status-offline": "離線中",
   "Request": {

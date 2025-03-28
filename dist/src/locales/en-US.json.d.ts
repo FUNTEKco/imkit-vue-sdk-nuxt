@@ -77,6 +77,12 @@ declare const _default: {
   "chatroomDeleteConfirmationTitle": "Are you sure you want to delete this chatroom?",
   "chatroomDeleteConfirmationMessage": "After deleting this chatroom, you will not be able to view the chat history in the chatroom. For the other user in the chatroom, their chat history will not be affected, and they can still send you new messages.",
   "unreadMessages": "Below are unread messages",
+  "deleteMessageConfirmation": "How do you want to delete this message?",
+  "deleteForEveryone": "Delete for everyone",
+  "deleteForMe": "Delete for me only",
+  "confirmDeleteMessage": "Confirm Delete Message?",
+  "deleteForEveryoneWarning": "The message you selected will be deleted from all chatrooms. This action cannot be undone.",
+  "deleteForMeWarning": "The message you selected will be deleted from your chatroom. The other user will still be able to see the message in the chatroom. This action cannot be undone.",
   "online-status-online": "Active",
   "online-status-offline": "Away",
   "Request": {

@@ -7,6 +7,7 @@ export declare enum IMMutationTypes {
     updateLastRead = "updateLastRead",
     pushMessage = "pushMessage",
     replaceMessage = "replaceMessage",
+    deleteMessages = "deleteMessages",
     clearChatRoom = "clearChatRoom",
     deleteRoom = "deleteRoom",
     setMap = "setMap",

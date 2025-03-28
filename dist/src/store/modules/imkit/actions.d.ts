@@ -34,6 +34,14 @@ export interface Actions {
         roomId: string;
         _id: string;
     }): void;
+    [IMActionTypes.hideMessage](context: AugmentedActionContext, payload: {
+        roomId: string;
+        messageIds: string[];
+    }): void;
+    [IMActionTypes.deleteMessage](context: AugmentedActionContext, payload: {
+        roomId: string;
+        messageId: string;
+    }): void;
     [IMActionTypes.uploadMedia](context: AugmentedActionContext, payload: {
         id: string;
         file: File;

@@ -76,6 +76,12 @@ declare const _default: {
   "chatroomDeleteConfirmationTitle": "¿Confirmar eliminación de la sala de chat?",
   "chatroomDeleteConfirmationMessage": "Después de eliminar la sala de chat, no podrás ver el historial de chat anterior. La sala de chat desde la perspectiva de la otra persona no se verá afectada y aún podrán enviarte nuevos mensajes.",
   "unreadMessages": "Mensajes no leídos a continuación",
+  "deleteMessageConfirmation": "¿Cómo deseas eliminar este mensaje?",
+  "deleteForEveryone": "Eliminar para todos",
+  "deleteForMe": "Eliminar solo para mí",
+  "confirmDeleteMessage": "¿Confirmar eliminación del mensaje?",
+  "deleteForEveryoneWarning": "El mensaje que seleccionaste se eliminará de todas las salas de chat. Esta acción no se puede deshacer.",
+  "deleteForMeWarning": "El mensaje que seleccionaste solo se eliminará de tu sala de chat. La otra persona aún podrá ver el mensaje en la sala de chat. Esta acción no se puede deshacer.",
   "online-status-online": "Activo",
   "online-status-offline": "Ausente",
   "Request": {

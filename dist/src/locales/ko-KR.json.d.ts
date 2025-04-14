@@ -102,7 +102,12 @@ declare const _default: {
   },
   "emailFromatError": "올바른 형식을 입력해 주세요",
   "chatbotSwitch": "챗봇",
-  "chatbotSwitchDescription": "챗봇을 켜면 설정한 흐름에 따라 상대방에게 응답합니다. 챗봇을 끄면 실제 사람이 응답하는 모드로 전환됩니다."
+  "chatbotSwitchDescription": "챗봇을 켜면 설정한 흐름에 따라 상대방에게 응답합니다. 챗봇을 끄면 실제 사람이 응답하는 모드로 전환됩니다.",
+  "allowOfflineNotifications": "오프라인 푸시 알림 허용",
+  "notificationPermissionDescription": "활성화하면 새 메시지가 도착했을 때 채팅이 열려 있지 않아도 데스크톱 알림을 받습니다.",
+  "notificationSettingsPath": "이 설정은 [내 계정 > 알림 설정]에서 수정할 수 있습니다.",
+  "askLater": "나중에 묻기",
+  "allowNotifications": "알림 허용"
 }
 ;
 

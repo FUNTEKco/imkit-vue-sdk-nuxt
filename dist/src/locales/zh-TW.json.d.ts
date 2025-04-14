@@ -103,7 +103,12 @@ declare const _default: {
   },
   "emailFromatError": "請輸入正確格式",
   "chatbotSwitch": "聊天機器人開關",
-  "chatbotSwitchDescription": "開啟聊天機器人，機器人會依照您設定的流程回應對方。關閉機器人，可以進入真人回覆模式"
+  "chatbotSwitchDescription": "開啟聊天機器人，機器人會依照您設定的流程回應對方。關閉機器人，可以進入真人回覆模式",
+  "allowOfflineNotifications": "允許離線推播通知",
+  "notificationPermissionDescription": "允許後，當有新訊息傳來時，即使聊天室頁面未開啟，你也會收到桌面推播通知。",
+  "notificationSettingsPath": "這個設定可以在【我的帳號 > 訊息通知設定】中修改。",
+  "askLater": "稍後再說",
+  "allowNotifications": "允許通知"
 }
 ;
 

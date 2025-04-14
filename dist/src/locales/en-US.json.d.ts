@@ -103,7 +103,12 @@ declare const _default: {
   },
   "emailFromatError": "Please enter correct format",
   "chatbotSwitch": "Chatbot",
-  "chatbotSwitchDescription": "Turn on the chatbot, the chatbot will respond to the other party according to the flow you set. Turn off the chatbot, you can enter the real person reply mode."
+  "chatbotSwitchDescription": "Turn on the chatbot, the chatbot will respond to the other party according to the flow you set. Turn off the chatbot, you can enter the real person reply mode.",
+  "allowOfflineNotifications": "Allow offline push notifications",
+  "notificationPermissionDescription": "After enabling, when a new message arrives, you will receive desktop notifications even if the chat is not open.",
+  "notificationSettingsPath": "This setting can be modified in [My Account > Notification Settings].",
+  "askLater": "Ask Later",
+  "allowNotifications": "Allow Notifications"
 }
 ;
 

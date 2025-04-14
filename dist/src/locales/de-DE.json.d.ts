@@ -102,7 +102,12 @@ declare const _default: {
   },
   "emailFromatError": "Bitte korrektes Format eingeben",
   "chatbotSwitch": "Chatbot",
-  "chatbotSwitchDescription": "Wenn der Chatbot eingeschaltet ist, antwortet er dem Gesprächspartner gemäß Ihren Einstellungen. Wenn der Chatbot ausgeschaltet ist, können Sie in den Modus für persönliche Antworten wechseln."
+  "chatbotSwitchDescription": "Wenn der Chatbot eingeschaltet ist, antwortet er dem Gesprächspartner gemäß Ihren Einstellungen. Wenn der Chatbot ausgeschaltet ist, können Sie in den Modus für persönliche Antworten wechseln.",
+  "allowOfflineNotifications": "Offline-Push-Benachrichtigungen zulassen",
+  "notificationPermissionDescription": "Nach der Aktivierung erhalten Sie bei Eingang einer neuen Nachricht Desktop-Benachrichtigungen, auch wenn der Chat nicht geöffnet ist.",
+  "notificationSettingsPath": "Diese Einstellung kann unter [Mein Konto > Benachrichtigungseinstellungen] geändert werden.",
+  "askLater": "Später fragen",
+  "allowNotifications": "Benachrichtigungen zulassen"
 }
 ;
 

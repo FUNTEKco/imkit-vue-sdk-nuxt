@@ -103,7 +103,12 @@ declare const _default: {
   },
   "emailFromatError": "正しい形式を入力してください",
   "chatbotSwitch": "チャットボット",
-  "chatbotSwitchDescription": "チャットボットをオンにすると、チャットボットが設定したフローに従って他のパーティーに応答します。チャットボットをオフにすると、実際の人間の返信モードに入ることができます。"
+  "chatbotSwitchDescription": "チャットボットをオンにすると、チャットボットが設定したフローに従って他のパーティーに応答します。チャットボットをオフにすると、実際の人間の返信モードに入ることができます。",
+  "allowOfflineNotifications": "オフラインプッシュ通知を許可する",
+  "notificationPermissionDescription": "有効にすると、チャットが開いていなくても、新しいメッセージが到着したときにデスクトップ通知を受け取ります。",
+  "notificationSettingsPath": "この設定は[マイアカウント > 通知設定]で変更できます。",
+  "askLater": "後で聞く",
+  "allowNotifications": "通知を許可"
 }
 ;
 

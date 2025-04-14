@@ -105,6 +105,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'en-US': {
         close: string;
@@ -212,6 +217,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'es-ES': {
         close: string;
@@ -318,6 +328,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'fr-FR': {
         close: string;
@@ -424,6 +439,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'ja-JP': {
         close: string;
@@ -531,6 +551,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'ko-KR': {
         close: string;
@@ -637,6 +662,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'pt-PT': {
         close: string;
@@ -743,6 +773,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'ro-RO': {
         close: string;
@@ -849,6 +884,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'th-TH': {
         close: string;
@@ -955,6 +995,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'vi-VN': {
         close: string;
@@ -1061,6 +1106,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'zh-CN': {
         close: string;
@@ -1167,6 +1217,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
     'zh-TW': {
         close: string;
@@ -1274,6 +1329,11 @@ declare const i18n: VueI18n.I18n<{
         emailFromatError: string;
         chatbotSwitch: string;
         chatbotSwitchDescription: string;
+        allowOfflineNotifications: string;
+        notificationPermissionDescription: string;
+        notificationSettingsPath: string;
+        askLater: string;
+        allowNotifications: string;
     };
 }, {}, {}, string, false>;
 export default i18n;

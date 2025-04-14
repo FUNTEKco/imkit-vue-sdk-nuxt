@@ -102,7 +102,12 @@ declare const _default: {
   },
   "emailFromatError": "Vui lòng nhập đúng định dạng",
   "chatbotSwitch": "Bot trò chuyện",
-  "chatbotSwitchDescription": "Bật bot trò chuyện, bot sẽ phản hồi người khác theo quy trình bạn đã thiết lập. Tắt bot trò chuyện, bạn có thể vào chế độ phản hồi của người thật."
+  "chatbotSwitchDescription": "Bật bot trò chuyện, bot sẽ phản hồi người khác theo quy trình bạn đã thiết lập. Tắt bot trò chuyện, bạn có thể vào chế độ phản hồi của người thật.",
+  "allowOfflineNotifications": "Cho phép thông báo đẩy ngoại tuyến",
+  "notificationPermissionDescription": "Sau khi bật, khi có tin nhắn mới đến, bạn sẽ nhận được thông báo trên màn hình ngay cả khi cuộc trò chuyện không mở.",
+  "notificationSettingsPath": "Cài đặt này có thể được sửa đổi trong [Tài khoản của tôi > Cài đặt thông báo].",
+  "askLater": "Hỏi sau",
+  "allowNotifications": "Cho phép thông báo"
 }
 ;
 

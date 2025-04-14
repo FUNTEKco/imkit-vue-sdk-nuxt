@@ -102,7 +102,12 @@ declare const _default: {
   },
   "emailFromatError": "Vă rugăm să introduceți formatul corect",
   "chatbotSwitch": "Chatbot",
-  "chatbotSwitchDescription": "Când chatbot-ul este pornit, acesta va răspunde celeilalte părți conform fluxului pe care l-ați setat. Când chatbot-ul este oprit, puteți intra în modul de răspuns personal."
+  "chatbotSwitchDescription": "Când chatbot-ul este pornit, acesta va răspunde celeilalte părți conform fluxului pe care l-ați setat. Când chatbot-ul este oprit, puteți intra în modul de răspuns personal.",
+  "allowOfflineNotifications": "Permiteți notificările push offline",
+  "notificationPermissionDescription": "După activare, când sosește un mesaj nou, veți primi notificări pe desktop chiar dacă chatul nu este deschis.",
+  "notificationSettingsPath": "Această setare poate fi modificată în [Contul meu > Setări de notificare].",
+  "askLater": "Întreabă mai târziu",
+  "allowNotifications": "Permiteți notificările"
 }
 ;
 

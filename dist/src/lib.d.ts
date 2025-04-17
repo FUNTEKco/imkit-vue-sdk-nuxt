@@ -7,11 +7,12 @@ import { default as RoomList } from './components/RoomList.vue';
 import { Store } from 'vuex';
 import { default as User } from './classes/user';
 import { default as Message } from './classes/message';
+import { default as NotificationPermissionModal } from './components/NotificationPermissionModal.vue';
 type Options = {
     store: Store<any>;
     config: Config;
 };
-export { RoomList, ChatRoom, ChatRoomInfo, ModalsContainer, User, Message };
+export { RoomList, ChatRoom, ChatRoomInfo, ModalsContainer, User, Message, NotificationPermissionModal };
 declare const _default: {
     install: (app: App, options: Options) => Promise<void>;
 };

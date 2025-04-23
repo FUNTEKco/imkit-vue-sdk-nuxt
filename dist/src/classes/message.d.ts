@@ -21,6 +21,10 @@ export declare enum MessageType {
     Announcement = "announcement",
     Typing = "typing"
 }
+export interface Reaction {
+    client: string;
+    reaction: string;
+}
 type MessageTemplate = {
     quickReply: {
         items: any[];
@@ -35,6 +39,7 @@ export default class Message {
     updatedAt: number;
     groupId: string;
     dateId: number;
+    reactions: Reaction[];
     template?: MessageTemplate;
     text?: string;
     prev: Message | null;

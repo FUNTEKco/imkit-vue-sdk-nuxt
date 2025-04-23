@@ -109,6 +109,10 @@ export interface Actions {
     }): void;
     [IMActionTypes.getBlockList](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.hideMessagesFromUserInRoom](context: AugmentedActionContext, roomId: string): void;
+    [IMActionTypes.sendReaction](context: AugmentedActionContext, payload: {
+        messageId: string;
+        reaction: string;
+    }): void;
     [IMActionTypes.checkNotificationPermission](context: AugmentedActionContext): void;
 }
 export declare const actions: ActionTree<IMState, RootState> & Actions;

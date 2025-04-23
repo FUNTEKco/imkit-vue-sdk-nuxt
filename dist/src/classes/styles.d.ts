@@ -3,5 +3,7 @@ type Styles = {
     outgoingMessageCell: string;
     roomListUnreadBadge: string;
     chatRoomHeader: string;
+    sendButtonEnabled: string;
+    sendButtonDisabled: string;
 };
 export default Styles;

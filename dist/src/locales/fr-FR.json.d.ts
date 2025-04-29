@@ -82,6 +82,8 @@ declare const _default: {
   "confirmDeleteMessage": "Confirmer la suppression du message ?",
   "deleteForEveryoneWarning": "Le message que vous avez sélectionné sera supprimé de tous les salons de discussion. Cette action ne peut pas être annulée.",
   "deleteForMeWarning": "Le message que vous avez sélectionné sera supprimé uniquement de votre salon de discussion. L'autre personne pourra toujours voir le message dans le salon de discussion. Cette action ne peut pas être annulée.",
+  "messages": "Messages",
+  "foundMessages": "Messages trouvés {0}",
   "online-status-online": "En ligne",
   "online-status-offline": "Hors ligne",
   "Request": {

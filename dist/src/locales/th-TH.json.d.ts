@@ -82,6 +82,8 @@ declare const _default: {
   "confirmDeleteMessage": "ยืนยันการลบข้อความ?",
   "deleteForEveryoneWarning": "ข้อความที่คุณเลือกจะถูกลบออกจากห้องแชททั้งหมด การกระทำนี้ไม่สามารถเรียกคืนได้",
   "deleteForMeWarning": "ข้อความที่คุณเลือกจะถูกลบออกจากห้องแชทของคุณ อีกฝ่ายจะยังคงสามารถเห็นข้อความในห้องแชทได้ การกระทำนี้ไม่สามารถเรียกคืนได้",
+  "messages": "ข้อความ",
+  "foundMessages": "พบ {0} ข้อความ",
   "online-status-online": "ออนไลน์",
   "online-status-offline": "ออฟไลน์",
   "Request": {

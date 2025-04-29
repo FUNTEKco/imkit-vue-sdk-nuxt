@@ -82,6 +82,8 @@ declare const _default: {
   "confirmDeleteMessage": "메시지를 삭제하시겠습니까?",
   "deleteForEveryoneWarning": "선택한 메시지가 모든 채팅방에서 삭제됩니다. 이 작업은 취소할 수 없습니다.",
   "deleteForMeWarning": "선택한 메시지가 내 채팅방에서만 삭제됩니다. 상대방은 여전히 채팅방에서 메시지를 볼 수 있습니다. 이 작업은 취소할 수 없습니다.",
+  "messages": "메시지",
+  "foundMessages": "찾은 메시지 {0}개",
   "online-status-online": "온라인",
   "online-status-offline": "오프라인",
   "Request": {

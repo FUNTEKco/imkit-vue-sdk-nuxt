@@ -82,6 +82,8 @@ declare const _default: {
   "confirmDeleteMessage": "Xác nhận xóa tin nhắn?",
   "deleteForEveryoneWarning": "Tin nhắn bạn đã chọn sẽ bị xóa khỏi tất cả các phòng trò chuyện. Hành động này không thể hoàn tác.",
   "deleteForMeWarning": "Tin nhắn bạn đã chọn sẽ chỉ bị xóa khỏi phòng trò chuyện của bạn. Người kia vẫn có thể thấy tin nhắn trong phòng trò chuyện. Hành động này không thể hoàn tác.",
+  "messages": "Tin nhắn",
+  "foundMessages": "Tìm thấy {0} tin nhắn",
   "online-status-online": "Đang hoạt động",
   "online-status-offline": "Không hoạt động",
   "Request": {

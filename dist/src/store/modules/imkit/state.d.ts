@@ -70,6 +70,7 @@ export type IMState = {
     };
     isSearchInRoomMode: boolean;
     messageSearchKeyword: string;
+    searchedMessageIds: Map<string, string[]>;
     blockedUsers: {
         [uid: string]: boolean;
     };

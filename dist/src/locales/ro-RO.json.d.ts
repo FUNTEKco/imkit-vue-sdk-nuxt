@@ -82,6 +82,8 @@ declare const _default: {
   "confirmDeleteMessage": "Confirmați ștergerea mesajului?",
   "deleteForEveryoneWarning": "Mesajul selectat va fi șters din toate camerele de chat. Această acțiune nu poate fi anulată.",
   "deleteForMeWarning": "Mesajul selectat va fi șters doar din camera dvs. de chat. Cealaltă persoană va putea în continuare să vadă mesajul în camera de chat. Această acțiune nu poate fi anulată.",
+  "messages": "Mesaj",
+  "foundMessages": "A fost găsit {0} mesaj",
   "online-status-online": "Activ",
   "online-status-offline": "Inactiv",
   "Request": {

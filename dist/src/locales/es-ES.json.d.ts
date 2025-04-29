@@ -82,6 +82,8 @@ declare const _default: {
   "confirmDeleteMessage": "¿Confirmar eliminación del mensaje?",
   "deleteForEveryoneWarning": "El mensaje que seleccionaste se eliminará de todas las salas de chat. Esta acción no se puede deshacer.",
   "deleteForMeWarning": "El mensaje que seleccionaste solo se eliminará de tu sala de chat. La otra persona aún podrá ver el mensaje en la sala de chat. Esta acción no se puede deshacer.",
+  "messages": "Mensajes",
+  "foundMessages": "Mensajes encontrados {0}",
   "online-status-online": "Activo",
   "online-status-offline": "Ausente",
   "Request": {

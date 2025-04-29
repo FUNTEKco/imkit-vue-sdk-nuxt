@@ -83,6 +83,8 @@ declare const _default: {
   "confirmDeleteMessage": "Confirm Delete Message?",
   "deleteForEveryoneWarning": "The message you selected will be deleted from all chatrooms. This action cannot be undone.",
   "deleteForMeWarning": "The message you selected will be deleted from your chatroom. The other user will still be able to see the message in the chatroom. This action cannot be undone.",
+  "messages": "Messages",
+  "foundMessages": "Found {0} messages",
   "online-status-online": "Active",
   "online-status-offline": "Away",
   "Request": {

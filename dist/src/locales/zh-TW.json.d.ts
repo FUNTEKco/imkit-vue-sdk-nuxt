@@ -83,6 +83,8 @@ declare const _default: {
   "confirmDeleteMessage": "確認要刪除這則訊息嗎？",
   "deleteForEveryoneWarning": "您選擇的訊息會從所有人的聊天室中刪除。此操作無法復原。",
   "deleteForMeWarning": "您選擇的訊息只會從您的聊天室刪除，對方還是可以在聊天室內看到訊息。此操作無法復原。",
+  "messages": "訊息",
+  "foundMessages": "找到 {0} 則訊息",
   "online-status-online": "上線中",
   "online-status-offline": "離線中",
   "Request": {

@@ -82,6 +82,8 @@ declare const _default: {
   "confirmDeleteMessage": "Nachricht löschen bestätigen?",
   "deleteForEveryoneWarning": "Die von Ihnen ausgewählte Nachricht wird aus allen Chaträumen gelöscht. Diese Aktion kann nicht rückgängig gemacht werden.",
   "deleteForMeWarning": "Die von Ihnen ausgewählte Nachricht wird nur aus Ihrem Chatraum gelöscht. Die andere Person kann die Nachricht weiterhin im Chatraum sehen. Diese Aktion kann nicht rückgängig gemacht werden.",
+  "messages": "Nachrichten",
+  "foundMessages": "Gefundene Nachrichten {0}",
   "online-status-online": "Aktiv",
   "online-status-offline": "Abwesend",
   "Request": {

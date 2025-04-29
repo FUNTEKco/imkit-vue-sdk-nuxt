@@ -84,6 +84,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -196,6 +198,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -307,6 +311,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -418,6 +424,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -530,6 +538,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -641,6 +651,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -752,6 +764,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -863,6 +877,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -974,6 +990,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1085,6 +1103,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1196,6 +1216,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1308,6 +1330,8 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        messages: string;
+        foundMessages: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {

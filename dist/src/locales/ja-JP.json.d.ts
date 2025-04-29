@@ -83,6 +83,8 @@ declare const _default: {
   "confirmDeleteMessage": "メッセージの削除を確認しますか？",
   "deleteForEveryoneWarning": "選択したメッセージはすべてのチャットルームから削除されます。この操作は元に戻せません。",
   "deleteForMeWarning": "選択したメッセージはあなたのチャットルームからのみ削除されます。相手はチャットルームでメッセージを見ることができます。この操作は元に戻せません。",
+  "messages": "メッセージ",
+  "foundMessages": "見つかったメッセージ {0} 件",
   "online-status-online": "アクティブ",
   "online-status-offline": "ないオンライン",
   "Request": {

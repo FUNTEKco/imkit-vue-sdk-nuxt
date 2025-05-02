@@ -29985,7 +29985,7 @@ const hAe = {
     const r = n.lastReadMessageId[t.uid];
     if (!r) return;
     const i = (a = t.messageMultiList.main) == null ? void 0 : a.finds(r);
-    if (!i) return;
+    if (!i || i.senderId === t.uid) return;
     const s = zn.fromPayload(
       {
         roomId: t.selectedRoomId,

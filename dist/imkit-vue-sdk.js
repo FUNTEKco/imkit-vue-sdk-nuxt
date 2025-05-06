@@ -77533,10 +77533,10 @@ const zwe = ["width", "height"], TO = {
   class: "mb-1 ml-1 text-xs font-medium text-gray-500 dark:text-gray-300"
 }, bSe = {
   key: 0,
-  class: "w-[52px] shrink-0 self-end text-xs text-gray-500 dark:text-gray-300"
+  class: "shrink-0 self-end text-xs text-gray-500 dark:text-gray-300"
 }, vSe = {
   key: 1,
-  class: "flex w-[52px] shrink-0 items-center justify-center gap-2"
+  class: "flex shrink-0 items-center justify-center gap-2"
 }, ySe = {
   key: 1,
   class: "relative flex items-center justify-center"
@@ -77797,7 +77797,7 @@ const zwe = ["width", "height"], TO = {
       ], 64);
     };
   }
-}), TSe = /* @__PURE__ */ En(_Se, [["__scopeId", "data-v-f15d3d0f"]]), ESe = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, CSe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, xSe = ["src", "onClick"], wSe = {
+}), TSe = /* @__PURE__ */ En(_Se, [["__scopeId", "data-v-a58b9103"]]), ESe = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, CSe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, xSe = ["src", "onClick"], wSe = {
   key: 0,
   class: "flex h-14 w-full flex-shrink-0 gap-4 overflow-x-auto p-3"
 }, SSe = ["src", "onClick"], ISe = /* @__PURE__ */ Ke({

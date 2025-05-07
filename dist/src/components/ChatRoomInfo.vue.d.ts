@@ -1,6 +1,7 @@
 declare function __VLS_template(): {
     slots: {
         default?(_: {}): any;
+        afterChatbotSwitch?(_: {}): any;
     };
     refs: {};
     attrs: Partial<{}>;

@@ -84,6 +84,12 @@ declare const _default: {
   "deleteForMeWarning": "선택한 메시지가 내 채팅방에서만 삭제됩니다. 상대방은 여전히 채팅방에서 메시지를 볼 수 있습니다. 이 작업은 취소할 수 없습니다.",
   "messages": "메시지",
   "foundMessages": "찾은 메시지 {0}개",
+  "moveOut": "내보내기",
+  "kickOutConfirmTitle": "{0}님을 그룹에서 내보내시겠습니까?",
+  "kickOutConfirmTip": "내보낸 후에는 해당 사용자가 그룹 메시지를 더 이상 볼 수 없습니다.",
+  "kickOutGroup": "그룹에서 쫓아냅니다",
+  "kickOutErrorTitle": "퇴장 멤버가 실패했습니다",
+  "kickOutErrorDesc": "킥아웃 작업은 현재 완료 될 수 없습니다. 네트워크 연결을 확인하거나 나중에 다시 시도하십시오.",
   "online-status-online": "온라인",
   "online-status-offline": "오프라인",
   "Request": {

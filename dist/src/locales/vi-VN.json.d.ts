@@ -84,6 +84,12 @@ declare const _default: {
   "deleteForMeWarning": "Tin nhắn bạn đã chọn sẽ chỉ bị xóa khỏi phòng trò chuyện của bạn. Người kia vẫn có thể thấy tin nhắn trong phòng trò chuyện. Hành động này không thể hoàn tác.",
   "messages": "Tin nhắn",
   "foundMessages": "Tìm thấy {0} tin nhắn",
+  "kickOutConfirmTitle": "Bạn có chắc muốn xóa {0} khỏi nhóm không?",
+  "kickOutConfirmTip": "Sau khi bị xóa, thành viên sẽ không thể xem tin nhắn nhóm nữa.",
+  "moveOut": "Xóa",
+  "kickOutGroup": "Đá ra khỏi nhóm",
+  "kickOutErrorTitle": "Khởi động các thành viên không thành công",
+  "kickOutErrorDesc": "Các hoạt động kick-out không thể được hoàn thành hiện tại. Vui lòng xác nhận kết nối mạng hoặc thử lại sau.",
   "online-status-online": "Đang hoạt động",
   "online-status-offline": "Không hoạt động",
   "Request": {

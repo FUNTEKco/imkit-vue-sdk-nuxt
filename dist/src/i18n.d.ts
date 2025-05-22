@@ -86,6 +86,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -200,6 +206,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -313,6 +325,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -426,6 +444,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -540,6 +564,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -653,6 +683,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -766,6 +802,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -879,6 +921,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -992,6 +1040,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1105,6 +1159,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        moveOut: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1218,6 +1278,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1332,6 +1398,12 @@ declare const i18n: VueI18n.I18n<{
         deleteForMeWarning: string;
         messages: string;
         foundMessages: string;
+        moveOut: string;
+        kickOutConfirmTitle: string;
+        kickOutConfirmTip: string;
+        kickOutGroup: string;
+        kickOutErrorTitle: string;
+        kickOutErrorDesc: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {

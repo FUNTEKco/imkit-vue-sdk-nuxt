@@ -84,6 +84,12 @@ declare const _default: {
   "deleteForMeWarning": "A mensagem que selecionou será apagada apenas da sua sala de chat. A outra pessoa ainda poderá ver a mensagem na sala de chat. Esta ação não pode ser desfeita.",
   "messages": "Mensagem",
   "foundMessages": "Encontrado {0} mensagens",
+  "moveOut": "Remover",
+  "kickOutConfirmTitle": "Tem certeza de que deseja remover {0} do grupo?",
+  "kickOutConfirmTip": "Após a remoção, o membro não poderá mais ver as mensagens do grupo.",
+  "kickOutGroup": "Chutar do grupo",
+  "kickOutErrorTitle": "Os membros do chutes falharam",
+  "kickOutErrorDesc": "A operação de chute não pode ser concluída no momento. Confirme a conexão de rede ou tente novamente mais tarde.",
   "online-status-online": "Ativo",
   "online-status-offline": "Ausente",
   "Request": {

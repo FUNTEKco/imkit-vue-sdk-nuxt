@@ -84,6 +84,12 @@ declare const _default: {
   "deleteForMeWarning": "Die von Ihnen ausgewählte Nachricht wird nur aus Ihrem Chatraum gelöscht. Die andere Person kann die Nachricht weiterhin im Chatraum sehen. Diese Aktion kann nicht rückgängig gemacht werden.",
   "messages": "Nachrichten",
   "foundMessages": "Gefundene Nachrichten {0}",
+  "moveOut": "Entfernen",
+  "kickOutConfirmTitle": "Möchten Sie {0} wirklich aus der Gruppe entfernen?",
+  "kickOutConfirmTip": "Nach dem Entfernen kann das Mitglied keine Gruppen­nachrichten mehr sehen.",
+  "kickOutGroup": "Aus der Gruppe ausgehen",
+  "kickOutErrorTitle": "Die Mitglieder des Tretens scheiterten",
+  "kickOutErrorDesc": "Der Kick-out-Betrieb kann derzeit nicht abgeschlossen werden. Bitte bestätigen Sie die Netzwerkverbindung oder versuchen Sie es später erneut.",
   "online-status-online": "Aktiv",
   "online-status-offline": "Abwesend",
   "Request": {

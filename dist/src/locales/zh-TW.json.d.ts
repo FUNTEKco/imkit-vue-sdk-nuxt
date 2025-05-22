@@ -85,6 +85,12 @@ declare const _default: {
   "deleteForMeWarning": "您選擇的訊息只會從您的聊天室刪除，對方還是可以在聊天室內看到訊息。此操作無法復原。",
   "messages": "訊息",
   "foundMessages": "找到 {0} 則訊息",
+  "moveOut": "移出",
+  "kickOutConfirmTitle": "確定要將 {0} 踢出群組嗎？",
+  "kickOutConfirmTip": "成員被移出後，將無法再查看群組訊息。",
+  "kickOutGroup": "踢出群組",
+  "kickOutErrorTitle": "踢出成員失敗",
+  "kickOutErrorDesc": "目前無法完成踢出操作，請確認網路連線或稍後再試。",
   "online-status-online": "上線中",
   "online-status-offline": "離線中",
   "Request": {

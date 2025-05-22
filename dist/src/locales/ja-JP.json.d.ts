@@ -85,6 +85,12 @@ declare const _default: {
   "deleteForMeWarning": "選択したメッセージはあなたのチャットルームからのみ削除されます。相手はチャットルームでメッセージを見ることができます。この操作は元に戻せません。",
   "messages": "メッセージ",
   "foundMessages": "見つかったメッセージ {0} 件",
+  "moveOut": "削除する",
+  "kickOutConfirmTitle": "{0} をグループから削除してもよろしいですか？",
+  "kickOutConfirmTip": "メンバーが削除されると、グループメッセージを閲覧できなくなります。",
+  "kickOutGroup": "グループからキックアウト",
+  "kickOutErrorTitle": "メンバーを蹴るには失敗しました",
+  "kickOutErrorDesc": "現在、キックアウト操作は完了できません。ネットワーク接続を確認するか、後で再試行してください。",
   "online-status-online": "アクティブ",
   "online-status-offline": "ないオンライン",
   "Request": {

@@ -84,6 +84,12 @@ declare const _default: {
   "deleteForMeWarning": "Le message que vous avez sélectionné sera supprimé uniquement de votre salon de discussion. L'autre personne pourra toujours voir le message dans le salon de discussion. Cette action ne peut pas être annulée.",
   "messages": "Messages",
   "foundMessages": "Messages trouvés {0}",
+  "moveOut": "Retirer",
+  "kickOutConfirmTitle": "Êtes-vous sûr de vouloir retirer {0} du groupe ?",
+  "kickOutConfirmTip": "Une fois retiré, le membre ne pourra plus voir les messages du groupe.",
+  "kickOutGroup": "Sortir du groupe",
+  "kickOutErrorTitle": "Les membres ont échoué",
+  "kickOutErrorDesc": "L'opération de lancement ne peut pas être achevée à l'heure actuelle. Veuillez confirmer la connexion réseau ou réessayer plus tard.",
   "online-status-online": "En ligne",
   "online-status-offline": "Hors ligne",
   "Request": {

@@ -85,6 +85,12 @@ declare const _default: {
   "deleteForMeWarning": "The message you selected will be deleted from your chatroom. The other user will still be able to see the message in the chatroom. This action cannot be undone.",
   "messages": "Messages",
   "foundMessages": "Found {0} messages",
+  "moveOut": "Remove",
+  "kickOutConfirmTitle": "Are you sure you want to remove {0} from the group?",
+  "kickOutConfirmTip": "Once removed, the member will no longer be able to view group messages.",
+  "kickOutGroup": "Kick out of the group",
+  "kickOutErrorTitle": "Kicking out members failed",
+  "kickOutErrorDesc": "The kick-out operation cannot be completed at present. Please confirm the network connection or try again later.",
   "online-status-online": "Active",
   "online-status-offline": "Away",
   "Request": {

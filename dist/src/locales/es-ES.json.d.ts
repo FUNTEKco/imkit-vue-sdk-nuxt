@@ -84,6 +84,12 @@ declare const _default: {
   "deleteForMeWarning": "El mensaje que seleccionaste solo se eliminará de tu sala de chat. La otra persona aún podrá ver el mensaje en la sala de chat. Esta acción no se puede deshacer.",
   "messages": "Mensajes",
   "foundMessages": "Mensajes encontrados {0}",
+  "moveOut": "Echar",
+  "kickOutConfirmTitle": "¿Estás seguro de que deseas expulsar a {0} del grupo?",
+  "kickOutConfirmTip": "Una vez expulsado, el miembro no podrá ver los mensajes del grupo.",
+  "kickOutGroup": "Compilarse del grupo",
+  "kickOutErrorTitle": "Patear a los miembros falló",
+  "kickOutErrorDesc": "La operación de inicio no se puede completar en la actualidad. Confirme la conexión de red o vuelva a intentarlo más tarde.",
   "online-status-online": "Activo",
   "online-status-offline": "Ausente",
   "Request": {

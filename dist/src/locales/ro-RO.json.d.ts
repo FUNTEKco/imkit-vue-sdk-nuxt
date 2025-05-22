@@ -84,6 +84,12 @@ declare const _default: {
   "deleteForMeWarning": "Mesajul selectat va fi șters doar din camera dvs. de chat. Cealaltă persoană va putea în continuare să vadă mesajul în camera de chat. Această acțiune nu poate fi anulată.",
   "messages": "Mesaj",
   "foundMessages": "A fost găsit {0} mesaj",
+  "moveOut": "Elimină",
+  "kickOutConfirmTitle": "Sigur doriți să îl eliminați pe {0} din grup?",
+  "kickOutConfirmTip": "Odată eliminat, membrul nu va mai putea vedea mesajele din grup.",
+  "kickOutGroup": "Da afară din grup",
+  "kickOutErrorTitle": "Introducerea membrilor nu a reușit",
+  "kickOutErrorDesc": "Operația de declanșare nu poate fi finalizată în prezent. Vă rugăm să confirmați conexiunea de rețea sau să încercați din nou mai târziu.",
   "online-status-online": "Activ",
   "online-status-offline": "Inactiv",
   "Request": {

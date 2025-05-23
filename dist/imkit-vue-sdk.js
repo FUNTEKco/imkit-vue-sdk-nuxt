@@ -77926,7 +77926,7 @@ const fIe = ["width", "height"], wN = {
         }, null, 8, ["message"])) : (W(), te("div", {
           key: 2,
           class: gt(["grid w-full grid-flow-row gap-2", [
-            u.value ? "grid-cols-[30px_fit-content(75%)_120px] grid-rows-[16px_1fr]" : "grid-cols-[minmax(140px,auto)_fit-content(75%)]",
+            u.value ? d.value ? "grid-cols-[30px_fit-content(75%)_120px] grid-rows-[16px_1fr]" : "grid-cols-[fit-content(75%)_120px] pl-[38px]" : "grid-cols-[minmax(140px,auto)_fit-content(75%)]",
             d.value ? "mt-1" : "mt-[0.0625rem]",
             l.value ? "mb-1" : "mb-[0.0625rem]",
             A.value.length > 0 ? "mb-[40px]" : ""
@@ -78030,7 +78030,7 @@ const fIe = ["width", "height"], wN = {
       ], 64);
     };
   }
-}), VIe = /* @__PURE__ */ En(qIe, [["__scopeId", "data-v-89a62783"]]), WIe = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, QIe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, GIe = ["src", "onClick"], YIe = {
+}), VIe = /* @__PURE__ */ En(qIe, [["__scopeId", "data-v-c2a9e756"]]), WIe = { class: "absolute bottom-[110%] right-0 flex h-80 w-80 max-w-full flex-col divide-y overflow-auto rounded-xl border bg-white dark:bg-zinc-800" }, QIe = { class: "grid grow grid-cols-3 items-center justify-center gap-4 overflow-y-auto p-4 sm:grid-cols-4" }, GIe = ["src", "onClick"], YIe = {
   key: 0,
   class: "flex h-14 w-full flex-shrink-0 gap-4 overflow-x-auto p-3"
 }, XIe = ["src", "onClick"], KIe = /* @__PURE__ */ Ke({

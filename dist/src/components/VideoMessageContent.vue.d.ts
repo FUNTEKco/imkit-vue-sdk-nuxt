@@ -1,7 +1,8 @@
 import { VideoMessage } from './../classes/message';
-declare const _default: import('vue').DefineComponent<{
+type __VLS_Props = {
     message: VideoMessage;
-}, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<{
-    message: VideoMessage;
-}> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+};
+declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
+    videoPlayer: HTMLVideoElement;
+}, HTMLDivElement>;
 export default _default;

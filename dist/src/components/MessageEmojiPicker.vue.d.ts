@@ -1,9 +1,10 @@
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         default?(_: {}): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import('vue').DefineComponent<{}, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {

@@ -6,5 +6,5 @@ declare const _default: import('vue').DefineComponent<Props, {}, {}, {}, {}, imp
     selectEmoji: (emoji: string) => any;
 }, string, import('vue').PublicProps, Readonly<Props> & Readonly<{
     onSelectEmoji?: ((emoji: string) => any) | undefined;
-}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, HTMLDivElement>;
 export default _default;

@@ -16,6 +16,7 @@ export type Mutations<S = IMState> = {
         value: string;
     }): void;
     [MutationTypes.updateRoom](state: S, payload: Room): void;
+    [MutationTypes.updateMessage](state: S, payload: Message): void;
     [MutationTypes.updateLastRead](state: S, event: {
         roomId: string;
         uid: string;

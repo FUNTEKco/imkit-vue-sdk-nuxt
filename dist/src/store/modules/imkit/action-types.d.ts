@@ -8,6 +8,7 @@ export declare enum IMActionTypes {
     handleRoomFromSocket = "handleRoomFromSocket",
     handleLastReadFromSocket = "handleLastReadFromSocket",
     sendMessage = "sendMessage",
+    retryMessage = "retryMessage",
     recallMessage = "recallMessage",
     hideMessage = "hideMessage",
     deleteMessage = "deleteMessage",

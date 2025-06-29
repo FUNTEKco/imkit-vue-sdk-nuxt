@@ -4,6 +4,7 @@ export declare enum IMMutationTypes {
     updateField = "updateField",
     deleteField = "deleteField",
     updateRoom = "updateRoom",
+    updateMessage = "updateMessage",
     updateLastRead = "updateLastRead",
     pushMessage = "pushMessage",
     replaceMessage = "replaceMessage",

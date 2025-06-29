@@ -30,6 +30,7 @@ export interface Actions {
         messageId: string;
     }): void;
     [IMActionTypes.sendMessage](context: AugmentedActionContext, payload: Record<string, unknown>): void;
+    [IMActionTypes.retryMessage](context: AugmentedActionContext, message: Message): void;
     [IMActionTypes.recallMessage](context: AugmentedActionContext, payload: {
         roomId: string;
         _id: string;

@@ -7,6 +7,7 @@ import { default as Folder } from '../../../classes/folder';
 import { default as LinkPreview } from '../../../classes/linkPreview';
 import { default as Message } from '../../../classes/message';
 import { default as MessageMultiList } from '../../../classes/messageMultiList';
+import { default as RWLock } from 'async-rwlock';
 import { default as Room } from '../../../classes/room';
 import { SearchType } from '../../../enums/searchType';
 import { default as User } from '../../../classes/user';
@@ -59,6 +60,7 @@ export type IMState = {
     roomTag: string;
     deliveringMessages: Map<string, Message>;
     processingMessages: Map<string, Message>;
+    rwlock: RWLock;
     selectedRoomId: string;
     messageMultiList: MessageMultiList;
     numberOfTotalMessages: number;

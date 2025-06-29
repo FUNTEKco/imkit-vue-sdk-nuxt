@@ -14,6 +14,7 @@ type Settings = {
     massTextingEnabled: boolean;
     showDarkModeSwitch: boolean;
     enableReadReceipt: boolean;
+    linkPreviewEnabled: boolean;
     fixedRoomEnabled: boolean;
 };
 export default Settings;

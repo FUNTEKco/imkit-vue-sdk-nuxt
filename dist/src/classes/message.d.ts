@@ -25,7 +25,12 @@ export interface Reaction {
     client: string;
     reaction: string;
 }
-type MessageTemplate = {
+export declare enum MessageStatus {
+    Sending = "sending",
+    Delivered = "delivered",
+    Failed = "failed"
+}
+export type MessageTemplate = {
     quickReply: {
         items: any[];
     };
@@ -35,6 +40,7 @@ export default class Message {
     roomId: string;
     senderId: string;
     type: MessageType;
+    status: MessageStatus;
     createdAt: number;
     updatedAt: number;
     groupId: string;
@@ -44,6 +50,7 @@ export default class Message {
     text?: string;
     prev: Message | null;
     next: Message | null;
+    payload: Record<string, unknown> | null;
     _string(uid: string, users: {
         [uid: string]: User;
     }): string;
@@ -52,7 +59,8 @@ export default class Message {
     get isOutgoing(): boolean;
     get isSystem(): boolean;
     constructor(raw: any);
-    static fromRaw(raw: any): Message | null;
+    static create(raw: any): Message | null;
+    static createReactive(raw: any): Message | null;
     static fromPayload(payload: Record<string, unknown>, uid: string): Message | null;
 }
 export declare class TextMessage extends Message {
@@ -127,4 +135,3 @@ export declare class AudioMessage extends Message {
     duration: number;
     constructor(raw: any);
 }
-export {};

@@ -102698,13 +102698,13 @@ const PPe = /* @__PURE__ */ wn(NPe, [["render", RPe]]), BPe = {
             onClick: we
           })),
           r.isTestPreview ? Ve("", !0) : (Y(), re(Ct, { key: 1 }, [
-            f.value ? (Y(), re("div", {
+            f.value ? Ve("", !0) : (Y(), re("div", {
               key: 0,
               class: "cursor-pointer rounded-[5px] p-[6px] hover:bg-[#00000033]",
               style: Yt(`color: ${(gt = (lt = r.chatStyle) == null ? void 0 : lt.header) == null ? void 0 : gt.color}`)
             }, [
               ot(PPe, { onClick: Ie })
-            ], 4)) : Ve("", !0),
+            ], 4)),
             u.value.avatars.length === 1 ? (Y(), Tt(ni, {
               key: 1,
               url: u.value.avatars[0].url,
@@ -102995,7 +102995,7 @@ const PPe = /* @__PURE__ */ wn(NPe, [["render", RPe]]), BPe = {
       ], 32)) : Ve("", !0);
     };
   }
-}), cje = /* @__PURE__ */ wn(tBe, [["__scopeId", "data-v-fb17e8a3"]]), k9 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR4nO3WPQrCMBiA4W+yh/BcniABFyNIsrsnOPRS/kz1KlJ35SsdOkhtRaGp7wOB0pZ3CGlSEQAAAAAAAAAAJsC5sjA+bU2IZxviXUd77fTZrHrr3WFpQ7zakB6vhvGp0ndm0XOuLPpi3eiQmZx6T3SZvIt1opvce2J9ugwOhnjKvScmxHpEsM69J2OCNsRb7j35uyVtQ3Tf3BSm3pP2QK8GxKrVfr/IvdfQQ7sv+smPwpR7DZ0dXRL6HehG0WwWPh313uCZy6gHAAAAAAAAAID8wBNoenSqsgBAfQAAAABJRU5ErkJggg==";
+}), cje = /* @__PURE__ */ wn(tBe, [["__scopeId", "data-v-6b1097ce"]]), k9 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA1klEQVR4nO3WPQrCMBiA4W+yh/BcniABFyNIsrsnOPRS/kz1KlJ35SsdOkhtRaGp7wOB0pZ3CGlSEQAAAAAAAAAAJsC5sjA+bU2IZxviXUd77fTZrHrr3WFpQ7zakB6vhvGp0ndm0XOuLPpi3eiQmZx6T3SZvIt1opvce2J9ugwOhnjKvScmxHpEsM69J2OCNsRb7j35uyVtQ3Tf3BSm3pP2QK8GxKrVfr/IvdfQQ7sv+smPwpR7DZ0dXRL6HehG0WwWPh313uCZy6gHAAAAAAAAAID8wBNoenSqsgBAfQAAAABJRU5ErkJggg==";
 var Mv = { name: "Toggle", emits: ["input", "update:modelValue", "change"], props: { value: { validator: function(t) {
   return (e) => ["number", "string", "boolean"].indexOf(typeof e) !== -1 || e == null;
 }, required: !1 }, modelValue: { validator: function(t) {

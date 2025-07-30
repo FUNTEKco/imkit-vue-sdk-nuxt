@@ -68,6 +68,7 @@ declare const _default: {
   "confirmDeleteTag": "确认删除标签?",
   "editTag": "编辑标签",
   "chooseColor": "选择颜色",
+  "duplicateTagName": "标签已存在，请换个名称",
   "block": "封锁",
   "unblock": "解封锁",
   "textareaBlockedHint": "此用户已被封锁。",

@@ -68,6 +68,7 @@ declare const _default: {
   "confirmDeleteTag": "Confirmați ștergerea etichetei?",
   "editTag": "Editează eticheta",
   "chooseColor": "Alegeți culoarea",
+  "duplicateTagName": "Eticheta există deja. Folosiți alt nume.",
   "block": "Blochează",
   "unblock": "Deblochează",
   "textareaBlockedHint": "Acest utilizator a fost blocat.",

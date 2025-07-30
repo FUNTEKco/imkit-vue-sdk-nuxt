@@ -69,6 +69,7 @@ declare const _default: {
   "confirmDeleteTag": "Confirm Delete Tag?",
   "editTag": "Edit Tag",
   "chooseColor": "Choose Color",
+  "duplicateTagName": "Tag already exists. Try another name.",
   "block": "Block",
   "unblock": "Unblock",
   "textareaBlockedHint": "This user has been blocked",

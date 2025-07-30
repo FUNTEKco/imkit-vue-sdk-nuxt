@@ -69,6 +69,7 @@ declare const _default: {
   "confirmDeleteTag": "確認刪除標籤?",
   "editTag": "編輯標籤",
   "chooseColor": "選擇顏色",
+  "duplicateTagName": "此標籤已存在，請改用其他名稱",
   "block": "封鎖",
   "unblock": "解封鎖",
   "textareaBlockedHint": "此用戶已被封鎖。",

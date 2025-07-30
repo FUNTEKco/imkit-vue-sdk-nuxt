@@ -70,6 +70,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -190,6 +191,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -309,6 +311,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -428,6 +431,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -548,6 +552,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -667,6 +672,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -786,6 +792,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -905,6 +912,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -1024,6 +1032,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -1143,6 +1152,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -1262,6 +1272,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;
@@ -1382,6 +1393,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteTag: string;
         editTag: string;
         chooseColor: string;
+        duplicateTagName: string;
         block: string;
         unblock: string;
         textareaBlockedHint: string;

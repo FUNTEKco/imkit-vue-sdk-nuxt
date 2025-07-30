@@ -69,6 +69,7 @@ declare const _default: {
   "confirmDeleteTag": "タグを削除してよろしいですか？",
   "editTag": "タグを編集",
   "chooseColor": "色を選択",
+  "duplicateTagName": "このタグは既にあります。他の名前にしてください。",
   "block": "ブロック",
   "unblock": "ブロック解除​",
   "textareaBlockedHint": "このユーザーはブロックされました。",

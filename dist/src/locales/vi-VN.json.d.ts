@@ -68,6 +68,7 @@ declare const _default: {
   "confirmDeleteTag": "Xác nhận xóa thẻ?",
   "editTag": "Chỉnh sửa thẻ",
   "chooseColor": "Chọn màu",
+  "duplicateTagName": "Thẻ đã tồn tại. Dùng tên khác.",
   "block": "Chặn",
   "unblock": "Bỏ chặn",
   "textareaBlockedHint": "Người dùng này đã bị chặn.",

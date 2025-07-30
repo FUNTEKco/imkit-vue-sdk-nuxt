@@ -68,6 +68,7 @@ declare const _default: {
   "confirmDeleteTag": "ยืนยันการลบแท็ก?",
   "editTag": "แก้ไขแท็ก",
   "chooseColor": "เลือกสี",
+  "duplicateTagName": "แท็กนี้มีอยู่แล้ว ใช้ชื่ออื่น",
   "block": "บล็อก",
   "unblock": "ยกเลิกการบล็อก",
   "textareaBlockedHint": "ผู้ใช้นี้ถูกบล็อกแล้ว",

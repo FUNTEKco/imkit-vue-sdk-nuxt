@@ -68,6 +68,7 @@ declare const _default: {
   "confirmDeleteTag": "¿Confirmar eliminación de etiqueta?",
   "editTag": "Editar etiqueta",
   "chooseColor": "Elegir color",
+  "duplicateTagName": "Etiqueta ya existe. Usa otro nombre.",
   "block": "Bloquear",
   "unblock": "Desbloquear",
   "textareaBlockedHint": "Este usuario ha sido bloqueado.",

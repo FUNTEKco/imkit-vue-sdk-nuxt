@@ -91,6 +91,8 @@ declare const _default: {
   "kickOutGroup": "Đá ra khỏi nhóm",
   "kickOutErrorTitle": "Khởi động các thành viên không thành công",
   "kickOutErrorDesc": "Các hoạt động kick-out không thể được hoàn thành hiện tại. Vui lòng xác nhận kết nối mạng hoặc thử lại sau.",
+  "fileSizeLimitTitle": "Tệp quá lớn",
+  "fileSizeLimitMessage": "Tệp bạn chọn vượt quá kích thước tối đa cho phép {0}. Vui lòng chọn tệp nhỏ hơn.",
   "online-status-online": "Đang hoạt động",
   "online-status-offline": "Không hoạt động",
   "Request": {

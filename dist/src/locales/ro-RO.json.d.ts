@@ -91,6 +91,8 @@ declare const _default: {
   "kickOutGroup": "Da afară din grup",
   "kickOutErrorTitle": "Introducerea membrilor nu a reușit",
   "kickOutErrorDesc": "Operația de declanșare nu poate fi finalizată în prezent. Vă rugăm să confirmați conexiunea de rețea sau să încercați din nou mai târziu.",
+  "fileSizeLimitTitle": "Fișier prea mare",
+  "fileSizeLimitMessage": "Fișierul selectat depășește dimensiunea maximă permisă de {0}. Vă rugăm să alegeți un fișier mai mic.",
   "online-status-online": "Activ",
   "online-status-offline": "Inactiv",
   "Request": {

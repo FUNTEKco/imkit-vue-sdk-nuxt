@@ -91,6 +91,8 @@ declare const _default: {
   "kickOutGroup": "Aus der Gruppe ausgehen",
   "kickOutErrorTitle": "Die Mitglieder des Tretens scheiterten",
   "kickOutErrorDesc": "Der Kick-out-Betrieb kann derzeit nicht abgeschlossen werden. Bitte bestätigen Sie die Netzwerkverbindung oder versuchen Sie es später erneut.",
+  "fileSizeLimitTitle": "Datei zu groß",
+  "fileSizeLimitMessage": "Die ausgewählte Datei überschreitet die maximale erlaubte Größe von {0}. Bitte wählen Sie eine kleinere Datei.",
   "online-status-online": "Aktiv",
   "online-status-offline": "Abwesend",
   "Request": {

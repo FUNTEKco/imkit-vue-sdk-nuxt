@@ -15,6 +15,7 @@ type Settings = {
     showDarkModeSwitch: boolean;
     enableReadReceipt: boolean;
     linkPreviewEnabled: boolean;
+    fileUploadSizeLimit?: number;
     fixedRoomEnabled: boolean;
 };
 export default Settings;

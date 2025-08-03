@@ -91,6 +91,8 @@ declare const _default: {
   "kickOutGroup": "Chutar do grupo",
   "kickOutErrorTitle": "Os membros do chutes falharam",
   "kickOutErrorDesc": "A operação de chute não pode ser concluída no momento. Confirme a conexão de rede ou tente novamente mais tarde.",
+  "fileSizeLimitTitle": "Ficheiro demasiado grande",
+  "fileSizeLimitMessage": "O ficheiro selecionado excede o tamanho máximo permitido de {0}. Por favor, escolha um ficheiro mais pequeno.",
   "online-status-online": "Ativo",
   "online-status-offline": "Ausente",
   "Request": {

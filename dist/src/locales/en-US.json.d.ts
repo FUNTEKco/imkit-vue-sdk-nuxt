@@ -92,6 +92,8 @@ declare const _default: {
   "kickOutGroup": "Kick out of the group",
   "kickOutErrorTitle": "Kicking out members failed",
   "kickOutErrorDesc": "The kick-out operation cannot be completed at present. Please confirm the network connection or try again later.",
+  "fileSizeLimitTitle": "File too large",
+  "fileSizeLimitMessage": "The selected file exceeds the maximum allowed size of {0}. Please choose a smaller file.",
   "online-status-online": "Active",
   "online-status-offline": "Away",
   "Request": {

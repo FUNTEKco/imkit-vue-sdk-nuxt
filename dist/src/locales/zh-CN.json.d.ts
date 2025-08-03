@@ -91,6 +91,8 @@ declare const _default: {
   "kickOutGroup": "踢出群组",
   "kickOutErrorTitle": "踢出成员失败",
   "kickOutErrorDesc": "目前无法完成踢出操作，请确认网路连线或稍后再试。",
+  "fileSizeLimitTitle": "文件过大",
+  "fileSizeLimitMessage": "所选文件超过 {0} 的大小限制。请选择较小的文件。",
   "online-status-online": "上线中",
   "online-status-offline": "离线中",
   "Request": {

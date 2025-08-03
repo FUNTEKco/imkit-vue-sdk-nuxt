@@ -91,6 +91,8 @@ declare const _default: {
   "kickOutGroup": "เตะออกจากกลุ่ม",
   "kickOutErrorTitle": "การเตะสมาชิกล้มเหลว",
   "kickOutErrorDesc": "การดำเนินการเตะออกไม่สามารถเสร็จสิ้นได้ในปัจจุบัน โปรดยืนยันการเชื่อมต่อเครือข่ายหรือลองอีกครั้งในภายหลัง",
+  "fileSizeLimitTitle": "ไฟล์ใหญ่เกินไป",
+  "fileSizeLimitMessage": "ไฟล์ที่เลือกมีขนาดเกินขีดจำกัดสูงสุดที่อนุญาต {0} กรุณาเลือกไฟล์ที่เล็กกว่า",
   "online-status-online": "ออนไลน์",
   "online-status-offline": "ออฟไลน์",
   "Request": {

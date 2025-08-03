@@ -91,6 +91,8 @@ declare const _default: {
   "kickOutGroup": "그룹에서 쫓아냅니다",
   "kickOutErrorTitle": "퇴장 멤버가 실패했습니다",
   "kickOutErrorDesc": "킥아웃 작업은 현재 완료 될 수 없습니다. 네트워크 연결을 확인하거나 나중에 다시 시도하십시오.",
+  "fileSizeLimitTitle": "파일이 너무 큽니다",
+  "fileSizeLimitMessage": "선택한 파일이 {0}의 최대 허용 크기를 초과했습니다. 더 작은 파일을 선택하세요.",
   "online-status-online": "온라인",
   "online-status-offline": "오프라인",
   "Request": {

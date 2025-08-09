@@ -118,8 +118,38 @@ declare const _default: {
   "notificationPermissionDescription": "允许后，当有新讯息传来时，即使聊天室页面未开启，你也会收到桌面推送通知。",
   "notificationSettingsPath": "这个设置可以在【我的帐号 > 讯息通知设置】中修改。",
   "askLater": "稍后再说",
-  "allowNotifications": "允许通知"
-}
-;
+  "allowNotifications": "允许通知",
+  "you": "您",
+  "submit": "提交",
+  "status": "状态",
+  "currency": "货币",
+  "paymentCollectionTitle": "收款",
+  "paymentCollectionNotSet": "未设置付款方式",
+  "paymentCollectionNotSetDescription": "您尚未设置付款方式。请前往【我的账户 > 聊天室付款设置】完成设置并开始发送付款请求。",
+  "paymentGoToSetting": "前往设置",
+  "paymentSendRequestMessage": "发送付款请求消息",
+  "paymentMethods": "付款方式",
+  "paymentSupportedMethods": "支持的付款方式",
+  "paymentRequestMessage": "付款请求消息",
+  "paymentInputMessageOptional": "输入消息（可选）",
+  "paymentRequestedFrom": "已向 {0} 请求付款",
+  "paymentViewDetails": "查看详情",
+  "paymentRequestDetail": "请求详情",
+  "paymentDetail": "付款详情",
+  "paymentRequestTime": "请求时间",
+  "paymentCompleted": "{0} 已完成付款",
+  "paymentFlowPaid": "已付款",
+  "paymentFlowUnpaid": "未付款",
+  "paymentFlowRefund": "已退款",
+  "paymentFlowAuthorizationError": "授权错误",
+  "paymentRequestedFromYou": "{0} 向您请求付款",
+  "paymentGoToPay": "前往付款",
+  "paymentFailed": "付款失败",
+  "paymentFailedDescription": "请检查您的账户并重试。",
+  "paymentPaidTo": "已付款至 {0}",
+  "paymentSendPaymentRequestMessageEmpty": "无",
+  "paymentSendPaymentRequestMessage": "{0} 发送了付款请求",
+  "paymentSendPaymentMessage": "{0} 发送了付款"
+};
 
 export default _default;

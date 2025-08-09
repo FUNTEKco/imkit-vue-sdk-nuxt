@@ -119,8 +119,38 @@ declare const _default: {
   "notificationPermissionDescription": "After enabling, when a new message arrives, you will receive desktop notifications even if the chat is not open.",
   "notificationSettingsPath": "This setting can be modified in [My Account > Notification Settings].",
   "askLater": "Ask Later",
-  "allowNotifications": "Allow Notifications"
-}
-;
+  "allowNotifications": "Allow Notifications",
+  "you": "You",
+  "submit": "Submit",
+  "status": "Status",
+  "currency": "Currency",
+  "paymentCollectionTitle": "Payment Collection",
+  "paymentCollectionNotSet": "Payment method not set",
+  "paymentCollectionNotSetDescription": "You haven't set up a payment method yet. Please go to [My Account > Chatroom Payment Settings] to complete the setup and start sending payment requests.",
+  "paymentGoToSetting": "Go to Settings",
+  "paymentSendRequestMessage": "Send Payment Request Message",
+  "paymentMethods": "Payment Methods",
+  "paymentSupportedMethods": "Supported Payment Methods",
+  "paymentRequestMessage": "Payment Request Message",
+  "paymentInputMessageOptional": "Enter message (optional)",
+  "paymentRequestedFrom": "Requested payment from {0}",
+  "paymentViewDetails": "View Details",
+  "paymentRequestDetail": "Request Details",
+  "paymentDetail": "Payment Details",
+  "paymentRequestTime": "Request Time",
+  "paymentCompleted": "{0} has completed the payment",
+  "paymentFlowPaid": "Paid",
+  "paymentFlowUnpaid": "Unpaid",
+  "paymentFlowRefund": "Refunded",
+  "paymentFlowAuthorizationError": "Authorization Error",
+  "paymentRequestedFromYou": "{0} requested payment from you",
+  "paymentGoToPay": "Go to Pay",
+  "paymentFailed": "Payment Failed",
+  "paymentFailedDescription": "Please check your account and try again.",
+  "paymentPaidTo": "Paid to ${0}",
+  "paymentSendPaymentRequestMessageEmpty": "None",
+  "paymentSendPaymentRequestMessage": "{0} sent a payment request",
+  "paymentSendPaymentMessage": "{0} sent a payment"
+};
 
 export default _default;

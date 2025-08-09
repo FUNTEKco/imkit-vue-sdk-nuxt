@@ -118,8 +118,38 @@ declare const _default: {
   "notificationPermissionDescription": "Sau khi bật, khi có tin nhắn mới đến, bạn sẽ nhận được thông báo trên màn hình ngay cả khi cuộc trò chuyện không mở.",
   "notificationSettingsPath": "Cài đặt này có thể được sửa đổi trong [Tài khoản của tôi > Cài đặt thông báo].",
   "askLater": "Hỏi sau",
-  "allowNotifications": "Cho phép thông báo"
-}
-;
+  "allowNotifications": "Cho phép thông báo",
+  "you": "Bạn",
+  "submit": "Gửi",
+  "status": "Trạng thái",
+  "currency": "Tiền tệ",
+  "paymentCollectionTitle": "Thu tiền",
+  "paymentCollectionNotSet": "Chưa thiết lập phương thức thanh toán",
+  "paymentCollectionNotSetDescription": "Bạn chưa thiết lập phương thức thanh toán. Vui lòng vào [Tài khoản của tôi > Cài đặt thanh toán phòng chat] để hoàn tất thiết lập và bắt đầu gửi yêu cầu thanh toán.",
+  "paymentGoToSetting": "Đi tới cài đặt",
+  "paymentSendRequestMessage": "Gửi tin nhắn yêu cầu thanh toán",
+  "paymentMethods": "Phương thức thanh toán",
+  "paymentSupportedMethods": "Phương thức thanh toán được hỗ trợ",
+  "paymentRequestMessage": "Tin nhắn yêu cầu thanh toán",
+  "paymentInputMessageOptional": "Nhập tin nhắn (tùy chọn)",
+  "paymentRequestedFrom": "Đã yêu cầu thanh toán từ {0}",
+  "paymentViewDetails": "Xem chi tiết",
+  "paymentRequestDetail": "Chi tiết yêu cầu",
+  "paymentDetail": "Chi tiết thanh toán",
+  "paymentRequestTime": "Thời gian yêu cầu",
+  "paymentCompleted": "{0} đã hoàn thành thanh toán",
+  "paymentFlowPaid": "Đã thanh toán",
+  "paymentFlowUnpaid": "Chưa thanh toán",
+  "paymentFlowRefund": "Đã hoàn tiền",
+  "paymentFlowAuthorizationError": "Lỗi ủy quyền",
+  "paymentRequestedFromYou": "{0} đã yêu cầu thanh toán từ bạn",
+  "paymentGoToPay": "Đi thanh toán",
+  "paymentFailed": "Thanh toán thất bại",
+  "paymentFailedDescription": "Vui lòng kiểm tra tài khoản và thử lại.",
+  "paymentPaidTo": "Đã thanh toán cho {0}",
+  "paymentSendPaymentRequestMessageEmpty": "Không có",
+  "paymentSendPaymentRequestMessage": "{0} đã gửi yêu cầu thanh toán",
+  "paymentSendPaymentMessage": "{0} đã gửi thanh toán"
+};
 
 export default _default;

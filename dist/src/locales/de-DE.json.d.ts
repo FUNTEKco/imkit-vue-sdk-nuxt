@@ -118,8 +118,38 @@ declare const _default: {
   "notificationPermissionDescription": "Nach der Aktivierung erhalten Sie bei Eingang einer neuen Nachricht Desktop-Benachrichtigungen, auch wenn der Chat nicht geöffnet ist.",
   "notificationSettingsPath": "Diese Einstellung kann unter [Mein Konto > Benachrichtigungseinstellungen] geändert werden.",
   "askLater": "Später fragen",
-  "allowNotifications": "Benachrichtigungen zulassen"
-}
-;
+  "allowNotifications": "Benachrichtigungen zulassen",
+  "you": "",
+  "submit": "",
+  "status": "",
+  "currency": "",
+  "paymentCollectionTitle": "",
+  "paymentCollectionNotSet": "",
+  "paymentCollectionNotSetDescription": "",
+  "paymentGoToSetting": "",
+  "paymentSendRequestMessage": "",
+  "paymentMethods": "",
+  "paymentSupportedMethods": "",
+  "paymentRequestMessage": "",
+  "paymentInputMessageOptional": "",
+  "paymentRequestedFrom": "",
+  "paymentViewDetails": "",
+  "paymentRequestDetail": "",
+  "paymentDetail": "",
+  "paymentRequestTime": "",
+  "paymentCompleted": "",
+  "paymentFlowPaid": "",
+  "paymentFlowUnpaid": "",
+  "paymentFlowRefund": "",
+  "paymentFlowAuthorizationError": "",
+  "paymentRequestedFromYou": "",
+  "paymentGoToPay": "",
+  "paymentFailed": "",
+  "paymentFailedDescription": "",
+  "paymentPaidTo": "",
+  "paymentSendPaymentRequestMessageEmpty": "",
+  "paymentSendPaymentRequestMessage": "",
+  "paymentSendPaymentMessage": ""
+};
 
 export default _default;

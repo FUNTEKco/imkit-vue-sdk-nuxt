@@ -118,8 +118,38 @@ declare const _default: {
   "notificationPermissionDescription": "หลังจากเปิดใช้งาน เมื่อมีข้อความใหม่เข้ามา คุณจะได้รับการแจ้งเตือนบนเดสก์ท็อปแม้ว่าแชทจะไม่ได้เปิดอยู่ก็ตาม",
   "notificationSettingsPath": "การตั้งค่านี้สามารถแก้ไขได้ใน [บัญชีของฉัน > การตั้งค่าการแจ้งเตือน]",
   "askLater": "ถามทีหลัง",
-  "allowNotifications": "อนุญาตการแจ้งเตือน"
-}
-;
+  "allowNotifications": "อนุญาตการแจ้งเตือน",
+  "you": "คุณ",
+  "submit": "ส่ง",
+  "status": "สถานะ",
+  "currency": "สกุลเงิน",
+  "paymentCollectionTitle": "การเก็บเงิน",
+  "paymentCollectionNotSet": "ยังไม่ได้ตั้งค่าวิธีการชำระเงิน",
+  "paymentCollectionNotSetDescription": "คุณยังไม่ได้ตั้งค่าวิธีการชำระเงิน กรุณาไปที่ [บัญชีของฉัน > การตั้งค่าการชำระเงินในห้องแชท] เพื่อทำการตั้งค่าให้เสร็จสิ้นและเริ่มส่งคำขอชำระเงิน",
+  "paymentGoToSetting": "ไปที่การตั้งค่า",
+  "paymentSendRequestMessage": "ส่งข้อความขอชำระเงิน",
+  "paymentMethods": "วิธีการชำระเงิน",
+  "paymentSupportedMethods": "วิธีการชำระเงินที่รองรับ",
+  "paymentRequestMessage": "ข้อความขอชำระเงิน",
+  "paymentInputMessageOptional": "กรอกข้อความ (ไม่บังคับ)",
+  "paymentRequestedFrom": "ได้ขอชำระเงินจาก {0}",
+  "paymentViewDetails": "ดูรายละเอียด",
+  "paymentRequestDetail": "รายละเอียดคำขอ",
+  "paymentDetail": "รายละเอียดการชำระเงิน",
+  "paymentRequestTime": "เวลาที่ขอ",
+  "paymentCompleted": "{0} ได้ชำระเงินเสร็จสิ้นแล้ว",
+  "paymentFlowPaid": "ชำระแล้ว",
+  "paymentFlowUnpaid": "ยังไม่ชำระ",
+  "paymentFlowRefund": "คืนเงินแล้ว",
+  "paymentFlowAuthorizationError": "ข้อผิดพลาดในการอนุญาต",
+  "paymentRequestedFromYou": "{0} ได้ขอชำระเงินจากคุณ",
+  "paymentGoToPay": "ไปชำระเงิน",
+  "paymentFailed": "การชำระเงินล้มเหลว",
+  "paymentFailedDescription": "กรุณาตรวจสอบบัญชีของคุณและลองใหม่อีกครั้ง",
+  "paymentPaidTo": "ชำระเงินให้ {0}",
+  "paymentSendPaymentRequestMessageEmpty": "ไม่มี",
+  "paymentSendPaymentRequestMessage": "{0} ส่งคำขอชำระเงิน",
+  "paymentSendPaymentMessage": "{0} ส่งการชำระเงิน"
+};
 
 export default _default;

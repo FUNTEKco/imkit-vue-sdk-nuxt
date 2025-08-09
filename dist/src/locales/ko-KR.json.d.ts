@@ -118,8 +118,38 @@ declare const _default: {
   "notificationPermissionDescription": "활성화하면 새 메시지가 도착했을 때 채팅이 열려 있지 않아도 데스크톱 알림을 받습니다.",
   "notificationSettingsPath": "이 설정은 [내 계정 > 알림 설정]에서 수정할 수 있습니다.",
   "askLater": "나중에 묻기",
-  "allowNotifications": "알림 허용"
-}
-;
+  "allowNotifications": "알림 허용",
+  "you": "당신",
+  "submit": "제출",
+  "status": "상태",
+  "currency": "통화",
+  "paymentCollectionTitle": "결제 수금",
+  "paymentCollectionNotSet": "결제 방법이 설정되지 않음",
+  "paymentCollectionNotSetDescription": "아직 결제 방법을 설정하지 않으셨습니다. [내 계정 > 채팅방 결제 설정]으로 이동하여 설정을 완료하고 결제 요청 보내기를 시작하세요.",
+  "paymentGoToSetting": "설정으로 이동",
+  "paymentSendRequestMessage": "결제 요청 메시지 보내기",
+  "paymentMethods": "결제 방법",
+  "paymentSupportedMethods": "지원되는 결제 방법",
+  "paymentRequestMessage": "결제 요청 메시지",
+  "paymentInputMessageOptional": "메시지 입력 (선택사항)",
+  "paymentRequestedFrom": "{0}에게 결제를 요청했습니다",
+  "paymentViewDetails": "세부 정보 보기",
+  "paymentRequestDetail": "요청 세부 정보",
+  "paymentDetail": "결제 세부 정보",
+  "paymentRequestTime": "요청 시간",
+  "paymentCompleted": "{0}이(가) 결제를 완료했습니다",
+  "paymentFlowPaid": "결제 완료",
+  "paymentFlowUnpaid": "미결제",
+  "paymentFlowRefund": "환불됨",
+  "paymentFlowAuthorizationError": "인증 오류",
+  "paymentRequestedFromYou": "{0}이(가) 당신에게 결제를 요청했습니다",
+  "paymentGoToPay": "결제하러 가기",
+  "paymentFailed": "결제 실패",
+  "paymentFailedDescription": "계정을 확인하고 다시 시도해 주세요.",
+  "paymentPaidTo": "{0}에게 결제 완료",
+  "paymentSendPaymentRequestMessageEmpty": "없음",
+  "paymentSendPaymentRequestMessage": "{0}이(가) 결제 요청을 보냈습니다",
+  "paymentSendPaymentMessage": "{0}이(가) 결제를 보냈습니다"
+};
 
 export default _default;

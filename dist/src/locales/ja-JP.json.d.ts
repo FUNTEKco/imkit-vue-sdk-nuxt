@@ -119,8 +119,38 @@ declare const _default: {
   "notificationPermissionDescription": "有効にすると、チャットが開いていなくても、新しいメッセージが到着したときにデスクトップ通知を受け取ります。",
   "notificationSettingsPath": "この設定は[マイアカウント > 通知設定]で変更できます。",
   "askLater": "後で聞く",
-  "allowNotifications": "通知を許可"
-}
-;
+  "allowNotifications": "通知を許可",
+  "you": "あなた",
+  "submit": "送信",
+  "status": "ステータス",
+  "currency": "通貨",
+  "paymentCollectionTitle": "支払い回収",
+  "paymentCollectionNotSet": "支払い方法が設定されていません",
+  "paymentCollectionNotSetDescription": "まだ支払い方法を設定していません。【マイアカウント > チャットルーム支払い設定】に移動して設定を完了し、支払いリクエストの送信を開始してください。",
+  "paymentGoToSetting": "設定に移動",
+  "paymentSendRequestMessage": "支払いリクエストメッセージを送信",
+  "paymentMethods": "支払い方法",
+  "paymentSupportedMethods": "対応している支払い方法",
+  "paymentRequestMessage": "支払いリクエストメッセージ",
+  "paymentInputMessageOptional": "メッセージを入力（任意）",
+  "paymentRequestedFrom": "{0} に支払いを請求しました",
+  "paymentViewDetails": "詳細を見る",
+  "paymentRequestDetail": "リクエスト詳細",
+  "paymentDetail": "支払い詳細",
+  "paymentRequestTime": "リクエスト時刻",
+  "paymentCompleted": "{0} が支払いを完了しました",
+  "paymentFlowPaid": "支払い済み",
+  "paymentFlowUnpaid": "未払い",
+  "paymentFlowRefund": "返金済み",
+  "paymentFlowAuthorizationError": "認証エラー",
+  "paymentRequestedFromYou": "{0} があなたに支払いを請求しました",
+  "paymentGoToPay": "支払いに移動",
+  "paymentFailed": "支払い失敗",
+  "paymentFailedDescription": "アカウントを確認して、もう一度お試しください。",
+  "paymentPaidTo": "{0} に支払い完了",
+  "paymentSendPaymentRequestMessageEmpty": "なし",
+  "paymentSendPaymentRequestMessage": "{0} が支払いリクエストを送信しました",
+  "paymentSendPaymentMessage": "{0} が支払いを送信しました"
+};
 
 export default _default;

@@ -118,8 +118,38 @@ declare const _default: {
   "notificationPermissionDescription": "După activare, când sosește un mesaj nou, veți primi notificări pe desktop chiar dacă chatul nu este deschis.",
   "notificationSettingsPath": "Această setare poate fi modificată în [Contul meu > Setări de notificare].",
   "askLater": "Întreabă mai târziu",
-  "allowNotifications": "Permiteți notificările"
-}
-;
+  "allowNotifications": "Permiteți notificările",
+  "you": "Tu",
+  "submit": "Trimite",
+  "status": "Status",
+  "currency": "Monedă",
+  "paymentCollectionTitle": "Colectarea plăților",
+  "paymentCollectionNotSet": "Metoda de plată nu este setată",
+  "paymentCollectionNotSetDescription": "Nu ați setat încă o metodă de plată. Vă rugăm să mergeți la [Contul meu > Setări plată cameră chat] pentru a finaliza configurarea și a începe să trimiteți cereri de plată.",
+  "paymentGoToSetting": "Mergi la setări",
+  "paymentSendRequestMessage": "Trimite mesaj de cerere de plată",
+  "paymentMethods": "Metode de plată",
+  "paymentSupportedMethods": "Metode de plată acceptate",
+  "paymentRequestMessage": "Mesaj cerere de plată",
+  "paymentInputMessageOptional": "Introduceți mesaj (opțional)",
+  "paymentRequestedFrom": "A solicitat plată de la {0}",
+  "paymentViewDetails": "Vezi detalii",
+  "paymentRequestDetail": "Detalii cerere",
+  "paymentDetail": "Detalii plată",
+  "paymentRequestTime": "Timpul cererii",
+  "paymentCompleted": "{0} a finalizat plata",
+  "paymentFlowPaid": "Plătit",
+  "paymentFlowUnpaid": "Neplătit",
+  "paymentFlowRefund": "Rambursat",
+  "paymentFlowAuthorizationError": "Eroare de autorizare",
+  "paymentRequestedFromYou": "{0} a solicitat plată de la tine",
+  "paymentGoToPay": "Mergi să plătești",
+  "paymentFailed": "Plată eșuată",
+  "paymentFailedDescription": "Vă rugăm să verificați contul și să încercați din nou.",
+  "paymentPaidTo": "Plătit către {0}",
+  "paymentSendPaymentRequestMessageEmpty": "Niciuna",
+  "paymentSendPaymentRequestMessage": "{0} a trimis o cerere de plată",
+  "paymentSendPaymentMessage": "{0} a trimis o plată"
+};
 
 export default _default;

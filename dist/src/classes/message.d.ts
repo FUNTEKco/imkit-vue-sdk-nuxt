@@ -19,7 +19,9 @@ export declare enum MessageType {
     DeleteMember = "deleteMember",
     AddMembers = "addMembers",
     Announcement = "announcement",
-    Typing = "typing"
+    Typing = "typing",
+    PaymentSelect = "payment-select",
+    Line = "line"
 }
 export interface Reaction {
     client: string;
@@ -133,5 +135,23 @@ export declare class AudioMessage extends Message {
     bytes: number;
     fileExtension: string;
     duration: number;
+    constructor(raw: any);
+}
+export declare class PaymentMessage extends Message {
+    paymentId: string;
+    paymentType: string;
+    payer: {
+        id: string;
+        nickname: string;
+    };
+    payee: {
+        id: string;
+        nickname: string;
+    };
+    value: string;
+    timestamp: number;
+    availableMethods: string[];
+    currency: string;
+    remark: string;
     constructor(raw: any);
 }

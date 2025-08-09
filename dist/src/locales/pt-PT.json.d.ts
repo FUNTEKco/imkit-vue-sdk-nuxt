@@ -118,8 +118,38 @@ declare const _default: {
   "notificationPermissionDescription": "Após ativar, quando uma nova mensagem chegar, você receberá notificações na área de trabalho mesmo que o chat não esteja aberto.",
   "notificationSettingsPath": "Esta configuração pode ser modificada em [Minha Conta > Configurações de Notificação].",
   "askLater": "Perguntar Mais Tarde",
-  "allowNotifications": "Permitir Notificações"
-}
-;
+  "allowNotifications": "Permitir Notificações",
+  "you": "Você",
+  "submit": "Enviar",
+  "status": "Status",
+  "currency": "Moeda",
+  "paymentCollectionTitle": "Cobrança de pagamento",
+  "paymentCollectionNotSet": "Forma de pagamento não configurada",
+  "paymentCollectionNotSetDescription": "Você ainda não configurou uma forma de pagamento. Vá para [Minha conta > Configurações de pagamento do chat] para concluir a configuração e começar a enviar solicitações de pagamento.",
+  "paymentGoToSetting": "Ir para configurações",
+  "paymentSendRequestMessage": "Enviar mensagem de solicitação de pagamento",
+  "paymentMethods": "Formas de pagamento",
+  "paymentSupportedMethods": "Formas de pagamento suportadas",
+  "paymentRequestMessage": "Mensagem de solicitação de pagamento",
+  "paymentInputMessageOptional": "Digite a mensagem (opcional)",
+  "paymentRequestedFrom": "Solicitou pagamento de {0}",
+  "paymentViewDetails": "Ver detalhes",
+  "paymentRequestDetail": "Detalhes da solicitação",
+  "paymentDetail": "Detalhes do pagamento",
+  "paymentRequestTime": "Hora da solicitação",
+  "paymentCompleted": "{0} completou o pagamento",
+  "paymentFlowPaid": "Pago",
+  "paymentFlowUnpaid": "Não pago",
+  "paymentFlowRefund": "Reembolsado",
+  "paymentFlowAuthorizationError": "Erro de autorização",
+  "paymentRequestedFromYou": "{0} solicitou pagamento de você",
+  "paymentGoToPay": "Ir para pagar",
+  "paymentFailed": "Pagamento falhou",
+  "paymentFailedDescription": "Por favor, verifique sua conta e tente novamente.",
+  "paymentPaidTo": "Pago para {0}",
+  "paymentSendPaymentRequestMessageEmpty": "Nenhuma",
+  "paymentSendPaymentRequestMessage": "{0} enviou uma solicitação de pagamento",
+  "paymentSendPaymentMessage": "{0} enviou um pagamento"
+};
 
 export default _default;

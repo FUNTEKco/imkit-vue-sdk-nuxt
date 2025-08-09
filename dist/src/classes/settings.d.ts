@@ -1,4 +1,8 @@
 type Settings = {
+    paymentEnabled: boolean;
+    linePayEnabled: boolean;
+    stripeEnabled: boolean;
+    paypalEnabled: boolean;
     locationInputEnabled: boolean;
     audioInputEnabled: boolean;
     fileInputEnabled: boolean;

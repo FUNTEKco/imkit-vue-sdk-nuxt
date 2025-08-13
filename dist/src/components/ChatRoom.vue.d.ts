@@ -11,6 +11,8 @@ declare function __VLS_template(): {
     refs: {
         vl: any;
         input: HTMLTextAreaElement;
+        stickerButtonEl: HTMLButtonElement;
+        emojiButtonEl: HTMLButtonElement;
         fileInput: HTMLInputElement;
     };
     rootEl: any;
@@ -25,6 +27,8 @@ declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}
 }>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
     vl: any;
     input: HTMLTextAreaElement;
+    stickerButtonEl: HTMLButtonElement;
+    emojiButtonEl: HTMLButtonElement;
     fileInput: HTMLInputElement;
 }, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;

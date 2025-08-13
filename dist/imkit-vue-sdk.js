@@ -68440,7 +68440,7 @@ const oke = /* @__PURE__ */ pn(ike, [["render", ake]]), uke = ["placeholder"], l
       W("div", ea({ class: "flex items-center gap-2 rounded bg-white p-2" }, c.$attrs), [
         Vt(W("input", {
           "onUpdate:modelValue": d[0] || (d[0] = (l) => n.value = l),
-          class: "max-w-[calc(100%-36px)] focus:outline-none",
+          class: "w-full focus:outline-none",
           placeholder: c.$t(`Request.Message.${c.content.subtype}.placeholder`),
           onKeypress: lh(u, ["enter"])
         }, null, 40, uke), [

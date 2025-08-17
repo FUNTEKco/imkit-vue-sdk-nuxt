@@ -28268,9 +28268,12 @@ class hm {
       state: {
         imkit: { uid: e, users: n }
       }
-    } = Yt();
+    } = Yt(), r = (s) => {
+      var a, o;
+      return s !== e && !((o = (a = n[s]) == null ? void 0 : a.memberIds) != null && o[e]) && s !== "BOT" && !s.endsWith("_sub");
+    }, i = e.endsWith("_sub") ? (s) => s !== this.extra.agentId : () => !0;
     return this.memberIds.filter(
-      (r) => r !== e && !n[r].memberIds[e] && r !== "BOT" && !r.endsWith("_sub")
+      (s) => r(s) && i(s)
     );
   }
   _displayName(e, n) {
@@ -73829,7 +73832,7 @@ const nDe = { class: "relative flex flex-col items-center justify-between" }, rD
         return [
           W("div", nDe, [
             W("button", {
-              class: "absolute right-0 top-0 flex items-center justify-center",
+              class: "absolute top-0 right-0 flex items-center justify-center",
               onClick: _[0] || (_[0] = (H) => ke(i).closeAll())
             }, [
               et(Br, { class: "h-6 w-6" })

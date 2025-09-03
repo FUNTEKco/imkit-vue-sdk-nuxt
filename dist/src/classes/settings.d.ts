@@ -15,6 +15,7 @@ type Settings = {
     autoSelectRoomWhenLoaded: boolean;
     customRoomInfoIframeUrl: string;
     showLeaveRoomButton: boolean;
+    showMemberActionMenu: boolean;
     massTextingEnabled: boolean;
     showDarkModeSwitch: boolean;
     enableReadReceipt: boolean;

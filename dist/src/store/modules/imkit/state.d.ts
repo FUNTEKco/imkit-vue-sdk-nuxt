@@ -62,8 +62,8 @@ export type IMState = {
     processingMessages: Map<string, Message>;
     rwlock: RWLock;
     selectedRoomId: string;
-    messageMultiList: MessageMultiList;
-    numberOfTotalMessages: number;
+    messageMultiLists: Map<string, MessageMultiList>;
+    numberOfTotalMessages: Map<string, number>;
     replyId: string;
     navigationTargetId: string;
     isRoomInfoVisible: boolean;

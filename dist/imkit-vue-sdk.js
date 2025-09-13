@@ -105017,7 +105017,7 @@ const OVe = /* @__PURE__ */ Fr(MVe), NVe = {
       default: Zt(() => [
         W("div", LVe, [
           W("button", {
-            class: "absolute right-0 top-0 flex items-center justify-center",
+            class: "absolute top-0 right-0 flex items-center justify-center",
             onClick: E[0] || (E[0] = (v) => ke(i).closeAll())
           }, [
             rt(Br, { class: "h-6 w-6" })
@@ -105038,11 +105038,11 @@ const OVe = /* @__PURE__ */ Fr(MVe), NVe = {
             W("p", UVe, _e(b.$t("currency")), 1),
             Gt(W("select", {
               "onUpdate:modelValue": E[2] || (E[2] = (v) => o.value = v),
-              class: "mb-4 mt-1 h-[34px] w-full appearance-none rounded-[5px] border-none bg-[#f2f2f2] px-[10px] text-[#1a1a1a] outline-none"
+              class: "mt-1 mb-4 h-[34px] w-full appearance-none rounded-[5px] border-none bg-[#f2f2f2] px-[10px] text-[#1a1a1a] outline-none"
             }, [
               (X(), se(wt, null, on(n, (v) => W("option", {
-                value: v,
-                key: v
+                key: v,
+                value: v
               }, _e(v), 9, $Ve)), 64))
             ], 512), [
               [m7, o.value]
@@ -105084,7 +105084,7 @@ const OVe = /* @__PURE__ */ Fr(MVe), NVe = {
       _: 1
     }));
   }
-}), JVe = /* @__PURE__ */ mn(ZVe, [["__scopeId", "data-v-47de052c"]]), eWe = { class: "relative flex flex-col items-center justify-between" }, tWe = { class: "mt-5 text-xl font-medium text-gray-700 dark:text-gray-300" }, nWe = { class: "mt-5 text-sm font-medium text-gray-700 dark:text-gray-300" }, rWe = { class: "mt-5 flex items-center justify-center" }, iWe = {
+}), JVe = /* @__PURE__ */ mn(ZVe, [["__scopeId", "data-v-689a8ccd"]]), eWe = { class: "relative flex flex-col items-center justify-between" }, tWe = { class: "mt-5 text-xl font-medium text-gray-700 dark:text-gray-300" }, nWe = { class: "mt-5 text-sm font-medium text-gray-700 dark:text-gray-300" }, rWe = { class: "mt-5 flex items-center justify-center" }, iWe = {
   class: "flex h-10 grow items-center justify-center rounded-lg bg-[#02B13F] text-base text-white",
   href: "/dashboard/settings_payment_flow"
 }, sWe = /* @__PURE__ */ Ze({

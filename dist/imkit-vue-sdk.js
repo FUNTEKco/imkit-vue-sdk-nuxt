@@ -68449,8 +68449,8 @@ const ake = /* @__PURE__ */ mn(rke, [["render", ske]]), oke = ["placeholder"], u
     n.value = e.content.text;
     const r = Se(!1), i = Yt(), s = de(() => i.state.imkit.config.callbacks), a = pn("messageId"), o = de(
       () => {
-        var c;
-        return (c = i.state.imkit.messageMultiList.main) == null ? void 0 : c.map.get(a);
+        var c, d;
+        return (d = (c = i.state.imkit.messageMultiLists.get(i.state.imkit.selectedRoomId)) == null ? void 0 : c.main) == null ? void 0 : d.map.get(a);
       }
     ), u = () => {
       if (!e.content.completed) {
@@ -68535,8 +68535,8 @@ const ake = /* @__PURE__ */ mn(rke, [["render", ske]]), oke = ["placeholder"], u
     n.value = e.content.text;
     const r = Yt(), i = de(() => r.state.imkit.config.callbacks), s = pn("messageId"), a = de(
       () => {
-        var u;
-        return (u = r.state.imkit.messageMultiList.main) == null ? void 0 : u.map.get(s);
+        var u, c;
+        return (c = (u = r.state.imkit.messageMultiLists.get(r.state.imkit.selectedRoomId)) == null ? void 0 : u.main) == null ? void 0 : c.map.get(s);
       }
     ), o = () => {
       !e.content.action || "fill" in e.content.action || i.value.flexMessageRatingSubmitted(
@@ -68555,7 +68555,7 @@ const ake = /* @__PURE__ */ mn(rke, [["render", ske]]), oke = ["placeholder"], u
       ]);
     };
   }
-}), Ake = /* @__PURE__ */ mn(gke, [["__scopeId", "data-v-5cde2512"]]), Kd = /* @__PURE__ */ Ze({
+}), Ake = /* @__PURE__ */ mn(gke, [["__scopeId", "data-v-b5658a6d"]]), Kd = /* @__PURE__ */ Ze({
   inheritAttrs: !1,
   __name: "FlexMessageComponent",
   props: {

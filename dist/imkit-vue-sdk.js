@@ -68525,7 +68525,7 @@ const ake = /* @__PURE__ */ mn(rke, [["render", ske]]), oke = ["placeholder"], u
       }, null, -1)
     ])));
   }
-}), mke = { class: "p-1.5" }, gke = /* @__PURE__ */ Ze({
+}), mke = { class: "m-0.5 h-8 w-8 max-w-[20%] sm:m-1.5" }, gke = /* @__PURE__ */ Ze({
   __name: "FlexMessageRatingComponent",
   props: {
     content: {}
@@ -68548,14 +68548,14 @@ const ake = /* @__PURE__ */ mn(rke, [["render", ske]]), oke = ["placeholder"], u
       var d;
       return X(), se("div", mke, [
         rt(pke, {
-          class: "h-8 w-8 text-yellow-300",
+          class: "h-full w-full cursor-pointer text-yellow-300",
           fill: (d = u.content.action) == null ? void 0 : d.fill,
           onClick: o
         }, null, 8, ["fill"])
       ]);
     };
   }
-}), Ake = /* @__PURE__ */ mn(gke, [["__scopeId", "data-v-71f9e243"]]), Kd = /* @__PURE__ */ Ze({
+}), Ake = /* @__PURE__ */ mn(gke, [["__scopeId", "data-v-5cde2512"]]), Kd = /* @__PURE__ */ Ze({
   inheritAttrs: !1,
   __name: "FlexMessageComponent",
   props: {

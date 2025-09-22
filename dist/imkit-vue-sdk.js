@@ -107844,7 +107844,7 @@ function eXe(t, e) {
   ), r;
 }
 function tXe(t, e) {
-  const n = pf(e.state.imkit.config.domain, {
+  const { domain: n, clientKey: r } = t, i = pf(n, {
     forceBase64: !0,
     transports: ["websocket", "webtransport"],
     reconnection: !0,
@@ -107852,38 +107852,38 @@ function tXe(t, e) {
     reconnectionDelay: 1e3,
     reconnectionDelayMax: 5e3
   });
-  return n.on("connect", () => {
-    n.emit("auth2", e.state.imkit.config.token, {
-      CLIENT_KEY: e.state.imkit.config.clientKey,
+  return i.on("connect", () => {
+    i.emit("auth2", e.state.imkit.config.token, {
+      CLIENT_KEY: r,
       Authorization: e.state.imkit.config.token
     });
-  }), n.on("disconnect", (r) => {
-    n.active || (n.connect(), console.log(r));
-  }), n.on("connect_error", (r) => {
-    n.active || (n.connect(), console.log(r.message));
-  }), n.on("chat message", (r) => {
-    var o;
-    const i = Fn.createReactive(r), s = new Ma(r.sender), a = e.state.imkit.config.callbacks;
-    (o = a == null ? void 0 : a.onMessageReceived) == null || o.call(a, i, s), e.dispatch("imkit/handleMessageFromSocket", i);
-  }), n.on("room", (r) => {
-    e.dispatch("imkit/handleRoomFromSocket", r);
-  }), n.on("lastRead", (r) => {
-    const { roomID: i, memberID: s, messageID: a } = r;
+  }), i.on("disconnect", (s) => {
+    i.active || (i.connect(), console.log(s));
+  }), i.on("connect_error", (s) => {
+    i.active || (i.connect(), console.log(s.message));
+  }), i.on("chat message", (s) => {
+    var c;
+    const a = Fn.createReactive(s), o = new Ma(s.sender), u = e.state.imkit.config.callbacks;
+    (c = u == null ? void 0 : u.onMessageReceived) == null || c.call(u, a, o), e.dispatch("imkit/handleMessageFromSocket", a);
+  }), i.on("room", (s) => {
+    e.dispatch("imkit/handleRoomFromSocket", s);
+  }), i.on("lastRead", (s) => {
+    const { roomID: a, memberID: o, messageID: u } = s;
     e.dispatch("imkit/handleLastReadFromSocket", {
-      roomId: i,
-      uid: s,
-      messageId: a
+      roomId: a,
+      uid: o,
+      messageId: u
     });
-  }), n.on("roomPref", (r) => {
-    const { room: i, ...s } = r;
-    i && (e.commit("imkit/updateRoom", { id: i, pref: s }), s.sticky !== void 0 && e.dispatch("imkit/aggregateRoomsAndFolders"));
-  }), n.on("myPrefChange", (r) => {
-    e.dispatch("imkit/handlePrefChangeFromSocket", r);
-  }), n.on("myPrefDelete", (r) => {
-    e.dispatch("imkit/handlePrefDeleteFromSocket", r);
-  }), n.on("typing", (r) => {
-    e.dispatch("imkit/handleTypingFromSocket", r);
-  }), n;
+  }), i.on("roomPref", (s) => {
+    const { room: a, ...o } = s;
+    a && (e.commit("imkit/updateRoom", { id: a, pref: o }), o.sticky !== void 0 && e.dispatch("imkit/aggregateRoomsAndFolders"));
+  }), i.on("myPrefChange", (s) => {
+    e.dispatch("imkit/handlePrefChangeFromSocket", s);
+  }), i.on("myPrefDelete", (s) => {
+    e.dispatch("imkit/handlePrefDeleteFromSocket", s);
+  }), i.on("typing", (s) => {
+    e.dispatch("imkit/handleTypingFromSocket", s);
+  }), i;
 }
 const qXe = {
   install: async (t, e) => {

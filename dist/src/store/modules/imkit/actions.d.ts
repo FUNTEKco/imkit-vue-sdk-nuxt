@@ -119,6 +119,7 @@ export interface Actions {
         messageId: string;
         reaction: string;
     }): void;
+    [IMActionTypes.handleAIStreamingFromSocket](context: AugmentedActionContext, payload: Record<string, unknown>): void;
     [IMActionTypes.checkNotificationPermission](context: AugmentedActionContext): void;
 }
 export declare const actions: ActionTree<IMState, RootState> & Actions;

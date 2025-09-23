@@ -46,6 +46,7 @@ export declare enum IMActionTypes {
     hideMessagesFromUserInRoom = "hideMessagesFromUserInRoom",
     sendReaction = "sendReaction",
     deleteReaction = "deleteReaction",
+    handleAIStreamingFromSocket = "handleAIStreamingFromSocket",
     quickReply = "quickReply",
     checkNotificationPermission = "checkNotificationPermission"
 }

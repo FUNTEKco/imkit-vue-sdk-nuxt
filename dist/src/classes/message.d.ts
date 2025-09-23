@@ -20,6 +20,7 @@ export declare enum MessageType {
     AddMembers = "addMembers",
     Announcement = "announcement",
     Typing = "typing",
+    AIStreaming = "ai_streaming",
     PaymentSelect = "payment-select",
     Line = "line"
 }
@@ -75,6 +76,10 @@ export declare class TextMessage extends Message {
     get html(): string;
     constructor(raw: any);
     static linkfy(text: string): string;
+}
+export declare class AIStreamingMessage extends Message {
+    text: string;
+    constructor(raw: any);
 }
 export declare class ImageMessage extends Message {
     images: IMImage[];

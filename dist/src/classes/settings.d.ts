@@ -13,7 +13,7 @@ type Settings = {
     showDirectChatRoomInfoButton: boolean;
     showGroupChatRoomInfoButton: boolean;
     autoSelectRoomWhenLoaded: boolean;
-    customRoomInfoIframeUrl: string;
+    customRoomInfoIframeURL: string;
     showLeaveRoomButton: boolean;
     showMemberActionMenu: boolean;
     massTextingEnabled: boolean;
@@ -21,6 +21,9 @@ type Settings = {
     enableReadReceipt: boolean;
     linkPreviewEnabled: boolean;
     fileUploadSizeLimit?: number;
+    noRoomsImageURL?: string;
+    noRoomsText?: string;
+    searchRoomPlaceholder?: string;
     fixedRoomEnabled: boolean;
 };
 export default Settings;

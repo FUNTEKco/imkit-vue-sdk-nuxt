@@ -60,6 +60,7 @@ declare const _default: {
   "confirmToDeleteFolder": "¿Eliminar carpeta?",
   "hide": "Ocultar",
   "unhide": "Mostrar",
+  "edit": "Editar",
   "delete": "Eliminar",
   "cancel": "Cancelar",
   "create": "Crear",
@@ -93,6 +94,7 @@ declare const _default: {
   "kickOutErrorDesc": "La operación de inicio no se puede completar en la actualidad. Confirme la conexión de red o vuelva a intentarlo más tarde.",
   "fileSizeLimitTitle": "Archivo demasiado grande",
   "fileSizeLimitMessage": "El archivo seleccionado excede el tamaño máximo permitido de {0}. Por favor, elija un archivo más pequeño.",
+  "noRoomsAvailable": "No hay salas de chat disponibles",
   "online-status-online": "Activo",
   "online-status-offline": "Ausente",
   "Request": {

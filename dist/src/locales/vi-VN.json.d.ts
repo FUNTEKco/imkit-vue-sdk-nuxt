@@ -60,6 +60,7 @@ declare const _default: {
   "confirmToDeleteFolder": "Xóa thư mục?",
   "hide": "Ẩn",
   "unhide": "Hiện",
+  "edit": "Chỉnh sửa",
   "delete": "Xóa",
   "cancel": "Hủy",
   "create": "Tạo",
@@ -93,6 +94,7 @@ declare const _default: {
   "kickOutErrorDesc": "Các hoạt động kick-out không thể được hoàn thành hiện tại. Vui lòng xác nhận kết nối mạng hoặc thử lại sau.",
   "fileSizeLimitTitle": "Tệp quá lớn",
   "fileSizeLimitMessage": "Tệp bạn chọn vượt quá kích thước tối đa cho phép {0}. Vui lòng chọn tệp nhỏ hơn.",
+  "noRoomsAvailable": "Không có phòng chat nào",
   "online-status-online": "Đang hoạt động",
   "online-status-offline": "Không hoạt động",
   "Request": {

@@ -60,6 +60,7 @@ declare const _default: {
   "confirmToDeleteFolder": "Ștergeți dosarul?",
   "hide": "Ascunde",
   "unhide": "Afișează",
+  "edit": "Editează",
   "delete": "Șterge",
   "cancel": "Anulează",
   "create": "Crează",
@@ -93,6 +94,7 @@ declare const _default: {
   "kickOutErrorDesc": "Operația de declanșare nu poate fi finalizată în prezent. Vă rugăm să confirmați conexiunea de rețea sau să încercați din nou mai târziu.",
   "fileSizeLimitTitle": "Fișier prea mare",
   "fileSizeLimitMessage": "Fișierul selectat depășește dimensiunea maximă permisă de {0}. Vă rugăm să alegeți un fișier mai mic.",
+  "noRoomsAvailable": "Nu sunt disponibile camere de chat",
   "online-status-online": "Activ",
   "online-status-offline": "Inactiv",
   "Request": {

@@ -61,6 +61,7 @@ declare const _default: {
   "confirmToDeleteFolder": "フォルダを削除しますか？",
   "hide": "非表示",
   "unhide": "非表示を解除",
+  "edit": "編集",
   "delete": "削除",
   "cancel": "キャンセル",
   "create": "作成",
@@ -94,6 +95,7 @@ declare const _default: {
   "kickOutErrorDesc": "現在、キックアウト操作は完了できません。ネットワーク接続を確認するか、後で再試行してください。",
   "fileSizeLimitTitle": "ファイルが大きすぎます",
   "fileSizeLimitMessage": "選択したファイルは、{0} の最大許容サイズを超えています。より小さいファイルを選択してください。",
+  "noRoomsAvailable": "チャットルームがありません",
   "online-status-online": "アクティブ",
   "online-status-offline": "ないオンライン",
   "Request": {

@@ -61,6 +61,7 @@ declare const _default: {
   "confirmToDeleteFolder": "刪除資料夾？",
   "hide": "隱藏",
   "unhide": "取消隱藏",
+  "edit": "編輯",
   "delete": "刪除",
   "cancel": "取消",
   "create": "建立",
@@ -94,6 +95,7 @@ declare const _default: {
   "kickOutErrorDesc": "目前無法完成踢出操作，請確認網路連線或稍後再試。",
   "fileSizeLimitTitle": "檔案過大",
   "fileSizeLimitMessage": "所選檔案超過 {0} 的大小限制。請選擇較小的檔案。",
+  "noRoomsAvailable": "目前沒有任何聊天室",
   "online-status-online": "上線中",
   "online-status-offline": "離線中",
   "Request": {

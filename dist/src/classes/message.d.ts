@@ -2,6 +2,7 @@ import { default as Autolinker } from 'autolinker/dist/Autolinker.js';
 import { default as IMImage } from './image';
 import { default as IMVideo } from './video';
 import { default as User } from './user';
+import { default as MarkdownIt } from 'markdown-it';
 export declare enum MessageType {
     Text = "text",
     Image = "image",
@@ -73,6 +74,7 @@ export declare class TextMessage extends Message {
     urls: string[];
     get string(): string;
     static autolinker: Autolinker;
+    static md: MarkdownIt;
     get html(): string;
     constructor(raw: any);
     static linkfy(text: string): string;

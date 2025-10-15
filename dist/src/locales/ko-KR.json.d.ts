@@ -60,6 +60,7 @@ declare const _default: {
   "confirmToDeleteFolder": "폴더를 삭제하시겠습니까?",
   "hide": "숨기기",
   "unhide": "숨기기 취소",
+  "edit": "편집",
   "delete": "삭제",
   "cancel": "취소",
   "create": "만들기",
@@ -93,6 +94,7 @@ declare const _default: {
   "kickOutErrorDesc": "킥아웃 작업은 현재 완료 될 수 없습니다. 네트워크 연결을 확인하거나 나중에 다시 시도하십시오.",
   "fileSizeLimitTitle": "파일이 너무 큽니다",
   "fileSizeLimitMessage": "선택한 파일이 {0}의 최대 허용 크기를 초과했습니다. 더 작은 파일을 선택하세요.",
+  "noRoomsAvailable": "채팅방이 없습니다",
   "online-status-online": "온라인",
   "online-status-offline": "오프라인",
   "Request": {

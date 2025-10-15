@@ -60,6 +60,7 @@ declare const _default: {
   "confirmToDeleteFolder": "Supprimer le dossier ?",
   "hide": "Masquer",
   "unhide": "Afficher",
+  "edit": "Éditer",
   "delete": "Supprimer",
   "cancel": "Annuler",
   "create": "Créer",
@@ -93,6 +94,7 @@ declare const _default: {
   "kickOutErrorDesc": "L'opération de lancement ne peut pas être achevée à l'heure actuelle. Veuillez confirmer la connexion réseau ou réessayer plus tard.",
   "fileSizeLimitTitle": "Fichier trop grand",
   "fileSizeLimitMessage": "Le fichier sélectionné dépasse la taille maximale autorisée de {0}. Veuillez choisir un fichier plus petit.",
+  "noRoomsAvailable": "Aucune salle de discussion disponible",
   "online-status-online": "En ligne",
   "online-status-offline": "Hors ligne",
   "Request": {

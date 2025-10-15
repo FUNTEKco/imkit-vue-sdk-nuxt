@@ -41,6 +41,7 @@ export type IMState = {
         [url: string]: LinkPreview;
     };
     actionMenuRoomId: string;
+    actionMenuFolderId: string;
     folders: {
         [id: string]: Folder;
     };

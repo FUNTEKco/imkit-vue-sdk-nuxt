@@ -60,6 +60,7 @@ declare const _default: {
   "confirmToDeleteFolder": "删除资料夹？",
   "hide": "隐藏",
   "unhide": "取消隐藏",
+  "edit": "编辑",
   "delete": "删除",
   "cancel": "取消",
   "create": "建立",
@@ -93,6 +94,7 @@ declare const _default: {
   "kickOutErrorDesc": "目前无法完成踢出操作，请确认网路连线或稍后再试。",
   "fileSizeLimitTitle": "文件过大",
   "fileSizeLimitMessage": "所选文件超过 {0} 的大小限制。请选择较小的文件。",
+  "noRoomsAvailable": "目前没有任何聊天室",
   "online-status-online": "上线中",
   "online-status-offline": "离线中",
   "Request": {

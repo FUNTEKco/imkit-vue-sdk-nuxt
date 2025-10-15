@@ -60,6 +60,7 @@ declare const _default: {
   "confirmToDeleteFolder": "ลบโฟลเดอร์?",
   "hide": "ซ่อน",
   "unhide": "ยกเลิกการซ่อน",
+  "edit": "แก้ไข",
   "delete": "ลบ",
   "cancel": "ยกเลิก",
   "create": "สร้าง",
@@ -93,6 +94,7 @@ declare const _default: {
   "kickOutErrorDesc": "การดำเนินการเตะออกไม่สามารถเสร็จสิ้นได้ในปัจจุบัน โปรดยืนยันการเชื่อมต่อเครือข่ายหรือลองอีกครั้งในภายหลัง",
   "fileSizeLimitTitle": "ไฟล์ใหญ่เกินไป",
   "fileSizeLimitMessage": "ไฟล์ที่เลือกมีขนาดเกินขีดจำกัดสูงสุดที่อนุญาต {0} กรุณาเลือกไฟล์ที่เล็กกว่า",
+  "noRoomsAvailable": "ไม่มีห้องแชทที่พร้อมใช้งาน",
   "online-status-online": "ออนไลน์",
   "online-status-offline": "ออฟไลน์",
   "Request": {

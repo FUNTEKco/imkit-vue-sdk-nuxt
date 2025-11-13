@@ -95,6 +95,8 @@ declare const _default: {
   "fileSizeLimitTitle": "Ficheiro demasiado grande",
   "fileSizeLimitMessage": "O ficheiro selecionado excede o tamanho máximo permitido de {0}. Por favor, escolha um ficheiro mais pequeno.",
   "noRoomsAvailable": "Não há salas de chat disponíveis",
+  "unauthorizedTitle": "Falha na autenticação",
+  "unauthorizedMessage": "A sua sessão expirou. Por favor, inicie sessão novamente.",
   "online-status-online": "Ativo",
   "online-status-offline": "Ausente",
   "Request": {
@@ -152,6 +154,7 @@ declare const _default: {
   "paymentSendPaymentRequestMessageEmpty": "Nenhuma",
   "paymentSendPaymentRequestMessage": "{0} enviou uma solicitação de pagamento",
   "paymentSendPaymentMessage": "{0} enviou um pagamento"
-};
+}
+;
 
 export default _default;

@@ -95,6 +95,8 @@ declare const _default: {
   "fileSizeLimitTitle": "Tệp quá lớn",
   "fileSizeLimitMessage": "Tệp bạn chọn vượt quá kích thước tối đa cho phép {0}. Vui lòng chọn tệp nhỏ hơn.",
   "noRoomsAvailable": "Không có phòng chat nào",
+  "unauthorizedTitle": "Xác thực thất bại",
+  "unauthorizedMessage": "Phiên của bạn đã hết hạn. Vui lòng đăng nhập lại.",
   "online-status-online": "Đang hoạt động",
   "online-status-offline": "Không hoạt động",
   "Request": {
@@ -152,6 +154,7 @@ declare const _default: {
   "paymentSendPaymentRequestMessageEmpty": "Không có",
   "paymentSendPaymentRequestMessage": "{0} đã gửi yêu cầu thanh toán",
   "paymentSendPaymentMessage": "{0} đã gửi thanh toán"
-};
+}
+;
 
 export default _default;

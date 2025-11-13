@@ -97,6 +97,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -253,6 +255,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -408,6 +412,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -563,6 +569,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -719,6 +727,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -874,6 +884,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1029,6 +1041,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1184,6 +1198,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1339,6 +1355,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1494,6 +1512,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1649,6 +1669,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1805,6 +1827,8 @@ declare const i18n: VueI18n.I18n<{
         fileSizeLimitTitle: string;
         fileSizeLimitMessage: string;
         noRoomsAvailable: string;
+        unauthorizedTitle: string;
+        unauthorizedMessage: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {

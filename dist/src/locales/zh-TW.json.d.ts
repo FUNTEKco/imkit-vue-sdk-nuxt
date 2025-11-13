@@ -96,6 +96,8 @@ declare const _default: {
   "fileSizeLimitTitle": "檔案過大",
   "fileSizeLimitMessage": "所選檔案超過 {0} 的大小限制。請選擇較小的檔案。",
   "noRoomsAvailable": "目前沒有任何聊天室",
+  "unauthorizedTitle": "身份驗證失敗",
+  "unauthorizedMessage": "您的登入已過期，請重新登入。",
   "online-status-online": "上線中",
   "online-status-offline": "離線中",
   "Request": {

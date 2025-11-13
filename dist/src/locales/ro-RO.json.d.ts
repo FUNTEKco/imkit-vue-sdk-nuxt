@@ -95,6 +95,8 @@ declare const _default: {
   "fileSizeLimitTitle": "Fișier prea mare",
   "fileSizeLimitMessage": "Fișierul selectat depășește dimensiunea maximă permisă de {0}. Vă rugăm să alegeți un fișier mai mic.",
   "noRoomsAvailable": "Nu sunt disponibile camere de chat",
+  "unauthorizedTitle": "Autentificare eșuată",
+  "unauthorizedMessage": "Sesiunea dvs. a expirat. Vă rugăm să vă autentificați din nou.",
   "online-status-online": "Activ",
   "online-status-offline": "Inactiv",
   "Request": {
@@ -152,6 +154,7 @@ declare const _default: {
   "paymentSendPaymentRequestMessageEmpty": "Niciuna",
   "paymentSendPaymentRequestMessage": "{0} a trimis o cerere de plată",
   "paymentSendPaymentMessage": "{0} a trimis o plată"
-};
+}
+;
 
 export default _default;

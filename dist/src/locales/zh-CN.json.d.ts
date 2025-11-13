@@ -95,6 +95,8 @@ declare const _default: {
   "fileSizeLimitTitle": "文件过大",
   "fileSizeLimitMessage": "所选文件超过 {0} 的大小限制。请选择较小的文件。",
   "noRoomsAvailable": "目前没有任何聊天室",
+  "unauthorizedTitle": "身份验证失败",
+  "unauthorizedMessage": "您的登录已过期，请重新登录。",
   "online-status-online": "上线中",
   "online-status-offline": "离线中",
   "Request": {
@@ -152,6 +154,7 @@ declare const _default: {
   "paymentSendPaymentRequestMessageEmpty": "无",
   "paymentSendPaymentRequestMessage": "{0} 发送了付款请求",
   "paymentSendPaymentMessage": "{0} 发送了付款"
-};
+}
+;
 
 export default _default;

@@ -95,6 +95,8 @@ declare const _default: {
   "fileSizeLimitTitle": "파일이 너무 큽니다",
   "fileSizeLimitMessage": "선택한 파일이 {0}의 최대 허용 크기를 초과했습니다. 더 작은 파일을 선택하세요.",
   "noRoomsAvailable": "채팅방이 없습니다",
+  "unauthorizedTitle": "인증 실패",
+  "unauthorizedMessage": "세션이 만료되었습니다. 다시 로그인하세요.",
   "online-status-online": "온라인",
   "online-status-offline": "오프라인",
   "Request": {
@@ -152,6 +154,7 @@ declare const _default: {
   "paymentSendPaymentRequestMessageEmpty": "없음",
   "paymentSendPaymentRequestMessage": "{0}이(가) 결제 요청을 보냈습니다",
   "paymentSendPaymentMessage": "{0}이(가) 결제를 보냈습니다"
-};
+}
+;
 
 export default _default;

@@ -95,6 +95,8 @@ declare const _default: {
   "fileSizeLimitTitle": "ไฟล์ใหญ่เกินไป",
   "fileSizeLimitMessage": "ไฟล์ที่เลือกมีขนาดเกินขีดจำกัดสูงสุดที่อนุญาต {0} กรุณาเลือกไฟล์ที่เล็กกว่า",
   "noRoomsAvailable": "ไม่มีห้องแชทที่พร้อมใช้งาน",
+  "unauthorizedTitle": "การยืนยันตัวตนล้มเหลว",
+  "unauthorizedMessage": "เซสชันของคุณหมดอายุแล้ว กรุณาเข้าสู่ระบบอีกครั้ง",
   "online-status-online": "ออนไลน์",
   "online-status-offline": "ออฟไลน์",
   "Request": {
@@ -152,6 +154,7 @@ declare const _default: {
   "paymentSendPaymentRequestMessageEmpty": "ไม่มี",
   "paymentSendPaymentRequestMessage": "{0} ส่งคำขอชำระเงิน",
   "paymentSendPaymentMessage": "{0} ส่งการชำระเงิน"
-};
+}
+;
 
 export default _default;

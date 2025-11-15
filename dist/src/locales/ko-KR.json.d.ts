@@ -97,6 +97,11 @@ declare const _default: {
   "noRoomsAvailable": "채팅방이 없습니다",
   "unauthorizedTitle": "인증 실패",
   "unauthorizedMessage": "세션이 만료되었습니다. 다시 로그인하세요.",
+  "sortByTime": "시간",
+  "sortByName": "이름",
+  "sortByUnread": "읽지 않음",
+  "sortAscending": "오름차순",
+  "sortDescending": "내림차순",
   "online-status-online": "온라인",
   "online-status-offline": "오프라인",
   "Request": {

@@ -9,7 +9,14 @@ declare function __VLS_template(): {
         setting?(_: {}): any;
     };
     refs: {
-        vl: any;
+        vl: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<Record<string, unknown>>, Record<string, unknown>, unknown, import('vue').ComputedOptions, import('vue').MethodOptions, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<Record<string, unknown>>, Record<string, unknown>, {}, import('vue').ComputedOptions, import('vue').MethodOptions, {}> | null;
         input: HTMLTextAreaElement;
         stickerButtonEl: HTMLButtonElement;
         emojiButtonEl: HTMLButtonElement;
@@ -25,7 +32,14 @@ declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}
     onSend?: ((...args: any[]) => any) | undefined;
     onGoBack?: ((...args: any[]) => any) | undefined;
 }>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
-    vl: any;
+    vl: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<Record<string, unknown>>, Record<string, unknown>, unknown, import('vue').ComputedOptions, import('vue').MethodOptions, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+    }, Readonly<Record<string, unknown>>, Record<string, unknown>, {}, import('vue').ComputedOptions, import('vue').MethodOptions, {}> | null;
     input: HTMLTextAreaElement;
     stickerButtonEl: HTMLButtonElement;
     emojiButtonEl: HTMLButtonElement;

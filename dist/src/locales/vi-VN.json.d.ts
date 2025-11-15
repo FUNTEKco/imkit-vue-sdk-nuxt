@@ -97,6 +97,11 @@ declare const _default: {
   "noRoomsAvailable": "Không có phòng chat nào",
   "unauthorizedTitle": "Xác thực thất bại",
   "unauthorizedMessage": "Phiên của bạn đã hết hạn. Vui lòng đăng nhập lại.",
+  "sortByTime": "Thời gian",
+  "sortByName": "Tên",
+  "sortByUnread": "Chưa đọc",
+  "sortAscending": "Tăng dần",
+  "sortDescending": "Giảm dần",
   "online-status-online": "Đang hoạt động",
   "online-status-offline": "Không hoạt động",
   "Request": {

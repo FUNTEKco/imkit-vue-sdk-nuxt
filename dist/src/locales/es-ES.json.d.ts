@@ -97,6 +97,11 @@ declare const _default: {
   "noRoomsAvailable": "No hay salas de chat disponibles",
   "unauthorizedTitle": "Error de autenticación",
   "unauthorizedMessage": "Su sesión ha expirado. Por favor, inicie sesión nuevamente.",
+  "sortByTime": "Tiempo",
+  "sortByName": "Nombre",
+  "sortByUnread": "No leído",
+  "sortAscending": "Ascendente",
+  "sortDescending": "Descendente",
   "online-status-online": "Activo",
   "online-status-offline": "Ausente",
   "Request": {

@@ -97,6 +97,11 @@ declare const _default: {
   "noRoomsAvailable": "Aucune salle de discussion disponible",
   "unauthorizedTitle": "Échec de l'authentification",
   "unauthorizedMessage": "Votre session a expiré. Veuillez vous reconnecter.",
+  "sortByTime": "Temps",
+  "sortByName": "Nom",
+  "sortByUnread": "Non lu",
+  "sortAscending": "Croissant",
+  "sortDescending": "Décroissant",
   "online-status-online": "En ligne",
   "online-status-offline": "Hors ligne",
   "Request": {

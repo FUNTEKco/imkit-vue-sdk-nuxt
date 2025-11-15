@@ -59,6 +59,8 @@ export type IMState = {
         [type: string]: Room[] | Folder[];
     };
     roomTag: string;
+    sortBy: string;
+    sortUnreadFirst: number;
     deliveringMessages: Map<string, Message>;
     processingMessages: Map<string, Message>;
     rwlock: RWLock;

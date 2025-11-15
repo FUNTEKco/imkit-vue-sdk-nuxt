@@ -97,6 +97,11 @@ declare const _default: {
   "noRoomsAvailable": "目前没有任何聊天室",
   "unauthorizedTitle": "身份验证失败",
   "unauthorizedMessage": "您的登录已过期，请重新登录。",
+  "sortByTime": "时间",
+  "sortByName": "名称",
+  "sortByUnread": "未读",
+  "sortAscending": "升序",
+  "sortDescending": "降序",
   "online-status-online": "上线中",
   "online-status-offline": "离线中",
   "Request": {

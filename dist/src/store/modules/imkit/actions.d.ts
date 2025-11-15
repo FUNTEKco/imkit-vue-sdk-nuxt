@@ -1,11 +1,11 @@
 import { ActionContext, ActionTree } from 'vuex';
-import { default as Message } from '../../../classes/message';
-import { IMActionTypes } from './action-types';
 import { default as IMImage } from '../../../classes/image';
-import { IMState } from './state';
 import { default as LinkPreview } from '../../../classes/linkPreview';
-import { Mutations } from './mutations';
+import { default as Message } from '../../../classes/message';
 import { RootState } from '../../../store';
+import { IMActionTypes } from './action-types';
+import { Mutations } from './mutations';
+import { IMState } from './state';
 type AugmentedActionContext = {
     commit<K extends keyof Mutations>(key: K, payload?: Parameters<Mutations[K]>[1]): ReturnType<Mutations[K]>;
 } & Omit<ActionContext<IMState, RootState>, 'commit'>;

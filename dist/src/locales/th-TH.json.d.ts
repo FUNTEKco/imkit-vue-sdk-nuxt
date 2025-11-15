@@ -97,6 +97,11 @@ declare const _default: {
   "noRoomsAvailable": "ไม่มีห้องแชทที่พร้อมใช้งาน",
   "unauthorizedTitle": "การยืนยันตัวตนล้มเหลว",
   "unauthorizedMessage": "เซสชันของคุณหมดอายุแล้ว กรุณาเข้าสู่ระบบอีกครั้ง",
+  "sortByTime": "เวลา",
+  "sortByName": "ชื่อ",
+  "sortByUnread": "ยังไม่ได้อ่าน",
+  "sortAscending": "จากน้อยไปมาก",
+  "sortDescending": "จากมากไปน้อย",
   "online-status-online": "ออนไลน์",
   "online-status-offline": "ออฟไลน์",
   "Request": {

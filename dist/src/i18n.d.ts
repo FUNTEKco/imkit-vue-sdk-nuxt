@@ -99,6 +99,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -257,6 +262,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -414,6 +424,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -571,6 +586,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -729,6 +749,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -886,6 +911,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1043,6 +1073,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1200,6 +1235,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1357,6 +1397,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1514,6 +1559,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1671,6 +1721,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1829,6 +1884,11 @@ declare const i18n: VueI18n.I18n<{
         noRoomsAvailable: string;
         unauthorizedTitle: string;
         unauthorizedMessage: string;
+        sortByTime: string;
+        sortByName: string;
+        sortByUnread: string;
+        sortAscending: string;
+        sortDescending: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {

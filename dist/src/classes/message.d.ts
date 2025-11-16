@@ -1,8 +1,8 @@
 import { default as Autolinker } from 'autolinker/dist/Autolinker.js';
-import { default as IMImage } from './image';
-import { default as IMVideo } from './video';
-import { default as User } from './user';
 import { default as MarkdownIt } from 'markdown-it';
+import { default as IMImage } from './image';
+import { default as User } from './user';
+import { default as IMVideo } from './video';
 export declare enum MessageType {
     Text = "text",
     Image = "image",

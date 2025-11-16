@@ -16,9 +16,9 @@ export interface Actions {
     }): void;
     [IMActionTypes.loadMessages](context: AugmentedActionContext, payload: {
         roomId: string;
-        beforeMessageId: string | null;
-        afterMessageId: string | null;
-        targetMessageId: string | null;
+        beforeMessageId?: string | null;
+        afterMessageId?: string | null;
+        targetMessageId?: string | null;
     }): void;
     [IMActionTypes.fetchRoom](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.updateLastRead](context: AugmentedActionContext, roomId: string): void;

@@ -98,10 +98,7 @@ declare const _default: {
   "unauthorizedTitle": "Authentifizierung fehlgeschlagen",
   "unauthorizedMessage": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
   "sortByTime": "Zeit",
-  "sortByName": "Name",
   "sortByUnread": "Ungelesen",
-  "sortAscending": "Aufsteigend",
-  "sortDescending": "Absteigend",
   "online-status-online": "Aktiv",
   "online-status-offline": "Abwesend",
   "Request": {

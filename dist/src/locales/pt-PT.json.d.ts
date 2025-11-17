@@ -98,10 +98,7 @@ declare const _default: {
   "unauthorizedTitle": "Falha na autenticação",
   "unauthorizedMessage": "A sua sessão expirou. Por favor, inicie sessão novamente.",
   "sortByTime": "Tempo",
-  "sortByName": "Nome",
   "sortByUnread": "Não lido",
-  "sortAscending": "Ascendente",
-  "sortDescending": "Descendente",
   "online-status-online": "Ativo",
   "online-status-offline": "Ausente",
   "Request": {

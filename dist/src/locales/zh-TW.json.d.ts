@@ -99,10 +99,7 @@ declare const _default: {
   "unauthorizedTitle": "身份驗證失敗",
   "unauthorizedMessage": "您的登入已過期，請重新登入。",
   "sortByTime": "時間",
-  "sortByName": "名稱",
   "sortByUnread": "未讀",
-  "sortAscending": "升序",
-  "sortDescending": "降序",
   "online-status-online": "上線中",
   "online-status-offline": "離線中",
   "Request": {

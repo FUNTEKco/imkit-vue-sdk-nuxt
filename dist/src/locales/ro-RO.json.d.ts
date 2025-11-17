@@ -98,10 +98,7 @@ declare const _default: {
   "unauthorizedTitle": "Autentificare eșuată",
   "unauthorizedMessage": "Sesiunea dvs. a expirat. Vă rugăm să vă autentificați din nou.",
   "sortByTime": "Timp",
-  "sortByName": "Nume",
   "sortByUnread": "Necitit",
-  "sortAscending": "Crescător",
-  "sortDescending": "Descrescător",
   "online-status-online": "Activ",
   "online-status-offline": "Inactiv",
   "Request": {

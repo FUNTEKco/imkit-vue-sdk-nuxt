@@ -99,10 +99,7 @@ declare const _default: {
   "unauthorizedTitle": "Authentication Failed",
   "unauthorizedMessage": "Your session has expired. Please log in again.",
   "sortByTime": "Time",
-  "sortByName": "Name",
   "sortByUnread": "Unread",
-  "sortAscending": "Ascending",
-  "sortDescending": "Descending",
   "online-status-online": "Active",
   "online-status-offline": "Away",
   "Request": {

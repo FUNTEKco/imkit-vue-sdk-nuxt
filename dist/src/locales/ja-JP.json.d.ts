@@ -99,10 +99,7 @@ declare const _default: {
   "unauthorizedTitle": "認証失敗",
   "unauthorizedMessage": "セッションの有効期限が切れました。もう一度ログインしてください。",
   "sortByTime": "時間",
-  "sortByName": "名前",
   "sortByUnread": "未読",
-  "sortAscending": "昇順",
-  "sortDescending": "降順",
   "online-status-online": "アクティブ",
   "online-status-offline": "ないオンライン",
   "Request": {

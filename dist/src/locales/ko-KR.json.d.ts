@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "세션이 만료되었습니다. 다시 로그인하세요.",
   "sortByTime": "시간",
   "sortByUnread": "읽지 않음",
+  "goToDashboard": "관리 콘솔로 이동",
+  "logout": "로그아웃",
   "online-status-online": "온라인",
   "online-status-offline": "오프라인",
   "Request": {

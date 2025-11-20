@@ -100,6 +100,8 @@ declare const _default: {
   "unauthorizedMessage": "セッションの有効期限が切れました。もう一度ログインしてください。",
   "sortByTime": "時間",
   "sortByUnread": "未読",
+  "goToDashboard": "管理コンソールに戻る",
+  "logout": "ログアウト",
   "online-status-online": "アクティブ",
   "online-status-offline": "ないオンライン",
   "Request": {

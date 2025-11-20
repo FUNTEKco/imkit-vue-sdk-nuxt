@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "您的登录已过期，请重新登录。",
   "sortByTime": "时间",
   "sortByUnread": "未读",
+  "goToDashboard": "回管理后台",
+  "logout": "登出",
   "online-status-online": "上线中",
   "online-status-offline": "离线中",
   "Request": {

@@ -100,6 +100,8 @@ declare const _default: {
   "unauthorizedMessage": "Your session has expired. Please log in again.",
   "sortByTime": "Time",
   "sortByUnread": "Unread",
+  "goToDashboard": "Go to Admin Console",
+  "logout": "Log out",
   "online-status-online": "Active",
   "online-status-offline": "Away",
   "Request": {

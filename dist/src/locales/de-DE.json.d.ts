@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
   "sortByTime": "Zeit",
   "sortByUnread": "Ungelesen",
+  "goToDashboard": "Zur Admin-Konsole",
+  "logout": "Abmelden",
   "online-status-online": "Aktiv",
   "online-status-offline": "Abwesend",
   "Request": {

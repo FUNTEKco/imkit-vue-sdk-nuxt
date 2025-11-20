@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "Sesiunea dvs. a expirat. Vă rugăm să vă autentificați din nou.",
   "sortByTime": "Timp",
   "sortByUnread": "Necitit",
+  "goToDashboard": "Mergi la consola de administrare",
+  "logout": "Deconectare",
   "online-status-online": "Activ",
   "online-status-offline": "Inactiv",
   "Request": {

@@ -101,6 +101,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -261,6 +263,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -420,6 +424,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -579,6 +585,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -739,6 +747,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -898,6 +908,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1057,6 +1069,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1216,6 +1230,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1375,6 +1391,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1534,6 +1552,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1693,6 +1713,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {
@@ -1853,6 +1875,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        goToDashboard: string;
+        logout: string;
         "online-status-online": string;
         "online-status-offline": string;
         Request: {

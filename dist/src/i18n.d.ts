@@ -101,6 +101,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -263,6 +265,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -424,6 +428,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -585,6 +591,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -747,6 +755,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -908,6 +918,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1069,6 +1081,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1230,6 +1244,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1391,6 +1407,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1552,6 +1570,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1713,6 +1733,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1875,6 +1897,8 @@ declare const i18n: VueI18n.I18n<{
         unauthorizedMessage: string;
         sortByTime: string;
         sortByUnread: string;
+        enableNotificationsTitle: string;
+        enableNotificationsMessage: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;

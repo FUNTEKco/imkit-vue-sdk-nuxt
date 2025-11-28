@@ -100,6 +100,8 @@ declare const _default: {
   "unauthorizedMessage": "您的登入已過期，請重新登入。",
   "sortByTime": "時間",
   "sortByUnread": "未讀",
+  "enableNotificationsTitle": "啟用通知",
+  "enableNotificationsMessage": "開啟瀏覽器通知，隨時掌握最新訊息。",
   "goToDashboard": "回管理後台",
   "logout": "登出",
   "online-status-online": "上線中",

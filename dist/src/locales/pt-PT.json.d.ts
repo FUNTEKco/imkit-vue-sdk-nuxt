@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "A sua sessão expirou. Por favor, inicie sessão novamente.",
   "sortByTime": "Tempo",
   "sortByUnread": "Não lido",
+  "enableNotificationsTitle": "Ativar notificações",
+  "enableNotificationsMessage": "Ative as notificações do navegador para se manter atualizado com novas mensagens.",
   "goToDashboard": "Ir para a consola de administração",
   "logout": "Terminar sessão",
   "online-status-online": "Ativo",

@@ -45,9 +45,11 @@ export interface Actions {
     }): void;
     [IMActionTypes.uploadMedia](context: AugmentedActionContext, payload: {
         id: string;
+        roomId: string;
         file: File;
     }): Promise<string>;
     [IMActionTypes.uploadImage](context: AugmentedActionContext, payload: {
+        roomId: string;
         image: IMImage;
         file: File;
     }): Promise<{

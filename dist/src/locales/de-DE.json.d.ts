@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
   "sortByTime": "Zeit",
   "sortByUnread": "Ungelesen",
+  "enableNotificationsTitle": "Benachrichtigungen aktivieren",
+  "enableNotificationsMessage": "Aktivieren Sie Browser-Benachrichtigungen, um über neue Nachrichten auf dem Laufenden zu bleiben.",
   "goToDashboard": "Zur Admin-Konsole",
   "logout": "Abmelden",
   "online-status-online": "Aktiv",

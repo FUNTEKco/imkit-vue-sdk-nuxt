@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "เซสชันของคุณหมดอายุแล้ว กรุณาเข้าสู่ระบบอีกครั้ง",
   "sortByTime": "เวลา",
   "sortByUnread": "ยังไม่ได้อ่าน",
+  "enableNotificationsTitle": "เปิดการแจ้งเตือน",
+  "enableNotificationsMessage": "เปิดการแจ้งเตือนของเบราว์เซอร์เพื่อรับข้อความใหม่ทันที",
   "goToDashboard": "ไปที่คอนโซลผู้ดูแล",
   "logout": "ออกจากระบบ",
   "online-status-online": "ออนไลน์",

@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "Phiên của bạn đã hết hạn. Vui lòng đăng nhập lại.",
   "sortByTime": "Thời gian",
   "sortByUnread": "Chưa đọc",
+  "enableNotificationsTitle": "Bật thông báo",
+  "enableNotificationsMessage": "Bật thông báo trình duyệt để cập nhật tin nhắn mới.",
   "goToDashboard": "Đến bảng điều khiển quản trị",
   "logout": "Đăng xuất",
   "online-status-online": "Đang hoạt động",

@@ -99,6 +99,8 @@ declare const _default: {
   "unauthorizedMessage": "세션이 만료되었습니다. 다시 로그인하세요.",
   "sortByTime": "시간",
   "sortByUnread": "읽지 않음",
+  "enableNotificationsTitle": "알림 활성화",
+  "enableNotificationsMessage": "브라우저 알림을 켜서 새 메시지를 놓치지 마세요.",
   "goToDashboard": "관리 콘솔로 이동",
   "logout": "로그아웃",
   "online-status-online": "온라인",

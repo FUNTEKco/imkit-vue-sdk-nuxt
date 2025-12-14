@@ -24,6 +24,7 @@ type Settings = {
     noRoomsImageURL?: string;
     noRoomsText?: string;
     searchRoomPlaceholder?: string;
+    showEndChatButton?: boolean;
     fixedRoomEnabled: boolean;
 };
 export default Settings;

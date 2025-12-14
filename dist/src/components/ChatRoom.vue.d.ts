@@ -7,6 +7,7 @@ declare function __VLS_template(): {
     attrs: Partial<{}>;
     slots: {
         setting?(_: {}): any;
+        'header-right'?(_: {}): any;
     };
     refs: {
         vl: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<Record<string, unknown>>, Record<string, unknown>, unknown, import('vue').ComputedOptions, import('vue').MethodOptions, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {

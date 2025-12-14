@@ -31,6 +31,7 @@ type PaymentDetailUrl = {
 type Callbacks = {
     onMessageReceived: (message: Message, sender: User) => void;
     onMessageSent: (message: Message) => void;
+    onEndChat?: () => void;
     flexMessageInputSubmitted: (message: Message, value: string) => void;
     flexMessageRatingSubmitted: (message: Message, rating: string) => void;
     onChatbotStateChange: (roomId: string, enabled: boolean) => Promise<boolean>;

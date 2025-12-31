@@ -95,6 +95,7 @@ export interface Actions {
         };
     }): void;
     [IMActionTypes.insertUnreadMessage](context: AugmentedActionContext): void;
+    [IMActionTypes.removeUnreadMessage](context: AugmentedActionContext): void;
     [IMActionTypes.translate](context: AugmentedActionContext, text: string): Promise<string>;
     [IMActionTypes.searchRooms](context: AugmentedActionContext, keyword: string): void;
     [IMActionTypes.subscribe](context: AugmentedActionContext): void;

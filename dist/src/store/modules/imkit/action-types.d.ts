@@ -30,6 +30,7 @@ export declare enum IMActionTypes {
     removeMembers = "removeMembers",
     handleTypingFromSocket = "handleTypingFromSocket",
     insertUnreadMessage = "insertUnreadMessage",
+    removeUnreadMessage = "removeUnreadMessage",
     translate = "translate",
     searchRooms = "searchRooms",
     subscribe = "subscribe",

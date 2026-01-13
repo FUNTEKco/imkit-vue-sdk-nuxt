@@ -107,6 +107,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -275,6 +278,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -442,6 +448,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -609,6 +618,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -777,6 +789,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -944,6 +959,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1111,6 +1129,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1278,6 +1299,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1445,6 +1469,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1612,6 +1639,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1779,6 +1809,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1947,6 +1980,9 @@ declare const i18n: VueI18n.I18n<{
         endChat: string;
         endChatConfirmTitle: string;
         endChatConfirmMessage: string;
+        unsendMessageConfirmTitle: string;
+        unsendMessageConfirmDescription: string;
+        unsendMessageAction: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;

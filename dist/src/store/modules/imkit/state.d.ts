@@ -1,16 +1,16 @@
-import { ClientToServerEvents, ServerToClientEvents } from '../../../socket';
-import { Socket } from 'socket.io-client';
 import { AxiosInstance } from 'axios';
 import { Cache } from 'runtime-memcache';
+import { Socket } from 'socket.io-client';
+import { ClientToServerEvents, ServerToClientEvents } from '../../../socket';
+import { default as RWLock } from 'async-rwlock';
 import { default as Config } from '../../../classes/config';
 import { default as Folder } from '../../../classes/folder';
 import { default as LinkPreview } from '../../../classes/linkPreview';
 import { default as Message } from '../../../classes/message';
 import { default as MessageMultiList } from '../../../classes/messageMultiList';
-import { default as RWLock } from 'async-rwlock';
 import { default as Room } from '../../../classes/room';
-import { SearchType } from '../../../enums/searchType';
 import { default as User } from '../../../classes/user';
+import { SearchType } from '../../../enums/searchType';
 export type IMState = {
     count: number;
     config: Config;
@@ -40,6 +40,7 @@ export type IMState = {
     linkPreviews: {
         [url: string]: LinkPreview;
     };
+    loadingLinkPreviews: Set<string>;
     actionMenuRoomId: string;
     actionMenuFolderId: string;
     folders: {
@@ -68,6 +69,7 @@ export type IMState = {
     messageMultiLists: Map<string, MessageMultiList>;
     numberOfTotalMessages: Map<string, number>;
     replyId: string;
+    editingMessageId: string;
     navigationTargetId: string;
     isRoomInfoVisible: boolean;
     isTyping: {
@@ -79,5 +81,6 @@ export type IMState = {
     blockedUsers: {
         [uid: string]: boolean;
     };
+    activeActionMessageId: string;
 };
 export declare const state: IMState;

@@ -18,7 +18,31 @@ declare function __VLS_template(): {
             M: {};
             Defaults: {};
         }, Readonly<Record<string, unknown>>, Record<string, unknown>, {}, import('vue').ComputedOptions, import('vue').MethodOptions, {}> | null;
-        input: HTMLTextAreaElement;
+        input: HTMLDivElement;
+        formatMenu: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{
+            inputElement: HTMLDivElement | undefined;
+        }> & Readonly<{
+            "onFormat-applied"?: (() => any) | undefined;
+        }>, {
+            checkSelection: () => void;
+            hideMenu: () => void;
+        }, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
+            "format-applied": () => any;
+        }, import('vue').PublicProps, {}, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
+            P: {};
+            B: {};
+            D: {};
+            C: {};
+            M: {};
+            Defaults: {};
+        }, Readonly<{
+            inputElement: HTMLDivElement | undefined;
+        }> & Readonly<{
+            "onFormat-applied"?: (() => any) | undefined;
+        }>, {
+            checkSelection: () => void;
+            hideMenu: () => void;
+        }, {}, {}, {}, {}> | null;
         stickerButtonEl: HTMLButtonElement;
         emojiButtonEl: HTMLButtonElement;
         fileInput: HTMLInputElement;
@@ -41,7 +65,31 @@ declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}
         M: {};
         Defaults: {};
     }, Readonly<Record<string, unknown>>, Record<string, unknown>, {}, import('vue').ComputedOptions, import('vue').MethodOptions, {}> | null;
-    input: HTMLTextAreaElement;
+    input: HTMLDivElement;
+    formatMenu: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{
+        inputElement: HTMLDivElement | undefined;
+    }> & Readonly<{
+        "onFormat-applied"?: (() => any) | undefined;
+    }>, {
+        checkSelection: () => void;
+        hideMenu: () => void;
+    }, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
+        "format-applied": () => any;
+    }, import('vue').PublicProps, {}, false, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
+        P: {};
+        B: {};
+        D: {};
+        C: {};
+        M: {};
+        Defaults: {};
+    }, Readonly<{
+        inputElement: HTMLDivElement | undefined;
+    }> & Readonly<{
+        "onFormat-applied"?: (() => any) | undefined;
+    }>, {
+        checkSelection: () => void;
+        hideMenu: () => void;
+    }, {}, {}, {}, {}> | null;
     stickerButtonEl: HTMLButtonElement;
     emojiButtonEl: HTMLButtonElement;
     fileInput: HTMLInputElement;

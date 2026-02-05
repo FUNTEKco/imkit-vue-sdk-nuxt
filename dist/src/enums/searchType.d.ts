@@ -4,5 +4,6 @@ export declare enum SearchType {
     RoomPrefTags = "roomPrefTags",
     RoomPrefFolder = "roomPrefFolder",
     RoomTags = "roomTags",
-    Messages = "messages"
+    Messages = "messages",
+    Files = "files"
 }

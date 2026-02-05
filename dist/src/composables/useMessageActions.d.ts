@@ -1,0 +1,20 @@
+import { ComputedRef } from 'vue';
+import { default as Message } from '../classes/message';
+export declare function useMessageActions(message: ComputedRef<Message>): {
+    canCopy: ComputedRef<boolean>;
+    canReply: ComputedRef<boolean>;
+    canTranslate: ComputedRef<boolean>;
+    canEdit: ComputedRef<boolean>;
+    isEdited: ComputedRef<boolean>;
+    room: ComputedRef<any>;
+    setShowActions: (value: boolean) => void;
+    reply: () => void;
+    edit: () => void;
+    copy: () => void;
+    translate: () => void;
+    deleteFailedMessage: () => void;
+    deleteMessage: () => void;
+    unsendMessage: () => void;
+    retry: () => void;
+    selectEmoji: (emoji: string) => Promise<any>;
+};

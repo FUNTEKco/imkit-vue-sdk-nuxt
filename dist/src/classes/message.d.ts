@@ -6,6 +6,7 @@ import { default as IMVideo } from './video';
 export declare enum MessageType {
     Text = "text",
     Image = "image",
+    Mixed = "mixed",
     Sticker = "sticker",
     Video = "video",
     File = "file",
@@ -43,6 +44,7 @@ export default class Message {
     id: string;
     roomId: string;
     senderId: string;
+    senderNickname: string;
     type: MessageType;
     status: MessageStatus;
     createdAt: number;
@@ -87,6 +89,16 @@ export declare class ImageMessage extends Message {
     images: IMImage[];
     constructor(raw: any);
 }
+export declare class MixedMessage extends Message {
+    text: string;
+    translatedText: string | null;
+    replyId: string | null;
+    urls: string[];
+    images: IMImage[];
+    get string(): string;
+    get html(): string;
+    constructor(raw: any);
+}
 export declare class StickerMessage extends Message {
     stickerId: string;
     stickerUrl: string;
@@ -126,6 +138,9 @@ export declare class LocationMessage extends Message {
 export declare class SystemMessage extends Message {
     members: User[];
     constructor(raw: any);
+    _string(uid: string, users: {
+        [uid: string]: User;
+    }): string;
 }
 export declare class FileMessage extends Message {
     url: string;

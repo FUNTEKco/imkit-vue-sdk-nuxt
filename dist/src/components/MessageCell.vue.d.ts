@@ -1,4 +1,4 @@
-import { default as Message } from './../classes/message';
+import { default as Message } from '../classes/message';
 type __VLS_Props = {
     source: Message;
 };

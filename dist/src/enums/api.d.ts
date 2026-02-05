@@ -2,5 +2,6 @@ export declare enum API {
     FetchRooms = "/rooms",
     Search = "/search",
     Subscribe = "/me/subscribe",
-    Unsubscribe = "/me/unsubscribe"
+    Unsubscribe = "/me/unsubscribe",
+    FetchVideoInfo = "/files/video-info"
 }

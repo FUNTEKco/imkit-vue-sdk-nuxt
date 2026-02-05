@@ -1,14 +1,16 @@
 import { Reaction } from '../classes/message';
 interface Props {
     reactions: Reaction[];
-    /** Tooltip alignment: 'left' for others' messages, 'right' for own messages */
-    align?: 'left' | 'right';
+    /** Initial emoji to show when opening (if null, shows "All" tab) */
+    initialEmoji?: string | null;
 }
 declare const _default: import('vue').DefineComponent<Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
-    selectEmoji: (emoji: string) => any;
+    close: () => any;
 }, string, import('vue').PublicProps, Readonly<Props> & Readonly<{
-    onSelectEmoji?: ((emoji: string) => any) | undefined;
+    onClose?: (() => any) | undefined;
 }>, {
-    align: "left" | "right";
-}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, HTMLDivElement>;
+    initialEmoji: string | null;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
+    tabsRef: HTMLDivElement;
+}, any>;
 export default _default;

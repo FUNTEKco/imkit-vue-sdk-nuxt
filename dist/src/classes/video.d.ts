@@ -5,6 +5,7 @@ type IMVideo = {
     thumbnailUrl: string;
     originalUrl: string;
     duration: number;
+    thumbnailId?: string;
     thumbnailFile: {
         id: string;
         file: File;

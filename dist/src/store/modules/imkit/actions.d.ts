@@ -35,6 +35,11 @@ export interface Actions {
         roomId: string;
         _id: string;
     }): void;
+    [IMActionTypes.editMessage](context: AugmentedActionContext, payload: {
+        roomId: string;
+        _id: string;
+        message: string;
+    }): void;
     [IMActionTypes.hideMessage](context: AugmentedActionContext, payload: {
         roomId: string;
         messageIds: string[];
@@ -94,7 +99,7 @@ export interface Actions {
             nickname: string;
         };
     }): void;
-    [IMActionTypes.insertUnreadMessage](context: AugmentedActionContext): void;
+    [IMActionTypes.insertUnreadMessage](context: AugmentedActionContext, numberOfUnread: number): void;
     [IMActionTypes.removeUnreadMessage](context: AugmentedActionContext): void;
     [IMActionTypes.translate](context: AugmentedActionContext, text: string): Promise<string>;
     [IMActionTypes.searchRooms](context: AugmentedActionContext, keyword: string): void;
@@ -123,6 +128,10 @@ export interface Actions {
         reaction: string;
     }): void;
     [IMActionTypes.handleAIStreamingFromSocket](context: AugmentedActionContext, payload: Record<string, unknown>): void;
+    [IMActionTypes.fetchPresignedUrl](context: AugmentedActionContext, payload: {
+        bucketName: string;
+        fileId: string;
+    }): void;
     [IMActionTypes.checkNotificationPermission](context: AugmentedActionContext): void;
 }
 export declare const actions: ActionTree<IMState, RootState> & Actions;

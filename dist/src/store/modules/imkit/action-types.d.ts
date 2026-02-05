@@ -10,6 +10,7 @@ export declare enum IMActionTypes {
     sendMessage = "sendMessage",
     retryMessage = "retryMessage",
     recallMessage = "recallMessage",
+    editMessage = "editMessage",
     hideMessage = "hideMessage",
     deleteMessage = "deleteMessage",
     uploadMedia = "uploadMedia",
@@ -48,6 +49,7 @@ export declare enum IMActionTypes {
     sendReaction = "sendReaction",
     deleteReaction = "deleteReaction",
     handleAIStreamingFromSocket = "handleAIStreamingFromSocket",
+    fetchPresignedUrl = "fetchPresignedUrl",
     quickReply = "quickReply",
     checkNotificationPermission = "checkNotificationPermission"
 }

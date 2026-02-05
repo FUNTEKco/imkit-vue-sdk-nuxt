@@ -1,6 +1,8 @@
 import * as VueI18n from 'vue-i18n';
 declare const i18n: VueI18n.I18n<{
     'de-DE': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -64,6 +66,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -110,6 +119,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -171,6 +186,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'en-US': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -235,6 +252,14 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -281,6 +306,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -342,6 +373,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'es-ES': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -405,6 +438,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -451,6 +491,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -512,6 +558,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'fr-FR': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -575,6 +623,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -621,6 +676,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -682,6 +743,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'ja-JP': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -746,6 +809,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -792,6 +862,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -853,6 +929,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'ko-KR': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -916,6 +994,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -962,6 +1047,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1023,6 +1114,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'pt-PT': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -1086,6 +1179,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -1132,6 +1232,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1193,6 +1299,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'ro-RO': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -1256,6 +1364,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -1302,6 +1417,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1363,6 +1484,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'th-TH': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -1426,6 +1549,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -1472,6 +1602,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1533,6 +1669,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'vi-VN': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -1596,6 +1734,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -1642,6 +1787,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1703,6 +1854,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'zh-CN': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -1766,6 +1919,13 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
         cancel: string;
         create: string;
         save: string;
@@ -1812,6 +1972,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1873,6 +2039,8 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
     'zh-TW': {
+        editMessage: string;
+        edited: string;
         close: string;
         confirm: string;
         folderName: string;
@@ -1937,6 +2105,14 @@ declare const i18n: VueI18n.I18n<{
         unhide: string;
         edit: string;
         delete: string;
+        copy: string;
+        unsend: string;
+        translate: string;
+        react: string;
+        reply: string;
+        forward: string;
+        more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -1983,6 +2159,12 @@ declare const i18n: VueI18n.I18n<{
         unsendMessageConfirmTitle: string;
         unsendMessageConfirmDescription: string;
         unsendMessageAction: string;
+        files: string;
+        foundFiles: string;
+        reactionTooltip: string;
+        reactionTooltipWithOthers: string;
+        listSeparator: string;
+        all: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;

@@ -1,4 +1,4 @@
-import { Store as VuexStore, DispatchOptions, CommitOptions, Module } from 'vuex';
+import { CommitOptions, DispatchOptions, Module, Store as VuexStore } from 'vuex';
 import { RootState } from '../../../store';
 import { Actions } from './actions';
 import { Getters } from './getters';

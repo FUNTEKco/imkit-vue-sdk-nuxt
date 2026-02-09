@@ -1,5 +1,5 @@
-import { default as Room } from './../classes/room';
 import { default as Folder } from './../classes/folder';
+import { default as Room } from './../classes/room';
 type __VLS_Props = {
     source: Room | Folder;
 };

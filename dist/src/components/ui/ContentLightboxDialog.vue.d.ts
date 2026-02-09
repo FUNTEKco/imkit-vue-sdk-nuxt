@@ -12,6 +12,7 @@ type __VLS_Props = {
     roomId?: string | null;
     senderName?: string | null;
     createdAt?: string | number | null;
+    showDownload?: boolean;
 };
 declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
     close: () => any;
@@ -30,5 +31,6 @@ declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {
     nextMedia: () => void;
     mediaCount: number;
     senderName: string | null;
+    showDownload: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 export default _default;

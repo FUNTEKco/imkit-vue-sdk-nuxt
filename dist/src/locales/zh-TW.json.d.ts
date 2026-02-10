@@ -160,7 +160,7 @@ declare const _default: {
   "submit": "送出",
   "status": "狀態",
   "currency": "幣別",
-  "paymentCollectionTitle": "收款",
+  "paymentCollectionTitle": "請求付款",
   "paymentCollectionNotSet": "尚未設定收款方式",
   "paymentCollectionNotSetDescription": "您尚未設定任何收款方式，請前往【我的帳號 > 聊天室金流設定】完成設定後，即可發送收款訊息給對方。",
   "paymentGoToSetting": "前往設定",

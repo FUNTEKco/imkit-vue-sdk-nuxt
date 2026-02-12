@@ -9,6 +9,7 @@ type __VLS_Props = {
     mediaCount?: number;
     image?: IMImage | null;
     video?: IMVideo | null;
+    directVideoUrl?: string | null;
     roomId?: string | null;
     senderName?: string | null;
     createdAt?: string | number | null;
@@ -30,6 +31,7 @@ declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {
     previousMedia: () => void;
     nextMedia: () => void;
     mediaCount: number;
+    directVideoUrl: string | null;
     senderName: string | null;
     showDownload: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;

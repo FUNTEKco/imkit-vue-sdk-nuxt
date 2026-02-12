@@ -50,6 +50,7 @@ export declare enum IMActionTypes {
     deleteReaction = "deleteReaction",
     handleAIStreamingFromSocket = "handleAIStreamingFromSocket",
     fetchPresignedUrl = "fetchPresignedUrl",
+    fetchPresignedUrlByPath = "fetchPresignedUrlByPath",
     quickReply = "quickReply",
     checkNotificationPermission = "checkNotificationPermission"
 }

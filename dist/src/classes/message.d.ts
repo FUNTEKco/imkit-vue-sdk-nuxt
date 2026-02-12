@@ -49,6 +49,7 @@ export default class Message {
     status: MessageStatus;
     createdAt: number;
     updatedAt: number;
+    editedAt: string | null;
     groupId: string;
     dateId: number;
     reactions: Reaction[];

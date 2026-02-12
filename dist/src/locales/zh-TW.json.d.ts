@@ -23,7 +23,7 @@ declare const _default: {
   "video": "影片",
   "sticker": "貼圖",
   "message": "訊息",
-  "youSent": "{0} 已傳送",
+  "youSent": "{0}已傳送",
   "someoneSent": "{0} 向您傳送了{1}",
   "tapOpen": "點選此處以開啟此連結。",
   "TypeMessage": "輸入訊息...",

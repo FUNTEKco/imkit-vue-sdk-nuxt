@@ -132,6 +132,7 @@ export interface Actions {
         bucketName: string;
         fileId: string;
     }): void;
+    [IMActionTypes.fetchPresignedUrlByPath](context: AugmentedActionContext, path: string): Promise<string | null>;
     [IMActionTypes.checkNotificationPermission](context: AugmentedActionContext): void;
 }
 export declare const actions: ActionTree<IMState, RootState> & Actions;

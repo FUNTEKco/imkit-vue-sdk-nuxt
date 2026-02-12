@@ -71453,7 +71453,7 @@ const ZWe = ["width", "height"], JWe = ["fill"], r0 = {
             onClick: (c) => B(Ws)(e.message.roomId, s.defaultAction)
           }, null, 14, OQe)) : _e("", !0),
           M("div", {
-            class: "flex flex-col gap-1 p-3 text-sm",
+            class: "text-sm flex flex-col gap-1 p-3",
             onClick: (c) => B(Ws)(e.message.roomId, s.defaultAction)
           }, [
             M("div", null, he((u = s.title) == null ? void 0 : u.substring(0, 100)), 1),

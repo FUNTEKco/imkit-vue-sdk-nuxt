@@ -31068,7 +31068,7 @@ const Lo = /* @__PURE__ */ ir(FIe, [["render", BIe]]), PIe = { class: "mb-1 flex
     };
     return (s, a) => (N(), De(B(Er), {
       class: "flex items-center justify-center",
-      "content-class": "bg-white dark:bg-zinc-800 min-w-[200px] rounded-xl p-5 flex flex-col gap-3 max-w-[360px]",
+      "content-class": "bg-white dark:bg-zinc-800 min-w-[200px] rounded-xl p-5 flex flex-col gap-3 max-w-[min(400px,calc(100vw-2.5rem))]",
       "content-transition": "vfm-fade",
       "overlay-transition": "vfm-fade"
     }, {

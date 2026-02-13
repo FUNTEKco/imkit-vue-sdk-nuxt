@@ -53626,7 +53626,7 @@ const lPe = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty(
       "typewriter-effect": !0
     }, null, 8, ["content"]));
   }
-}), dPe = /* @__PURE__ */ lr(cPe, [["__scopeId", "data-v-ed963930"]]);
+}), dPe = /* @__PURE__ */ lr(cPe, [["__scopeId", "data-v-e9e8aa03"]]);
 var Gb = {};
 /*!
  *  howler.js v2.2.4
@@ -71733,7 +71733,7 @@ const JWe = ["width", "height"], eVe = ["fill"], o0 = {
             key: S,
             class: "flex animate-pulse items-stretch justify-center gap-2"
           }, [...x[2] || (x[2] = [
-            _5('<div class="my-0.5 w-0.5 shrink-0 rounded-full bg-gray-300" data-v-06954cce></div><div class="align-center flex grow flex-col justify-center gap-1.5 overflow-hidden" data-v-06954cce><div class="h-4 w-3/4 rounded bg-gray-200 dark:bg-zinc-600" data-v-06954cce></div><div class="h-3 w-1/2 rounded bg-gray-200 dark:bg-zinc-600" data-v-06954cce></div></div><div class="my-auto h-12 w-12 shrink-0 rounded-sm bg-gray-200 dark:bg-zinc-600" data-v-06954cce></div>', 3)
+            _5('<div class="my-0.5 w-0.5 shrink-0 rounded-full bg-gray-300" data-v-bc7671eb></div><div class="align-center flex grow flex-col justify-center gap-1.5 overflow-hidden" data-v-bc7671eb><div class="h-4 w-3/4 rounded bg-gray-200 dark:bg-zinc-600" data-v-bc7671eb></div><div class="h-3 w-1/2 rounded bg-gray-200 dark:bg-zinc-600" data-v-bc7671eb></div></div><div class="my-auto h-12 w-12 shrink-0 rounded-sm bg-gray-200 dark:bg-zinc-600" data-v-bc7671eb></div>', 3)
           ])]))), 128)),
           (N(!0), Q(tt, null, qt(a.value, (S) => (N(), Q("div", {
             key: S.url,
@@ -71756,7 +71756,7 @@ const JWe = ["width", "height"], eVe = ["fill"], o0 = {
       ], 64);
     };
   }
-}), pa = /* @__PURE__ */ lr(aGe, [["__scopeId", "data-v-06954cce"]]), uGe = {}, lGe = { class: "flex h-4 items-center" };
+}), pa = /* @__PURE__ */ lr(aGe, [["__scopeId", "data-v-bc7671eb"]]), uGe = {}, lGe = { class: "flex h-4 items-center" };
 function cGe(e, t) {
   return N(), Q("div", lGe, [
     (N(), Q(tt, null, qt(3, (n) => M("div", {
@@ -96563,9 +96563,14 @@ const tlt = /* @__PURE__ */ lr(Zut, [["render", elt]]), nlt = {
         { immediate: !0 }
       ), st(
         [
+          // 1) Keep pinned to bottom when virtual list input length changes.
           () => h.value.length,
+          // 2) Link preview loading finished may resize cells; keep bottom if already at bottom.
           () => o.state.imkit.loadingLinkPreviews.size,
-          () => b.value.length
+          // Used to detect "exactly one real message appended".
+          () => b.value.length,
+          // 3) AI streaming can replace/update the last message without changing array length.
+          y
         ],
         ([, , Se], [, , Ue]) => {
           var Ot, xt, Lt, Bt, Pn;
@@ -97095,7 +97100,7 @@ const tlt = /* @__PURE__ */ lr(Zut, [["render", elt]]), nlt = {
       ], 16);
     };
   }
-}), c0t = /* @__PURE__ */ lr(Tlt, [["__scopeId", "data-v-5bafb06c"]]);
+}), c0t = /* @__PURE__ */ lr(Tlt, [["__scopeId", "data-v-62b3db2d"]]);
 var Dy = { name: "Toggle", emits: ["input", "update:modelValue", "change"], props: { value: { validator: function(e) {
   return (t) => ["number", "string", "boolean"].indexOf(typeof t) !== -1 || t == null;
 }, required: !1 }, modelValue: { validator: function(e) {

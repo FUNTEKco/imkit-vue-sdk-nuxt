@@ -23,14 +23,17 @@
     "build:lib": "vue-tsc --noEmit && vite build --config vite-lib.config.ts",
     "build:lib-dev": "vue-tsc --noEmit && vite build --config vite-lib.config.ts && cp -R dist/ ../pinchat_web_v6/sdk/imkit-vue-sdk/dist && cp package.json ../pinchat_web_v6/sdk/imkit-vue-sdk/package.json",
     "preview": "vite preview",
-    "test": "vitest run tests/*",
+    "test": "vitest run tests/*.test.ts && playwright test",
+    "test:unit": "vitest run tests/*.test.ts",
+    "test:e2e": "playwright test",
     "prepare": "is-ci || husky install",
     "upstream:merge": "./scripts/upstream-merge.sh",
     "project:init": "./scripts/project-init.sh",
     "generate:token": "./scripts/generate-token.sh",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "sync-lock": "npm install --legacy-peer-deps --package-lock-only"
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
@@ -82,6 +85,7 @@
     "@commitlint/cli": "20.4.1",
     "@commitlint/config-conventional": "20.4.1",
     "@eslint/js": "9.30.0",
+    "@playwright/test": "^1.58.2",
     "@rollup/plugin-dynamic-import-vars": "^2.1.5",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",

@@ -25,6 +25,7 @@ type Settings = {
     noRoomsText?: string;
     searchRoomPlaceholder?: string;
     showEndChatButton?: boolean;
+    scrollAnchoringEnabled?: boolean;
     fixedRoomEnabled: boolean;
 };
 export default Settings;

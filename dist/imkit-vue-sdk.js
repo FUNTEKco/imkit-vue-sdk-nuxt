@@ -2290,7 +2290,7 @@ const VO = {
       }
     });
   }
-}, W5 = "1.105.2";
+}, W5 = "1.106.0";
 function V5(e, t) {
   return function() {
     return e.apply(t, arguments);

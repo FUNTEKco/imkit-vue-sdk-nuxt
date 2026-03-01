@@ -60,6 +60,7 @@ export type IMState = {
         [type: string]: Room[] | Folder[];
     };
     roomTag: string;
+    roomTagCache: Map<string, string[]>;
     sortBy: string;
     sortUnreadFirst: number;
     deliveringMessages: Map<string, Message>;

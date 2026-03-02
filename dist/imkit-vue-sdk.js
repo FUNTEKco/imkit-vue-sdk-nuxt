@@ -96873,7 +96873,7 @@ const nlt = /* @__PURE__ */ dr(Jut, [["render", tlt]]), rlt = {
               onClick: u
             }, [
               Se(L(CS), {
-                class: "h-6 w-6 text-gray-600 dark:text-gray-300",
+                class: "h-5 w-5 text-gray-600 dark:text-gray-300",
                 color: ((hn = (Vt = r.chatStyle) == null ? void 0 : Vt.header) == null ? void 0 : hn.color) ?? "#6c727f"
               }, null, 8, ["color"])
             ], 8, olt)) : Ee("", !0),
@@ -97196,7 +97196,7 @@ const nlt = /* @__PURE__ */ dr(Jut, [["render", tlt]]), rlt = {
       ], 16);
     };
   }
-}), l0t = /* @__PURE__ */ dr(_lt, [["__scopeId", "data-v-aed7c0e7"]]);
+}), l0t = /* @__PURE__ */ dr(_lt, [["__scopeId", "data-v-faf26b5f"]]);
 var Ny = { name: "Toggle", emits: ["input", "update:modelValue", "change"], props: { value: { validator: function(e) {
   return (t) => ["number", "string", "boolean"].indexOf(typeof t) !== -1 || t == null;
 }, required: !1 }, modelValue: { validator: function(e) {

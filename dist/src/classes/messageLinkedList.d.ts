@@ -15,6 +15,8 @@ export default class MessageLinkedList {
     replace(id: string, message: Message): void;
     concate(linkedList: MessageLinkedList): void;
     unshift(linkedList: MessageLinkedList): void;
+    private mergeMetadata;
+    private removeFromMetadata;
     resetHead(id: string): void;
     resetTail(id: string): void;
     canCombine(linkedList: MessageLinkedList): boolean;

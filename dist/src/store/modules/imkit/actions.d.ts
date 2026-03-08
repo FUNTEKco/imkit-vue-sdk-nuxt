@@ -22,7 +22,10 @@ export interface Actions {
     }): void;
     [IMActionTypes.fetchRoom](context: AugmentedActionContext, roomId: string): void;
     [IMActionTypes.updateLastRead](context: AugmentedActionContext, roomId: string): void;
-    [IMActionTypes.handleMessageFromSocket](context: AugmentedActionContext, message: Message): void;
+    [IMActionTypes.handleMessageFromSocket](context: AugmentedActionContext, payload: {
+        message: Message;
+        mentions?: string[];
+    }): void;
     [IMActionTypes.handleRoomFromSocket](context: AugmentedActionContext, room: Record<string, unknown>): void;
     [IMActionTypes.handleLastReadFromSocket](context: AugmentedActionContext, event: {
         roomId: string;

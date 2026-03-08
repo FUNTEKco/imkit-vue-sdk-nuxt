@@ -76,6 +76,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -128,6 +129,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -266,6 +268,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -318,6 +321,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -454,6 +458,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -506,6 +511,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -642,6 +648,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -694,6 +701,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -831,6 +839,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -883,6 +892,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1019,6 +1029,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -1071,6 +1082,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1207,6 +1219,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -1259,6 +1272,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1395,6 +1409,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -1447,6 +1462,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1583,6 +1599,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -1635,6 +1652,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1771,6 +1789,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -1823,6 +1842,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1959,6 +1979,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -2011,6 +2032,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -2149,6 +2171,7 @@ declare const i18n: VueI18n.I18n<{
         cancel: string;
         create: string;
         save: string;
+        add: string;
         currentTags: string;
         manageTag: string;
         createTag: string;
@@ -2201,6 +2224,7 @@ declare const i18n: VueI18n.I18n<{
         reactionTooltipWithOthers: string;
         listSeparator: string;
         all: string;
+        youWereMentioned: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;

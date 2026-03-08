@@ -36,6 +36,7 @@ declare class Room {
     extra: Record<string, unknown>;
     muted: boolean;
     isSuperuser: boolean;
+    isMentioned: boolean;
     description: string;
     constructor(raw: any, uid: string);
     get memberIdsWithoutMeAndMyGroup(): string[];

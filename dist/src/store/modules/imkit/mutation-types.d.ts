@@ -2,6 +2,7 @@ export declare enum IMMutationTypes {
     increment = "increment",
     setState = "setState",
     updateField = "updateField",
+    mergeUsers = "mergeUsers",
     deleteField = "deleteField",
     updateRoom = "updateRoom",
     updateMessage = "updateMessage",

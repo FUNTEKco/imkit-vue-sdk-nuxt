@@ -3,6 +3,7 @@ import { default as MessageLinkedList } from '../../../classes/messageLinkedList
 import { IMState } from './state';
 import { MutationTree } from 'vuex';
 import { default as Room } from '../../../classes/room';
+import { default as User } from '../../../classes/user';
 import { IMMutationTypes as MutationTypes } from './mutation-types';
 export type Mutations<S = IMState> = {
     [MutationTypes.increment](state: S): void;
@@ -11,6 +12,7 @@ export type Mutations<S = IMState> = {
         key: keyof S;
         value: Record<string, unknown>;
     }): void;
+    [MutationTypes.mergeUsers](state: S, users: Record<string, User>): void;
     [MutationTypes.deleteField](state: S, payload: {
         key: keyof S;
         value: string;

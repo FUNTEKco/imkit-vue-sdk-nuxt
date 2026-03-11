@@ -17,6 +17,7 @@ export declare enum IMMutationTypes {
     insertMessageLinkedList = "insertMessageLinkedList",
     concateMessageLinkedList = "concateMessageLinkedList",
     unshiftMessageLinkedList = "unshiftMessageLinkedList",
+    setRoomTag = "setRoomTag",
     addLoadingLinkPreviews = "addLoadingLinkPreviews",
     removeLoadingLinkPreview = "removeLoadingLinkPreview"
 }

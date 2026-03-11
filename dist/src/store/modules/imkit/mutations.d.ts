@@ -44,6 +44,7 @@ export type Mutations<S = IMState> = {
     [MutationTypes.insertMessageLinkedList](state: S, linkedList: MessageLinkedList): void;
     [MutationTypes.concateMessageLinkedList](state: S, linkedList: MessageLinkedList): void;
     [MutationTypes.unshiftMessageLinkedList](state: S, linkedList: MessageLinkedList): void;
+    [MutationTypes.setRoomTag](state: S, roomTag: string): void;
     [MutationTypes.addLoadingLinkPreviews](state: S, urls: string[]): void;
     [MutationTypes.removeLoadingLinkPreview](state: S, url: string): void;
 };

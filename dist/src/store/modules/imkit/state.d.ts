@@ -83,5 +83,6 @@ export type IMState = {
         [uid: string]: boolean;
     };
     activeActionMessageId: string;
+    isNavigatingToMessage: boolean;
 };
 export declare const state: IMState;

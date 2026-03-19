@@ -24,6 +24,7 @@ export declare enum MessageType {
     Typing = "typing",
     AIStreaming = "ai_streaming",
     PaymentSelect = "payment-select",
+    Payment = "payment",
     Line = "line"
 }
 export interface Reaction {

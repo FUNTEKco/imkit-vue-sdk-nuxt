@@ -175,7 +175,7 @@ declare const _default: {
   "paymentDetail": "付款详情",
   "paymentRequestTime": "请求时间",
   "paymentCompleted": "{0} 已完成付款",
-  "paymentFlowPaid": "已付款",
+  "paymentFlowPaid": "付款完成",
   "paymentFlowUnpaid": "未付款",
   "paymentFlowRefund": "已退款",
   "paymentFlowAuthorizationError": "授权错误",

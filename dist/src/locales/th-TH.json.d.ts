@@ -175,7 +175,7 @@ declare const _default: {
   "paymentDetail": "รายละเอียดการชำระเงิน",
   "paymentRequestTime": "เวลาที่ขอ",
   "paymentCompleted": "{0} ได้ชำระเงินเสร็จสิ้นแล้ว",
-  "paymentFlowPaid": "ชำระแล้ว",
+  "paymentFlowPaid": "ชำระเงินสำเร็จ",
   "paymentFlowUnpaid": "ยังไม่ชำระ",
   "paymentFlowRefund": "คืนเงินแล้ว",
   "paymentFlowAuthorizationError": "ข้อผิดพลาดในการอนุญาต",

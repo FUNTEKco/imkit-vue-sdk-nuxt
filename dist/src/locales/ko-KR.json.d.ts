@@ -165,7 +165,7 @@ declare const _default: {
   "paymentCollectionNotSetDescription": "아직 결제 방법을 설정하지 않으셨습니다. [내 계정 > 채팅방 결제 설정]으로 이동하여 설정을 완료하고 결제 요청 보내기를 시작하세요.",
   "paymentGoToSetting": "설정으로 이동",
   "paymentSendRequestMessage": "결제 요청 메시지 보내기",
-  "paymentMethods": "결제 방법",
+  "paymentMethods": "결제 수단",
   "paymentSupportedMethods": "지원되는 결제 방법",
   "paymentRequestMessage": "결제 요청 메시지",
   "paymentInputMessageOptional": "메시지 입력 (선택사항)",

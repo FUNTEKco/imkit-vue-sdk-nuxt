@@ -176,7 +176,7 @@ declare const _default: {
   "paymentDetail": "支払い詳細",
   "paymentRequestTime": "リクエスト時刻",
   "paymentCompleted": "{0} が支払いを完了しました",
-  "paymentFlowPaid": "支払い済み",
+  "paymentFlowPaid": "支払い完了",
   "paymentFlowUnpaid": "未払い",
   "paymentFlowRefund": "返金済み",
   "paymentFlowAuthorizationError": "認証エラー",

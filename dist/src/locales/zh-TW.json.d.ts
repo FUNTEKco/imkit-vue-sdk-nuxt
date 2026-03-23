@@ -177,7 +177,7 @@ declare const _default: {
   "paymentDetail": "付款詳細",
   "paymentRequestTime": "請款時間",
   "paymentCompleted": "{0} 已支付款項",
-  "paymentFlowPaid": "已付款",
+  "paymentFlowPaid": "付款完成",
   "paymentFlowUnpaid": "未付款",
   "paymentFlowRefund": "退款",
   "paymentFlowAuthorizationError": "授權錯誤",
@@ -185,7 +185,7 @@ declare const _default: {
   "paymentGoToPay": "前往付款",
   "paymentFailed": "暫時無法使用此付款方式付款",
   "paymentFailedDescription": "付款設定暫時發生問題，請聯繫客服或改用其他付款方式。",
-  "paymentPaidTo": "已支付給 ${0}",
+  "paymentPaidTo": "已支付給 {0}",
   "paymentSendPaymentRequestMessageEmpty": "無",
   "paymentSendPaymentRequestMessage": "{0}傳送了請款訊息",
   "paymentSendPaymentMessage": "{0}傳送了付款訊息"

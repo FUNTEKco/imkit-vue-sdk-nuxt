@@ -175,7 +175,7 @@ declare const _default: {
   "paymentDetail": "Chi tiết thanh toán",
   "paymentRequestTime": "Thời gian yêu cầu",
   "paymentCompleted": "{0} đã hoàn thành thanh toán",
-  "paymentFlowPaid": "Đã thanh toán",
+  "paymentFlowPaid": "Thanh toán hoàn tất",
   "paymentFlowUnpaid": "Chưa thanh toán",
   "paymentFlowRefund": "Đã hoàn tiền",
   "paymentFlowAuthorizationError": "Lỗi ủy quyền",

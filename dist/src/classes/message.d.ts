@@ -175,6 +175,7 @@ export declare class PaymentMessage extends Message {
     value: string;
     timestamp: number;
     availableMethods: string[];
+    method: string;
     currency: string;
     remark: string;
     constructor(raw: any);

@@ -71261,7 +71261,11 @@ const QVe = ["width", "height"], GVe = ["fill"], h0 = {
     availableMethods: {}
   },
   setup(e) {
-    const t = e, n = ln(), { t: r, locale: o } = Xr(), i = rr(), a = te(!1), s = te(), u = te(t.availableMethods[0] || ""), c = G(() => t.availableMethods.includes("line")), d = G(
+    const t = e, n = ln(), { t: r, locale: o } = Xr(), i = rr(), a = te(!1), s = te(), u = te(
+      t.availableMethods.map(
+        (A) => A === "line" ? "linepay" : A
+      )[0] || ""
+    ), c = G(() => t.availableMethods.includes("line")), d = G(
       () => t.availableMethods.includes("stripe")
     ), l = G(
       () => t.availableMethods.includes("paypal")

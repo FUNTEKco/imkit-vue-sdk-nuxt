@@ -1,10 +1,10 @@
 {
   "name": "imkit-vue-sdk",
   "private": true,
-  "version": "1.111.1",
+  "version": "1.112.0",
   "type": "module",
   "files": [
-    "*"
+    "dist"
   ],
   "main": "./dist/imkit-vue-sdk.umd.cjs",
   "module": "./dist/imkit-vue-sdk.js",
@@ -20,8 +20,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build --config vite.config.ts",
-    "build:lib": "vue-tsc --noEmit && vite build --config vite-lib.config.ts",
-    "build:lib-dev": "vue-tsc --noEmit && vite build --config vite-lib.config.ts && cp -R dist/ ../pinchat_web_v6/sdk/imkit-vue-sdk/dist && cp package.json ../pinchat_web_v6/sdk/imkit-vue-sdk/package.json",
+    "build:lib": "vue-tsc --noEmit && vite build --config vite-lib.config.ts && pnpm verify:esm-bundle",
+    "build:lib-dev": "vue-tsc --noEmit && vite build --config vite-lib.config.ts && pnpm verify:esm-bundle && cp -R dist/ ../pinchat_web_v6/sdk/imkit-vue-sdk/dist && cp package.json ../pinchat_web_v6/sdk/imkit-vue-sdk/package.json",
+    "verify:esm-bundle": "node scripts/verify-esm-bundle.mjs",
+    "verify:consumer-fixture": "node scripts/verify-consumer-fixture.mjs",
     "preview": "vite preview",
     "test": "vitest run --coverage && playwright test",
     "test:unit": "vitest run --coverage",
@@ -72,18 +74,20 @@
     "uuid": "^13.0.0",
     "validator": "^13.15.35",
     "video.js": "^8.23.7",
-    "vue": "^3.5.32",
     "vue-dark-switch": "^1.0.6",
     "vue-final-modal": "^4.5.5",
-    "vue-i18n": "^11.3.2",
     "vue-renderer-markdown": "0.0.63-beta.4",
-    "vue-router": "^5.0.4",
     "vue3-emoji-picker": "^1.1.8",
     "vue3-google-map": "^0.27.1",
     "vue3-popper": "^1.5.0",
     "vue3-radial-progress": "^1.1.1",
     "vue3-touch-events": "^5.0.15",
-    "vue3-virtual-scroll-list": "^0.2.1",
+    "vue3-virtual-scroll-list": "^0.2.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0",
+    "vue-i18n": "^11.0.0",
+    "vue-router": "^4.6.0 || ^5.0.0",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
@@ -141,6 +145,10 @@
     "vite-plugin-mkcert": "^2.0.0",
     "vitest": "^4.1.4",
     "vue-eslint-parser": "^10.4.0",
+    "vue": "^3.5.32",
+    "vue-i18n": "^11.3.2",
+    "vue-router": "^5.0.4",
+    "vuex": "^4.1.0",
     "vue-tsc": "^3.2.6"
   },
   "config": {

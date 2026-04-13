@@ -1,8 +1,8 @@
+import { RWLock } from '@rocicorp/lock';
 import { AxiosInstance } from 'axios';
-import { Cache } from 'runtime-memcache';
+import { default as QuickLRU } from 'quick-lru';
 import { Socket } from 'socket.io-client';
 import { ClientToServerEvents, ServerToClientEvents } from '../../../socket';
-import { default as RWLock } from 'async-rwlock';
 import { default as Config } from '../../../classes/config';
 import { default as Folder } from '../../../classes/folder';
 import { default as LinkPreview } from '../../../classes/linkPreview';
@@ -20,8 +20,8 @@ export type IMState = {
         [api: string]: Date | null;
     };
     socket: Socket<ServerToClientEvents, ClientToServerEvents>;
-    imageCache: Cache<string>;
-    translationCache: Cache<string>;
+    imageCache: QuickLRU<string, string>;
+    translationCache: QuickLRU<string, string>;
     users: {
         [uid: string]: User;
     };

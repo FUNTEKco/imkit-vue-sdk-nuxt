@@ -12,6 +12,11 @@
     ".": {
       "import": "./dist/imkit-vue-sdk.js",
       "require": "./dist/imkit-vue-sdk.umd.cjs"
+    },
+    "./custom-element": {
+      "types": "./dist/custom-element.d.ts",
+      "import": "./dist/imkit-custom-element.js",
+      "require": "./dist/imkit-custom-element.umd.cjs"
     }
   },
   "sideEffects": [
@@ -22,6 +27,7 @@
     "build": "vue-tsc --noEmit && vite build --config vite.config.ts",
     "build:lib": "vue-tsc --noEmit && vite build --config vite-lib.config.ts && pnpm verify:esm-bundle",
     "build:lib-dev": "vue-tsc --noEmit && vite build --config vite-lib.config.ts && pnpm verify:esm-bundle && cp -R dist/ ../pinchat_web_v6/sdk/imkit-vue-sdk/dist && cp package.json ../pinchat_web_v6/sdk/imkit-vue-sdk/package.json",
+    "build:custom-element": "vite build --config vite-custom-element.config.ts && cp src/custom-element.d.ts dist/custom-element.d.ts",
     "verify:esm-bundle": "node scripts/verify-esm-bundle.mjs",
     "verify:consumer-fixture": "node scripts/verify-consumer-fixture.mjs",
     "preview": "vite preview",

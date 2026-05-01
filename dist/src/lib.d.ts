@@ -12,6 +12,13 @@ type Options = {
     config: Config;
 };
 export { ChatRoom, ChatRoomInfo, Message, ModalsContainer, RoomList, User };
+/**
+ * Per-app SDK registrations: vue-final-modal, vue-i18n, vue3-touch-events,
+ * and the v-src directive. Exported so consumers that share one store across
+ * multiple Vue apps (e.g. the Web Component layer) can register these on a
+ * second app without re-running the store-scoped heavy init.
+ */
+export declare const installAppLevel: (app: App, store: Store<any>) => void;
 declare const _default: {
     install: (app: App, options: Options) => Promise<void>;
 };

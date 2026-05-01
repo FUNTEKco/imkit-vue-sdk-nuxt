@@ -23644,7 +23644,10 @@ var xw = {
 	},
 	async [Z.fetchRoomsInFolders]({ state: e, dispatch: t }) {
 		let n = Object.keys(e.roomIdsInFolders).length;
-		for (; e.numberOfFetchedRooms < n;) await t(Z.fetchRooms, { pageSize: 200 });
+		for (; e.numberOfFetchedRooms < n;) {
+			let n = e.numberOfFetchedRooms, r = e.numberOfTotalRooms;
+			if (await t(Z.fetchRooms, { pageSize: 200 }), e.numberOfFetchedRooms === n && e.numberOfTotalRooms === r) break;
+		}
 		let r = WC(6), i = Object.keys(e.roomIdsInFolders).filter((t) => !e.rooms[t]).map((e) => r(() => t(Z.fetchRoom, e)));
 		await Promise.allSettled(i);
 	},

@@ -10,6 +10,7 @@ type AttrName = (typeof ROOM_AWARE_OBSERVED_ATTRIBUTES)[number];
 interface IMKitElementImperativeAPI {
     setConfig(config: Partial<Config>): void;
     setRoomTag(tag: string): void;
+    setChatStyle(style: unknown): void;
     getStore(): Store<unknown> | undefined;
     readonly imkitReady: boolean;
 }
@@ -20,6 +21,9 @@ declare abstract class IMKitElementBase extends HTMLElement implements IMKitElem
     protected overrides: Partial<Config>;
     protected themeState: {
         theme: string | null;
+    };
+    protected chatStyleState: {
+        chatStyle: unknown;
     };
     private storeUnsubscribe?;
     private actionUnsubscribe?;
@@ -50,6 +54,7 @@ declare abstract class IMKitElementBase extends HTMLElement implements IMKitElem
     private bridgeStoreEvents;
     setConfig(config: Partial<Config>): void;
     setRoomTag(tag: string): void;
+    setChatStyle(style: unknown): void;
     getStore(): Store<unknown> | undefined;
 }
 interface IMKitChatRoomElement extends IMKitElementImperativeAPI {

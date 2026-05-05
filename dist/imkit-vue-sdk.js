@@ -77886,7 +77886,7 @@ var vke = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 		}), (e, r) => (P(), f("div", {
 			ref_key: "panelRef",
 			ref: s,
-			class: "relative overflow-auto"
+			class: "relative h-full overflow-auto"
 		}, [_(R(NE), {
 			class: "h-full overflow-auto transition ease-in-out",
 			"data-key": "id",
@@ -77985,7 +77985,7 @@ var vke = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 			onMassTexting: De
 		}, null, 8, ["mass-texting-enabled"])], 512));
 	}
-}), [["__scopeId", "data-v-0ab222d4"]]);
+}), [["__scopeId", "data-v-d15eee73"]]);
 //#endregion
 //#region src/socket.ts
 function Gke(e, t) {

@@ -27,5 +27,6 @@ type Settings = {
     showEndChatButton?: boolean;
     scrollAnchoringEnabled?: boolean;
     fixedRoomEnabled: boolean;
+    assetBaseUrl?: string;
 };
 export default Settings;

@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "Input Tag",
   "inputTagPlaceholder": "Input Tag Color #02B13F",
   "download": "Download",
+  "mediaLoadFailed": "Failed to load",
+  "retry": "Retry",
   "someoneUnsentMessage": "{0} unsent a message",
   "read": "Read",
   "pin": "Pin",

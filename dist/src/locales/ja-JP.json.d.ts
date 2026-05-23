@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "タグを入力",
   "inputTagPlaceholder": "カスタムカラーを入力してください（例：#02B13F）",
   "download": "ダウンロード",
+  "mediaLoadFailed": "読み込み失敗",
+  "retry": "再試行",
   "someoneUnsentMessage": "{0}がメッセージを取り消しました",
   "read": "既読",
   "pin": "ピン留め",

@@ -10,14 +10,8 @@ declare function __VLS_template(): {
         'header-right'?(_: {}): any;
     };
     refs: {
-        vl: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<Record<string, unknown>>, Record<string, unknown>, unknown, import('vue').ComputedOptions, import('vue').MethodOptions, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
-            P: {};
-            B: {};
-            D: {};
-            C: {};
-            M: {};
-            Defaults: {};
-        }, Readonly<Record<string, unknown>>, Record<string, unknown>, {}, import('vue').ComputedOptions, import('vue').MethodOptions, {}> | null;
+        scrollEl: HTMLDivElement;
+        headerEl: HTMLDivElement;
         input: HTMLDivElement;
         formatMenu: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{
             inputElement: HTMLDivElement | undefined;
@@ -51,20 +45,14 @@ declare function __VLS_template(): {
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
-    send: (...args: any[]) => void;
-    goBack: (...args: any[]) => void;
+    send: () => any;
+    goBack: () => any;
 }, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{
-    onSend?: ((...args: any[]) => any) | undefined;
-    onGoBack?: ((...args: any[]) => any) | undefined;
+    onSend?: (() => any) | undefined;
+    onGoBack?: (() => any) | undefined;
 }>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
-    vl: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<Record<string, unknown>>, Record<string, unknown>, unknown, import('vue').ComputedOptions, import('vue').MethodOptions, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, import('vue').PublicProps, {}, true, {}, {}, import('vue').GlobalComponents, import('vue').GlobalDirectives, string, {}, any, import('vue').ComponentProvideOptions, {
-        P: {};
-        B: {};
-        D: {};
-        C: {};
-        M: {};
-        Defaults: {};
-    }, Readonly<Record<string, unknown>>, Record<string, unknown>, {}, import('vue').ComputedOptions, import('vue').MethodOptions, {}> | null;
+    scrollEl: HTMLDivElement;
+    headerEl: HTMLDivElement;
     input: HTMLDivElement;
     formatMenu: import('vue').CreateComponentPublicInstanceWithMixins<Readonly<{
         inputElement: HTMLDivElement | undefined;

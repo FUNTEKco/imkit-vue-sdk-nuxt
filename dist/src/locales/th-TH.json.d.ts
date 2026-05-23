@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "ป้อนชื่อแท็ก",
   "inputTagPlaceholder": "กรุณาป้อนสีที่กำหนดเอง เช่น #02B13F",
   "download": "ดาวน์โหลด",
+  "mediaLoadFailed": "โหลดไม่สำเร็จ",
+  "retry": "ลองอีกครั้ง",
   "someoneUnsentMessage": "{0} ได้ถอนข้อความ",
   "read": "อ่านแล้ว",
   "pin": "ปักหมุด",

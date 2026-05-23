@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "Introduceți numele etichetei",
   "inputTagPlaceholder": "Vă rugăm să introduceți o culoare personalizată ca #02B13F",
   "download": "Descarcă",
+  "mediaLoadFailed": "Încărcare eșuată",
+  "retry": "Reîncercare",
   "someoneUnsentMessage": "{0} a retras un mesaj",
   "read": "Citit",
   "pin": "Fixează",

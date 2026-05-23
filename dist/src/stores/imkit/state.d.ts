@@ -1,27 +1,14 @@
-import { RWLock } from '@rocicorp/lock';
-import { AxiosInstance } from 'axios';
-import { default as QuickLRU } from 'quick-lru';
-import { Socket } from 'socket.io-client';
-import { ClientToServerEvents, ServerToClientEvents } from '../../../socket';
-import { default as Config } from '../../../classes/config';
-import { default as Folder } from '../../../classes/folder';
-import { default as LinkPreview } from '../../../classes/linkPreview';
-import { default as Message } from '../../../classes/message';
-import { default as MessageMultiList } from '../../../classes/messageMultiList';
-import { default as Room } from '../../../classes/room';
-import { default as User } from '../../../classes/user';
-import { SearchType } from '../../../enums/searchType';
-export type IMState = {
-    count: number;
-    config: Config;
-    uid: string;
-    axios: AxiosInstance;
+import { default as Folder } from '../../classes/folder';
+import { default as LinkPreview } from '../../classes/linkPreview';
+import { default as Message } from '../../classes/message';
+import { default as MessageMultiList } from '../../classes/messageMultiList';
+import { default as Room } from '../../classes/room';
+import { default as User } from '../../classes/user';
+import { SearchType } from '../../enums/searchType';
+export type ImkitState = {
     isRequesting: {
         [api: string]: Date | null;
     };
-    socket: Socket<ServerToClientEvents, ClientToServerEvents>;
-    imageCache: QuickLRU<string, string>;
-    translationCache: QuickLRU<string, string>;
     users: {
         [uid: string]: User;
     };
@@ -60,12 +47,13 @@ export type IMState = {
         [type: string]: Room[] | Folder[];
     };
     roomTag: string;
-    roomTagCache: Map<string, string[]>;
     sortBy: string;
     sortUnreadFirst: number;
+    stickyUnreadRoomIds: {
+        [id: string]: true;
+    };
     deliveringMessages: Map<string, Message>;
     processingMessages: Map<string, Message>;
-    rwlock: RWLock;
     selectedRoomId: string;
     messageMultiLists: Map<string, MessageMultiList>;
     numberOfTotalMessages: Map<string, number>;
@@ -85,4 +73,4 @@ export type IMState = {
     activeActionMessageId: string;
     isNavigatingToMessage: boolean;
 };
-export declare const state: IMState;
+export declare const createState: () => ImkitState;

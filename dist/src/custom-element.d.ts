@@ -1,6 +1,6 @@
 import { App, Component } from 'vue';
-import { Store } from 'vuex';
 import { default as Config } from './classes/config';
+import { ImkitStore } from './stores/imkit';
 declare const CHAT_ROOM_ELEMENT_NAME = "imkit-chat-room";
 declare const ROOM_LIST_ELEMENT_NAME = "imkit-room-list";
 declare const CHAT_ROOM_INFO_ELEMENT_NAME = "imkit-chat-room-info";
@@ -10,20 +10,16 @@ type AttrName = (typeof ROOM_AWARE_OBSERVED_ATTRIBUTES)[number];
 interface IMKitElementImperativeAPI {
     setConfig(config: Partial<Config>): void;
     setRoomTag(tag: string): void;
-    setChatStyle(style: unknown): void;
-    getStore(): Store<unknown> | undefined;
+    getStore(): ImkitStore | undefined;
     readonly imkitReady: boolean;
 }
 declare abstract class IMKitElementBase extends HTMLElement implements IMKitElementImperativeAPI {
     protected app?: App;
-    protected store?: Store<unknown>;
+    protected store?: ImkitStore;
     protected mountPoint?: HTMLDivElement;
     protected overrides: Partial<Config>;
     protected themeState: {
         theme: string | null;
-    };
-    protected chatStyleState: {
-        chatStyle: unknown;
     };
     private storeUnsubscribe?;
     private actionUnsubscribe?;
@@ -40,7 +36,7 @@ declare abstract class IMKitElementBase extends HTMLElement implements IMKitElem
      *  <imkit-chat-room-info> to match v1's `v-if="selectedRoomId"`. */
     protected hideRootWhenNoSelectedRoom(): boolean;
     /** Hook fired after the inner Vue app has mounted. */
-    protected onAfterMount?(store: Store<unknown>): void;
+    protected onAfterMount?(store: ImkitStore): void;
     /** Public: set by the base class once mount() resolves. React consumers
      *  can read this synchronously to recover from missing the imkit-ready
      *  event (event-only signaling races against React effect phases). */
@@ -54,8 +50,7 @@ declare abstract class IMKitElementBase extends HTMLElement implements IMKitElem
     private bridgeStoreEvents;
     setConfig(config: Partial<Config>): void;
     setRoomTag(tag: string): void;
-    setChatStyle(style: unknown): void;
-    getStore(): Store<unknown> | undefined;
+    getStore(): ImkitStore | undefined;
 }
 interface IMKitChatRoomElement extends IMKitElementImperativeAPI {
     sendMessage(text: string): Promise<void>;
@@ -70,7 +65,7 @@ declare class RoomListElement extends IMKitElementBase {
     static get observedAttributes(): readonly string[];
     protected getRootComponent(): Component;
     protected getElementLabel(): string;
-    protected onAfterMount(store: Store<unknown>): void;
+    protected onAfterMount(store: ImkitStore): void;
 }
 declare class ChatRoomInfoElement extends IMKitElementBase {
     static get observedAttributes(): readonly string[];

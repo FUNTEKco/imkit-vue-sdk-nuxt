@@ -25,8 +25,8 @@ declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {
     createdAt: string | number | null;
     image: IMImage | null;
     video: IMVideo | null;
-    open: boolean;
     roomId: string | null;
+    open: boolean;
     selectedMedia: ChatRoomContent | null;
     previousMedia: () => void;
     nextMedia: () => void;

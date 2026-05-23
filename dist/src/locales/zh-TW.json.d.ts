@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "輸入標籤名稱",
   "inputTagPlaceholder": "請輸入自訂色彩例如 #02B13F",
   "download": "下載",
+  "mediaLoadFailed": "無法載入",
+  "retry": "重試",
   "someoneUnsentMessage": "{0} 已收回訊息",
   "read": "已讀",
   "pin": "置頂",

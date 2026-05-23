@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "Tag-Namen eingeben",
   "inputTagPlaceholder": "Bitte benutzerdefinierte Farbe eingeben, z. B. #02B13F",
   "download": "Herunterladen",
+  "mediaLoadFailed": "Fehler beim Laden",
+  "retry": "Wiederholen",
   "someoneUnsentMessage": "{0} hat die Nachricht zurückgezogen",
   "read": "Gelesen",
   "pin": "Anheften",

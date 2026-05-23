@@ -17,6 +17,8 @@ export interface DownloadOptions {
 }
 export declare function useMediaDownload(): {
     isDownloading: import('vue').Ref<boolean, boolean>;
-    downloadProgresses: import('vue').ComputedRef<any>;
+    downloadProgresses: import('vue').ComputedRef<{
+        [id: string]: number;
+    }>;
     download: (options: DownloadOptions) => Promise<void>;
 };

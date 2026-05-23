@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "태그 이름 입력",
   "inputTagPlaceholder": "#02B13F와 같은 사용자 지정 색상을 입력하세요",
   "download": "다운로드",
+  "mediaLoadFailed": "불러오기 실패",
+  "retry": "재시도",
   "someoneUnsentMessage": "{0}님이 메시지를 삭제했습니다",
   "read": "읽음",
   "pin": "고정",

@@ -7,6 +7,7 @@ type Config = {
     token: string;
     translationApiKey: string;
     mapApiKey: string;
+    mapId?: string;
     firebaseConfig: {
         apiKey: string;
         authDomain: string;
@@ -15,7 +16,7 @@ type Config = {
         storageBucket: string;
         messagingSenderId: string;
         appId: string;
-        measurementId: string;
+        measurementId?: string;
     } | null | undefined;
     firebaseVapidKey: string | undefined;
     settings: Settings;

@@ -1,0 +1,54 @@
+import { Ref } from 'vue';
+import { default as IMImage } from '../classes/image';
+import { default as Room } from '../classes/room';
+import { default as Settings } from '../classes/settings';
+import { default as User } from '../classes/user';
+import { default as IMVideo } from '../classes/video';
+type UseComposerOptions = {
+    room: Ref<Room | undefined>;
+    users: Ref<Record<string, User>>;
+    settings: Ref<Settings>;
+    isMobile: Ref<boolean>;
+    input: Ref<HTMLDivElement | undefined>;
+    fileInput: Ref<HTMLInputElement | undefined>;
+    images: Ref<IMImage[]>;
+    imageFiles: Ref<File[]>;
+    videos: Ref<IMVideo[]>;
+    videoFiles: Ref<File[]>;
+    replyId: Ref<string>;
+    editingMessageId: Ref<string>;
+    sendMessage: (payload: Record<string, unknown>) => Promise<unknown>;
+    editMessage: (payload: {
+        roomId: string;
+        _id: string;
+        message: string;
+    }) => Promise<unknown>;
+    clearReply: () => void;
+    clearEditing: () => void;
+};
+export declare const useComposer: ({ room, users, settings, isMobile, input, fileInput, images, imageFiles, videos, videoFiles, replyId, editingMessageId, sendMessage, editMessage, clearReply, clearEditing }: UseComposerOptions) => {
+    message: Ref<string, string>;
+    isComposing: Ref<boolean, boolean>;
+    showStickerPanel: Ref<boolean, boolean>;
+    showEmojiPicker: Ref<boolean, boolean>;
+    stickerButtonEl: Ref<HTMLElement | null, HTMLElement | null>;
+    emojiButtonEl: Ref<HTMLElement | null, HTMLElement | null>;
+    showAudioInput: Ref<boolean, boolean>;
+    send: () => Promise<void>;
+    onSelectEmoji: (emoji: {
+        i: string;
+    }) => void;
+    onClickOutsideSticker: () => void;
+    onClickOutsideEmoji: () => void;
+    toggleStickerPanel: () => void;
+    toggleEmojiPicker: () => void;
+    handleImageButtonTapped: () => void;
+    onCompositionstart: () => void;
+    onCompositionend: () => void;
+    onKeydownEnter: (event: KeyboardEvent) => void;
+    onBeforeInput: (e: InputEvent) => void;
+    onInput: () => void;
+    onFormatApplied: () => void;
+    ensureCaretAnchor: () => void;
+};
+export {};

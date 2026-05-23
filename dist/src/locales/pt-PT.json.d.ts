@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "Inserir nome da etiqueta",
   "inputTagPlaceholder": "Por favor, insira uma cor personalizada como #02B13F",
   "download": "Descarregar",
+  "mediaLoadFailed": "Falha ao carregar",
+  "retry": "Tentar novamente",
   "someoneUnsentMessage": "{0} retirou uma mensagem",
   "read": "Lido",
   "pin": "Fixar",

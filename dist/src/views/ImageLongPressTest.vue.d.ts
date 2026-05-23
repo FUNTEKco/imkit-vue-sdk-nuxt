@@ -1,8 +1,4 @@
 declare const _default: import('vue').DefineComponent<{}, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {
-    panelRef: HTMLDivElement;
-    scrollEl: HTMLDivElement;
-    headerEl: HTMLDivElement;
-    menuTriggerRef: HTMLDivElement;
-    searchInput: HTMLInputElement;
-}, any>;
+    target: HTMLDivElement;
+}, HTMLDivElement>;
 export default _default;

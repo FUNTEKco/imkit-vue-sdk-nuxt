@@ -1,5 +1,4 @@
 import { default as Message } from './message';
-import { default as User } from './user';
 export declare enum RoomType {
     Direct = "direct",
     Group = "group"
@@ -37,12 +36,8 @@ declare class Room {
     muted: boolean;
     isSuperuser: boolean;
     isMentioned: boolean;
-    description: string;
     constructor(raw: any, uid: string);
     get memberIdsWithoutMeAndMyGroup(): string[];
-    _displayName(uid: string, users: {
-        [uid: string]: User;
-    }): string;
     get displayName(): string;
     get avatars(): Avatar[];
 }

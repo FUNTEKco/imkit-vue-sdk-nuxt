@@ -9,6 +9,8 @@ declare const _default: {
   "inputTag": "Nhập tên thẻ",
   "inputTagPlaceholder": "Vui lòng nhập màu tùy chỉnh như #02B13F",
   "download": "Tải xuống",
+  "mediaLoadFailed": "Tải thất bại",
+  "retry": "Thử lại",
   "someoneUnsentMessage": "{0} đã thu hồi một tin nhắn",
   "read": "Đã đọc",
   "pin": "Ghim",

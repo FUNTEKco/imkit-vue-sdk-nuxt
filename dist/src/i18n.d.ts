@@ -11,6 +11,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -201,6 +203,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -393,6 +397,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -583,6 +589,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -773,6 +781,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -964,6 +974,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -1154,6 +1166,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -1344,6 +1358,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -1534,6 +1550,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -1724,6 +1742,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -1914,6 +1934,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;
@@ -2104,6 +2126,8 @@ declare const i18n: VueI18n.I18n<{
         inputTag: string;
         inputTagPlaceholder: string;
         download: string;
+        mediaLoadFailed: string;
+        retry: string;
         someoneUnsentMessage: string;
         read: string;
         pin: string;

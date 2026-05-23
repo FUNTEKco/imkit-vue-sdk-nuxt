@@ -1,7 +1,7 @@
 {
   "name": "imkit-vue-sdk",
   "private": true,
-  "version": "1.112.0",
+  "version": "1.117.2",
   "type": "module",
   "files": [
     "dist"
@@ -24,16 +24,16 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build --config vite.config.ts",
-    "build:lib": "vue-tsc --noEmit && vite build --config vite-lib.config.ts && pnpm verify:esm-bundle",
-    "build:lib-dev": "vue-tsc --noEmit && vite build --config vite-lib.config.ts && pnpm verify:esm-bundle && cp -R dist/ ../pinchat_web_v6/sdk/imkit-vue-sdk/dist && cp package.json ../pinchat_web_v6/sdk/imkit-vue-sdk/package.json",
-    "build:custom-element": "vite build --config vite-custom-element.config.ts && cp src/custom-element.d.ts dist/custom-element.d.ts && rm -rf dist/sticker && cp -R public/sticker dist/sticker",
+    "build": "vite build --config vite.config.ts --logLevel error",
+    "build:lib": "vite build --config vite-lib.config.ts --logLevel error && pnpm verify:esm-bundle",
+    "build:custom-element": "vite build --config vite-custom-element.config.ts --logLevel error && cp src/custom-element.d.ts dist/custom-element.d.ts",
+    "build:lib-dev": "vite build --config vite-lib.config.ts --logLevel error && pnpm verify:esm-bundle && cp -R dist/ ../pinchat_web_v6/sdk/imkit-vue-sdk/dist && cp package.json ../pinchat_web_v6/sdk/imkit-vue-sdk/package.json",
     "verify:esm-bundle": "node scripts/verify-esm-bundle.mjs",
     "verify:consumer-fixture": "node scripts/verify-consumer-fixture.mjs",
     "preview": "vite preview",
-    "test": "vitest run --coverage && playwright test",
-    "test:unit": "vitest run --coverage",
-    "test:e2e": "playwright test",
+    "test": "vitest run --reporter=agent --silent=passed-only --coverage --coverage.reporter=text-summary && playwright test --reporter=dot --quiet",
+    "test:unit": "vitest run --reporter=agent --silent=passed-only --coverage --coverage.reporter=text-summary",
+    "test:e2e": "playwright test --reporter=dot --quiet",
     "update-snapshots": "find tests/e2e -path '*-snapshots/*-darwin.*' -o -path '*-snapshots/*-linux.*' -o -path '*-snapshots/*-win32.*' | xargs rm -f && playwright test --update-snapshots",
     "prepare": "is-ci || husky install",
     "upstream:merge": "./scripts/upstream-merge.sh",
@@ -45,22 +45,22 @@
     "format:check": "prettier --check .",
     "typecheck": "vue-tsc --noEmit",
     "check": "concurrently --group --kill-others-on-fail -n lint,format,types,unit,build -c blue,green,magenta,cyan,yellow \"pnpm lint\" \"pnpm format:check\" \"pnpm typecheck\" \"pnpm test:unit\" \"pnpm build && pnpm build:lib\" && pnpm test:e2e",
+    "check:fast": "concurrently --group --kill-others-on-fail -n lint,format,types,unit,build -c blue,green,magenta,cyan,yellow \"pnpm lint\" \"pnpm format:check\" \"pnpm typecheck\" \"pnpm test:unit\" \"pnpm build && pnpm build:lib\"",
     "sync-lock": "npm install --legacy-peer-deps --package-lock-only"
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
     "@rocicorp/lock": "^1.0.4",
+    "@vueform/toggle": "^2.1.4",
     "@vueuse/components": "^14.2.1",
     "@vueuse/core": "^14.2.1",
     "autolinker": "github:imkit/Autolinker.js#0c4c8fd666c8322451095e92760c9c385efa0a26",
     "axios": "^1.15.0",
-    "@vueform/toggle": "^2.1.4",
     "bowser": "^2.13.1",
     "browser-image-compression": "^2.0.2",
     "cheerio": "^1.2.0",
     "dayjs": "^1.11.20",
     "firebase": "^12.12.0",
-    "get-blob-duration": "^1.2.0",
     "hash-wasm": "^4.12.0",
     "howler": "^2.2.4",
     "jose": "^6.2.2",
@@ -68,6 +68,7 @@
     "luxon": "^3.7.2",
     "markdown-it": "^14.1.1",
     "p-limit": "^7.3.0",
+    "pinia": "^3.0.4",
     "promise-coalesce": "^1.5.0",
     "quick-lru": "^7.3.0",
     "radix-vue": "^1.9.17",
@@ -77,9 +78,10 @@
     "tailwind-merge": "^3.5.0",
     "textarea-caret": "^3.1.0",
     "throttle-debounce": "^5.0.2",
-    "uuid": "^13.0.0",
+    "uuid": "^14.0.0",
     "validator": "^13.15.35",
     "video.js": "^8.23.7",
+    "virtua": "0.49.1",
     "vue-dark-switch": "^1.0.6",
     "vue-final-modal": "^4.5.5",
     "vue-renderer-markdown": "0.0.63-beta.4",
@@ -87,19 +89,18 @@
     "vue3-google-map": "^0.27.1",
     "vue3-popper": "^1.5.0",
     "vue3-radial-progress": "^1.1.1",
-    "vue3-touch-events": "^5.0.15",
-    "vue3-virtual-scroll-list": "^0.2.1"
+    "vue3-touch-events": "^5.0.15"
   },
   "peerDependencies": {
     "vue": "^3.5.0",
     "vue-i18n": "^11.0.0",
-    "vue-router": "^4.6.0 || ^5.0.0",
-    "vuex": "^4.1.0"
+    "vue-router": "^4.6.0 || ^5.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "20.5.0",
     "@commitlint/config-conventional": "20.5.0",
     "@eslint/js": "10.0.1",
+    "@pinia/testing": "^1.0.3",
     "@playwright/test": "^1.59.1",
     "@rollup/plugin-dynamic-import-vars": "^2.1.5",
     "@semantic-release/changelog": "6.0.3",
@@ -121,7 +122,7 @@
     "@vitejs/plugin-vue": "^6.0.5",
     "@vitest/coverage-v8": "^4.1.4",
     "@vue/test-utils": "^2.4.6",
-    "autoprefixer": "^10.4.27",
+    "autoprefixer": "^10.5.0",
     "commitizen": "4.3.1",
     "concurrently": "^9.2.1",
     "cz-conventional-changelog": "3.3.0",
@@ -150,11 +151,10 @@
     "vite-plugin-libcss": "^1.1.2",
     "vite-plugin-mkcert": "^2.0.0",
     "vitest": "^4.1.4",
-    "vue-eslint-parser": "^10.4.0",
     "vue": "^3.5.32",
+    "vue-eslint-parser": "^10.4.0",
     "vue-i18n": "^11.3.2",
     "vue-router": "^5.0.4",
-    "vuex": "^4.1.0",
     "vue-tsc": "^3.2.6"
   },
   "config": {
@@ -171,5 +171,5 @@
       "eslint --fix"
     ]
   },
-  "packageManager": "pnpm@10.25.0"
+  "packageManager": "pnpm@9.1.1+sha512.14e915759c11f77eac07faba4d019c193ec8637229e62ec99eefb7cf3c3b75c64447882b7c485142451ee3a6b408059cdfb7b7fa0341b975f12d0f7629c71195"
 }

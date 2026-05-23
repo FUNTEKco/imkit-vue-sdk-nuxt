@@ -6,7 +6,7 @@ export declare function useMessageActions(message: ComputedRef<Message>): {
     canTranslate: ComputedRef<boolean>;
     canEdit: ComputedRef<boolean>;
     isEdited: ComputedRef<boolean>;
-    room: ComputedRef<any>;
+    room: ComputedRef<import('../classes/room').default>;
     setShowActions: (value: boolean) => void;
     reply: () => void;
     edit: () => void;
@@ -16,5 +16,5 @@ export declare function useMessageActions(message: ComputedRef<Message>): {
     deleteMessage: () => void;
     unsendMessage: () => void;
     retry: () => void;
-    selectEmoji: (emoji: string) => Promise<any>;
+    selectEmoji: (emoji: string) => Promise<void>;
 };

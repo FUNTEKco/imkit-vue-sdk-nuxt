@@ -5703,7 +5703,7 @@ var rte = { install(e, t) {
 	} }), e.directive(`${n.namespace}-options`, { beforeMount: function(e, t) {
 		g(e, t.value);
 	} });
-} }, Zs = "1.117.2", Qs;
+} }, Zs = "1.117.3", Qs;
 (function(e) {
 	e.Root = "root", e.Text = "text", e.Directive = "directive", e.Comment = "comment", e.Script = "script", e.Style = "style", e.Tag = "tag", e.CDATA = "cdata", e.Doctype = "doctype";
 })(Qs ||= {});
@@ -28410,7 +28410,8 @@ var cE = () => {
 		for (let t of [
 			"paragraph_open",
 			"heading_open",
-			"list_item_open"
+			"bullet_list_open",
+			"ordered_list_open"
 		]) {
 			let n = e.renderer.rules[t] || function(e, t, n, r, i) {
 				return i.renderToken(e, t, n);

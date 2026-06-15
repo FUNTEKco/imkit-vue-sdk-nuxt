@@ -12,6 +12,9 @@ export declare const actions: {
     fetchRooms(this: any, { pageSize }?: {
         pageSize?: number;
     }): Promise<Room[] | undefined>;
+    resyncRooms(this: any): Promise<void>;
+    resyncAfterReconnect(this: any): Promise<void>;
+    cancelTrailingReconnectResync(this: any): void;
     fetchRoom(this: any, roomId: string): Promise<void>;
     fetchRoomsInFolders(this: any): Promise<void>;
     mergeInto(this: any, key: string, value: Record<string, unknown>): void;
@@ -94,14 +97,15 @@ export declare const actions: {
     }): void;
     deleteMessages(this: any, messageIds: string[], roomId?: any): void;
     clearChatRoom(this: any): void;
-    insertMessageLinkedList(this: any, linkedList: MessageLinkedList): void;
-    concateMessageLinkedList(this: any, linkedList: MessageLinkedList): void;
-    unshiftMessageLinkedList(this: any, linkedList: MessageLinkedList): void;
-    loadMessages(this: any, { roomId, beforeMessageId, afterMessageId, targetMessageId }: {
+    insertMessageLinkedList(this: any, linkedList: MessageLinkedList, roomId?: string): void;
+    concateMessageLinkedList(this: any, linkedList: MessageLinkedList, roomId?: string): void;
+    unshiftMessageLinkedList(this: any, linkedList: MessageLinkedList, roomId?: string): void;
+    loadMessages(this: any, { roomId, beforeMessageId, afterMessageId, targetMessageId, bypassTotalGuard }: {
         roomId: string;
         beforeMessageId?: string | null;
         afterMessageId?: string | null;
         targetMessageId?: string | null;
+        bypassTotalGuard?: boolean;
     }): Promise<any>;
     sendMessage(this: any, payload: Record<string, unknown>): Promise<Message | undefined>;
     retryMessage(this: any, localMessage: Message): Promise<Message | undefined>;

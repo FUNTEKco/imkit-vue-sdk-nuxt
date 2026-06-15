@@ -5,6 +5,9 @@ type Config = {
     domain: string;
     clientKey: string;
     token: string;
+    getToken?: (opts: {
+        forceRefresh: boolean;
+    }) => string | Promise<string>;
     translationApiKey: string;
     mapApiKey: string;
     mapId?: string;

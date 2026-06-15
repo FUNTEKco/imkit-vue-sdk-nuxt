@@ -37,6 +37,7 @@ declare class Room {
     isSuperuser: boolean;
     isMentioned: boolean;
     constructor(raw: any, uid: string);
+    get isGroup(): boolean;
     get memberIdsWithoutMeAndMyGroup(): string[];
     get displayName(): string;
     get avatars(): Avatar[];

@@ -61,8 +61,22 @@ export default class Message {
     payload: Record<string, unknown> | null;
     _string(uid: string, users: {
         [uid: string]: User;
-    }): string;
+    }, isGroup?: boolean): string;
     get string(): string;
+    /**
+     * Last-message preview that drops the sender name in 1-on-1 rooms.
+     * Callers pass the owning room's type so the lookup stays reliable even when
+     * the room-list payload omits a roomId on the message.
+     */
+    previewString(isGroup: boolean): string;
+    /**
+     * Label for the "latest message" banner inside an open room. It mirrors the
+     * room-list preview, except group text/mixed messages — whose preview is the
+     * raw body with no sender name — get a "Name: " prefix so it's clear who
+     * spoke. Every other type's preview already names the sender (or is a 1-on-1,
+     * which shows no name by design), so no prefix is added.
+     */
+    bannerLabel(isGroup: boolean): string;
     get isIncoming(): boolean;
     get isOutgoing(): boolean;
     get isSystem(): boolean;
@@ -77,6 +91,7 @@ export declare class TextMessage extends Message {
     replyId: string | null;
     urls: string[];
     get string(): string;
+    previewString(): string;
     static autolinker: Autolinker;
     static md: MarkdownIt;
     get html(): string;
@@ -99,6 +114,7 @@ export declare class MixedMessage extends Message {
     images: IMImage[];
     get string(): string;
     get html(): string;
+    previewString(): string;
     constructor(raw: any);
 }
 export declare class StickerMessage extends Message {

@@ -29,6 +29,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -132,6 +133,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -221,6 +223,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -326,6 +329,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -415,6 +419,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -518,6 +523,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -607,6 +613,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -710,6 +717,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -799,6 +807,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -903,6 +912,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -992,6 +1002,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -1095,6 +1106,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1184,6 +1196,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -1287,6 +1300,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1376,6 +1390,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -1479,6 +1494,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1568,6 +1584,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -1671,6 +1688,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1760,6 +1778,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -1863,6 +1882,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1952,6 +1972,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -2055,6 +2076,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -2144,6 +2166,7 @@ declare const i18n: VueI18n.I18n<{
         message: string;
         youSent: string;
         someoneSent: string;
+        sentYouItem: string;
         tapOpen: string;
         TypeMessage: string;
         isTyping: string;
@@ -2249,6 +2272,7 @@ declare const i18n: VueI18n.I18n<{
         listSeparator: string;
         all: string;
         youWereMentioned: string;
+        scrollToBottom: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;

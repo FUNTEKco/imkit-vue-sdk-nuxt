@@ -49,8 +49,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                 payload: Record<string, unknown> | null;
                 _string: (uid: string, users: {
                     [uid: string]: import('../../lib').User;
-                }) => string;
+                }, isGroup?: boolean) => string;
                 readonly string: string;
+                previewString: (isGroup: boolean) => string;
+                bannerLabel: (isGroup: boolean) => string;
                 readonly isIncoming: boolean;
                 readonly isOutgoing: boolean;
                 readonly isSystem: boolean;
@@ -72,6 +74,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             muted: boolean;
             isSuperuser: boolean;
             isMentioned: boolean;
+            readonly isGroup: boolean;
             readonly memberIdsWithoutMeAndMyGroup: string[];
             readonly displayName: string;
             readonly avatars: {
@@ -142,8 +145,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             payload: Record<string, unknown> | null;
             _string: (uid: string, users: {
                 [uid: string]: import('../../lib').User;
-            }) => string;
+            }, isGroup?: boolean) => string;
             readonly string: string;
+            previewString: (isGroup: boolean) => string;
+            bannerLabel: (isGroup: boolean) => string;
             readonly isIncoming: boolean;
             readonly isOutgoing: boolean;
             readonly isSystem: boolean;
@@ -175,8 +180,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             payload: Record<string, unknown> | null;
             _string: (uid: string, users: {
                 [uid: string]: import('../../lib').User;
-            }) => string;
+            }, isGroup?: boolean) => string;
             readonly string: string;
+            previewString: (isGroup: boolean) => string;
+            bannerLabel: (isGroup: boolean) => string;
             readonly isIncoming: boolean;
             readonly isOutgoing: boolean;
             readonly isSystem: boolean;
@@ -211,8 +218,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -244,8 +253,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -278,8 +289,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -311,8 +324,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -344,8 +359,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -395,8 +412,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -428,8 +447,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -462,8 +483,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -495,8 +518,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -528,8 +553,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -579,8 +606,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -612,8 +641,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -646,8 +677,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -679,8 +712,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -712,8 +747,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                     payload: Record<string, unknown> | null;
                     _string: (uid: string, users: {
                         [uid: string]: import('../../lib').User;
-                    }) => string;
+                    }, isGroup?: boolean) => string;
                     readonly string: string;
+                    previewString: (isGroup: boolean) => string;
+                    bannerLabel: (isGroup: boolean) => string;
                     readonly isIncoming: boolean;
                     readonly isOutgoing: boolean;
                     readonly isSystem: boolean;
@@ -738,6 +775,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             length: number;
             numberOfMessages: () => number;
             concate: (linkedList: import('../../classes/messageLinkedList').default) => void;
+            finds: (id: string) => import('../../lib').Message | undefined;
+            hasSegment: (segment: unknown) => boolean;
+            replace: (targetId: string, message: import('../../lib').Message) => void;
+            remove: (id: string) => void;
             unshift: (linkedList: import('../../classes/messageLinkedList').default) => void;
             insert: (linkedList: import('../../classes/messageLinkedList').default) => void;
             merge: () => void;
@@ -759,6 +800,18 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         };
         activeActionMessageId: string;
         isNavigatingToMessage: boolean;
+        reconnectResyncTick: number;
+        lastReconnectResyncAt: number;
+        trailingReconnectResyncTimer: {
+            close: () => NodeJS.Timeout;
+            hasRef: () => boolean;
+            ref: () => NodeJS.Timeout;
+            refresh: () => NodeJS.Timeout;
+            unref: () => NodeJS.Timeout;
+            _onTimeout: (...args: any[]) => void;
+            [Symbol.toPrimitive]: () => number;
+            [Symbol.dispose]: () => void;
+        } | null;
     } & import('pinia').PiniaCustomStateProperties<ImkitState>) => import('../../classes/room').default[];
 }, {
     updateRoom(this: any, payload: Partial<import('../../classes/room').default> & {
@@ -768,6 +821,9 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     fetchRooms(this: any, { pageSize }?: {
         pageSize?: number;
     }): Promise<import('../../classes/room').default[] | undefined>;
+    resyncRooms(this: any): Promise<void>;
+    resyncAfterReconnect(this: any): Promise<void>;
+    cancelTrailingReconnectResync(this: any): void;
     fetchRoom(this: any, roomId: string): Promise<void>;
     fetchRoomsInFolders(this: any): Promise<void>;
     mergeInto(this: any, key: string, value: Record<string, unknown>): void;
@@ -850,14 +906,15 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     }): void;
     deleteMessages(this: any, messageIds: string[], roomId?: any): void;
     clearChatRoom(this: any): void;
-    insertMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default): void;
-    concateMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default): void;
-    unshiftMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default): void;
-    loadMessages(this: any, { roomId, beforeMessageId, afterMessageId, targetMessageId }: {
+    insertMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default, roomId?: string): void;
+    concateMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default, roomId?: string): void;
+    unshiftMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default, roomId?: string): void;
+    loadMessages(this: any, { roomId, beforeMessageId, afterMessageId, targetMessageId, bypassTotalGuard }: {
         roomId: string;
         beforeMessageId?: string | null;
         afterMessageId?: string | null;
         targetMessageId?: string | null;
+        bypassTotalGuard?: boolean;
     }): Promise<any>;
     sendMessage(this: any, payload: Record<string, unknown>): Promise<import('../../lib').Message | undefined>;
     retryMessage(this: any, localMessage: import('../../lib').Message): Promise<import('../../lib').Message | undefined>;

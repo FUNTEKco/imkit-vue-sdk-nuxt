@@ -72,5 +72,8 @@ export type ImkitState = {
     };
     activeActionMessageId: string;
     isNavigatingToMessage: boolean;
+    reconnectResyncTick: number;
+    lastReconnectResyncAt: number;
+    trailingReconnectResyncTimer: ReturnType<typeof setTimeout> | null;
 };
 export declare const createState: () => ImkitState;

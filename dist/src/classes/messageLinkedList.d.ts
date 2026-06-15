@@ -20,6 +20,7 @@ export default class MessageLinkedList {
     resetHead(id: string): void;
     resetTail(id: string): void;
     canCombine(linkedList: MessageLinkedList): boolean;
+    private sharesMessage;
     combine(linkedList: MessageLinkedList): void;
     array(): Message[];
     finds(id: string): Message | undefined;

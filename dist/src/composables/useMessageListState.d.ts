@@ -17,15 +17,19 @@ type VirtualizerLike = {
     }) => void;
     scrollTo: (offset: number) => void;
 };
+type ScrollToBottomOptions = {
+    smooth?: boolean;
+};
 export type UseMessageListStateReturn = {
     isInitialLoaded: Ref<boolean>;
     isLatestMessageVisible: Ref<boolean>;
     isNearBottom: () => boolean;
     isPrepending: Ref<boolean>;
     isRequesting: ComputedRef<boolean>;
+    isScrollToBottomVisible: ComputedRef<boolean>;
     onVlScroll: (offset: number) => void;
     reloadData: (roomId: string, resetInitialLoaded?: boolean) => Promise<void>;
-    scrollToBottom: () => Promise<void>;
+    scrollToBottom: (options?: ScrollToBottomOptions) => Promise<void>;
     setVl: (el: unknown) => void;
     sortedMessages: ComputedRef<Message[]>;
     tobottom: () => Promise<void>;

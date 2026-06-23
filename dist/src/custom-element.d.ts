@@ -5,7 +5,7 @@ declare const CHAT_ROOM_ELEMENT_NAME = "imkit-chat-room";
 declare const ROOM_LIST_ELEMENT_NAME = "imkit-room-list";
 declare const CHAT_ROOM_INFO_ELEMENT_NAME = "imkit-chat-room-info";
 declare const MODALS_CONTAINER_ELEMENT_NAME = "imkit-modals-container";
-declare const ROOM_AWARE_OBSERVED_ATTRIBUTES: readonly ["token", "api-base-url", "client-key", "room-tag", "theme", "room-id"];
+declare const ROOM_AWARE_OBSERVED_ATTRIBUTES: readonly ["token", "api-base-url", "client-key", "room-tag", "theme", "lang", "room-id"];
 type AttrName = (typeof ROOM_AWARE_OBSERVED_ATTRIBUTES)[number];
 interface IMKitElementImperativeAPI {
     setConfig(config: Partial<Config>): void;

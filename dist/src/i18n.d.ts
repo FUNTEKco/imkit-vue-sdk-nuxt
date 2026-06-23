@@ -2334,4 +2334,13 @@ declare const i18n: VueI18n.I18n<{
         paymentSendPaymentMessage: string;
     };
 }, {}, {}, string, false>;
+/**
+ * 設置語言
+ * @param locale 語言代碼，例如 'zh-TW', 'en-US', 'en', 'ja', 'ko', 'fr'
+ */
+export declare function setLocale(locale: string): void;
+/**
+ * 獲取當前語言
+ */
+export declare function getLocale(): string;
 export default i18n;

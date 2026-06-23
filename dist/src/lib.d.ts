@@ -9,6 +9,7 @@ import { default as RoomList } from './components/RoomList.vue';
 type Options = {
     config: Config;
 };
+export { getLocale, setLocale } from './i18n';
 export { clearSignedUrlCache } from './runtime/signedUrlStore';
 export { useImkitStore, type ImkitStore } from './stores/imkit';
 export { ChatRoom, ChatRoomInfo, Message, ModalsContainer, RoomList, User };

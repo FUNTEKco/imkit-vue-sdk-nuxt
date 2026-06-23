@@ -8,7 +8,9 @@ export declare const actions: {
     updateRoom(this: any, payload: Partial<Room> & {
         id: string;
     }): void;
-    deleteRoom(this: any, roomId: string): void;
+    deleteRoom(this: any, roomId: string, { adjustCounts }?: {
+        adjustCounts?: boolean;
+    }): void;
     fetchRooms(this: any, { pageSize }?: {
         pageSize?: number;
     }): Promise<Room[] | undefined>;
@@ -18,6 +20,7 @@ export declare const actions: {
     fetchRoom(this: any, roomId: string): Promise<void>;
     fetchRoomsInFolders(this: any): Promise<void>;
     mergeInto(this: any, key: string, value: Record<string, unknown>): void;
+    dropFrom(this: any, key: string, id: string): void;
     updateRoomPrefs(this: any, { roomId, prefs, roomTag }: {
         roomId: string;
         prefs: Record<string, unknown>;
@@ -43,7 +46,9 @@ export declare const actions: {
         folderId?: string;
     }): Promise<void>;
     setRoomTag(this: any, roomTag: string): void;
+    resetSession(this: any): void;
     aggregateRoomsAndFolders(this: any): Promise<void>;
+    scheduleAggregateRoomsAndFolders(this: any): void;
     mergeUsers(this: any, users: Record<string, User>): void;
     updateLastRead(this: any, payload: string | {
         roomId: string;
@@ -118,6 +123,7 @@ export declare const actions: {
         roomId: string;
         _id: string;
         message: string;
+        mentions?: string[];
     }): Promise<void>;
     hideMessage(this: any, payload: {
         roomId: string;

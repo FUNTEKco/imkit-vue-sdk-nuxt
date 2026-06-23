@@ -7,6 +7,25 @@ type Avatar = {
     url: string;
     name: string;
 };
+export interface RawRoomMember {
+    _id: string;
+    clientType?: string;
+    members?: {
+        _id: string;
+    }[];
+}
+export interface RawRoom {
+    [key: string]: unknown;
+    members?: RawRoomMember[];
+}
+type RoomPref = {
+    tags: string[];
+    tagColors: {
+        [tag: string]: string;
+    };
+    sticky: boolean;
+    hidden: boolean;
+} | null;
 declare class Room {
     id: string;
     name: string;
@@ -23,20 +42,13 @@ declare class Room {
     lastReadMessageId: {
         [uid: string]: string;
     };
-    pref: {
-        tags: string[];
-        tagColors: {
-            [tag: string]: string;
-        };
-        sticky: boolean;
-        hidden: boolean;
-    } | null;
+    pref: RoomPref;
     roomTags: string[];
     extra: Record<string, unknown>;
     muted: boolean;
     isSuperuser: boolean;
     isMentioned: boolean;
-    constructor(raw: any, uid: string);
+    constructor(raw: RawRoom, uid: string);
     get isGroup(): boolean;
     get memberIdsWithoutMeAndMyGroup(): string[];
     get displayName(): string;

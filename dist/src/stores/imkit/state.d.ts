@@ -75,5 +75,6 @@ export type ImkitState = {
     reconnectResyncTick: number;
     lastReconnectResyncAt: number;
     trailingReconnectResyncTimer: ReturnType<typeof setTimeout> | null;
+    aggregateCoalesceTimer: ReturnType<typeof setTimeout> | null;
 };
 export declare const createState: () => ImkitState;

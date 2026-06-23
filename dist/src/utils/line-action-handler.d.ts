@@ -1,4 +1,4 @@
-declare const _default: (roomId: string, action: {
+declare const _default: (roomId: string, action?: {
     type: string;
     label: string;
     uri: string;

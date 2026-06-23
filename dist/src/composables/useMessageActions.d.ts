@@ -15,6 +15,6 @@ export declare function useMessageActions(message: ComputedRef<Message>): {
     deleteFailedMessage: () => void;
     deleteMessage: () => void;
     unsendMessage: () => void;
-    retry: () => void;
+    retry: () => Promise<void>;
     selectEmoji: (emoji: string) => Promise<void>;
 };

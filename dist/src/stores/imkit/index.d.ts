@@ -379,6 +379,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                 resetTail: (id: string) => void;
                 canCombine: (linkedList: import('../../classes/messageLinkedList').default) => boolean;
                 combine: (linkedList: import('../../classes/messageLinkedList').default) => void;
+                firstRealMessage: () => import('../../lib').Message | undefined;
                 array: () => import('../../lib').Message[];
                 finds: (id: string) => import('../../lib').Message | undefined;
                 contains: (id: string) => boolean;
@@ -573,6 +574,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                 resetTail: (id: string) => void;
                 canCombine: (linkedList: import('../../classes/messageLinkedList').default) => boolean;
                 combine: (linkedList: import('../../classes/messageLinkedList').default) => void;
+                firstRealMessage: () => import('../../lib').Message | undefined;
                 array: () => import('../../lib').Message[];
                 finds: (id: string) => import('../../lib').Message | undefined;
                 contains: (id: string) => boolean;
@@ -767,6 +769,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                 resetTail: (id: string) => void;
                 canCombine: (linkedList: import('../../classes/messageLinkedList').default) => boolean;
                 combine: (linkedList: import('../../classes/messageLinkedList').default) => void;
+                firstRealMessage: () => import('../../lib').Message | undefined;
                 array: () => import('../../lib').Message[];
                 finds: (id: string) => import('../../lib').Message | undefined;
                 contains: (id: string) => boolean;
@@ -812,12 +815,24 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             [Symbol.toPrimitive]: () => number;
             [Symbol.dispose]: () => void;
         } | null;
+        aggregateCoalesceTimer: {
+            close: () => NodeJS.Timeout;
+            hasRef: () => boolean;
+            ref: () => NodeJS.Timeout;
+            refresh: () => NodeJS.Timeout;
+            unref: () => NodeJS.Timeout;
+            _onTimeout: (...args: any[]) => void;
+            [Symbol.toPrimitive]: () => number;
+            [Symbol.dispose]: () => void;
+        } | null;
     } & import('pinia').PiniaCustomStateProperties<ImkitState>) => import('../../classes/room').default[];
 }, {
     updateRoom(this: any, payload: Partial<import('../../classes/room').default> & {
         id: string;
     }): void;
-    deleteRoom(this: any, roomId: string): void;
+    deleteRoom(this: any, roomId: string, { adjustCounts }?: {
+        adjustCounts?: boolean;
+    }): void;
     fetchRooms(this: any, { pageSize }?: {
         pageSize?: number;
     }): Promise<import('../../classes/room').default[] | undefined>;
@@ -827,6 +842,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     fetchRoom(this: any, roomId: string): Promise<void>;
     fetchRoomsInFolders(this: any): Promise<void>;
     mergeInto(this: any, key: string, value: Record<string, unknown>): void;
+    dropFrom(this: any, key: string, id: string): void;
     updateRoomPrefs(this: any, { roomId, prefs, roomTag }: {
         roomId: string;
         prefs: Record<string, unknown>;
@@ -852,7 +868,9 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         folderId?: string;
     }): Promise<void>;
     setRoomTag(this: any, roomTag: string): void;
+    resetSession(this: any): void;
     aggregateRoomsAndFolders(this: any): Promise<void>;
+    scheduleAggregateRoomsAndFolders(this: any): void;
     mergeUsers(this: any, users: Record<string, import('../../lib').User>): void;
     updateLastRead(this: any, payload: string | {
         roomId: string;
@@ -927,6 +945,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         roomId: string;
         _id: string;
         message: string;
+        mentions?: string[];
     }): Promise<void>;
     hideMessage(this: any, payload: {
         roomId: string;

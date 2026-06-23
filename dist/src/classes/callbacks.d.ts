@@ -29,8 +29,8 @@ type PaymentDetailUrl = {
     url: string;
 };
 type Callbacks = {
-    onMessageReceived: (message: Message, sender: User) => void;
-    onMessageSent: (message: Message) => void;
+    onMessageReceived?: (message: Message, sender: User) => void;
+    onMessageSent?: (message: Message) => void;
     onEndChat?: () => void;
     onUnauthorized?: () => void;
     flexMessageInputSubmitted: (message: Message, value: string) => void;

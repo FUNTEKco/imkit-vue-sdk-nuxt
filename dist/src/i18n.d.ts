@@ -4,6 +4,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -26,6 +27,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -76,6 +78,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -102,6 +105,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -134,6 +138,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -198,6 +210,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -220,6 +233,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -239,7 +253,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -298,6 +312,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -330,6 +345,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -394,6 +417,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -416,6 +440,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -435,7 +460,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -466,6 +491,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -492,6 +518,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -524,6 +551,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -588,6 +623,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -610,6 +646,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -629,7 +666,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -660,6 +697,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -686,6 +724,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -718,6 +757,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -782,6 +829,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -804,6 +852,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -823,7 +872,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -855,6 +904,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -881,6 +931,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -913,6 +964,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -977,6 +1036,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -999,6 +1059,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -1018,7 +1079,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -1049,6 +1110,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -1075,6 +1137,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -1107,6 +1170,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1171,6 +1242,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -1193,6 +1265,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -1212,7 +1285,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -1243,6 +1316,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -1269,6 +1343,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -1301,6 +1376,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1365,6 +1448,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -1387,6 +1471,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -1406,7 +1491,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -1437,6 +1522,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -1463,6 +1549,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -1495,6 +1582,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1559,6 +1654,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -1581,6 +1677,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -1600,7 +1697,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -1631,6 +1728,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -1657,6 +1755,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -1689,6 +1788,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1753,6 +1860,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -1775,6 +1883,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -1794,7 +1903,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -1825,6 +1934,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -1851,6 +1961,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         kickOutConfirmTitle: string;
@@ -1883,6 +1994,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1947,6 +2066,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -1969,6 +2089,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -1988,7 +2109,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -2019,6 +2140,7 @@ declare const i18n: VueI18n.I18n<{
         reply: string;
         forward: string;
         more: string;
+        emoji: string;
         cancel: string;
         create: string;
         save: string;
@@ -2045,6 +2167,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -2077,6 +2200,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -2141,6 +2272,7 @@ declare const i18n: VueI18n.I18n<{
         editMessage: string;
         edited: string;
         close: string;
+        viewAvatar: string;
         confirm: string;
         folderName: string;
         createFolder: string;
@@ -2163,6 +2295,7 @@ declare const i18n: VueI18n.I18n<{
         image: string;
         video: string;
         sticker: string;
+        typing: string;
         message: string;
         youSent: string;
         someoneSent: string;
@@ -2182,7 +2315,7 @@ declare const i18n: VueI18n.I18n<{
         location: string;
         sendCurrentLocation: string;
         noAccessLocationPermission: string;
-        "locationInfoUnavailable.": string;
+        locationInfoUnavailable: string;
         requestLocationTimeout: string;
         addressUnavailable: string;
         audio: string;
@@ -2241,6 +2374,7 @@ declare const i18n: VueI18n.I18n<{
         confirmDeleteMessage: string;
         deleteForEveryoneWarning: string;
         deleteForMeWarning: string;
+        deleteMessageFailed: string;
         messages: string;
         foundMessages: string;
         moveOut: string;
@@ -2273,6 +2407,14 @@ declare const i18n: VueI18n.I18n<{
         all: string;
         youWereMentioned: string;
         scrollToBottom: string;
+        clearSearch: string;
+        floatingActionButton: string;
+        openActionMenu: string;
+        formatBold: string;
+        formatItalic: string;
+        formatStrike: string;
+        formatInlineCode: string;
+        formatCodeBlock: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;

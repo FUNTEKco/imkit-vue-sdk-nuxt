@@ -23,6 +23,10 @@ type UseAttachmentUploadOptions = {
     sendFile: (payload: FileMessagePayload) => Promise<unknown>;
     fetchPresignedUrlByPath: (path: string) => Promise<string | null>;
 };
+export declare const parseFileName: (name: string) => {
+    fileName: string;
+    fileExtension: string | undefined;
+};
 export declare const useAttachmentUpload: ({ roomId, users, fileSizeLimit, fileInput, onOversize, sendFile, fetchPresignedUrlByPath }: UseAttachmentUploadOptions) => {
     images: Ref<{
         id: string;

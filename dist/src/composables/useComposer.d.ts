@@ -22,6 +22,7 @@ type UseComposerOptions = {
         roomId: string;
         _id: string;
         message: string;
+        mentions?: string[];
     }) => Promise<unknown>;
     clearReply: () => void;
     clearEditing: () => void;

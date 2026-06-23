@@ -5,5 +5,10 @@
  *
  * Use this for any user-controlled text (chat peer nicknames, file names,
  * message content, etc.) that ends up inside an HTML template literal.
+ *
+ * Callers pass untyped peer JSON fields (fileName, fileExtension, nickname,
+ * uid) that are typed `string` but can be undefined/missing at runtime, so the
+ * input is coerced here — a bare `.replace` on undefined would throw and crash
+ * the consuming `html` computed.
  */
-export declare const escapeHtml: (str: string) => string;
+export declare const escapeHtml: (str: string | null | undefined) => string;

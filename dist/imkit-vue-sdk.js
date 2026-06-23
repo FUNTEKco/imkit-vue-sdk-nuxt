@@ -27580,7 +27580,7 @@ var mle = /* @__PURE__ */ qe(((e) => {
 }({}), CT = /* @__PURE__ */ function(e) {
 	return e.Messages = "messages", e.RoomName = "roomName", e.RoomMember = "roomMember", e.RoomPrefTags = "roomPrefTags", e.RoomPrefFolder = "roomPrefFolder", e.RoomTags = "roomTags", e.Files = "files", e;
 }({}), wT = null, gle = (e) => {
-	wT = e;
+	wT = ye(e);
 }, TT = () => {
 	if (!wT) throw Error("imkit runtime not initialized (config)");
 	return wT;

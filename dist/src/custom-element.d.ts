@@ -39,6 +39,13 @@ declare abstract class IMKitElementBase extends HTMLElement implements IMKitElem
     /** Auto-hide the root component when there's no selected room. Used by
      *  <imkit-chat-room-info> to match v1's `v-if="selectedRoomId"`. */
     protected hideRootWhenNoSelectedRoom(): boolean;
+    /** Drive the offline-push permission flow (modal + FCM subscribe) from this
+     *  element. Only <imkit-room-list> opts in — it's the always-mounted element
+     *  on the admin chat, mirroring v1's MainView.onMounted, which the
+     *  web-component build (no MainView) otherwise drops. Gated at runtime on
+     *  firebaseConfig + firebaseVapidKey, so it's a no-op until the host
+     *  configures push. */
+    protected enablesNotificationFlow(): boolean;
     /** Hook fired after the inner Vue app has mounted. */
     protected onAfterMount?(store: ImkitStore): void;
     /** Public: set by the base class once mount() resolves. React consumers
@@ -70,6 +77,7 @@ declare class RoomListElement extends IMKitElementBase {
     static get observedAttributes(): readonly string[];
     protected getRootComponent(): Component;
     protected getElementLabel(): string;
+    protected enablesNotificationFlow(): boolean;
     protected onAfterMount(store: ImkitStore): void;
 }
 declare class ChatRoomInfoElement extends IMKitElementBase {

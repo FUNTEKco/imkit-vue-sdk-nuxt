@@ -27542,6 +27542,10 @@ var mle = /* @__PURE__ */ qe(((e) => {
 		let e = yT(), t = Bv();
 		return this.name ? this.name : this.memberIdsWithoutMeAndMyGroup.length === 0 ? Fv.global.t("emptyChat") : this.type == "direct" ? this.extra.guestId ? e[this.extra.guestId]?.nickname ?? "" : this.memberIdsWithoutMeAndMyGroup.map((t) => e[t])[0]?.nickname ?? "" : this.isGroup ? this.memberIds.filter((e) => e !== t && e !== "BOT" && !e.endsWith("_sub")).map((t) => e[t]?.nickname ?? "").filter((e) => e.length > 0).join(", ") : "";
 	}
+	get linkName() {
+		let e = typeof this.extra.title == "string" ? this.extra.title : "", t = typeof this.extra.name == "string" ? this.extra.name : "";
+		return e || t;
+	}
 	get avatars() {
 		let e = yT(), t = Bv();
 		return this.coverUrl && this.coverUrl.length > 0 ? [{
@@ -83475,16 +83479,20 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 }, _Re = { class: "flex w-0 min-w-0 grow flex-col text-left" }, vRe = { class: "flex justify-between gap-2" }, X9 = { class: "flex flex-1 items-center justify-center gap-1 overflow-hidden" }, yRe = { class: "w-full overflow-hidden text-base text-ellipsis whitespace-nowrap text-gray-900 dark:text-gray-100" }, bRe = {
 	key: 0,
 	"data-testid": "room-mute-icon"
-}, xRe = { class: "flex-none text-xs whitespace-nowrap text-gray-500 dark:text-gray-300" }, SRe = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-gray-500 dark:text-gray-400" }, CRe = {
-	key: 1,
-	class: "text-xs text-blue-500 dark:text-blue-400"
-}, wRe = {
+}, xRe = { class: "flex-none text-xs whitespace-nowrap text-gray-500 dark:text-gray-300" }, SRe = {
+	key: 0,
+	"data-testid": "room-link-name",
+	class: "overflow-hidden text-xs text-ellipsis whitespace-nowrap text-gray-400 dark:text-gray-500"
+}, CRe = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-gray-500 dark:text-gray-400" }, wRe = {
 	key: 2,
-	class: "mt-1 flex flex-wrap gap-1"
+	class: "text-xs text-blue-500 dark:text-blue-400"
 }, TRe = {
 	key: 3,
+	class: "mt-1 flex flex-wrap gap-1"
+}, ERe = {
+	key: 4,
 	class: "text-gray-500 dark:text-gray-400"
-}, ERe = { class: "flex flex-col items-stretch gap-1 rounded-lg bg-white p-1.5 text-base text-gray-800 shadow-md dark:bg-zinc-800 dark:text-gray-200" }, DRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, ORe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, kRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, ARe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, jRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, MRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, NRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, PRe = /* @__PURE__ */ b({
+}, DRe = { class: "flex flex-col items-stretch gap-1 rounded-lg bg-white p-1.5 text-base text-gray-800 shadow-md dark:bg-zinc-800 dark:text-gray-200" }, ORe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, kRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, ARe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, jRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, MRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, NRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, PRe = { class: "flex cursor-pointer items-center gap-2 rounded p-2 outline-none hover:bg-gray-100 hover:dark:bg-zinc-700" }, FRe = /* @__PURE__ */ b({
 	__name: "RoomCell",
 	props: { source: {} },
 	setup(e) {
@@ -83496,29 +83504,32 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 			if (l.searchKeyword.length > 0 && (l.searchType === CT.RoomName || l.searchType === CT.RoomMember)) return l.searchKeyword;
 		}), v = c(() => {
 			if (l.searchKeyword.length > 0 && (l.searchType === CT.Messages || l.searchType === CT.RoomMember)) return l.searchKeyword;
-		}), y = c(() => l.searchKeyword.length > 0 && l.searchType === CT.RoomMember ? m.value.memberIds.map((e) => l.users[e]).filter((e) => e).map((e) => e.nickname || e.id).join(", ") : l.searchKeyword.length > 0 && l.searchType === CT.Files ? s("foundFiles", { count: l.searchedMessageIds.get(t.source.id)?.length ?? 0 }) : m.value.lastMessage?.previewString(m.value.isGroup)), b = c(() => l.selectedRoomId === t.source.id), x = c(() => !!l.roomIdsInFolders[t.source.id]), S = c(() => l.actionMenuRoomId), C = c(() => l.actionMenuFolderId), w = c(() => l.searchKeyword), T = c(() => m.value.pref?.sticky ?? !1), E = c(() => m.value.pref?.hidden ?? !1), D = c(() => l.sortedFolderIds), O = L(""), k = c(() => {
+		}), y = c(() => l.searchKeyword.length > 0 && l.searchType === CT.RoomMember ? m.value.memberIds.map((e) => l.users[e]).filter((e) => e).map((e) => e.nickname || e.id).join(", ") : l.searchKeyword.length > 0 && l.searchType === CT.Files ? s("foundFiles", { count: l.searchedMessageIds.get(t.source.id)?.length ?? 0 }) : m.value.lastMessage?.previewString(m.value.isGroup)), b = c(() => l.selectedRoomId === t.source.id), x = c(() => !!l.roomIdsInFolders[t.source.id]), S = c(() => l.actionMenuRoomId), C = c(() => l.actionMenuFolderId), w = c(() => l.searchKeyword), T = c(() => m.value.pref?.sticky ?? !1), E = c(() => m.value.pref?.hidden ?? !1), D = c(() => {
+			let e = m.value.linkName;
+			return e && e !== m.value.displayName ? e : "";
+		}), O = c(() => l.sortedFolderIds), k = L(""), A = c(() => {
 			let e = m.value.roomTags ?? [], t = m.value.pref?.tags ?? [];
-			return [...e.filter((e) => e !== O.value), ...t];
+			return [...e.filter((e) => e !== k.value), ...t];
 		});
 		se(() => {
 			let e = m.value?.roomTags ?? [];
-			e.length > 0 && (O.value = e[0]);
+			e.length > 0 && (k.value = e[0]);
 		});
-		let A = () => {
+		let j = () => {
 			let { open: e } = zs({
 				component: fRe,
 				attrs: {
 					roomId: t.source.id,
-					roomTag: O.value
+					roomTag: k.value
 				}
 			});
 			e(), l.$patch({ actionMenuRoomId: "" });
-		}, j = c({
+		}, M = c({
 			get: () => S.value === t.source.id,
 			set: (e) => {
 				l.$patch({ actionMenuRoomId: e ? t.source.id : "" });
 			}
-		}), M = async () => {
+		}), ee = async () => {
 			if (S.value || C.value) return;
 			l.$patch({
 				selectedRoomId: t.source.id,
@@ -83529,50 +83540,50 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 				messageSearchKeyword: e ? l.searchKeyword : "",
 				isSearchInRoomMode: e
 			});
-		}, ee = async () => {
+		}, te = async () => {
 			await l.updateRoomPrefs({
 				roomId: t.source.id,
 				prefs: { sticky: !T.value }
 			});
-		}, te = async () => {
+		}, ne = async () => {
 			l.updateRoomPrefs({
 				roomId: t.source.id,
 				prefs: { hidden: !E.value }
 			});
-		}, ne = async () => {
+		}, N = async () => {
 			let { open: e } = zs({
 				component: KLe,
 				attrs: { roomId: t.source.id }
 			});
 			e();
-		}, N = async () => {
-			await l.removeRoomFromFolder(t.source.id);
 		}, F = async () => {
+			await l.removeRoomFromFolder(t.source.id);
+		}, ie = async () => {
 			let { open: e } = zs({
 				component: VLe,
 				attrs: { roomId: t.source.id }
 			});
 			e();
-		}, ie = L(null);
-		WO(ie, () => {
-			j.value = !j.value;
+		}, ae = L(null);
+		WO(ae, () => {
+			M.value = !M.value;
 		}, { modifiers: { prevent: !0 } });
-		let ae = c(() => l.roomsInSelectedFolder);
+		let oe = c(() => l.roomsInSelectedFolder);
 		return (r, s) => m.value ? (I(), f("div", pRe, [x.value && !w.value ? (I(), f("div", {
 			key: 0,
 			class: P(["absolute left-2 h-[120%] w-1 shrink-0 rounded-full bg-slate-500", {
-				"mt-4 h-full!": ae.value[0]?.id === t.source.id,
-				"mb-4 h-full!": ae.value[ae.value.length - 1]?.id === t.source.id
+				"mt-4 h-full!": oe.value[0]?.id === t.source.id,
+				"mb-4 h-full!": oe.value[oe.value.length - 1]?.id === t.source.id
 			}])
 		}, null, 2)) : d("", !0), p("div", {
 			ref_key: "roomCellRef",
-			ref: ie,
+			ref: ae,
 			"data-testid": `room-cell-${m.value.id}`,
 			class: P(["group relative flex min-h-[66px] grow cursor-pointer items-center gap-3 rounded-lg p-2 select-none sm:hover:bg-gray-100 sm:hover:dark:bg-zinc-700", {
 				"bg-gray-100 dark:bg-zinc-700": b.value,
 				"ml-4": x.value && !w.value
 			}]),
-			onClick: M
+			onClick: ee
 		}, [
 			p("div", hRe, [m.value.avatars.length === 1 ? (I(), u(RD, {
 				key: 0,
@@ -83597,10 +83608,11 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 					text: m.value.displayName ?? "",
 					highlight: h.value
 				}, null, 8, ["text", "highlight"])]), m.value.muted ? (I(), f("span", bRe, [_(z(bO), { class: "mt-0.5 h-3.5 w-3.5 text-gray-600 dark:text-gray-400" })])) : d("", !0)]), p("div", xRe, R(o.value), 1)]),
+				D.value ? (I(), f("div", SRe, R(D.value), 1)) : d("", !0),
 				i.value.enableReadReceipt ? (I(), f("div", {
-					key: 0,
+					key: 1,
 					class: P(["flex items-center justify-between gap-2", { "text-gray-800": m.value.numberOfUnread > 0 }])
-				}, [p("div", SRe, [_(Y9, {
+				}, [p("div", CRe, [_(Y9, {
 					text: y.value ?? "",
 					highlight: v.value
 				}, null, 8, ["text", "highlight"])]), m.value.numberOfUnread > 0 && !b.value ? (I(), f("div", {
@@ -83609,20 +83621,20 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 					class: "flex h-5 min-w-5 items-center justify-center rounded-full bg-blue-400 px-1.5 text-center text-xs leading-none font-semibold text-white",
 					style: re(a.value.roomListUnreadBadge)
 				}, R(m.value.numberOfUnread > 99 ? "99+" : m.value.numberOfUnread), 5)) : d("", !0)], 2)) : d("", !0),
-				m.value.isMentioned && m.value.numberOfUnread > 0 && !b.value ? (I(), f("div", CRe, R(r.$t("youWereMentioned")), 1)) : d("", !0),
-				m.value.pref?.tags ? (I(), f("div", wRe, [(I(!0), f(n, null, me(k.value, (e) => (I(), f("div", {
+				m.value.isMentioned && m.value.numberOfUnread > 0 && !b.value ? (I(), f("div", wRe, R(r.$t("youWereMentioned")), 1)) : d("", !0),
+				m.value.pref?.tags ? (I(), f("div", TRe, [(I(!0), f(n, null, me(A.value, (e) => (I(), f("div", {
 					key: e,
 					class: "overflow-hidden rounded-md bg-blue-400 px-1 py-0.5 text-xs text-ellipsis whitespace-nowrap text-white",
 					style: re({ backgroundColor: (m.value.pref?.tagColors || {})[e] })
 				}, R(e), 5))), 128))])) : d("", !0),
-				w.value && z(l).searchType === z(CT).Messages ? (I(), f("div", TRe, R(r.$t("foundMessages", [z(l).searchedMessageIds.get(e.source.id)?.length ?? 0])), 1)) : d("", !0)
+				w.value && z(l).searchType === z(CT).Messages ? (I(), f("div", ERe, R(r.$t("foundMessages", [z(l).searchedMessageIds.get(e.source.id)?.length ?? 0])), 1)) : d("", !0)
 			]),
 			_(z(FZ), {
-				open: j.value,
-				"onUpdate:open": s[2] ||= (e) => j.value = e
+				open: M.value,
+				"onUpdate:open": s[2] ||= (e) => M.value = e
 			}, {
 				default: V(() => [_(z(IZ), {
-					class: P(["absolute right-4 hidden h-8 w-8 items-center justify-center rounded-full bg-white shadow-md hover:scale-110 hover:transform hover:transition sm:group-hover:flex dark:bg-zinc-800", { "flex!": j.value }]),
+					class: P(["absolute right-4 hidden h-8 w-8 items-center justify-center rounded-full bg-white shadow-md hover:scale-110 hover:transform hover:transition sm:group-hover:flex dark:bg-zinc-800", { "flex!": M.value }]),
 					onClick: s[0] ||= Re(() => {}, ["stop"])
 				}, {
 					default: V(() => [_(z(YD), { class: "h-5 w-5 text-gray-700 dark:text-gray-300" })]),
@@ -83634,19 +83646,19 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 						side: "bottom",
 						"side-offset": 8
 					}, {
-						default: V(() => [p("div", ERe, [
+						default: V(() => [p("div", DRe, [
 							_(z(zZ), {
 								"as-child": "",
-								onSelect: A
+								onSelect: j
 							}, {
-								default: V(() => [p("div", DRe, [_(z(zde), { class: "h-5 w-5" }), g(" " + R(r.$t("tag")), 1)])]),
+								default: V(() => [p("div", ORe, [_(z(zde), { class: "h-5 w-5" }), g(" " + R(r.$t("tag")), 1)])]),
 								_: 1
 							}),
 							_(z(zZ), {
 								"as-child": "",
-								onSelect: ee
+								onSelect: te
 							}, {
-								default: V(() => [p("div", ORe, [T.value ? (I(), u(z(Pde), {
+								default: V(() => [p("div", kRe, [T.value ? (I(), u(z(Pde), {
 									key: 0,
 									class: "h-5 w-5"
 								})) : (I(), u(z(uO), {
@@ -83657,38 +83669,38 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 							}),
 							_(z(zZ), {
 								"as-child": "",
-								onSelect: te
+								onSelect: ne
 							}, {
-								default: V(() => [p("div", kRe, [_(z(wde), { class: "h-5 w-5" }), g(" " + R(E.value ? r.$t("unhide") : r.$t("hide")), 1)])]),
+								default: V(() => [p("div", ARe, [_(z(wde), { class: "h-5 w-5" }), g(" " + R(E.value ? r.$t("unhide") : r.$t("hide")), 1)])]),
 								_: 1
 							}),
 							_(z(zZ), {
 								"as-child": "",
-								onSelect: ne
+								onSelect: N
 							}, {
-								default: V(() => [p("div", ARe, [_(z(_O), { class: "h-5 w-5" }), g(" " + R(r.$t("delete")), 1)])]),
+								default: V(() => [p("div", jRe, [_(z(_O), { class: "h-5 w-5" }), g(" " + R(r.$t("delete")), 1)])]),
 								_: 1
 							}),
 							x.value ? (I(), u(z(zZ), {
 								key: 0,
 								"as-child": "",
-								onSelect: N
-							}, {
-								default: V(() => [p("div", jRe, [_(z(Tde), { class: "h-5 w-5" }), g(" " + R(r.$t("removeFromFolder")), 1)])]),
-								_: 1
-							})) : D.value.length > 0 ? (I(), u(z(zZ), {
-								key: 1,
-								"as-child": "",
 								onSelect: F
 							}, {
-								default: V(() => [p("div", MRe, [_(z(iO), { class: "h-5 w-5" }), g(" " + R(r.$t("addToFolder")), 1)])]),
+								default: V(() => [p("div", MRe, [_(z(Tde), { class: "h-5 w-5" }), g(" " + R(r.$t("removeFromFolder")), 1)])]),
+								_: 1
+							})) : O.value.length > 0 ? (I(), u(z(zZ), {
+								key: 1,
+								"as-child": "",
+								onSelect: ie
+							}, {
+								default: V(() => [p("div", NRe, [_(z(iO), { class: "h-5 w-5" }), g(" " + R(r.$t("addToFolder")), 1)])]),
 								_: 1
 							})) : d("", !0),
 							_(z(zZ), {
 								"as-child": "",
 								onSelect: s[1] ||= (e) => z(l).toggleNotification(t.source.id)
 							}, {
-								default: V(() => [p("div", NRe, [m.value.muted ? (I(), u(z(Vde), {
+								default: V(() => [p("div", PRe, [m.value.muted ? (I(), u(z(Vde), {
 									key: 0,
 									class: "h-5 w-5"
 								})) : (I(), u(z(bO), {
@@ -83706,11 +83718,11 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 			}, 8, ["open"])
 		], 10, mRe)])) : d("", !0);
 	}
-}), FRe = /* @__PURE__ */ b({
+}), IRe = /* @__PURE__ */ b({
 	__name: "RoomListWrapperCell",
 	props: { source: {} },
 	setup(e) {
-		return (t, n) => e.source instanceof z(bT) ? (I(), u(PRe, {
+		return (t, n) => e.source instanceof z(bT) ? (I(), u(FRe, {
 			key: 0,
 			source: e.source
 		}, null, 8, ["source"])) : (I(), u(LLe, {
@@ -83721,7 +83733,7 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 });
 //#endregion
 //#region src/composables/useRoomSearch.ts
-function IRe({ fetchTask: e }) {
+function LRe({ fetchTask: e }) {
 	let t = gE(), n = L(""), r = L(), i = L(!1), a = L(!1), o = async () => {
 		if (n.value !== t.searchKeyword) if (n.value) {
 			a.value = !0;
@@ -83745,7 +83757,7 @@ function IRe({ fetchTask: e }) {
 }
 //#endregion
 //#region src/composables/useRoomSort.ts
-function LRe() {
+function RRe() {
 	let e = gE(), t = L("time"), n = L(!1), r = L(!0), i = () => "-lastMessage", a = () => +(t.value === "unread"), o = () => {
 		let t = /* @__PURE__ */ new Set();
 		e.selectedRoomId && t.add(e.selectedRoomId);
@@ -83785,10 +83797,10 @@ function LRe() {
 }
 //#endregion
 //#region src/components/MassTextingModal.vue?vue&type=script&setup=true&lang.ts
-var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium text-gray-700 dark:text-gray-300" }, zRe = ["placeholder"], BRe = { class: "flex h-[50vh] flex-col" }, VRe = { class: "mb-2 flex h-12 items-center gap-2 rounded-lg bg-gray-100 p-3 dark:bg-zinc-700" }, HRe = { class: "grow overflow-hidden" }, URe = ["placeholder"], WRe = {
+var zRe = { class: "mb-1 flex items-center justify-between text-xl font-medium text-gray-700 dark:text-gray-300" }, BRe = ["placeholder"], VRe = { class: "flex h-[50vh] flex-col" }, HRe = { class: "mb-2 flex h-12 items-center gap-2 rounded-lg bg-gray-100 p-3 dark:bg-zinc-700" }, URe = { class: "grow overflow-hidden" }, WRe = ["placeholder"], GRe = {
 	key: 0,
 	class: "flex flex-col gap-1"
-}, GRe = { class: "flex items-center justify-center gap-2" }, KRe = ["disabled"], qRe = /* @__PURE__ */ FD(/* @__PURE__ */ b({
+}, KRe = { class: "flex items-center justify-center gap-2" }, qRe = ["disabled"], JRe = /* @__PURE__ */ FD(/* @__PURE__ */ b({
 	__name: "MassTextingModal",
 	setup(e) {
 		let t = Ls(), r = gE(), i = L(""), a = (e) => r.selectedRoomIdsForCreateFolder[e], o = (e) => {
@@ -83823,20 +83835,20 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 			"overlay-transition": "vfm-fade"
 		}, {
 			default: V(() => [
-				p("div", RRe, R(e.$t("massTexting")), 1),
+				p("div", zRe, R(e.$t("massTexting")), 1),
 				Fe(p("textarea", {
 					"onUpdate:modelValue": r[0] ||= (e) => i.value = e,
 					rows: "3",
 					class: "grow rounded-md bg-gray-100 p-2 placeholder-gray-400 outline-hidden dark:bg-zinc-700",
 					placeholder: e.$t("inputMessage")
-				}, null, 8, zRe), [[je, i.value]]),
-				p("div", BRe, [
-					p("div", VRe, [
+				}, null, 8, BRe), [[je, i.value]]),
+				p("div", VRe, [
+					p("div", HRe, [
 						_(z(mO), {
 							size: 24,
 							class: "h-6 w-6 cursor-pointer text-gray-600 dark:text-gray-300"
 						}),
-						p("div", HRe, [Fe(p("input", {
+						p("div", URe, [Fe(p("input", {
 							ref: "searchInput",
 							"onUpdate:modelValue": r[1] ||= (e) => m.value = e,
 							class: "bg-gray-100 placeholder-gray-400 outline-hidden dark:bg-zinc-700",
@@ -83844,7 +83856,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 							onCompositionstart: r[2] ||= (e) => h.value = !0,
 							onCompositionend: r[3] ||= (e) => h.value = !1,
 							onBlur: r[4] ||= (e) => h.value = !1
-						}, null, 40, URe), [[je, m.value]])]),
+						}, null, 40, WRe), [[je, m.value]])]),
 						m.value ? (I(), u(z(xO), {
 							key: 0,
 							size: 20,
@@ -83854,7 +83866,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 							}
 						})) : d("", !0)
 					]),
-					y.value ? (I(), f("div", WRe, [(I(), f(n, null, me(10, (e) => p("div", {
+					y.value ? (I(), f("div", GRe, [(I(), f(n, null, me(10, (e) => p("div", {
 						key: e,
 						class: "flex gap-3 p-2"
 					}, [...r[8] ||= [p("div", { class: "loading h-[34px] w-[34px] rounded-xl" }, null, -1), p("div", { class: "flex grow flex-col justify-center gap-2" }, [p("div", { class: "loading h-3 w-full rounded-md" }), p("div", { class: "loading h-3 w-4/5 rounded-md" })], -1)]])), 64))])) : d("", !0),
@@ -83868,7 +83880,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 						_: 1
 					}, 8, ["data"])
 				]),
-				p("div", GRe, [p("button", {
+				p("div", KRe, [p("button", {
 					class: "disabled:(bg-blue-200 cursor-not-allowed) h-10 grow rounded-lg border border-gray-200 text-base dark:border-stone-400 dark:text-stone-400",
 					onClick: r[6] ||= () => {
 						z(t).closeAll();
@@ -83879,31 +83891,31 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 					onClick: r[7] ||= () => {
 						b(), z(t).closeAll();
 					}
-				}, R(e.$t("confirm")), 11, KRe)])
+				}, R(e.$t("confirm")), 11, qRe)])
 			]),
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-75b0396a"]]), JRe = { class: "border-b border-gray-200 p-4 dark:border-zinc-700" }, YRe = { class: "mb-4 flex items-center justify-between" }, XRe = { class: "flex items-center space-x-3" }, ZRe = { class: "flex items-center gap-2" }, QRe = { class: "flex items-center space-x-2" }, $Re = { class: "relative flex-1" }, eze = { class: "absolute top-1/2 left-3 flex h-4 w-4 -translate-y-1/2 transform items-center justify-center" }, tze = ["aria-label", "placeholder"], nze = ["aria-label"], rze = { class: "relative" }, ize = {
+}), [["__scopeId", "data-v-75b0396a"]]), YRe = { class: "border-b border-gray-200 p-4 dark:border-zinc-700" }, XRe = { class: "mb-4 flex items-center justify-between" }, ZRe = { class: "flex items-center space-x-3" }, QRe = { class: "flex items-center gap-2" }, $Re = { class: "flex items-center space-x-2" }, eze = { class: "relative flex-1" }, tze = { class: "absolute top-1/2 left-3 flex h-4 w-4 -translate-y-1/2 transform items-center justify-center" }, nze = ["aria-label", "placeholder"], rze = ["aria-label"], ize = { class: "relative" }, aze = {
 	key: 0,
 	class: "absolute top-12 right-0 z-50 min-w-32 overflow-hidden rounded-md border border-gray-200 bg-white p-1 shadow-lg dark:border-zinc-700 dark:bg-zinc-800"
-}, aze = {
+}, oze = {
 	key: 0,
 	class: "mx-2 mt-2 flex items-center gap-2 overflow-auto text-base text-gray-900 dark:text-gray-200"
-}, oze = ["onClick"], sze = {
+}, sze = ["onClick"], cze = {
 	key: 1,
 	class: "flex flex-col gap-1"
-}, cze = {
+}, lze = {
 	key: 2,
 	class: "flex h-[80dvh] flex-col items-center justify-center gap-6 px-6 py-12"
-}, lze = ["src"], uze = {
+}, uze = ["src"], dze = {
 	key: 1,
 	src: rLe,
 	class: "h-24 w-24 object-contain"
-}, dze = {
+}, fze = {
 	key: 2,
 	class: "text-center text-base text-gray-500 dark:text-gray-400"
-}, fze = 100, pze = /* @__PURE__ */ FD(/* @__PURE__ */ b({
+}, pze = 100, mze = /* @__PURE__ */ FD(/* @__PURE__ */ b({
 	__name: "RoomList",
 	setup(e) {
 		let t = gE(), r = Ls(), a = TT(), o = L(!1), s = L(), l = L(), m = L(320);
@@ -83915,7 +83927,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 		function v() {
 			o.value || h(), o.value = !o.value;
 		}
-		let { sortType: y, showSortMenu: b, isFirstLoading: x, setSortType: S } = LRe(), C = c(() => t.sortedRooms), w = c(() => t.sortedFolderIds.map((e) => t.folders[e]).filter((e) => e)), T = c(() => t.folders[t.selectedFolderId]), E = c(() => t.searchType), D = c(() => t.searchKeyword ? Object.values(CT).filter((e) => e in t.searchRooms) : []), O = c(() => t.roomTag), k = c(() => a.settings), j = c(() => Bv()), M = 0, ee = null, te = "", ne = async () => {
+		let { sortType: y, showSortMenu: b, isFirstLoading: x, setSortType: S } = RRe(), C = c(() => t.sortedRooms), w = c(() => t.sortedFolderIds.map((e) => t.folders[e]).filter((e) => e)), T = c(() => t.folders[t.selectedFolderId]), E = c(() => t.searchType), D = c(() => t.searchKeyword ? Object.values(CT).filter((e) => e in t.searchRooms) : []), O = c(() => t.roomTag), k = c(() => a.settings), j = c(() => Bv()), M = 0, ee = null, te = "", ne = async () => {
 			x.value = !0;
 			try {
 				await t.fetchPrefs(), await t.fetchRooms();
@@ -83923,7 +83935,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 				x.value = !1;
 			}
 			await t.fetchRoomsInFolders();
-		}, { searchKeyword: N, searchInput: F, isCompositting: ie, isAPIRequesting: ae, clearSearch: oe } = IRe({ fetchTask: ne }), ce = c(() => {
+		}, { searchKeyword: N, searchInput: F, isCompositting: ie, isAPIRequesting: ae, clearSearch: oe } = LRe({ fetchTask: ne }), ce = c(() => {
 			if (t.searchKeyword && r.modals.length === 0) {
 				if (E.value === CT.RoomPrefFolder && T.value) {
 					let e = [...t.searchRooms[E.value] || []], n = T.value.roomIds.map((e) => t.rooms[e]).filter((e) => O.value ? e && e.roomTags.includes(O.value) : !!e), r = e.findIndex((e) => e.id === T.value.id);
@@ -83942,7 +83954,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 		}, we = (e) => {
 			let t = ye.value;
 			if (!t) return;
-			let n = e + t.clientHeight >= t.scrollHeight - fze;
+			let n = e + t.clientHeight >= t.scrollHeight - pze;
 			n && !Se && Ce(), Se = n;
 		}, Te = () => typeof window < "u" ? window.location.origin : "", Ee = () => {
 			if (typeof window > "u") return;
@@ -83960,7 +83972,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 			let { open: e } = zs({ component: J9 });
 			e();
 		}, Ne = () => {
-			let { open: e } = zs({ component: qRe });
+			let { open: e } = zs({ component: JRe });
 			e();
 		};
 		B(C, (e) => {
@@ -83994,10 +84006,10 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 			ref_key: "headerEl",
 			ref: be
 		}, [
-			p("div", JRe, [p("div", YRe, [p("div", XRe, [r[9] ||= p("span", { class: "relative flex h-7 w-7 shrink-0 overflow-hidden rounded-full" }, [p("img", {
+			p("div", YRe, [p("div", XRe, [p("div", ZRe, [r[9] ||= p("span", { class: "relative flex h-7 w-7 shrink-0 overflow-hidden rounded-full" }, [p("img", {
 				class: "aspect-square h-full w-full object-contain",
 				src: "data:image/png;base64,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"
-			})], -1), p("div", ZRe, [r[8] ||= p("h1", { class: "font-semibold text-gray-900 dark:text-gray-100" }, " PinChat ", -1), Fe((I(), f("div", {
+			})], -1), p("div", QRe, [r[8] ||= p("h1", { class: "font-semibold text-gray-900 dark:text-gray-100" }, " PinChat ", -1), Fe((I(), f("div", {
 				ref_key: "menuTriggerRef",
 				ref: s,
 				class: "relative"
@@ -84022,8 +84034,8 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 				_: 1
 			})])), [[z(w4), () => {
 				o.value = !1;
-			}]])])])]), p("div", QRe, [p("div", $Re, [
-				p("div", eze, [ue.value ? (I(), u(SO, { key: 0 })) : (I(), u(z(mO), {
+			}]])])])]), p("div", $Re, [p("div", eze, [
+				p("div", tze, [ue.value ? (I(), u(SO, { key: 0 })) : (I(), u(z(mO), {
 					key: 1,
 					class: "h-4 w-4 text-gray-500"
 				}))]),
@@ -84038,21 +84050,21 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 					onCompositionstart: r[1] ||= (e) => ie.value = !0,
 					onCompositionend: r[2] ||= (e) => ie.value = !1,
 					onBlur: r[3] ||= (e) => ie.value = !1
-				}, null, 40, tze), [[je, z(N)]]),
+				}, null, 40, nze), [[je, z(N)]]),
 				de.value ? (I(), f("button", {
 					key: 0,
 					class: "absolute inset-y-0 right-3 flex items-center text-gray-400 transition-colors hover:text-gray-600 focus-visible:ring-1 focus-visible:ring-blue-400 focus-visible:outline-none dark:text-gray-100",
 					type: "button",
 					"aria-label": e.$t("clearSearch"),
 					onClick: r[4] ||= (...e) => z(oe) && z(oe)(...e)
-				}, [_(z(xO), { class: "h-4 w-4" })], 8, nze)) : d("", !0)
-			]), Fe((I(), f("div", rze, [p("button", {
+				}, [_(z(xO), { class: "h-4 w-4" })], 8, rze)) : d("", !0)
+			]), Fe((I(), f("div", ize, [p("button", {
 				class: "ring-offset-background inline-flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center gap-2 rounded-md text-base font-medium whitespace-nowrap text-gray-900 transition-colors hover:bg-gray-100 focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 dark:text-gray-100 dark:hover:bg-zinc-700",
 				type: "button",
 				"aria-label": "Sort rooms",
 				onClick: r[5] ||= (e) => b.value = !z(b)
 			}, [_(z(xde), { class: "h-4 w-4" })]), _(i, { name: "slide-fade" }, {
-				default: V(() => [z(b) ? (I(), f("div", ize, [p("div", {
+				default: V(() => [z(b) ? (I(), f("div", aze, [p("div", {
 					class: P(["relative flex cursor-pointer items-center rounded-sm px-2 py-1.5 text-base transition-colors outline-none select-none hover:bg-gray-100 dark:hover:bg-zinc-700", { "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400": z(y) === "time" }]),
 					onClick: r[6] ||= (e) => z(S)("time")
 				}, R(e.$t("sortByTime")), 3), p("div", {
@@ -84063,19 +84075,19 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 			})])), [[z(w4), () => {
 				b.value = !1;
 			}]])])]),
-			pe.value ? (I(), f("div", aze, [(I(!0), f(n, null, me(D.value, (n) => (I(), f("div", {
+			pe.value ? (I(), f("div", oze, [(I(!0), f(n, null, me(D.value, (n) => (I(), f("div", {
 				key: n,
 				class: P(["cursor-pointer rounded-lg p-2 whitespace-nowrap hover:bg-gray-100 hover:dark:bg-white hover:dark:text-gray-900", { "bg-gray-100 font-medium text-gray-800": n === E.value }]),
 				onClick: (e) => z(t).$patch({ searchType: n })
-			}, R(e.$t(n)), 11, oze))), 128))])) : d("", !0),
-			fe.value ? (I(), f("div", sze, [(I(), f(n, null, me(20, (e) => p("div", {
+			}, R(e.$t(n)), 11, sze))), 128))])) : d("", !0),
+			fe.value ? (I(), f("div", cze, [(I(), f(n, null, me(20, (e) => p("div", {
 				key: e,
 				class: "flex gap-3 p-2"
-			}, [...r[10] ||= [p("div", { class: "loading h-[50px] w-[50px] rounded-2xl bg-white dark:bg-zinc-800" }, null, -1), p("div", { class: "flex grow flex-col justify-center gap-2" }, [p("div", { class: "loading h-5 w-full rounded-md bg-white dark:bg-zinc-800" }), p("div", { class: "loading h-4 w-4/5 rounded-md bg-white dark:bg-zinc-800" })], -1)]])), 64))])) : he.value ? (I(), f("div", cze, [ge.value ? (I(), f("img", {
+			}, [...r[10] ||= [p("div", { class: "loading h-[50px] w-[50px] rounded-2xl bg-white dark:bg-zinc-800" }, null, -1), p("div", { class: "flex grow flex-col justify-center gap-2" }, [p("div", { class: "loading h-5 w-full rounded-md bg-white dark:bg-zinc-800" }), p("div", { class: "loading h-4 w-4/5 rounded-md bg-white dark:bg-zinc-800" })], -1)]])), 64))])) : he.value ? (I(), f("div", lze, [ge.value ? (I(), f("img", {
 				key: 0,
 				src: k.value.noRoomsImageURL,
 				class: "h-24 w-24 object-contain"
-			}, null, 8, lze)) : _e.value ? (I(), f("img", uze)) : d("", !0), ve.value ? (I(), f("p", dze, R(k.value.noRoomsText === void 0 ? e.$t("noRoomsAvailable") : k.value.noRoomsText), 1)) : d("", !0)])) : d("", !0)
+			}, null, 8, uze)) : _e.value ? (I(), f("img", dze)) : d("", !0), ve.value ? (I(), f("p", fze, R(k.value.noRoomsText === void 0 ? e.$t("noRoomsAvailable") : k.value.noRoomsText), 1)) : d("", !0)])) : d("", !0)
 		], 512), _(z(JE), {
 			data: ce.value,
 			"scroll-ref": ye.value,
@@ -84083,7 +84095,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 			"item-size": 66,
 			onScroll: we
 		}, {
-			default: V(({ item: e }) => [_(FRe, { source: e }, null, 8, ["source"])]),
+			default: V(({ item: e }) => [_(IRe, { source: e }, null, 8, ["source"])]),
 			_: 1
 		}, 8, [
 			"data",
@@ -84095,7 +84107,7 @@ var RRe = { class: "mb-1 flex items-center justify-between text-xl font-medium t
 			onMassTexting: Ne
 		}, null, 8, ["mass-texting-enabled"])], 512));
 	}
-}), [["__scopeId", "data-v-02271ed9"]]), mze = (e, t) => {
+}), [["__scopeId", "data-v-02271ed9"]]), hze = (e, t) => {
 	gle(e), zv(t), Ple(), HNe();
 };
 //#endregion
@@ -84113,7 +84125,7 @@ function Z9(e) {
 	}
 }
 var Q9 = null;
-function hze() {
+function gze() {
 	Q9?.();
 	let e = vE();
 	return Q9 = B(() => e.selectedRoomId, (e, t) => {
@@ -84130,7 +84142,7 @@ function hze() {
 //#region src/lib.ts
 var $9 = (e) => {
 	e.use(Ps()), e.use(Fv), e.use(lte, { disableClick: !1 });
-}, gze = { install: async (e, t) => {
+}, _ze = { install: async (e, t) => {
 	console.log("IMKIT version:", Gs), "store" in t && console.warn("[imkit] options.store is no longer accepted; SDK owns its Pinia store internally.");
 	let { config: n } = t, r = e.config.globalProperties.$pinia, i = r ?? Bee();
 	r || e.use(i);
@@ -84141,7 +84153,7 @@ var $9 = (e) => {
 	} catch (e) {
 		console.log(e);
 	}
-	mze(n, a), Jle(i), hze(), $9(e);
+	hze(n, a), Jle(i), gze(), $9(e);
 } };
 //#endregion
-export { _Ie as ChatRoom, nLe as ChatRoomInfo, wE as Message, Hs as ModalsContainer, pze as RoomList, xT as User, RT as clearSignedUrlCache, gze as default, Lv as getLocale, $9 as installAppLevel, Iv as setLocale, gE as useImkitStore };
+export { _Ie as ChatRoom, nLe as ChatRoomInfo, wE as Message, Hs as ModalsContainer, mze as RoomList, xT as User, RT as clearSignedUrlCache, _ze as default, Lv as getLocale, $9 as installAppLevel, Iv as setLocale, gE as useImkitStore };

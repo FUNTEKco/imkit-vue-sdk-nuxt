@@ -77,6 +77,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             readonly isGroup: boolean;
             readonly memberIdsWithoutMeAndMyGroup: string[];
             readonly displayName: string;
+            readonly linkName: string;
             readonly avatars: {
                 url: string;
                 name: string;

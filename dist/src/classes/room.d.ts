@@ -52,6 +52,7 @@ declare class Room {
     get isGroup(): boolean;
     get memberIdsWithoutMeAndMyGroup(): string[];
     get displayName(): string;
+    get linkName(): string;
     get avatars(): Avatar[];
 }
 export default Room;

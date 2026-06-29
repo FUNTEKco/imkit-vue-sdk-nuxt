@@ -83507,15 +83507,10 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 		}), y = c(() => l.searchKeyword.length > 0 && l.searchType === CT.RoomMember ? m.value.memberIds.map((e) => l.users[e]).filter((e) => e).map((e) => e.nickname || e.id).join(", ") : l.searchKeyword.length > 0 && l.searchType === CT.Files ? s("foundFiles", { count: l.searchedMessageIds.get(t.source.id)?.length ?? 0 }) : m.value.lastMessage?.previewString(m.value.isGroup)), b = c(() => l.selectedRoomId === t.source.id), x = c(() => !!l.roomIdsInFolders[t.source.id]), S = c(() => l.actionMenuRoomId), C = c(() => l.actionMenuFolderId), w = c(() => l.searchKeyword), T = c(() => m.value.pref?.sticky ?? !1), E = c(() => m.value.pref?.hidden ?? !1), D = c(() => {
 			let e = m.value.linkName;
 			return e && e !== m.value.displayName ? e : "";
-		}), O = c(() => l.sortedFolderIds), k = L(""), A = c(() => {
+		}), O = c(() => l.sortedFolderIds), k = c(() => m.value?.roomTags?.[0] ?? ""), A = c(() => {
 			let e = m.value.roomTags ?? [], t = m.value.pref?.tags ?? [];
 			return [...e.filter((e) => e !== k.value), ...t];
-		});
-		se(() => {
-			let e = m.value?.roomTags ?? [];
-			e.length > 0 && (k.value = e[0]);
-		});
-		let j = () => {
+		}), j = () => {
 			let { open: e } = zs({
 				component: fRe,
 				attrs: {
@@ -83624,6 +83619,7 @@ var U9 = /* @__PURE__ */ Ze((/* @__PURE__ */ qe(((e, t) => {
 				m.value.isMentioned && m.value.numberOfUnread > 0 && !b.value ? (I(), f("div", wRe, R(r.$t("youWereMentioned")), 1)) : d("", !0),
 				m.value.pref?.tags ? (I(), f("div", TRe, [(I(!0), f(n, null, me(A.value, (e) => (I(), f("div", {
 					key: e,
+					"data-testid": "room-tag",
 					class: "overflow-hidden rounded-md bg-blue-400 px-1 py-0.5 text-xs text-ellipsis whitespace-nowrap text-white",
 					style: re({ backgroundColor: (m.value.pref?.tagColors || {})[e] })
 				}, R(e), 5))), 128))])) : d("", !0),

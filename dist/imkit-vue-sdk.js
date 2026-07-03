@@ -27540,7 +27540,16 @@ var mle = /* @__PURE__ */ qe(((e) => {
 	}
 	get displayName() {
 		let e = yT(), t = Bv();
-		return this.name ? this.name : this.memberIdsWithoutMeAndMyGroup.length === 0 ? Fv.global.t("emptyChat") : this.type == "direct" ? this.extra.guestId ? e[this.extra.guestId]?.nickname ?? "" : this.memberIdsWithoutMeAndMyGroup.map((t) => e[t])[0]?.nickname ?? "" : this.isGroup ? this.memberIds.filter((e) => e !== t && e !== "BOT" && !e.endsWith("_sub")).map((t) => e[t]?.nickname ?? "").filter((e) => e.length > 0).join(", ") : "";
+		if (this.name) return this.name;
+		if (this.memberIdsWithoutMeAndMyGroup.length === 0) return Fv.global.t("emptyChat");
+		if (this.type == "direct") {
+			if (this.extra.guestId) {
+				let n = this.extra.guestId;
+				return t === n && this.linkName ? this.linkName : e[n]?.nickname ?? "";
+			}
+			return this.memberIdsWithoutMeAndMyGroup.map((t) => e[t])[0]?.nickname ?? "";
+		} else if (this.isGroup) return this.memberIds.filter((e) => e !== t && e !== "BOT" && !e.endsWith("_sub")).map((t) => e[t]?.nickname ?? "").filter((e) => e.length > 0).join(", ");
+		return "";
 	}
 	get linkName() {
 		let e = typeof this.extra.title == "string" ? this.extra.title : "", t = typeof this.extra.name == "string" ? this.extra.name : "";
@@ -28407,7 +28416,15 @@ var Kle = {
 		let t = new bT(e, Bv()), n = this.rooms[t.id];
 		n && (e.unread === void 0 && (t.numberOfUnread = n.numberOfUnread), e.pref === void 0 && (t.pref = n.pref), e.isSuperuser === void 0 && n.isSuperuser !== void 0 && (t.isSuperuser = n.isSuperuser), e.muted === void 0 && (t.muted = n.muted), e.isMentioned === void 0 && n.isMentioned !== void 0 && (t.isMentioned = n.isMentioned), dE(t, n, e.memberProperties)), nE(this, "rooms", { [t.id]: t });
 		let r = {};
-		fE(e.members, r), hE(r, t.extra), this.mergeUsers(r), this.scheduleAggregateRoomsAndFolders();
+		if (fE(e.members, r), hE(r, t.extra), t.extra?.guestId === Bv()) {
+			let e = Bv();
+			for (let t in r) {
+				if (t === e) continue;
+				let n = this.users[t];
+				n?.avatarUrl && (r[t].avatarUrl = n.avatarUrl), n?.nickname && (r[t].nickname = n.nickname);
+			}
+		}
+		this.mergeUsers(r), this.scheduleAggregateRoomsAndFolders();
 	},
 	async handleLastReadFromSocket(e) {
 		await this.updateLastRead(e);
@@ -46609,7 +46626,7 @@ function vW(e, t) {
 		fill: "white"
 	}, null, -1)]]);
 }
-var yW = /* @__PURE__ */ FD(gW, [["render", vW]]), bW = ["placeholder"], xW = ["disabled"], SW = {
+var yW = /* @__PURE__ */ FD(gW, [["render", vW]]), bW = ["disabled", "placeholder"], xW = ["disabled"], SW = {
 	key: 1,
 	width: "20",
 	height: "20",
@@ -46623,9 +46640,11 @@ var yW = /* @__PURE__ */ FD(gW, [["render", vW]]), bW = ["placeholder"], xW = ["
 	__name: "FlexMessageInputComponent",
 	props: { content: {} },
 	setup(e) {
-		let t = e, r = L("");
-		r.value = t.content.text;
-		let i = L(!1), a = gE(), o = c(() => TT().callbacks), s = D("messageId"), l = c(() => a.messageMultiLists.get(a.selectedRoomId)?.main?.map.get(s)), m = () => {
+		let t = e, r = L(""), i = L(!1);
+		r.value = t.content.completed ? "" : t.content.text, B(() => t.content.completed, (e) => {
+			e && (r.value = "", i.value = !1);
+		});
+		let a = gE(), o = c(() => TT().callbacks), s = D("messageId"), l = c(() => a.messageMultiLists.get(a.selectedRoomId)?.main?.map.get(s)), m = () => {
 			if (l.value && !t.content.completed) {
 				if (t.content.subtype === "email") {
 					if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(r.value)) {
@@ -46640,6 +46659,7 @@ var yW = /* @__PURE__ */ FD(gW, [["render", vW]]), bW = ["placeholder"], xW = ["
 		return (t, a) => (I(), f(n, null, [p("div", ne({ class: "flex items-center gap-2 rounded bg-white p-2" }, t.$attrs), [Fe(p("input", {
 			"onUpdate:modelValue": a[0] ||= (e) => r.value = e,
 			class: "w-full focus:outline-none",
+			disabled: e.content.completed,
 			placeholder: t.$t(`Request.Message.${e.content.subtype}.placeholder`),
 			onKeypress: Ie(m, ["enter"])
 		}, null, 40, bW), [[je, r.value]]), p("button", {

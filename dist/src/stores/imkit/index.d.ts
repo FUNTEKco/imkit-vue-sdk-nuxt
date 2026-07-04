@@ -873,6 +873,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     aggregateRoomsAndFolders(this: any): Promise<void>;
     scheduleAggregateRoomsAndFolders(this: any): void;
     mergeUsers(this: any, users: Record<string, import('../../lib').User>): void;
+    mergeSenderFromSocket(this: any, { roomId, user }: {
+        roomId: string;
+        user: import('../../lib').User;
+    }): void;
     updateLastRead(this: any, payload: string | {
         roomId: string;
         uid: string;

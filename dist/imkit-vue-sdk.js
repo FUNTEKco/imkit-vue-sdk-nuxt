@@ -81989,7 +81989,7 @@ var MFe = /* @__PURE__ */ YD(kFe, [["render", jFe]]), NFe = ["width", "height"],
 					je.value ? (I(), u(wFe, { key: 0 })) : Fe((I(), f("div", {
 						key: 1,
 						"data-testid": "chat-header",
-						class: "flex h-[72px] items-center gap-3 border-b border-solid border-gray-200 px-4 py-4 select-none dark:border-zinc-700",
+						class: "flex h-15 items-center gap-3 border-b border-solid border-gray-200 px-4 py-[10px] select-none dark:border-zinc-700",
 						style: re(Ne.value?.header ?? Me.value.chatRoomHeader)
 					}, [
 						l.isTestPreview ? d("", !0) : (I(), f(n, { key: 0 }, [w.value ? d("", !0) : (I(), f("button", {
@@ -82344,7 +82344,7 @@ var MFe = /* @__PURE__ */ YD(kFe, [["render", jFe]]), NFe = ["width", "height"],
 			], 16);
 		};
 	}
-}), [["__scopeId", "data-v-fd369dd4"]]), U9 = {
+}), [["__scopeId", "data-v-bb9ac168"]]), U9 = {
 	name: "Toggle",
 	emits: [
 		"input",

@@ -28426,7 +28426,7 @@ var Nle = {
 			}
 		}
 		let t = new NT(e, v_()), n = this.rooms[t.id];
-		n && (e.unread === void 0 && (t.numberOfUnread = n.numberOfUnread), e.pref === void 0 && (t.pref = n.pref), e.isSuperuser === void 0 && n.isSuperuser !== void 0 && (t.isSuperuser = n.isSuperuser), e.muted === void 0 && (t.muted = n.muted), e.isMentioned === void 0 && n.isMentioned !== void 0 && (t.isMentioned = n.isMentioned), wE(t, n, e.memberProperties)), hE(this, "rooms", { [t.id]: t });
+		n && (e.unread === void 0 && (t.numberOfUnread = n.numberOfUnread), e.pref === void 0 && (t.pref = n.pref), e.isSuperuser === void 0 && n.isSuperuser !== void 0 && (t.isSuperuser = n.isSuperuser), e.muted === void 0 && (t.muted = n.muted), e.isMentioned === void 0 && n.isMentioned !== void 0 && (t.isMentioned = n.isMentioned), e.extParams === void 0 && (t.extra = n.extra), wE(t, n, e.memberProperties)), hE(this, "rooms", { [t.id]: t });
 		let r = {};
 		TE(e.members, r), OE(r, t.extra), kE(this, t.extra, r), this.mergeUsers(r), this.scheduleAggregateRoomsAndFolders();
 	},

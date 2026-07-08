@@ -1,7 +1,7 @@
 type __VLS_Props = {
     inputElement: HTMLDivElement | undefined;
 };
-declare const _default: import('vue').DefineComponent<__VLS_Props, {
+declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {
     checkSelection: () => void;
     hideMenu: () => void;
 }, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
@@ -9,4 +9,5 @@ declare const _default: import('vue').DefineComponent<__VLS_Props, {
 }, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{
     "onFormat-applied"?: (() => any) | undefined;
 }>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

@@ -16,7 +16,7 @@ type __VLS_Props = {
     isSuperuser: boolean;
     roomType: RoomType;
 };
-declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
+declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     edit: () => any;
     delete: () => any;
     copy: () => any;
@@ -34,8 +34,6 @@ declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {
     onReply?: (() => any) | undefined;
     onSelectEmoji?: ((emoji: string) => any) | undefined;
     onDismiss?: (() => any) | undefined;
-}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {
-    overlayRef: HTMLDivElement;
-    actionMenuRef: HTMLDivElement;
-}, any>;
+}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

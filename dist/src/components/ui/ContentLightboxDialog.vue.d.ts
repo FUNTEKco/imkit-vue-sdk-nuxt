@@ -15,7 +15,7 @@ type __VLS_Props = {
     createdAt?: string | number | null;
     showDownload?: boolean;
 };
-declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
+declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
     close: () => any;
     "update:open": (value: boolean) => any;
 }, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{
@@ -35,4 +35,5 @@ declare const _default: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {
     senderName: string | null;
     showDownload: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
+declare const _default: typeof __VLS_export;
 export default _default;

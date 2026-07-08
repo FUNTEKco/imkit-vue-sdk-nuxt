@@ -50,10 +50,6 @@ export declare const actions: {
     aggregateRoomsAndFolders(this: any): Promise<void>;
     scheduleAggregateRoomsAndFolders(this: any): void;
     mergeUsers(this: any, users: Record<string, User>): void;
-    mergeSenderFromSocket(this: any, { roomId, user }: {
-        roomId: string;
-        user: User;
-    }): void;
     updateLastRead(this: any, payload: string | {
         roomId: string;
         uid: string;

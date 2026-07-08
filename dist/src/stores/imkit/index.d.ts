@@ -807,22 +807,18 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         reconnectResyncTick: number;
         lastReconnectResyncAt: number;
         trailingReconnectResyncTimer: {
-            close: () => NodeJS.Timeout;
-            hasRef: () => boolean;
             ref: () => NodeJS.Timeout;
-            refresh: () => NodeJS.Timeout;
             unref: () => NodeJS.Timeout;
-            _onTimeout: (...args: any[]) => void;
+            hasRef: () => boolean;
+            refresh: () => NodeJS.Timeout;
             [Symbol.toPrimitive]: () => number;
             [Symbol.dispose]: () => void;
         } | null;
         aggregateCoalesceTimer: {
-            close: () => NodeJS.Timeout;
-            hasRef: () => boolean;
             ref: () => NodeJS.Timeout;
-            refresh: () => NodeJS.Timeout;
             unref: () => NodeJS.Timeout;
-            _onTimeout: (...args: any[]) => void;
+            hasRef: () => boolean;
+            refresh: () => NodeJS.Timeout;
             [Symbol.toPrimitive]: () => number;
             [Symbol.dispose]: () => void;
         } | null;
@@ -873,10 +869,6 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     aggregateRoomsAndFolders(this: any): Promise<void>;
     scheduleAggregateRoomsAndFolders(this: any): void;
     mergeUsers(this: any, users: Record<string, import('../../lib').User>): void;
-    mergeSenderFromSocket(this: any, { roomId, user }: {
-        roomId: string;
-        user: import('../../lib').User;
-    }): void;
     updateLastRead(this: any, payload: string | {
         roomId: string;
         uid: string;

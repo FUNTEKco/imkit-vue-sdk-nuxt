@@ -88,6 +88,8 @@ declare const _default: {
   "fomatInvalid": "Invalid Format",
   "editTag": "Edit Tag",
   "tagLimitReached": "Tag limit reached (Maximum 5 tags, delete to add new ones)",
+  "tags": "Tags",
+  "aiSummary": "AI Summary",
   "chooseColor": "Choose Color",
   "duplicateTagName": "Tag already exists. Try another name.",
   "block": "Block",

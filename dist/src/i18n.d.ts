@@ -89,6 +89,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -296,6 +298,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -502,6 +506,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -708,6 +714,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -915,6 +923,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -1121,6 +1131,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -1327,6 +1339,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -1533,6 +1547,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -1739,6 +1755,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -1945,6 +1963,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -2151,6 +2171,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;
@@ -2358,6 +2380,8 @@ declare const i18n: VueI18n.I18n<{
         fomatInvalid: string;
         editTag: string;
         tagLimitReached: string;
+        tags: string;
+        aiSummary: string;
         chooseColor: string;
         duplicateTagName: string;
         block: string;

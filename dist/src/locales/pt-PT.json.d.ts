@@ -87,6 +87,8 @@ declare const _default: {
   "fomatInvalid": "Formato inválido",
   "editTag": "Editar etiqueta",
   "tagLimitReached": "Limite de etiquetas atingido (Máximo 5 etiquetas, elimine para adicionar novas)",
+  "tags": "Etiquetas",
+  "aiSummary": "Resumo de AI",
   "chooseColor": "Escolher cor",
   "duplicateTagName": "Tag existente. Use outro nome.",
   "block": "Bloquear",

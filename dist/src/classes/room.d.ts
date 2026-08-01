@@ -25,6 +25,7 @@ type RoomPref = {
     };
     sticky: boolean;
     hidden: boolean;
+    summary?: string;
 } | null;
 declare class Room {
     id: string;

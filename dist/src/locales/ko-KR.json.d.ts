@@ -87,6 +87,8 @@ declare const _default: {
   "fomatInvalid": "형식이 유효하지 않음",
   "editTag": "태그 편집",
   "tagLimitReached": "태그 개수 제한에 도달했습니다 (최대 5개, 삭제 후 추가 가능)",
+  "tags": "태그",
+  "aiSummary": "AI 요약",
   "chooseColor": "색상 선택",
   "duplicateTagName": "이미 존재하는 태그입니다. 다른 이름을 입력하세요.",
   "block": "차단",

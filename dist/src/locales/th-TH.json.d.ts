@@ -87,6 +87,8 @@ declare const _default: {
   "fomatInvalid": "รูปแบบไม่ถูกต้อง",
   "editTag": "แก้ไขแท็ก",
   "tagLimitReached": "ถึงขีดจำกัดจำนวนแท็กแล้ว (สูงสุด 5 แท็ก ลบเพื่อเพิ่มใหม่)",
+  "tags": "แท็ก",
+  "aiSummary": "สรุป AI",
   "chooseColor": "เลือกสี",
   "duplicateTagName": "แท็กนี้มีอยู่แล้ว ใช้ชื่ออื่น",
   "block": "บล็อก",

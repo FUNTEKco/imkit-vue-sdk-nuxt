@@ -88,6 +88,8 @@ declare const _default: {
   "fomatInvalid": "無効なフォーマット",
   "editTag": "タグを編集",
   "tagLimitReached": "タグの上限に達しました（最大5個、削除後に追加可能）",
+  "tags": "タグ",
+  "aiSummary": "AI 要約",
   "chooseColor": "色を選択",
   "duplicateTagName": "このタグは既にあります。他の名前にしてください。",
   "block": "ブロック",

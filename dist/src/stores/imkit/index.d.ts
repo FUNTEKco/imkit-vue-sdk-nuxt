@@ -68,6 +68,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                 };
                 sticky: boolean;
                 hidden: boolean;
+                summary?: string | undefined;
             } | null;
             roomTags: string[];
             extra: Record<string, unknown>;

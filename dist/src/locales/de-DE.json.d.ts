@@ -87,6 +87,8 @@ declare const _default: {
   "fomatInvalid": "Ungültiges Format",
   "editTag": "Tag bearbeiten",
   "tagLimitReached": "Tag-Limit erreicht (Maximal 5 Tags, löschen um neue hinzuzufügen)",
+  "tags": "Tags",
+  "aiSummary": "AI-Zusammenfassung",
   "chooseColor": "Farbe wählen",
   "duplicateTagName": "Tag existiert bereits. Anderen Namen wählen.",
   "block": "Blockieren",

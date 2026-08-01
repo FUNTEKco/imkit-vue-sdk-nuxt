@@ -87,6 +87,8 @@ declare const _default: {
   "fomatInvalid": "格式无效",
   "editTag": "编辑标签",
   "tagLimitReached": "已达标签数量上限（最多 5 个，删除后可新增）",
+  "tags": "标签",
+  "aiSummary": "AI 摘要",
   "chooseColor": "选择颜色",
   "duplicateTagName": "标签已存在，请换个名称",
   "block": "封锁",

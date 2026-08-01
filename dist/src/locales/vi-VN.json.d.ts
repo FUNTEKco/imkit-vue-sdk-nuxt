@@ -87,6 +87,8 @@ declare const _default: {
   "fomatInvalid": "Định dạng không hợp lệ",
   "editTag": "Chỉnh sửa thẻ",
   "tagLimitReached": "Đã đạt giới hạn số lượng thẻ (Tối đa 5 thẻ, xóa để thêm mới)",
+  "tags": "Thẻ",
+  "aiSummary": "Tóm tắt AI",
   "chooseColor": "Chọn màu",
   "duplicateTagName": "Thẻ đã tồn tại. Dùng tên khác.",
   "block": "Chặn",

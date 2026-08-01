@@ -1,8 +1,8 @@
-declare var __VLS_23: {}, __VLS_32: {};
+declare var __VLS_28: {}, __VLS_47: {};
 type __VLS_Slots = {} & {
-    default?: (props: typeof __VLS_23) => any;
+    default?: (props: typeof __VLS_28) => any;
 } & {
-    afterChatbotSwitch?: (props: typeof __VLS_32) => any;
+    afterChatbotSwitch?: (props: typeof __VLS_47) => any;
 };
 declare const __VLS_base: import('vue').DefineComponent<{}, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<{}> & Readonly<{}>, {}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
 declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;

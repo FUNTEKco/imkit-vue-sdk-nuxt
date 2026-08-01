@@ -88,6 +88,8 @@ declare const _default: {
   "fomatInvalid": "格式無效",
   "editTag": "編輯標籤",
   "tagLimitReached": "已達標籤數量上限（最多 5 個，刪除後可新增）",
+  "tags": "標籤",
+  "aiSummary": "AI 摘要",
   "chooseColor": "選擇顏色",
   "duplicateTagName": "此標籤已存在，請改用其他名稱",
   "block": "封鎖",

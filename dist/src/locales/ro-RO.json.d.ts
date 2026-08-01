@@ -87,6 +87,8 @@ declare const _default: {
   "fomatInvalid": "Format nevalid",
   "editTag": "Editează eticheta",
   "tagLimitReached": "Limită de etichete atinsă (Maxim 5 etichete, ștergeți pentru a adăuga altele noi)",
+  "tags": "Etichete",
+  "aiSummary": "Rezumat AI",
   "chooseColor": "Alegeți culoarea",
   "duplicateTagName": "Eticheta există deja. Folosiți alt nume.",
   "block": "Blochează",

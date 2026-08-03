@@ -13,6 +13,7 @@ type Settings = {
     showDirectChatRoomInfoButton: boolean;
     showGroupChatRoomInfoButton: boolean;
     autoSelectRoomWhenLoaded: boolean;
+    autoOpenRoomInfoOnSelect?: boolean;
     customRoomInfoIframeURL: string;
     showLeaveRoomButton: boolean;
     showMemberActionMenu: boolean;

@@ -146,6 +146,8 @@ declare const _default: {
   "formatStrike": "Tăiat",
   "formatInlineCode": "Cod inline",
   "formatCodeBlock": "Bloc de cod",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "Întreabă despre conversațiile la care ai acces",
   "goToDashboard": "Mergi la consola de administrare",
   "logout": "Deconectare",
   "online-status-online": "Activ",

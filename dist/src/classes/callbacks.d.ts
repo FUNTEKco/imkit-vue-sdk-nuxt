@@ -36,6 +36,9 @@ type Callbacks = {
     flexMessageInputSubmitted: (message: Message, value: string) => void;
     flexMessageRatingSubmitted: (message: Message, rating: string) => void;
     onChatbotStateChange: (roomId: string, enabled: boolean) => Promise<boolean>;
+    onPinchatAiRoomRequested?: () => Promise<{
+        roomId: string;
+    }>;
     onPaymentRequestCreated: (token: string, chatRoomId: string, payerName: string, chatUserId: string, amount: string, currency: string, remark: string) => Promise<void>;
     onPaymentDetailFetched: (paymentId: string) => Promise<PaymentDetail>;
     onPaymentDetailUrlGenerated: (paymentId: string, paymentMethod: string) => Promise<PaymentDetailUrl>;

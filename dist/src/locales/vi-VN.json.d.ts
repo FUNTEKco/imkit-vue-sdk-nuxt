@@ -146,6 +146,8 @@ declare const _default: {
   "formatStrike": "Gạch ngang",
   "formatInlineCode": "Mã nội tuyến",
   "formatCodeBlock": "Khối mã",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "Hỏi về các cuộc trò chuyện bạn có quyền truy cập",
   "goToDashboard": "Đến bảng điều khiển quản trị",
   "logout": "Đăng xuất",
   "online-status-online": "Đang hoạt động",

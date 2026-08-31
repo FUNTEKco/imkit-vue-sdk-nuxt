@@ -51,6 +51,7 @@ declare class Room {
     isMentioned: boolean;
     constructor(raw: RawRoom, uid: string);
     get isGroup(): boolean;
+    get isPinchatAi(): boolean;
     get memberIdsWithoutMeAndMyGroup(): string[];
     get displayName(): string;
     get linkName(): string;

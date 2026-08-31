@@ -148,6 +148,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -357,6 +359,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -565,6 +569,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -773,6 +779,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -982,6 +990,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1190,6 +1200,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1398,6 +1410,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1606,6 +1620,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -1814,6 +1830,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -2022,6 +2040,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -2230,6 +2250,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;
@@ -2439,6 +2461,8 @@ declare const i18n: VueI18n.I18n<{
         formatStrike: string;
         formatInlineCode: string;
         formatCodeBlock: string;
+        pinchatAiTitle: string;
+        pinchatAiDescription: string;
         goToDashboard: string;
         logout: string;
         "online-status-online": string;

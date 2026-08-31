@@ -146,6 +146,8 @@ declare const _default: {
   "formatStrike": "Durchgestrichen",
   "formatInlineCode": "Inline-Code",
   "formatCodeBlock": "Codeblock",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "Fragen Sie zu zugänglichen Chats",
   "goToDashboard": "Zur Admin-Konsole",
   "logout": "Abmelden",
   "online-status-online": "Aktiv",

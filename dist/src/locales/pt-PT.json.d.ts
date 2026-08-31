@@ -146,6 +146,8 @@ declare const _default: {
   "formatStrike": "Riscado",
   "formatInlineCode": "Código em linha",
   "formatCodeBlock": "Bloco de código",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "Pergunte sobre os chats a que tem acesso",
   "goToDashboard": "Ir para a consola de administração",
   "logout": "Terminar sessão",
   "online-status-online": "Ativo",

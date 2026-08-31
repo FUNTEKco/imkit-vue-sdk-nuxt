@@ -147,6 +147,8 @@ declare const _default: {
   "formatStrike": "取り消し線",
   "formatInlineCode": "インラインコード",
   "formatCodeBlock": "コードブロック",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "アクセス可能なチャットについて質問できます",
   "goToDashboard": "管理コンソールに戻る",
   "logout": "ログアウト",
   "online-status-online": "アクティブ",

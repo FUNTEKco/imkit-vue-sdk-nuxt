@@ -146,6 +146,8 @@ declare const _default: {
   "formatStrike": "ขีดทับ",
   "formatInlineCode": "โค้ดอินไลน์",
   "formatCodeBlock": "บล็อกโค้ด",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "ถามเกี่ยวกับแชทที่คุณมีสิทธิ์เข้าถึง",
   "goToDashboard": "ไปที่คอนโซลผู้ดูแล",
   "logout": "ออกจากระบบ",
   "online-status-online": "ออนไลน์",

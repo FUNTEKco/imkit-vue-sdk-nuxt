@@ -147,6 +147,8 @@ declare const _default: {
   "formatStrike": "刪除線",
   "formatInlineCode": "紅字框",
   "formatCodeBlock": "段落框",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "詢問你有權限查看的聊天室內容",
   "goToDashboard": "回管理後台",
   "logout": "登出",
   "online-status-online": "上線中",

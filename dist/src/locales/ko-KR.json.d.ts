@@ -146,6 +146,8 @@ declare const _default: {
   "formatStrike": "취소선",
   "formatInlineCode": "인라인 코드",
   "formatCodeBlock": "코드 블록",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "접근 가능한 채팅에 대해 질문하세요",
   "goToDashboard": "관리 콘솔로 이동",
   "logout": "로그아웃",
   "online-status-online": "온라인",

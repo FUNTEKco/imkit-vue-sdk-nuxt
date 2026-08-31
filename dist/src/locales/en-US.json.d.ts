@@ -147,6 +147,8 @@ declare const _default: {
   "formatStrike": "Strikethrough",
   "formatInlineCode": "Inline code",
   "formatCodeBlock": "Code block",
+  "pinchatAiTitle": "PinChat AI",
+  "pinchatAiDescription": "Ask across the chats you can access",
   "goToDashboard": "Go to Admin Console",
   "logout": "Log out",
   "online-status-online": "Active",

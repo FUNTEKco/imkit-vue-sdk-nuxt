@@ -28,5 +28,6 @@ type Settings = {
     showEndChatButton?: boolean;
     scrollAnchoringEnabled?: boolean;
     fixedRoomEnabled: boolean;
+    pinchatAiEnabled?: boolean;
 };
 export default Settings;

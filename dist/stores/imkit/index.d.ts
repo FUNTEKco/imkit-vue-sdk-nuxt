@@ -795,6 +795,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         editingMessageId: string;
         navigationTargetId: string;
         isRoomInfoVisible: boolean;
+        isRoomContentVisible: boolean;
         isTyping: {
             [uid: string]: import('./state').TypingStatus;
         };
@@ -806,24 +807,113 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         };
         activeActionMessageId: string;
         isNavigatingToMessage: boolean;
+        sessionEpoch: number;
         reconnectResyncTick: number;
         lastReconnectResyncAt: number;
         trailingReconnectResyncTimer: {
-            ref: () => NodeJS.Timeout;
-            unref: () => NodeJS.Timeout;
+            close: () => NodeJS.Timeout;
             hasRef: () => boolean;
+            ref: () => NodeJS.Timeout;
             refresh: () => NodeJS.Timeout;
+            unref: () => NodeJS.Timeout;
+            _onTimeout: (...args: any[]) => void;
             [Symbol.toPrimitive]: () => number;
             [Symbol.dispose]: () => void;
         } | null;
         aggregateCoalesceTimer: {
-            ref: () => NodeJS.Timeout;
-            unref: () => NodeJS.Timeout;
+            close: () => NodeJS.Timeout;
             hasRef: () => boolean;
+            ref: () => NodeJS.Timeout;
             refresh: () => NodeJS.Timeout;
+            unref: () => NodeJS.Timeout;
+            _onTimeout: (...args: any[]) => void;
             [Symbol.toPrimitive]: () => number;
             [Symbol.dispose]: () => void;
         } | null;
+        chatRoomContentMedia: {
+            _id: string;
+            appID: string;
+            client: {
+                _id: string;
+                id: string;
+                avatarUrl: string;
+                nickname: string;
+                lastLoginTime: string;
+                lastLoginTimeMS: number;
+                lastActiveTime: string;
+                lastActiveTimeMS: number;
+            };
+            room: string;
+            key: string;
+            signedUrl?: string | undefined;
+            size: number;
+            mimetype: string;
+            originalName: string;
+            fileType: string;
+            tags: string[];
+            createdAt: string;
+            createdAtMS: number;
+            updatedAt: string;
+            updatedAtMS: number;
+            preview: {
+                _id: string;
+                key: string;
+                size: number;
+                mimetype: string;
+                originalName: string;
+                fileType: string;
+                signedUrl: string;
+            } | null;
+            __v: number;
+        }[];
+        chatRoomContentFiles: {
+            _id: string;
+            appID: string;
+            client: {
+                _id: string;
+                id: string;
+                avatarUrl: string;
+                nickname: string;
+                lastLoginTime: string;
+                lastLoginTimeMS: number;
+                lastActiveTime: string;
+                lastActiveTimeMS: number;
+            };
+            room: string;
+            key: string;
+            signedUrl?: string | undefined;
+            size: number;
+            mimetype: string;
+            originalName: string;
+            fileType: string;
+            tags: string[];
+            createdAt: string;
+            createdAtMS: number;
+            updatedAt: string;
+            updatedAtMS: number;
+            preview: {
+                _id: string;
+                key: string;
+                size: number;
+                mimetype: string;
+                originalName: string;
+                fileType: string;
+                signedUrl: string;
+            } | null;
+            __v: number;
+        }[];
+        chatRoomContentMediaRoomId: string;
+        chatRoomContentFilesRoomId: string;
+        chatRoomContentMediaLoading: boolean;
+        chatRoomContentFilesLoading: boolean;
+        chatRoomContentMediaOffset: number;
+        chatRoomContentMediaTotalCount: number;
+        chatRoomContentMediaHasMore: boolean;
+        chatRoomContentMediaLoadingMore: boolean;
+        chatRoomContentFilesOffset: number;
+        chatRoomContentFilesTotalCount: number;
+        chatRoomContentFilesHasMore: boolean;
+        chatRoomContentFilesLoadingMore: boolean;
     } & import('pinia').PiniaCustomStateProperties<ImkitState>) => import('../../classes/room').default[];
 }, {
     clearRoomSearch(this: any): void;
@@ -852,8 +942,8 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     updatePref(this: any, { key, value }: {
         key: string;
         value: unknown;
-    }): Promise<import('axios').AxiosResponse<any, any, {}>>;
-    deletePref(this: any, key: string): Promise<import('axios').AxiosResponse<any, any, {}>>;
+    }): Promise<import('axios').AxiosResponse<any, unknown, {}, any>>;
+    deletePref(this: any, key: string): Promise<import('axios').AxiosResponse<any, any, {}, any>>;
     updateFolder(this: any, payload: {
         folderKey: string;
         name: string;
@@ -976,10 +1066,18 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     fetchLinkPreview(this: any, url: string): Promise<import('../../classes/linkPreview').default>;
     handleLinkPreviews(this: any, messages: import('../../lib').Message[]): Promise<void>;
     fetchVideoBlob(this: any, url: string): Promise<Blob>;
+    fetchRoomContentMedia(this: any, { roomId, loadMore }: {
+        roomId: string;
+        loadMore?: boolean;
+    }): Promise<void>;
+    fetchRoomContentFiles(this: any, { roomId, loadMore }: {
+        roomId: string;
+        loadMore?: boolean;
+    }): Promise<void>;
     fetchPresignedUrl(this: any, { bucketName, fileId }: {
         bucketName: string;
         fileId: string;
-    }): Promise<any>;
+    }): Promise<string>;
     fetchPresignedUrlByPath(this: any, path: string): Promise<any>;
     navigateToMessage(this: any, messageId: string): Promise<void>;
     insertUnreadMessage(this: any, numberOfUnread: number): Promise<void>;

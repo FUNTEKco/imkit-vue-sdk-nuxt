@@ -138,6 +138,8 @@ export declare const useAttachmentUpload: ({ roomId, users, fileSizeLimit, fileI
     isLoadingVideo: Ref<boolean, boolean>;
     showImageLightbox: Ref<boolean, boolean>;
     selectedImageIndex: Ref<number, number>;
+    canNavigatePreviousImage: import('vue').ComputedRef<boolean>;
+    canNavigateNextImage: import('vue').ComputedRef<boolean>;
     showVideoLightbox: Ref<boolean, boolean>;
     selectedVideoUrl: Ref<string | null, string | null>;
     onFileChange: (event: Event) => Promise<void>;

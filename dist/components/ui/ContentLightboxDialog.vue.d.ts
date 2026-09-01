@@ -1,12 +1,17 @@
 import { default as ChatRoomContent } from '../../classes/chatRoomContent';
 import { default as IMImage } from '../../classes/image';
 import { default as IMVideo } from '../../classes/video';
+import { RoomMediaItem } from '../../utils/roomMediaList';
 type __VLS_Props = {
     open?: boolean;
     selectedMedia?: ChatRoomContent | null;
-    previousMedia?: () => void;
-    nextMedia?: () => void;
+    previousMedia?: () => void | Promise<void>;
+    nextMedia?: () => void | Promise<void>;
     mediaCount?: number;
+    canNavigatePrevious?: boolean | null;
+    canNavigateNext?: boolean | null;
+    mediaItems?: readonly RoomMediaItem[];
+    mediaIndex?: number;
     image?: IMImage | null;
     video?: IMVideo | null;
     directVideoUrl?: string | null;
@@ -18,21 +23,27 @@ type __VLS_Props = {
 declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {} & {
     close: () => any;
     "update:open": (value: boolean) => any;
+    "update:mediaIndex": (value: number) => any;
 }, string, import('vue').PublicProps, Readonly<__VLS_Props> & Readonly<{
     onClose?: (() => any) | undefined;
     "onUpdate:open"?: ((value: boolean) => any) | undefined;
+    "onUpdate:mediaIndex"?: ((value: number) => any) | undefined;
 }>, {
     createdAt: string | number | null;
     image: IMImage | null;
     video: IMVideo | null;
     roomId: string | null;
     open: boolean;
-    selectedMedia: ChatRoomContent | null;
-    previousMedia: () => void;
-    nextMedia: () => void;
-    mediaCount: number;
-    directVideoUrl: string | null;
     senderName: string | null;
+    selectedMedia: ChatRoomContent | null;
+    previousMedia: () => void | Promise<void>;
+    nextMedia: () => void | Promise<void>;
+    mediaCount: number;
+    canNavigatePrevious: boolean | null;
+    canNavigateNext: boolean | null;
+    mediaItems: readonly RoomMediaItem[];
+    mediaIndex: number;
+    directVideoUrl: string | null;
     showDownload: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;
 declare const _default: typeof __VLS_export;

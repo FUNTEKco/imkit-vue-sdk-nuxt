@@ -5,3 +5,4 @@ export declare const roomTagCache: QuickLRU<string, string[]>;
 export declare const imageFailuresRef: import('vue').ShallowRef<Set<string>, Set<string>>;
 export declare const addImageFailure: (url: string) => void;
 export declare const removeImageFailure: (url: string) => void;
+export declare const clearImageCacheState: () => void;

@@ -7,6 +7,7 @@ export interface SignedUrlEntry {
 export declare const getSignedUrlEntry: (canonicalUrl: string) => SignedUrlEntry | null;
 export declare const getSignedUrl: (canonicalUrl: string) => string | null;
 export declare const setSignedUrl: (canonicalUrl: string, signedUrl: string) => void;
+export declare const resolveSignedUrl: (canonicalUrl: string, loader: () => Promise<string>) => Promise<string>;
 export declare const dropSignedUrl: (canonicalUrl: string) => void;
 export declare const isOnCooldown: (canonicalUrl: string) => boolean;
 export declare const markCooldown: (canonicalUrl: string) => void;

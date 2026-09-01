@@ -4,6 +4,7 @@ export interface ChatRoomContent {
     client: MediaClient;
     room: string;
     key: string;
+    signedUrl?: string;
     size: number;
     mimetype: string;
     originalName: string;

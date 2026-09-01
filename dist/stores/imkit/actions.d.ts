@@ -31,8 +31,8 @@ export declare const actions: {
     updatePref(this: any, { key, value }: {
         key: string;
         value: unknown;
-    }): Promise<import('axios').AxiosResponse<any, any, {}>>;
-    deletePref(this: any, key: string): Promise<import('axios').AxiosResponse<any, any, {}>>;
+    }): Promise<import('axios').AxiosResponse<any, unknown, {}, any>>;
+    deletePref(this: any, key: string): Promise<import('axios').AxiosResponse<any, any, {}, any>>;
     updateFolder(this: any, payload: {
         folderKey: string;
         name: string;
@@ -155,10 +155,18 @@ export declare const actions: {
     fetchLinkPreview(this: any, url: string): Promise<LinkPreview>;
     handleLinkPreviews(this: any, messages: Message[]): Promise<void>;
     fetchVideoBlob(this: any, url: string): Promise<Blob>;
+    fetchRoomContentMedia(this: any, { roomId, loadMore }: {
+        roomId: string;
+        loadMore?: boolean;
+    }): Promise<void>;
+    fetchRoomContentFiles(this: any, { roomId, loadMore }: {
+        roomId: string;
+        loadMore?: boolean;
+    }): Promise<void>;
     fetchPresignedUrl(this: any, { bucketName, fileId }: {
         bucketName: string;
         fileId: string;
-    }): Promise<any>;
+    }): Promise<string>;
     fetchPresignedUrlByPath(this: any, path: string): Promise<any>;
     navigateToMessage(this: any, messageId: string): Promise<void>;
     insertUnreadMessage(this: any, numberOfUnread: number): Promise<void>;

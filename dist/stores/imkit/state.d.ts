@@ -1,3 +1,4 @@
+import { default as ChatRoomContent } from '../../classes/chatRoomContent';
 import { default as Folder } from '../../classes/folder';
 import { default as LinkPreview } from '../../classes/linkPreview';
 import { default as Message } from '../../classes/message';
@@ -68,6 +69,7 @@ export type ImkitState = {
     editingMessageId: string;
     navigationTargetId: string;
     isRoomInfoVisible: boolean;
+    isRoomContentVisible: boolean;
     isTyping: {
         [uid: string]: TypingStatus;
     };
@@ -79,9 +81,24 @@ export type ImkitState = {
     };
     activeActionMessageId: string;
     isNavigatingToMessage: boolean;
+    sessionEpoch: number;
     reconnectResyncTick: number;
     lastReconnectResyncAt: number;
     trailingReconnectResyncTimer: ReturnType<typeof setTimeout> | null;
     aggregateCoalesceTimer: ReturnType<typeof setTimeout> | null;
+    chatRoomContentMedia: ChatRoomContent[];
+    chatRoomContentFiles: ChatRoomContent[];
+    chatRoomContentMediaRoomId: string;
+    chatRoomContentFilesRoomId: string;
+    chatRoomContentMediaLoading: boolean;
+    chatRoomContentFilesLoading: boolean;
+    chatRoomContentMediaOffset: number;
+    chatRoomContentMediaTotalCount: number;
+    chatRoomContentMediaHasMore: boolean;
+    chatRoomContentMediaLoadingMore: boolean;
+    chatRoomContentFilesOffset: number;
+    chatRoomContentFilesTotalCount: number;
+    chatRoomContentFilesHasMore: boolean;
+    chatRoomContentFilesLoadingMore: boolean;
 };
 export declare const createState: () => ImkitState;

@@ -56,6 +56,7 @@ declare abstract class IMKitElementBase extends HTMLElement implements IMKitElem
     disconnectedCallback(): void;
     attributeChangedCallback(name: string, oldVal: string | null, newVal: string | null): void;
     protected currentAttrs(): Partial<Record<AttrName, string>>;
+    private applyMountedRuntimeConfigPatch;
     protected mount(): void;
     protected unmount(): void;
     private bridgeStoreEvents;

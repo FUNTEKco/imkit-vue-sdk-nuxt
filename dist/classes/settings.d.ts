@@ -24,9 +24,19 @@ type Settings = {
     fileUploadSizeLimit?: number;
     noRoomsImageURL?: string;
     noRoomsText?: string;
+    /**
+     * Copy for the desktop chat column while no room is open.
+     *
+     * Three-state, matching `noRoomsText`: `undefined` uses the built-in
+     * translation, `''` hides the message entirely, any other string replaces
+     * it. The message stays hidden regardless when the user has no chat rooms,
+     * since there would be nothing to select.
+     */
+    noRoomSelectedText?: string;
     searchRoomPlaceholder?: string;
     showEndChatButton?: boolean;
     scrollAnchoringEnabled?: boolean;
+    roomContentEnabled?: boolean;
     fixedRoomEnabled: boolean;
     pinchatAiEnabled?: boolean;
 };

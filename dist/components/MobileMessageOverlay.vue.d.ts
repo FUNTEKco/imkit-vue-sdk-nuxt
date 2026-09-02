@@ -8,6 +8,7 @@ type __VLS_Props = {
     messageContent: Component;
     messageBlockClass: string[];
     messageStyle: StyleValue;
+    ownBubbleStyle?: Record<string, string>;
     isOutgoing: boolean;
     canCopy: boolean;
     canReply: boolean;

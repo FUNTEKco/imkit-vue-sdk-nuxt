@@ -2,6 +2,7 @@ type __VLS_Props = {
     isTestPreview?: boolean;
     pinchatLink?: string;
     chatStyle?: any;
+    colorMode?: 'light' | 'dark';
 };
 declare var __VLS_44: {};
 type __VLS_Slots = {} & {

@@ -2,6 +2,7 @@ import { default as Message } from '../classes/message';
 type __VLS_Props = {
     source: Message;
     actionClaimLocked?: boolean;
+    ownBubbleStyle?: Record<string, string>;
 };
 declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     "popover:open": (id: string) => any;

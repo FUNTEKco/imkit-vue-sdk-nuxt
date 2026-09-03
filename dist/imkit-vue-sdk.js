@@ -54383,7 +54383,7 @@ var q_e = b({
 	}
 });
 //#endregion
-//#region node_modules/.pnpm/vue3-google-map@0.27.2_patch_hash=e1ced7b795bd9b8b93e6c5838f47436e5def976276d8886569bd0_b2da725fd532b6bcd91083e1a2182c87/node_modules/vue3-google-map/dist/index.mjs
+//#region node_modules/.pnpm/vue3-google-map@0.27.2_patch_hash=11b00745109ebfebaad1bf55ed0c196567a1f06d166841fadd721_4a148fe40ff2135ac10ebaad31ee3718/node_modules/vue3-google-map/dist/index.mjs
 (function() {
 	try {
 		if (typeof document < "u") {
@@ -54794,13 +54794,12 @@ var Uve = !1, qZ = [
 				language: i,
 				libraries: a
 			});
-		};
-		if (o || !n.value) return;
-		let d = (o) => {
-			let s = o ? o.maps : google.maps;
-			a.value = M(s), i.value = M(new s.Map(n.value, c()));
-			let l = Hve(a.value);
-			a.value[BZ] = l, qZ.forEach((e) => {
+		}, d = (s) => {
+			if (o || !n.value) return;
+			let l = s ? s.maps : google.maps;
+			a.value = M(l), i.value = M(new l.Map(n.value, c()));
+			let u = Hve(a.value);
+			a.value[BZ] = u, qZ.forEach((e) => {
 				i.value?.addListener(e, (n) => t(e, n));
 			}), r.value = !0, H([
 				() => e.center,
@@ -54829,8 +54828,8 @@ var Uve = !1, qZ = [
 				let t = e.libraries && e.libraries.length > 0 ? e.libraries : ["maps", "marker"];
 				Promise.all(t.map((e) => zve(e))).then(() => d());
 			}
-		}), o = !0, ae(() => {
-			s.value = !1, i.value && a.value?.event.clearInstanceListeners(i.value);
+		}), ae(() => {
+			o = !0, s.value = !1, i.value && a.value?.event.clearInstanceListeners(i.value);
 		}), {
 			mapRef: n,
 			ready: r,
@@ -83736,14 +83735,17 @@ var E9 = /* @__PURE__ */ function(e) {
 		}, y = w9(700, async (e) => {
 			try {
 				if (e === 0) {
-					let e = o.value?.map.getCenter();
+					let e = o.value?.map?.getCenter();
 					if (e) {
 						let { lat: t, lng: n } = e;
 						s.value = new D9(t(), n());
 					}
 				} else if (e === 1) {
 					let { lat: e, lng: t } = await g();
-					s.value = new D9(e, t), p.value = 17, o.value?.map.panTo({
+					s.value = new D9(e, t), p.value = 17, l.value = {
+						lat: e,
+						lng: t
+					}, o.value?.map?.panTo({
 						lat: e,
 						lng: t
 					});
@@ -83857,7 +83859,7 @@ function KIe(e, t, r, a, o, s) {
 		_: 1
 	});
 }
-var qIe = /*#__PURE__*/ YT(zIe, [["render", KIe], ["__scopeId", "data-v-4434f8c5"]]), JIe = "/dashboard/settings_payment_flow", YIe = /* @__PURE__ */ b({
+var qIe = /*#__PURE__*/ YT(zIe, [["render", KIe], ["__scopeId", "data-v-66896ca1"]]), JIe = "/dashboard/settings_payment_flow", YIe = /* @__PURE__ */ b({
 	__name: "PaymentCollectionNotSetModal",
 	setup(e) {
 		let t = bc(), n = () => {
@@ -84334,7 +84336,7 @@ var FLe = /*#__PURE__*/ YT(MLe, [["render", PLe]]), ILe = ["width", "height"], L
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), O9 = "1.124.2-18-gad04a630", YLe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), O9 = "1.124.3-19-gf3c6e407", YLe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = bc(), n = () => {

@@ -19,6 +19,7 @@ export declare const actions: {
     resyncAfterReconnect(this: any): Promise<void>;
     cancelTrailingReconnectResync(this: any): void;
     fetchRoom(this: any, roomId: string): Promise<void>;
+    fetchExistingPinchatAiRoom(this: any): Promise<void>;
     fetchRoomsInFolders(this: any): Promise<void>;
     mergeInto(this: any, key: string, value: Record<string, unknown>): void;
     dropFrom(this: any, key: string, id: string): void;

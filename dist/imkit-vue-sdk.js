@@ -30588,6 +30588,23 @@ var gde = {
 			bD(t.members, r), CD(r, n.extra), aD(this, r);
 		});
 	},
+	async fetchExistingPinchatAiRoom() {
+		let e = ry();
+		if (!e) return;
+		let t = this.roomTag, n = this.sessionEpoch, r = t ? `${e}:${t}` : e, i = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(r)), a = `pinchat_ai_${Array.from(new Uint8Array(i)).map((e) => e.toString(16).padStart(2, "0")).join("").slice(0, 32)}`;
+		try {
+			let { data: { result: r } } = await HE().get(`/rooms/${a}`);
+			if (ry() !== e || this.sessionEpoch !== n || this.roomTag !== t) return;
+			let i = new UT(r, e);
+			if (i.id !== a || !i.isPinchatAi) return;
+			oD(this, "rooms", { [i.id]: i });
+			let o = {};
+			bD(r.members, o), CD(o, i.extra), aD(this, o), await this.aggregateRoomsAndFolders();
+		} catch (e) {
+			if ($S.isAxiosError(e) && e.response?.status === 404) return;
+			throw e;
+		}
+	},
 	async fetchRoomsInFolders() {
 		let e = Object.keys(this.roomIdsInFolders).length;
 		for (; this.numberOfFetchedRooms < e;) {
@@ -84358,7 +84375,7 @@ var FLe = /*#__PURE__*/ YT(MLe, [["render", PLe]]), ILe = ["width", "height"], L
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), O9 = "1.124.3-20-gffb98f2a", YLe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), O9 = "1.124.3-21-g23a185c5", YLe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = xc(), n = () => {
@@ -86808,6 +86825,7 @@ function AVe({ fetchTask: e }) {
 function jVe() {
 	let e = TD(), t = L("time"), n = L(!0), r = () => "-lastMessage", i = () => +(t.value === "unread"), a = () => {
 		let t = /* @__PURE__ */ new Set();
+		for (let n of Object.values(e.rooms)) n.isPinchatAi && t.add(n.id);
 		e.selectedRoomId && t.add(e.selectedRoomId);
 		for (let [n, r] of Object.entries(e.roomIdsInFolders)) r && t.add(n);
 		return t;
@@ -86822,7 +86840,9 @@ function jVe() {
 			let n = e.rooms[t];
 			n && (r[t] = n);
 		}
-		e.rooms = r, e.sortedRooms = t.map((e) => r[e.id] ?? e).filter((t) => (!e.roomIdsInFolders[t.id] || t.isPinchatAi) && !t.pref?.hidden);
+		e.rooms = r;
+		let i = new Set(t.map((e) => e.id)), a = Object.values(r).filter((e) => e.isPinchatAi && !i.has(e.id));
+		e.sortedRooms = [...a, ...t].map((e) => r[e.id] ?? e).filter((t) => (!e.roomIdsInFolders[t.id] || t.isPinchatAi) && !t.pref?.hidden);
 	}, s = async () => {
 		let t = r(), s = i(), c = e.selectedRoomId, l = a();
 		n.value = !0;
@@ -87243,11 +87263,10 @@ var MVe = /* @__PURE__ */ b({
 		let t = TD(), r = xc(), i = JT(), a = L(), { sortType: o, isFirstLoading: s, setSortType: l } = jVe(), m = c(() => t.sortedRooms), h = c(() => t.sortedFolderIds.map((e) => t.folders[e]).filter((e) => e)), g = c(() => t.folders[t.selectedFolderId]), v = c(() => t.searchType), y = c(() => t.searchKeyword ? Object.values(KT).filter((e) => e in t.searchRooms) : []), b = c(() => t.roomTag), x = c(() => i.settings), S = c(() => ry()), C = (e) => !e.isPinchatAi || x.value.pinchatAiEnabled === !0 && e.isPinchatAiVisibleFor(b.value), w = c(() => m.value.filter(C)), T = 0, E = null, D = "", O = async () => {
 			s.value = !0;
 			try {
-				await t.fetchPrefs(), await t.fetchRooms();
+				await t.fetchPrefs(), await t.fetchRooms(), await t.fetchRoomsInFolders(), x.value.pinchatAiEnabled === !0 && await t.fetchExistingPinchatAiRoom();
 			} finally {
 				s.value = !1;
 			}
-			await t.fetchRoomsInFolders();
 		}, { searchKeyword: k, searchInput: j, isCompositting: M, isAPIRequesting: ee, clearSearch: te } = AVe({ fetchTask: O }), ne = c(() => {
 			if (t.searchKeyword && r.modals.length === 0) {
 				if (v.value === KT.RoomPrefFolder && g.value) {
@@ -87265,9 +87284,9 @@ var MVe = /* @__PURE__ */ b({
 				}
 			}
 			return n;
-		}), N = c(() => r.modals.length === 0 && (M.value || s.value || ee.value && k.value.length > 0)), re = c(() => !!k.value), ie = c(() => s.value && r.modals.length === 0 || N.value && ne.value.length === 0), ae = c(() => y.value.length > 0 && r.modals.length === 0), oe = c(() => !N.value && ne.value.length === 0 && r.modals.length === 0), se = c(() => !!x.value.noRoomsImageURL), ce = c(() => x.value.noRoomsImageURL === void 0), ue = c(() => !!x.value.noRoomsText || x.value.noRoomsText === void 0), de = L(!1), fe = c(() => w.value.find((e) => e.isPinchatAi)), pe = c(() => x.value.pinchatAiEnabled === !0 && !t.searchKeyword && !fe.value && typeof i.callbacks?.onPinchatAiRoomRequested == "function"), R = "";
+		}), N = c(() => r.modals.length === 0 && (M.value || s.value || ee.value && k.value.length > 0)), re = c(() => !!k.value), ie = c(() => s.value && r.modals.length === 0 || N.value && ne.value.length === 0), ae = c(() => y.value.length > 0 && r.modals.length === 0), oe = c(() => !N.value && ne.value.length === 0 && r.modals.length === 0), se = c(() => !!x.value.noRoomsImageURL), ce = c(() => x.value.noRoomsImageURL === void 0), ue = c(() => !!x.value.noRoomsText || x.value.noRoomsText === void 0), de = L(!1), fe = c(() => w.value.find((e) => e.isPinchatAi)), pe = c(() => x.value.pinchatAiEnabled === !0 && !s.value && !t.searchKeyword && !fe.value && typeof i.callbacks?.onPinchatAiRoomRequested == "function"), R = "";
 		V(fe, async (e) => {
-			if (!(!e || e.id === R || typeof i.callbacks?.onPinchatAiRoomRequested != "function")) {
+			if (!(!e || e.extra.pinchatAiScope === "all" || e.extra.pinchatAiScope === "enterpoint" || e.id === R || typeof i.callbacks?.onPinchatAiRoomRequested != "function")) {
 				R = e.id;
 				try {
 					if (!(await i.callbacks.onPinchatAiRoomRequested())?.roomId) return;
@@ -87286,7 +87305,7 @@ var MVe = /* @__PURE__ */ b({
 					e || (R = n.roomId, await t.updateRoomPrefs({
 						roomId: n.roomId,
 						prefs: { sticky: !0 }
-					}), await t.resyncRooms()), t.$patch({
+					}), await t.resyncRooms()), await t.fetchExistingPinchatAiRoom(), t.$patch({
 						selectedRoomId: n.roomId,
 						actionMenuRoomId: "",
 						isRoomInfoVisible: !1
@@ -87476,7 +87495,7 @@ var MVe = /* @__PURE__ */ b({
 			"start-margin"
 		])], 512)], 512));
 	}
-}), [["__scopeId", "data-v-518516ff"]]), UHe = (e, t) => {
+}), [["__scopeId", "data-v-34ff2951"]]), UHe = (e, t) => {
 	uue(e), ny(t), Jue(), GFe();
 }, J9, WHe = () => (J9 ||= gte(), J9);
 //#endregion

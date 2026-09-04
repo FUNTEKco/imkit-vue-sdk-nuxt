@@ -3,6 +3,7 @@ export declare enum RoomType {
     Direct = "direct",
     Group = "group"
 }
+export type PinchatAiScope = 'all' | 'enterpoint';
 type Avatar = {
     url: string;
     name: string;
@@ -68,6 +69,8 @@ declare class Room {
     constructor(raw: RawRoom, uid: string);
     get isGroup(): boolean;
     get isPinchatAi(): boolean;
+    get pinchatAiScope(): PinchatAiScope | null;
+    isPinchatAiVisibleFor(roomTag: string): boolean;
     get memberIdsWithoutMeAndMyGroup(): string[];
     get displayName(): string;
     get linkName(): string;

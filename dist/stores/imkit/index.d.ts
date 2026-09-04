@@ -78,6 +78,8 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             isMentioned: boolean;
             readonly isGroup: boolean;
             readonly isPinchatAi: boolean;
+            readonly pinchatAiScope: import('../../classes/room').PinchatAiScope | null;
+            isPinchatAiVisibleFor: (roomTag: string) => boolean;
             readonly memberIdsWithoutMeAndMyGroup: string[];
             readonly displayName: string;
             readonly linkName: string;

@@ -37,6 +37,31 @@ type Settings = {
     showEndChatButton?: boolean;
     scrollAnchoringEnabled?: boolean;
     roomContentEnabled?: boolean;
+    /**
+     * The host's shell IS the page — it has built a full-page shell around the
+     * SDK elements rather than embedding them in a document that scrolls. The
+     * elements themselves need not each fill the viewport: the agent dashboard
+     * sets this while showing the room list, the chat and the room-info panel
+     * side by side inside one viewport-sized shell.
+     *
+     * A software keyboard shrinks the visible viewport without shrinking the
+     * initial containing block, so the page keeps a scrollable range of exactly
+     * the keyboard's height however short its content is, and the browser
+     * spends that range scrolling the focused field into view — which drags
+     * the header off the top and leaves the host's leftover full-height box as
+     * blank space between the field and the keyboard. `MainView` already
+     * pins the page for the SDK's own shell (see `startViewportScrollLock`);
+     * this is how a host that assembles its own shell asks for the same thing.
+     *
+     * Read by every SDK surface that owns a text field a keyboard can cover —
+     * `ChatRoom` (composer) and `RoomList` (search) — because a host shell can
+     * mount either one alone.
+     *
+     * Defaults to false: pinning the document is wrong — and trapping — for a
+     * component embedded in a host page that scrolls, which is every other
+     * consumer.
+     */
+    fullPageEnabled?: boolean;
     fixedRoomEnabled: boolean;
     pinchatAiEnabled?: boolean;
     /**

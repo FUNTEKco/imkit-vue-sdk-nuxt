@@ -1,6 +1,8 @@
 /**
  * Publishes the usable viewport height as the `--imkit-viewport-height` custom
  * property on `<html>`, for every full-height SDK surface to size itself from.
+ * Full-page iOS shells also bridge delayed keyboard-dismissal measurements
+ * with a short animation; the browser's next changed measurement takes over.
  *
  * **`dvh` cannot do this job in an iOS webview.** Measured on iPhone 17 Pro /
  * iOS 26.5 (issue #20), focusing the composer in a WKWebView produces:

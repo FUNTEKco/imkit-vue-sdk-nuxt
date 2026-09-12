@@ -53904,7 +53904,7 @@ var uve = b({
 				return;
 			}
 			if (e.startsWith("data:")) {
-				o.value = e, s.value = "loaded", r("load");
+				o.value = e, s.value = "loaded";
 				return;
 			}
 			if (!g(e)) {
@@ -53913,12 +53913,12 @@ var uve = b({
 			}
 			let n = ME.get(e);
 			if (n) {
-				o.value = n, s.value = "loaded", r("load");
+				o.value = n, s.value = "loaded";
 				return;
 			}
 			let c = bE(e);
 			if (c) {
-				o.value = c, s.value = "loaded", r("load");
+				o.value = c, s.value = "loaded";
 				return;
 			}
 			if (a.value.has(e)) {
@@ -53931,13 +53931,13 @@ var uve = b({
 			}, f = await mve(AE(), e).catch(() => null);
 			if (!(!d || t !== l)) {
 				if (f) {
-					h(e), SE(e, f), o.value = f, s.value = "loaded", r("load");
+					h(e), SE(e, f), o.value = f, s.value = "loaded";
 					return;
 				}
 				try {
 					let n = await fve(e, u);
 					if (!d || t !== l) return;
-					h(e), ME.set(e, n), o.value = n, s.value = "loaded", r("load");
+					h(e), ME.set(e, n), o.value = n, s.value = "loaded";
 					return;
 				} catch {}
 				if (!(!d || t !== l)) {
@@ -53945,7 +53945,7 @@ var uve = b({
 						let n = await pve(AE(), e);
 						if (!d || t !== l) return;
 						if (n) {
-							h(e), SE(e, n), o.value = n, s.value = "loaded", r("load");
+							h(e), SE(e, n), o.value = n, s.value = "loaded";
 							return;
 						}
 					} catch {}
@@ -54009,6 +54009,7 @@ var uve = b({
 			class: F([e.imgClass, e.noCallout && "[-webkit-touch-callout:none] [-webkit-user-select:none]"]),
 			style: re(e.imgStyle),
 			"data-testid": "image-bubble-thumb",
+			onLoad: n[0] ||= (e) => r("load"),
 			onError: v
 		}, null, 46, vve));
 	}
@@ -54089,11 +54090,22 @@ var uve = b({
 		}), v = c(() => {
 			let e = m.value;
 			return e ? e.kind === "video" ? e.video : null : s.video;
-		}), y = c(() => m.value?.roomId ?? s.roomId), b = c(() => s.selectedMedia?.client?.nickname ?? m.value?.senderName ?? s.senderName), x = c(() => s.selectedMedia?.createdAt ?? m.value?.createdAt ?? s.createdAt), S = c(() => s.mediaCount > 0 ? s.mediaCount : s.mediaItems.length), C = c(() => S.value > 1 && (s.canNavigatePrevious ?? (s.mediaItems.length > 0 ? s.mediaIndex > 0 : !0))), w = c(() => S.value > 1 && (s.canNavigateNext ?? (s.mediaItems.length > 0 ? s.mediaIndex < s.mediaItems.length - 1 : !0))), T = c(() => !!s.selectedMedia), E = c(() => !!h.value), D = c(() => !!v.value), O = c(() => !!s.directVideoUrl), k = c(() => T.value || !!b.value), A = R(null), j = c(() => s.open), M = R(null), { imageStyle: N, isInteracting: ee, isZoomed: te, onDoubleClick: P, onPointerCancel: ne, onPointerDown: ie, onPointerMove: ae, onPointerUp: oe, reset: se, scale: le } = IG(M), ue = R(!1), de = R(null), fe = R(!1), pe = R(!1), z = 0, me = () => {
-			z += 1, pe.value = !1;
-		}, he = (e) => {
-			l("update:open", e), e || (me(), se(), l("close"), de.value &&= (URL.revokeObjectURL(de.value), null));
-		}, ge = async () => {
+		}), y = c(() => m.value?.roomId ?? s.roomId), b = c(() => s.selectedMedia?.client?.nickname ?? m.value?.senderName ?? s.senderName), x = c(() => s.selectedMedia?.createdAt ?? m.value?.createdAt ?? s.createdAt), S = c(() => s.mediaCount > 0 ? s.mediaCount : s.mediaItems.length), C = c(() => S.value > 1 && (s.canNavigatePrevious ?? (s.mediaItems.length > 0 ? s.mediaIndex > 0 : !0))), w = c(() => S.value > 1 && (s.canNavigateNext ?? (s.mediaItems.length > 0 ? s.mediaIndex < s.mediaItems.length - 1 : !0))), T = c(() => {
+			let e = s.selectedMedia;
+			return e ? !(e.fileType === "image" && h.value && vG(h.value.originalUrl) === e._id) : !1;
+		}), E = c(() => !!h.value), D = c(() => !!v.value), O = c(() => !!s.directVideoUrl), k = c(() => T.value || !!b.value), A = R(null), j = c(() => s.open), M = R(null), { imageStyle: N, isInteracting: ee, isZoomed: te, onDoubleClick: P, onPointerCancel: ne, onPointerDown: ie, onPointerMove: ae, onPointerUp: oe, reset: se, scale: le } = IG(M), ue = R(!1), de = R(!1);
+		H([
+			() => s.open,
+			h,
+			T
+		], () => {
+			ue.value = !1, de.value = !1;
+		});
+		let fe = R(null), pe = R(!1), z = R(!1), me = 0, he = () => {
+			me += 1, z.value = !1;
+		}, ge = (e) => {
+			l("update:open", e), e || (he(), se(), l("close"), fe.value &&= (URL.revokeObjectURL(fe.value), null));
+		}, _e = async () => {
 			let e = s.selectedMedia;
 			if (!e) return;
 			let t = e._id;
@@ -54107,21 +54119,21 @@ var uve = b({
 			} catch (e) {
 				console.error("[Lightbox] fetchPresignedUrl error:", e), s.selectedMedia?._id === t && (A.value = null);
 			}
-		}, _e = 0, ve = async (e) => {
+		}, ve = 0, ye = async (e) => {
 			let t = v.value;
-			if (!t || de.value) return;
-			let n = t.id, i = () => e === _e && s.open && v.value?.id === n;
-			fe.value = !0;
+			if (!t || fe.value) return;
+			let n = t.id, i = () => e === ve && s.open && v.value?.id === n;
+			pe.value = !0;
 			try {
 				let e = await r.fetchVideoBlob(t.originalUrl);
 				if (!i()) return;
-				de.value = URL.createObjectURL(e);
+				fe.value = URL.createObjectURL(e);
 			} catch (e) {
 				i() && console.error("[Lightbox] loadVideo error:", e);
 			} finally {
-				i() && (fe.value = !1);
+				i() && (pe.value = !1);
 			}
-		}, ye = async (e) => {
+		}, be = async (e) => {
 			if (!y.value) return null;
 			let t = vG(e);
 			if (!t) return null;
@@ -54133,7 +54145,7 @@ var uve = b({
 			} catch (e) {
 				return console.error("[Lightbox] fetchSignedUrl error:", e), null;
 			}
-		}, be = async () => {
+		}, xe = async () => {
 			if (!o.value) {
 				o.value = !0;
 				try {
@@ -54151,7 +54163,7 @@ var uve = b({
 							signedUrl: n || void 0
 						});
 					} else if (E.value && h.value) {
-						let e = await ye(h.value.originalUrl);
+						let e = await be(h.value.originalUrl);
 						await a({
 							url: h.value.originalUrl,
 							fallbackId: h.value.id,
@@ -54160,7 +54172,7 @@ var uve = b({
 							signedUrl: e || void 0
 						});
 					} else if (D.value && v.value) {
-						let e = await ye(v.value.originalUrl);
+						let e = await be(v.value.originalUrl);
 						await a({
 							url: v.value.originalUrl,
 							fallbackId: v.value.id,
@@ -54182,26 +54194,26 @@ var uve = b({
 			h,
 			v
 		], ([e, t, , n]) => {
-			let r = ++_e;
-			e || me(), A.value = null, ue.value = !1, fe.value = !1, de.value &&= (URL.revokeObjectURL(de.value), null), e && (t ? ge() : n && ve(r));
+			let r = ++ve;
+			e || he(), A.value = null, pe.value = !1, fe.value &&= (URL.revokeObjectURL(fe.value), null), e && (t && T.value ? _e() : n && ye(r));
 		}, { immediate: !0 });
-		let xe = c(() => s.selectedMedia ? `content:${s.selectedMedia._id}` : m.value ? `item:${m.value.key}` : s.image ? `image:${s.image.id}` : null);
-		H([() => s.open, xe], () => {
+		let Se = c(() => s.selectedMedia ? `content:${s.selectedMedia._id}` : m.value ? `item:${m.value.key}` : s.image ? `image:${s.image.id}` : null);
+		H([() => s.open, Se], () => {
 			se();
 		}, { flush: "sync" });
-		let Se = (e) => {
-			!s.open || S.value <= 1 || (e.key === "ArrowLeft" && C.value ? (e.preventDefault(), we()) : e.key === "ArrowRight" && w.value && (e.preventDefault(), Te()));
+		let Ce = (e) => {
+			!s.open || S.value <= 1 || (e.key === "ArrowLeft" && C.value ? (e.preventDefault(), Te()) : e.key === "ArrowRight" && w.value && (e.preventDefault(), Ee()));
 		};
 		I(() => {
-			window.addEventListener("keydown", Se);
+			window.addEventListener("keydown", Ce);
 		}), ce(() => {
-			_e += 1, me(), window.removeEventListener("keydown", Se), de.value && URL.revokeObjectURL(de.value);
+			ve += 1, he(), window.removeEventListener("keydown", Ce), fe.value && URL.revokeObjectURL(fe.value);
 		});
-		let Ce = async (e, t, n) => {
-			if (!e || pe.value) return;
+		let we = async (e, t, n) => {
+			if (!e || z.value) return;
 			se();
-			let r = z;
-			pe.value = !0;
+			let r = me;
+			z.value = !0;
 			try {
 				if (t) {
 					let e = t();
@@ -54210,12 +54222,12 @@ var uve = b({
 			} catch (e) {
 				console.error("[Lightbox] navigation failed:", e);
 			} finally {
-				r === z && (pe.value = !1);
+				r === me && (z.value = !1);
 			}
-		}, we = () => Ce(C.value, s.previousMedia, () => s.mediaIndex - 1), Te = () => Ce(w.value, s.nextMedia, () => s.mediaIndex + 1);
+		}, Te = () => we(C.value, s.previousMedia, () => s.mediaIndex - 1), Ee = () => we(w.value, s.nextMedia, () => s.mediaIndex + 1);
 		return (t, r) => (L(), u(V(ove), {
 			open: j.value,
-			"onUpdate:open": he
+			"onUpdate:open": ge
 		}, {
 			default: U(() => [_(V(lve), {
 				class: "flex h-dvh w-dvw max-w-none flex-col !rounded-none !bg-[#000] !p-3 md:h-[90vh] md:max-w-5xl md:!rounded-lg md:!p-0",
@@ -54237,7 +54249,7 @@ var uve = b({
 						})) : (L(), u(V(rO), {
 							key: 1,
 							class: "h-5 w-5 cursor-pointer text-white",
-							onClick: be
+							onClick: xe
 						}))], 64)) : (L(), f("div", bve)),
 						k.value ? (L(), f("div", xve, [p("div", Sve, [p("div", null, B(b.value), 1), p("div", null, B(V(Hm.default)(x.value).format("YYYY-MM-DD")), 1)])])) : (L(), f("div", Cve)),
 						_(V(hZ), { class: "cursor-pointer text-white opacity-70 transition-opacity hover:opacity-100" }, {
@@ -54282,13 +54294,13 @@ var uve = b({
 							"cursor-grab": V(te) && !V(ee),
 							"cursor-grabbing": V(ee)
 						}]),
-						onDblclick: r[6] ||= Le((...e) => V(P) && V(P)(...e), ["stop"]),
-						onPointercancel: r[7] ||= Le((...e) => V(ne) && V(ne)(...e), ["stop"]),
-						onPointerdown: r[8] ||= Le((...e) => V(ie) && V(ie)(...e), ["stop"]),
-						onPointermove: r[9] ||= Le((...e) => V(ae) && V(ae)(...e), ["stop"]),
-						onPointerup: r[10] ||= Le((...e) => V(oe) && V(oe)(...e), ["stop"])
+						onDblclick: r[8] ||= Le((...e) => V(P) && V(P)(...e), ["stop"]),
+						onPointercancel: r[9] ||= Le((...e) => V(ne) && V(ne)(...e), ["stop"]),
+						onPointerdown: r[10] ||= Le((...e) => V(ie) && V(ie)(...e), ["stop"]),
+						onPointermove: r[11] ||= Le((...e) => V(ae) && V(ae)(...e), ["stop"]),
+						onPointerup: r[12] ||= Le((...e) => V(oe) && V(oe)(...e), ["stop"])
 					}, [
-						!ue.value && h.value.thumbnailUrl !== h.value.originalUrl ? (L(), u(gZ, {
+						!ue.value && !de.value && h.value.thumbnailUrl !== h.value.originalUrl ? (L(), u(gZ, {
 							key: 0,
 							url: h.value.thumbnailUrl,
 							"img-style": V(N),
@@ -54305,14 +54317,16 @@ var uve = b({
 							kind: "image",
 							variant: "full",
 							"data-id": "original-url",
-							"img-class": ["h-auto max-h-[85vh] w-full max-w-[95vw] object-contain md:max-h-[75vh] md:max-w-[90vw]", !ue.value && h.value.thumbnailUrl !== h.value.originalUrl ? "invisible absolute" : ""].join(" "),
-							onLoad: r[5] ||= (e) => ue.value = !0
+							"img-class": ["h-auto max-h-[85vh] w-full max-w-[95vw] object-contain md:max-h-[75vh] md:max-w-[90vw]", !ue.value && !de.value && h.value.thumbnailUrl !== h.value.originalUrl ? "invisible absolute" : ""].join(" "),
+							onLoad: r[5] ||= (e) => ue.value = !0,
+							onError: r[6] ||= (e) => de.value = !0,
+							onRetry: r[7] ||= (e) => de.value = !1
 						}, null, 8, [
 							"url",
 							"img-style",
 							"img-class"
 						]),
-						(!V(i)[h.value.originalUrl] || V(i)[h.value.originalUrl] < 1) && h.value.thumbnailUrl !== h.value.originalUrl && !ue.value ? (L(), f(n, { key: 1 }, [r[11] ||= p("div", { class: "absolute inset-0 bg-black/50" }, null, -1), _(V(hW), {
+						(!V(i)[h.value.originalUrl] || V(i)[h.value.originalUrl] < 1) && h.value.thumbnailUrl !== h.value.originalUrl && !ue.value && !de.value ? (L(), f(n, { key: 1 }, [r[13] ||= p("div", { class: "absolute inset-0 bg-black/50" }, null, -1), _(V(hW), {
 							class: "absolute!",
 							diameter: 40,
 							"completed-steps": (V(i)[h.value.originalUrl] ?? 0) * 100,
@@ -54323,9 +54337,9 @@ var uve = b({
 							"stroke-width": 4,
 							"inner-stroke-width": 4
 						}, null, 8, ["completed-steps"])], 64)) : d("", !0)
-					], 42, kve)) : D.value && v.value ? (L(), f(n, { key: 2 }, [fe.value ? (L(), f("div", Ave, [_(V(gO), { class: "h-10 w-10 animate-spin text-white" })])) : de.value ? (L(), f("video", {
+					], 42, kve)) : D.value && v.value ? (L(), f(n, { key: 2 }, [pe.value ? (L(), f("div", Ave, [_(V(gO), { class: "h-10 w-10 animate-spin text-white" })])) : fe.value ? (L(), f("video", {
 						key: 1,
-						src: de.value,
+						src: fe.value,
 						class: "h-auto max-h-[85vh] w-auto max-w-full md:max-h-[75vh]",
 						controls: "",
 						autoplay: ""
@@ -54340,19 +54354,19 @@ var uve = b({
 						type: "button",
 						"data-testid": "media-previous",
 						"aria-label": t.$t("previous"),
-						"aria-busy": pe.value,
-						disabled: pe.value || !C.value,
-						class: F(["pointer-events-auto inline-flex h-11 w-11 items-center justify-center gap-2 !rounded-full rounded-md bg-black/50 text-base font-medium whitespace-nowrap text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black", pe.value || !C.value ? "cursor-not-allowed opacity-30" : "cursor-pointer hover:bg-black/70"]),
-						onClick: we
+						"aria-busy": z.value,
+						disabled: z.value || !C.value,
+						class: F(["pointer-events-auto inline-flex h-11 w-11 items-center justify-center gap-2 !rounded-full rounded-md bg-black/50 text-base font-medium whitespace-nowrap text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black", z.value || !C.value ? "cursor-not-allowed opacity-30" : "cursor-pointer hover:bg-black/70"]),
+						onClick: Te
 					}, [_(V(eO), { class: "h-7 w-7" })], 10, Pve)) : d("", !0), S.value > 1 ? (L(), f("button", {
 						key: 1,
 						type: "button",
 						"data-testid": "media-next",
 						"aria-label": t.$t("next"),
-						"aria-busy": pe.value,
-						disabled: pe.value || !w.value,
-						class: F(["pointer-events-auto inline-flex h-11 w-11 items-center justify-center gap-2 !rounded-full rounded-md bg-black/50 text-base font-medium whitespace-nowrap text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black", pe.value || !w.value ? "cursor-not-allowed opacity-30" : "cursor-pointer hover:bg-black/70"]),
-						onClick: Te
+						"aria-busy": z.value,
+						disabled: z.value || !w.value,
+						class: F(["pointer-events-auto inline-flex h-11 w-11 items-center justify-center gap-2 !rounded-full rounded-md bg-black/50 text-base font-medium whitespace-nowrap text-white transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-black", z.value || !w.value ? "cursor-not-allowed opacity-30" : "cursor-pointer hover:bg-black/70"]),
+						onClick: Ee
 					}, [_(V(tO), { class: "h-7 w-7" })], 10, Fve)) : d("", !0)])])
 				]),
 				_: 1
@@ -79115,7 +79129,7 @@ var sFe = (e) => {
 	};
 }, fFe = (e, t, n) => {
 	let r = "", i = [], a = (e) => {
-		if (e.nodeType === Node.TEXT_NODE) r += e.textContent;
+		if (e.nodeType === Node.TEXT_NODE) r += e.parentElement?.closest("[data-at-caret-anchor]") ? e.textContent?.replace(/\u200b/g, "") : e.textContent;
 		else if (e.nodeType === Node.ELEMENT_NODE) {
 			let t = e;
 			if (t.tagName === "BR") r += "\n";
@@ -79218,13 +79232,13 @@ var sFe = (e) => {
 		v.value = !0;
 	}, M = () => {
 		setTimeout(() => {
-			v.value = !1;
+			v.value = !1, i.value === document.activeElement && F();
 		}, 0);
 	}, N = (e) => {
 		!v.value && !e.isComposing && e.key === "Enter" && !e.shiftKey && !r.value && !n.value.sendButtonEnabled && (e.preventDefault(), w());
 	}, ee = (e) => {
 		for (let t of Array.from(e.childNodes)) if (t.nodeType === Node.TEXT_NODE) {
-			if (!/^\s*$/.test(t.data)) return !1;
+			if (!/^[^\S\r\n]*$/.test(t.data)) return !1;
 		} else if (t.nodeType === Node.ELEMENT_NODE) {
 			if (t.contentEditable !== "false") return !1;
 		} else return !1;
@@ -79236,13 +79250,13 @@ var sFe = (e) => {
 		n?.removeAllRanges(), n?.addRange(t);
 	}, F = () => {
 		let e = i.value;
-		if (!e) return;
+		if (!e || v.value) return;
 		let t = e.lastChild;
 		if (ee(e) && t?.nodeType === Node.TEXT_NODE && /^\s*$/.test(t.data)) {
-			let e = t;
-			e.data ||= " ";
-			let n = window.getSelection(), r = n?.rangeCount ? n.getRangeAt(0) : null;
-			r?.collapsed && r.startContainer === e && r.startOffset === 0 && te(e);
+			let n = t;
+			n.data ||= " ";
+			let r = window.getSelection(), i = r?.rangeCount ? r.getRangeAt(0) : null;
+			(!i && document.activeElement === e || i?.collapsed && i.startContainer === n && i.startOffset === 0) && te(n);
 			return;
 		}
 		if (!t || t.nodeType !== Node.ELEMENT_NODE || t.contentEditable !== "false") return;
@@ -79288,7 +79302,7 @@ var sFe = (e) => {
 		onInput: () => {
 			if (!i.value) return;
 			F();
-			let e = i.value.innerText || "";
+			let e = (i.value.innerText || "").replace(/\u200b/g, "");
 			if (!e.trim()) {
 				_.value = "", i.value.textContent = "";
 				return;
@@ -79296,7 +79310,7 @@ var sFe = (e) => {
 			_.value = e;
 		},
 		onFormatApplied: () => {
-			i.value && (_.value = i.value.innerText || "");
+			i.value && (_.value = (i.value.innerText || "").replace(/\u200b/g, ""));
 		},
 		ensureCaretAnchor: F
 	};
@@ -81335,9 +81349,12 @@ function yIe(e, t = 13, n = 7) {
 //#endregion
 //#region src/utils/roomTitle.ts
 function p9(e) {
+	return e.isGroup ? ` (${e.memberIds.length})` : "";
+}
+function bIe(e) {
 	return {
 		truncatedName: yIe(e.displayName ?? ""),
-		countSuffix: e.isGroup ? ` (${e.memberIds.length})` : ""
+		countSuffix: p9(e)
 	};
 }
 //#endregion
@@ -81363,9 +81380,9 @@ function h9(e, t) {
 	if (!e) return;
 	let n = e;
 	for (; n && n.nodeType !== 1;) n = n.previousSibling;
-	e = n || e.parentNode, e && bIe(e, t);
+	e = n || e.parentNode, e && xIe(e, t);
 }
-function bIe(e, t) {
+function xIe(e, t) {
 	if (e.scrollIntoViewIfNeeded) e.scrollIntoViewIfNeeded(!1);
 	else {
 		t ||= e.parentElement;
@@ -81390,10 +81407,10 @@ function v9(e, t) {
 		index: -1
 	});
 }
-function xIe({ prev: e, chunk: t, allowSpaces: n }) {
+function SIe({ prev: e, chunk: t, allowSpaces: n }) {
 	return !(e !== void 0 && !/\s/.test(e) || /^\s/.test(t) || !n && /\s/.test(t));
 }
-function SIe(e, t) {
+function CIe(e, t) {
 	t ||= window;
 	for (var n = {
 		top: e.offsetTop,
@@ -81401,7 +81418,7 @@ function SIe(e, t) {
 	}, r = e.offsetParent; r != null && r != t;) n.left += r.offsetLeft, n.top += r.offsetTop, r = r.offsetParent;
 	return n;
 }
-function CIe(e, t) {
+function wIe(e, t) {
 	do
 		if (t(e)) return e;
 	while (e &&= e.parentNode);
@@ -81415,7 +81432,7 @@ function y9() {
 }
 //#endregion
 //#region src/components/at/At.vue
-var wIe = {
+var TIe = {
 	name: "VueAt",
 	props: {
 		value: {
@@ -81506,7 +81523,7 @@ var wIe = {
 			if (this.atwho) {
 				let { x: e, y: t } = this.atwho, { wrap: n } = this.$refs;
 				if (n) {
-					let r = SIe(n), i = this.scrollRef ? document.querySelector(this.scrollRef) : null, a = i ? i.scrollLeft : 0, o = i ? i.scrollTop : 0;
+					let r = CIe(n), i = this.scrollRef ? document.querySelector(this.scrollRef) : null, a = i ? i.scrollLeft : 0, o = i ? i.scrollTop : 0;
 					return {
 						left: e + a + window.pageXOffset - r.left + "px",
 						top: t + o + window.pageYOffset - r.top + "px"
@@ -81557,7 +81574,28 @@ var wIe = {
 		handleItemClick(e) {
 			this.selectByMouse(e), this.insertItem();
 		},
+		insertMentionLineBreak() {
+			if (!this.customsEmbedded || this.hasComposition) return !1;
+			let e = _9(), t = this.$el.querySelector("[contenteditable]");
+			if (!e?.collapsed || !t?.contains(e.startContainer)) return !1;
+			let { startContainer: n, startOffset: r } = e, i = null;
+			for (n.nodeType === Node.TEXT_NODE ? r === n.length && (i = n.nextSibling) : i = n.childNodes[r]; i?.nodeType === Node.TEXT_NODE && !i.data;) i = i.nextSibling;
+			let a = i?.nodeType === Node.ELEMENT_NODE && i.hasAttribute("data-at-embedded"), o = n.parentElement?.closest("[data-at-caret-anchor]");
+			if (!a && !o && !this.findPrecedingEmbedded()) return !1;
+			if (document.execCommand("insertHTML", !1, a ? "<br><span data-at-caret-anchor>​</span>" : "<br>"), a) {
+				let e = i.previousSibling;
+				if (e?.nodeType === Node.ELEMENT_NODE && e.hasAttribute("data-at-caret-anchor") && e.firstChild) {
+					let t = document.createRange();
+					t.setStart(e.firstChild, 0), t.collapse(!0), g9(t);
+				}
+			}
+			return !0;
+		},
 		handleBeforeInput(e) {
+			if (!e.defaultPrevented && e.cancelable && e.inputType === "insertLineBreak" && !e.isComposing && this.insertMentionLineBreak()) {
+				e.preventDefault();
+				return;
+			}
 			if (!this.customsEmbedded || e.inputType !== "deleteContentBackward") return;
 			let t = this.findPrecedingEmbedded();
 			t && (e.preventDefault(), e.stopPropagation(), this.removeEmbedded(t));
@@ -81577,7 +81615,7 @@ var wIe = {
 				i = i.parentNode;
 			}
 			let a = null;
-			for (t.nodeType === Node.TEXT_NODE ? n === 0 && (a = t.previousSibling) : t.nodeType === Node.ELEMENT_NODE && n > 0 && (a = t.childNodes[n - 1]); a && a.nodeType === Node.TEXT_NODE && /^\s*$/.test(a.data);) a = a.previousSibling;
+			for (t.nodeType === Node.TEXT_NODE ? n === 0 && (a = t.previousSibling) : t.nodeType === Node.ELEMENT_NODE && n > 0 && (a = t.childNodes[n - 1]); a && a.nodeType === Node.TEXT_NODE && /^[^\S\r\n]*$/.test(a.data);) a = a.previousSibling;
 			return a && a.nodeType === Node.ELEMENT_NODE && a.hasAttribute("data-at-embedded") ? a : null;
 		},
 		handleDelete(e) {
@@ -81618,6 +81656,10 @@ var wIe = {
 					return;
 				}
 			}
+			if (e.key === "Enter" && e.shiftKey && !e.isComposing && this.insertMentionLineBreak()) {
+				e.preventDefault();
+				return;
+			}
 			(e.keyCode === 8 || e.key === "Backspace") && this.handleDelete(e);
 		},
 		handleCompositionStart() {
@@ -81629,14 +81671,14 @@ var wIe = {
 		handleInput(e) {
 			if (this.hasComposition) return;
 			let t = this.$el.querySelector("[contenteditable]");
-			if (t.textContent.trim() === "" && !t.querySelector("[data-at-embedded]")) for (; t.firstChild;) t.firstChild.remove();
+			if (t.textContent.replace(/\u200b/g, "").trim() === "" && !t.querySelector("[data-at-embedded]")) for (; t.firstChild;) t.firstChild.remove();
 			this.$emit("update:value", t.innerHTML);
 			let n = y9();
 			if (n) {
 				let { atItems: t, allowSpaces: r, showUnique: i } = this, a = !0, o = n.toString(), { at: s, index: c } = v9(o, t);
 				c < 0 && (a = !1);
 				let l = o[c - 1], u = o.slice(c + s.length, o.length);
-				if (a &&= xIe({
+				if (a &&= SIe({
 					prev: l,
 					chunk: u,
 					allowSpaces: r
@@ -81689,7 +81731,7 @@ var wIe = {
 			h9(n, r);
 		},
 		selectByMouse(e) {
-			let t = +CIe(e.target, (e) => e.getAttribute("data-index")).getAttribute("data-index");
+			let t = +wIe(e.target, (e) => e.getAttribute("data-index")).getAttribute("data-index");
 			this.atwho = {
 				...this.atwho,
 				cur: t
@@ -81744,8 +81786,8 @@ var wIe = {
 			return e = e.trim(), t.innerHTML = e, t.content.firstChild;
 		}
 	}
-}, TIe = { class: "atwho-inner" }, EIe = { class: "atwho-view" }, DIe = { class: "atwho-ul" }, OIe = ["data-index"], kIe = ["textContent"], AIe = { ref: "embeddedItem" };
-function jIe(e, t, r, i, a, o) {
+}, EIe = { class: "atwho-inner" }, DIe = { class: "atwho-view" }, OIe = { class: "atwho-ul" }, kIe = ["data-index"], AIe = ["textContent"], jIe = { ref: "embeddedItem" };
+function MIe(e, t, r, i, a, o) {
 	return L(), f("div", {
 		ref: "wrap",
 		class: "atwho-wrap",
@@ -81759,19 +81801,19 @@ function jIe(e, t, r, i, a, o) {
 			key: 0,
 			class: "atwho-panel",
 			style: re(o.style)
-		}, [p("div", TIe, [p("div", EIe, [p("ul", DIe, [(L(!0), f(n, null, pe(a.atwho.list, (n, r) => (L(), f("li", {
+		}, [p("div", EIe, [p("div", DIe, [p("ul", OIe, [(L(!0), f(n, null, pe(a.atwho.list, (n, r) => (L(), f("li", {
 			key: r,
 			class: F(["atwho-li", o.isCur(r) && "atwho-cur"]),
 			"data-index": r,
 			onMousedown: t[0] ||= Le(() => {}, ["prevent"]),
 			onMouseenter: t[1] ||= (...e) => o.handleItemHover && o.handleItemHover(...e),
 			onClick: t[2] ||= (...e) => o.handleItemClick && o.handleItemClick(...e)
-		}, [z(e.$slots, "item", { item: n }, () => [p("span", { textContent: B(o.itemName(n)) }, null, 8, kIe)])], 42, OIe))), 128))])])])], 4)) : d("", !0),
-		Pe(p("span", AIe, [z(e.$slots, "embeddedItem", { current: o.currentItem })], 512), [[je, !1]]),
+		}, [z(e.$slots, "item", { item: n }, () => [p("span", { textContent: B(o.itemName(n)) }, null, 8, AIe)])], 42, kIe))), 128))])])])], 4)) : d("", !0),
+		Pe(p("span", jIe, [z(e.$slots, "embeddedItem", { current: o.currentItem })], 512), [[je, !1]]),
 		z(e.$slots, "default")
 	], 544);
 }
-var MIe = /*#__PURE__*/ LT(wIe, [["render", jIe]]), NIe = (/* @__PURE__ */ Ke(((e, t) => {
+var NIe = /*#__PURE__*/ LT(TIe, [["render", MIe]]), PIe = (/* @__PURE__ */ Ke(((e, t) => {
 	function n(e, t) {
 		if (!e) throw "First parameter is required.";
 		t ||= { type: "video" }, t = new r(e, t);
@@ -83526,33 +83568,33 @@ var MIe = /*#__PURE__*/ LT(wIe, [["render", jIe]]), NIe = (/* @__PURE__ */ Ke(((
 		}, this.blob = null;
 	}
 	n !== void 0 && (n.WebAssemblyRecorder = P);
-})))(), PIe = {}, FIe = {
+})))(), FIe = {}, IIe = {
 	xmlns: "http://www.w3.org/2000/svg",
 	width: "128",
 	height: "128",
 	version: "1.0",
 	viewBox: "0 0 96 96"
 };
-function IIe(e, t) {
-	return L(), f("svg", FIe, [...t[0] ||= [p("path", { d: "M9.2 13.2C8.4 14 8 18.6 8 27.1 8 37.3 8.3 40 9.6 41c.9.9 11.2 2.3 27.5 3.9C51.3 46.3 63 47.7 63 48c0 .3-11.7 1.7-25.9 3.1-16.3 1.6-26.6 3-27.5 3.9C8.3 56 8 58.7 8 69c0 13.8.7 15.8 5.2 14.6 5.7-1.6 73.3-32.5 74.2-33.9.8-1.2.8-2.2 0-3.4-1-1.6-72.6-34.1-75.4-34.2-.9-.1-2.1.4-2.8 1.1z" }, null, -1)]]);
+function LIe(e, t) {
+	return L(), f("svg", IIe, [...t[0] ||= [p("path", { d: "M9.2 13.2C8.4 14 8 18.6 8 27.1 8 37.3 8.3 40 9.6 41c.9.9 11.2 2.3 27.5 3.9C51.3 46.3 63 47.7 63 48c0 .3-11.7 1.7-25.9 3.1-16.3 1.6-26.6 3-27.5 3.9C8.3 56 8 58.7 8 69c0 13.8.7 15.8 5.2 14.6 5.7-1.6 73.3-32.5 74.2-33.9.8-1.2.8-2.2 0-3.4-1-1.6-72.6-34.1-75.4-34.2-.9-.1-2.1.4-2.8 1.1z" }, null, -1)]]);
 }
-var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
+var RIe = /*#__PURE__*/ LT(FIe, [["render", LIe]]), b9 = /* @__PURE__ */ b({
 	__name: "MessageSendButton",
 	props: { enabled: { type: Boolean } },
 	emits: ["click"],
 	setup(e, { emit: t }) {
 		let n = t;
-		return (t, r) => (L(), u(LIe, {
+		return (t, r) => (L(), u(RIe, {
 			"data-testid": "send-button",
 			class: F(["h-6 w-6 shrink-0", e.enabled ? "cursor-pointer fill-accent-vivid" : "cursor-not-allowed fill-content-faint"]),
 			onMousedown: r[0] ||= Le(() => {}, ["prevent"]),
 			onClick: r[1] ||= (t) => e.enabled && n("click")
 		}, null, 8, ["class"]));
 	}
-}), RIe = { class: "flex grow items-center gap-1" }, zIe = { class: "relative flex h-11 w-0 min-w-0 grow items-center gap-3 rounded-xl bg-surface-muted px-3" }, BIe = {
+}), zIe = { class: "flex grow items-center gap-1" }, BIe = { class: "relative flex h-11 w-0 min-w-0 grow items-center gap-3 rounded-xl bg-surface-muted px-3" }, VIe = {
 	key: 0,
 	class: "flex items-center gap-1 rounded-lg bg-surface p-2 text-xs text-content-muted transition duration-150 ease-in-out"
-}, VIe = { class: "volumes" }, HIe = { class: "ml-auto rounded-full bg-accent px-2 py-1 text-xs font-bold text-white" }, x9 = "audio/webm", UIe = 180, WIe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
+}, HIe = { class: "volumes" }, UIe = { class: "ml-auto rounded-full bg-accent px-2 py-1 text-xs font-bold text-white" }, x9 = "audio/webm", WIe = 180, GIe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
 	__name: "AudioInput",
 	setup(e) {
 		let { t } = ze(), r = pD(), a = IT(), o = c(() => a.styles), s = R(3), l = R(), u = R(), m = R(), h = R(), v = R(0), y = R(0), b = R(), x = R(), S = de([]), C = R(""), w = !1, T = c(() => v.value > 1), E = () => {
@@ -83568,7 +83610,7 @@ var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
 							E();
 							return;
 						}
-						u.value = new NIe.RecordRTCPromisesHandler(l.value, {
+						u.value = new PIe.RecordRTCPromisesHandler(l.value, {
 							type: "audio",
 							mimeType: x9
 						});
@@ -83585,7 +83627,7 @@ var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
 							return;
 						}
 						y.value = Date.now(), b.value = window.setInterval(() => {
-							v.value = (Date.now() - y.value) / 1e3, v.value >= UIe && D();
+							v.value = (Date.now() - y.value) / 1e3, v.value >= WIe && D();
 						}, 1e3), s.value = 1;
 						break;
 					}
@@ -83620,7 +83662,7 @@ var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
 			D();
 		}), ce(() => {
 			w = !0, E();
-		}), (e, t) => (L(), f("div", RIe, [p("div", zIe, [
+		}), (e, t) => (L(), f("div", zIe, [p("div", BIe, [
 			p("div", {
 				"data-testid": "audio-record-button",
 				class: "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border",
@@ -83630,18 +83672,18 @@ var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
 				"cursor-not-allowed bg-danger/50": C.value
 			}]) }, null, 2)]),
 			_(i, null, {
-				default: U(() => [C.value ? (L(), f("div", BIe, [_(V(IO), {
+				default: U(() => [C.value ? (L(), f("div", VIe, [_(V(IO), {
 					size: 16,
 					class: "h-4 w-4 text-content-muted"
 				}), g(" " + B(C.value), 1)])) : d("", !0)]),
 				_: 1
 			}),
-			p("div", VIe, [(L(!0), f(n, null, pe(S, (e, t) => (L(), f("div", {
+			p("div", HIe, [(L(!0), f(n, null, pe(S, (e, t) => (L(), f("div", {
 				key: t,
 				class: "min-h-0.5! w-0.5 shrink-0 rounded-sm bg-content-faint",
 				style: re({ height: `${e * 28}px` })
 			}, null, 4))), 128))]),
-			p("div", HIe, B(Math.floor(v.value / 60)) + ":" + B(`${Math.floor(v.value % 60)}`.padStart(2, "0")), 1)
+			p("div", UIe, B(Math.floor(v.value / 60)) + ":" + B(`${Math.floor(v.value % 60)}`.padStart(2, "0")), 1)
 		]), _(b9, {
 			enabled: T.value,
 			class: "mr-1 ml-2",
@@ -83649,13 +83691,13 @@ var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
 			onClick: O
 		}, null, 8, ["enabled", "style"])]));
 	}
-}), [["__scopeId", "data-v-d9f54f89"]]), GIe = {
+}), [["__scopeId", "data-v-d9f54f89"]]), KIe = {
 	key: 0,
 	class: "border-b border-border bg-field px-4 py-2.5"
-}, KIe = { class: "flex items-center gap-2.5" }, qIe = { class: "min-w-0 flex-1" }, JIe = { class: "flex items-center gap-1.5 text-xs font-semibold text-accent-vivid" }, YIe = { class: "truncate" }, XIe = {
+}, qIe = { class: "flex items-center gap-2.5" }, JIe = { class: "min-w-0 flex-1" }, YIe = { class: "flex items-center gap-1.5 text-xs font-semibold text-accent-vivid" }, XIe = { class: "truncate" }, ZIe = {
 	"data-testid": "edit-preview-body",
 	class: "truncate text-xs text-content-subtle"
-}, ZIe = /* @__PURE__ */ b({
+}, QIe = /* @__PURE__ */ b({
 	__name: "EditMessagePreview",
 	setup(e) {
 		let t = pD(), { t: n } = ze(), r = c(() => {
@@ -83667,17 +83709,17 @@ var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
 		}), a = () => {
 			t.$patch({ editingMessageId: "" });
 		};
-		return (e, t) => r.value ? (L(), f("div", GIe, [p("div", KIe, [p("div", qIe, [p("div", JIe, [_(V(vO), {
+		return (e, t) => r.value ? (L(), f("div", KIe, [p("div", qIe, [p("div", JIe, [p("div", YIe, [_(V(vO), {
 			size: 14,
 			class: "h-3.5 w-3.5 shrink-0"
-		}), p("span", YIe, B(V(n)("editMessage")), 1)]), p("div", XIe, B(i.value), 1)]), _(V(IO), {
+		}), p("span", XIe, B(V(n)("editMessage")), 1)]), p("div", ZIe, B(i.value), 1)]), _(V(IO), {
 			"data-testid": "edit-preview-close",
 			size: 20,
 			class: "h-5 w-5 shrink-0 cursor-pointer rounded-md p-0.5 text-content-muted hover:bg-surface hover:text-content",
 			onClick: a
 		})])])) : d("", !0);
 	}
-}), QIe = /* @__PURE__ */ b({
+}), $Ie = /* @__PURE__ */ b({
 	__name: "EndChatModal",
 	setup(e) {
 		let t = vc(), n = IT(), r = c(() => n.callbacks), i = () => {
@@ -83705,7 +83747,7 @@ var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
 			"confirm-label"
 		]));
 	}
-}), $Ie = /* @__PURE__ */ b({
+}), eLe = /* @__PURE__ */ b({
 	__name: "FileSizeLimitModal",
 	props: { fileSizeLimit: {} },
 	setup(e) {
@@ -83720,13 +83762,13 @@ var LIe = /*#__PURE__*/ LT(PIe, [["render", IIe]]), b9 = /* @__PURE__ */ b({
 			_: 1
 		}, 8, ["title", "confirm-label"]));
 	}
-}), eLe = {
+}), tLe = {
 	"aria-hidden": "true",
 	class: "absolute inset-x-0 bottom-0 h-px bg-border"
 }, S9 = /* @__PURE__ */ b({
 	__name: "HeaderDivider",
 	setup(e) {
-		return (e, t) => (L(), f("div", eLe));
+		return (e, t) => (L(), f("div", tLe));
 	}
 });
 //#endregion
@@ -83771,7 +83813,7 @@ var T9 = /* @__PURE__ */ function(e) {
 	get isValid() {
 		return this.address !== null;
 	}
-}, tLe = b({
+}, nLe = b({
 	components: {
 		GoogleMap: MZ,
 		AdvancedMarker: LZ,
@@ -83884,14 +83926,14 @@ var T9 = /* @__PURE__ */ function(e) {
 			}
 		};
 	}
-}), nLe = { class: "relative flex justify-center" }, rLe = {
+}), rLe = { class: "relative flex justify-center" }, iLe = {
 	key: 0,
 	class: "absolute bottom-12 left-1/2 flex max-w-[calc(100%-5rem)] -translate-x-1/2 items-center gap-1 rounded-full border border-border bg-surface p-2 text-xs text-content shadow-raised"
-}, iLe = ["disabled"], aLe = {
+}, aLe = ["disabled"], oLe = {
 	key: 0,
 	class: "flex h-10.5 w-full items-center justify-center"
-}, oLe = { class: "text-base font-semibold" }, sLe = { class: "text-xs" };
-function cLe(e, t, r, a, o, s) {
+}, sLe = { class: "text-base font-semibold" }, cLe = { class: "text-xs" };
+function lLe(e, t, r, a, o, s) {
 	let c = me("AdvancedMarker"), l = me("google-map"), m = me("CloseSvg"), h = me("LocateFixed"), v = me("X"), y = me("vue-final-modal");
 	return L(), u(y, {
 		class: "flex items-center justify-center",
@@ -83899,7 +83941,7 @@ function cLe(e, t, r, a, o, s) {
 		"content-transition": "vfm-fade",
 		"overlay-transition": "vfm-fade"
 	}, {
-		default: U(() => [p("div", nLe, [
+		default: U(() => [p("div", rLe, [
 			_(l, {
 				ref: "mapRef",
 				"api-key": e.apiKey,
@@ -83930,7 +83972,7 @@ function cLe(e, t, r, a, o, s) {
 				class: F(["text-content-muted", { "animate-pulse": e.isGettingCurrentPosition }])
 			}, null, 8, ["class"])]),
 			_(i, null, {
-				default: U(() => [e.geolocationPositionErrorMessage ? (L(), f("div", rLe, [_(v, {
+				default: U(() => [e.geolocationPositionErrorMessage ? (L(), f("div", iLe, [_(v, {
 					size: 16,
 					class: "text-danger-vivid"
 				}), g(" " + B(e.geolocationPositionErrorMessage), 1)])) : d("", !0)]),
@@ -83940,7 +83982,7 @@ function cLe(e, t, r, a, o, s) {
 			class: "m-2 flex flex-col items-center gap-0.5 rounded-md bg-accent p-2 text-white disabled:cursor-not-allowed disabled:bg-accent-subtle disabled:text-accent-vivid",
 			disabled: e.isGettingCurrentPosition || e.isRequesting || !e.location.isValid,
 			onClick: t[3] ||= (...t) => e.send && e.send(...t)
-		}, [e.isRequesting ? (L(), f("div", aLe, [...t[4] ||= [p("svg", {
+		}, [e.isRequesting ? (L(), f("div", oLe, [...t[4] ||= [p("svg", {
 			class: "h-6 w-6 animate-spin fill-white text-surface-muted",
 			viewBox: "0 0 100 101",
 			fill: "none",
@@ -83951,15 +83993,15 @@ function cLe(e, t, r, a, o, s) {
 		}), p("path", {
 			d: "M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z",
 			fill: "currentFill"
-		})], -1)]])) : (L(), f(n, { key: 1 }, [p("div", oLe, B(e.$t("sendCurrentLocation")), 1), p("div", sLe, B(e.address), 1)], 64))], 8, iLe)]),
+		})], -1)]])) : (L(), f(n, { key: 1 }, [p("div", sLe, B(e.$t("sendCurrentLocation")), 1), p("div", cLe, B(e.address), 1)], 64))], 8, aLe)]),
 		_: 1
 	});
 }
-var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1"]]), uLe = "/dashboard/settings_payment_flow", dLe = /* @__PURE__ */ b({
+var uLe = /*#__PURE__*/ LT(nLe, [["render", lLe], ["__scopeId", "data-v-66896ca1"]]), dLe = "/dashboard/settings_payment_flow", fLe = /* @__PURE__ */ b({
 	__name: "PaymentCollectionNotSetModal",
 	setup(e) {
 		let t = vc(), n = () => {
-			window.location.href = uLe;
+			window.location.href = dLe;
 		};
 		return (e, r) => (L(), u(zT, {
 			title: e.$t("paymentCollectionNotSet"),
@@ -83978,22 +84020,22 @@ var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1
 			"cancel-label"
 		]));
 	}
-}), fLe = { class: "flex flex-col" }, pLe = { class: "text-xl font-semibold text-content" }, mLe = { class: "mt-5 flex w-full items-end" }, hLe = { class: "mr-2 text-xl font-medium text-content" }, gLe = ["value"], _Le = { class: "mt-5 flex w-full flex-col" }, vLe = { class: "mr-2 text-xs font-normal text-content-muted" }, yLe = ["value"], bLe = { class: "mt-4 flex w-full flex-col" }, xLe = { class: "mr-2 text-xs font-normal text-content-muted" }, SLe = { class: "mt-1 flex" }, CLe = {
+}), pLe = { class: "flex flex-col" }, mLe = { class: "text-xl font-semibold text-content" }, hLe = { class: "mt-5 flex w-full items-end" }, gLe = { class: "mr-2 text-xl font-medium text-content" }, _Le = ["value"], vLe = { class: "mt-5 flex w-full flex-col" }, yLe = { class: "mr-2 text-xs font-normal text-content-muted" }, bLe = ["value"], xLe = { class: "mt-4 flex w-full flex-col" }, SLe = { class: "mr-2 text-xs font-normal text-content-muted" }, CLe = { class: "mt-1 flex" }, wLe = {
 	key: 0,
 	class: "mr-4",
 	src: w2,
 	alt: "LINE Pay Logo"
-}, wLe = {
+}, TLe = {
 	key: 1,
 	class: "mr-4",
 	src: T2,
 	alt: "Stripe Logo"
-}, TLe = {
+}, ELe = {
 	key: 2,
 	class: "mr-4",
 	src: E2,
 	alt: "Paypal Logo"
-}, ELe = { class: "mt-4 flex w-full flex-col" }, DLe = { class: "mr-2 text-xs font-normal text-content-muted" }, OLe = ["placeholder"], kLe = { class: "flex items-center justify-end gap-2" }, ALe = ["disabled"], jLe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
+}, DLe = { class: "mt-4 flex w-full flex-col" }, OLe = { class: "mr-2 text-xs font-normal text-content-muted" }, kLe = ["placeholder"], ALe = { class: "flex items-center justify-end gap-2" }, jLe = ["disabled"], MLe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
 	__name: "PaymentCollectionRequestModal",
 	props: {
 		isLinePayEnabled: { type: Boolean },
@@ -84031,60 +84073,60 @@ var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1
 			"content-transition": "vfm-fade",
 			"overlay-transition": "vfm-fade"
 		}, {
-			default: U(() => [p("div", fLe, [
-				p("h1", pLe, B(e.$t("paymentSendRequestMessage")), 1),
-				p("div", mLe, [p("p", hLe, B(h.value), 1), p("input", {
+			default: U(() => [p("div", pLe, [
+				p("h1", mLe, B(e.$t("paymentSendRequestMessage")), 1),
+				p("div", hLe, [p("p", gLe, B(h.value), 1), p("input", {
 					type: "text",
 					value: m.value,
 					placeholder: "0",
 					class: "hide-spin mb-[-8px] block h-full w-full px-[12px] py-0 !text-[40px] font-medium outline-none",
 					onBlur: E,
 					onInput: T
-				}, null, 40, gLe)]),
-				p("div", _Le, [p("p", vLe, B(e.$t("currency")), 1), Pe(p("select", {
+				}, null, 40, _Le)]),
+				p("div", vLe, [p("p", yLe, B(e.$t("currency")), 1), Pe(p("select", {
 					"onUpdate:modelValue": t[0] ||= (e) => h.value = e,
 					class: "mt-1 mb-4 h-[34px] w-full appearance-none rounded-md border-none bg-surface-muted px-[10px] text-content outline-none"
 				}, [(L(), f(n, null, pe(r, (e) => p("option", {
 					key: e,
 					value: e
-				}, B(e), 9, yLe)), 64))], 512), [[ke, h.value]])]),
-				p("div", bLe, [p("p", xLe, B(e.$t("paymentSupportedMethods")), 1), p("div", SLe, [
-					b.value ? (L(), f("img", CLe)) : d("", !0),
-					x.value ? (L(), f("img", wLe)) : d("", !0),
-					S.value ? (L(), f("img", TLe)) : d("", !0)
+				}, B(e), 9, bLe)), 64))], 512), [[ke, h.value]])]),
+				p("div", xLe, [p("p", SLe, B(e.$t("paymentSupportedMethods")), 1), p("div", CLe, [
+					b.value ? (L(), f("img", wLe)) : d("", !0),
+					x.value ? (L(), f("img", TLe)) : d("", !0),
+					S.value ? (L(), f("img", ELe)) : d("", !0)
 				])]),
-				p("div", ELe, [p("p", DLe, B(e.$t("paymentRequestMessage")), 1), Pe(p("input", {
+				p("div", DLe, [p("p", OLe, B(e.$t("paymentRequestMessage")), 1), Pe(p("input", {
 					"onUpdate:modelValue": t[1] ||= (e) => g.value = e,
 					class: "mt-1 h-[40px] gap-[10px] rounded-md bg-surface-muted px-[12px] py-[10px] outline-none",
 					type: "text",
 					placeholder: e.$t("paymentInputMessageOptional"),
 					maxlength: "100"
-				}, null, 8, OLe), [[Ae, g.value]])])
-			]), p("div", kLe, [p("button", {
+				}, null, 8, kLe), [[Ae, g.value]])])
+			]), p("div", ALe, [p("button", {
 				class: "inline-flex h-10 w-auto cursor-pointer items-center justify-center rounded-md bg-surface-muted px-4 text-base font-medium text-content transition-colors hover:bg-border",
 				onClick: t[2] ||= (e) => V(o).closeAll()
 			}, B(e.$t("cancel")), 1), p("button", {
 				disabled: !C.value,
 				class: "inline-flex h-10 w-auto cursor-pointer items-center justify-center rounded-md bg-accent px-4 text-base font-medium text-white transition-colors disabled:cursor-not-allowed disabled:opacity-50",
 				onClick: w
-			}, B(e.$t("submit")), 9, ALe)])]),
+			}, B(e.$t("submit")), 9, jLe)])]),
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-f90715cf"]]), MLe = {
+}), [["__scopeId", "data-v-f90715cf"]]), NLe = {
 	key: 0,
 	"data-testid": "reply-quoted-bar",
 	class: "border-b border-border bg-field px-4 py-2.5"
-}, NLe = { class: "flex items-center gap-2.5" }, PLe = { class: "min-w-0 flex-1" }, FLe = { class: "flex items-center gap-1.5 text-xs font-semibold text-accent-vivid" }, ILe = { class: "truncate" }, LLe = {
+}, PLe = { class: "flex items-center gap-2.5" }, FLe = { class: "min-w-0 flex-1" }, ILe = { class: "flex items-center gap-1.5 text-xs font-semibold text-accent-vivid" }, LLe = { class: "truncate" }, RLe = {
 	"data-testid": "reply-preview-body",
 	class: "truncate text-xs text-content"
-}, RLe = {
+}, zLe = {
 	key: 0,
 	class: "h-8 w-8 shrink-0 overflow-hidden rounded-md bg-surface [&>img]:h-8 [&>img]:w-8 [&>img]:object-cover"
-}, zLe = {
+}, BLe = {
 	key: 2,
 	class: "flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-surface"
-}, BLe = /* @__PURE__ */ b({
+}, VLe = /* @__PURE__ */ b({
 	__name: "ReplyMessagePreview",
 	setup(e) {
 		let t = pD(), { t: n } = ze(), r = c(() => {
@@ -84110,19 +84152,19 @@ var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1
 		}), s = c(() => r.value), l = c(() => r.value), m = () => {
 			t.$patch({ replyId: "" });
 		};
-		return (e, t) => r.value ? (L(), f("div", MLe, [p("div", NLe, [
-			p("div", PLe, [p("div", FLe, [_(V(wO), {
+		return (e, t) => r.value ? (L(), f("div", NLe, [p("div", PLe, [
+			p("div", FLe, [p("div", ILe, [_(V(wO), {
 				size: 14,
 				class: "h-3.5 w-3.5 shrink-0"
-			}), p("span", ILe, B(V(n)("reply")) + " " + B(i.value?.nickname), 1)]), p("div", LLe, B(a.value), 1)]),
-			r.value.type === V($).Sticker ? (L(), f("div", RLe, [_(j2, { message: s.value }, null, 8, ["message"])])) : d("", !0),
+			}), p("span", LLe, B(V(n)("reply")) + " " + B(i.value?.nickname), 1)]), p("div", RLe, B(a.value), 1)]),
+			r.value.type === V($).Sticker ? (L(), f("div", zLe, [_(j2, { message: s.value }, null, 8, ["message"])])) : d("", !0),
 			r.value.type === V($).Video ? (L(), u(gZ, {
 				key: 1,
 				url: l.value.video.thumbnailUrl,
 				kind: "video",
 				"img-class": "h-8 w-8 shrink-0 rounded-md object-cover"
 			}, null, 8, ["url"])) : d("", !0),
-			r.value.type === V($).File ? (L(), f("div", zLe, [_(V(fO), {
+			r.value.type === V($).File ? (L(), f("div", BLe, [_(V(fO), {
 				size: 18,
 				class: "text-accent-vivid"
 			})])) : d("", !0),
@@ -84140,11 +84182,11 @@ var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1
 			})
 		])])) : d("", !0);
 	}
-}), VLe = { class: "relative flex grow items-center rounded-full bg-field px-4 py-3 focus-within:ring-1 focus-within:ring-border-strong" }, HLe = {
+}), HLe = { class: "relative flex grow items-center rounded-full bg-field px-4 py-3 focus-within:ring-1 focus-within:ring-border-strong" }, ULe = {
 	key: 0,
 	"data-testid": "search-loading",
 	class: "flex h-5 w-5 items-center justify-center"
-}, ULe = ["placeholder"], WLe = { class: "absolute top-1/2 right-4 flex -translate-y-1/2 items-center justify-center" }, GLe = { class: "mr-4 pb-0.5 text-base font-medium text-content-subtle" }, KLe = ["aria-label"], qLe = /* @__PURE__ */ b({
+}, WLe = ["placeholder"], GLe = { class: "absolute top-1/2 right-4 flex -translate-y-1/2 items-center justify-center" }, KLe = { class: "mr-4 pb-0.5 text-base font-medium text-content-subtle" }, qLe = ["aria-label"], JLe = /* @__PURE__ */ b({
 	__name: "SearchPanel",
 	setup(e) {
 		let t = pD(), r = IT(), i = R(""), a = R(0), o = R([]), s = R(!1), l = R(!1), m = async () => {
@@ -84187,8 +84229,8 @@ var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1
 			style: re(y.value.chatRoomHeader)
 		}, [
 			_(S9),
-			p("div", VLe, [
-				p("div", null, [l.value ? (L(), f("div", HLe, [_(RT)])) : (L(), u(V(EO), {
+			p("div", HLe, [
+				p("div", null, [l.value ? (L(), f("div", ULe, [_(RT)])) : (L(), u(V(EO), {
 					key: 1,
 					size: 20,
 					class: "h-4.5 w-4.5 cursor-pointer text-content-muted"
@@ -84201,9 +84243,9 @@ var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1
 					placeholder: e.$t("searchInConversation"),
 					onCompositionstart: t[1] ||= (e) => s.value = !0,
 					onCompositionend: t[2] ||= (e) => s.value = !1
-				}, null, 40, ULe), [[Ae, i.value]]),
-				p("div", WLe, [!l.value && i.value.length > 0 ? (L(), f(n, { key: 0 }, [
-					p("div", GLe, B(a.value) + "/" + B(o.value.length), 1),
+				}, null, 40, WLe), [[Ae, i.value]]),
+				p("div", GLe, [!l.value && i.value.length > 0 ? (L(), f(n, { key: 0 }, [
+					p("div", KLe, B(a.value) + "/" + B(o.value.length), 1),
 					a.value > 1 ? (L(), u(V(nO), {
 						key: 0,
 						size: 20,
@@ -84231,7 +84273,7 @@ var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1
 					"aria-label": e.$t("clear"),
 					class: "flex h-5 w-5 cursor-pointer appearance-none items-center justify-center border-0 bg-transparent p-0 text-content-muted hover:text-content focus-visible:ring-1 focus-visible:ring-accent-vivid focus-visible:outline-none",
 					onClick: x
-				}, [_(V(ofe), { size: 20 })], 8, KLe)) : d("", !0)])
+				}, [_(V(ofe), { size: 20 })], 8, qLe)) : d("", !0)])
 			]),
 			p("button", {
 				type: "button",
@@ -84243,15 +84285,15 @@ var lLe = /*#__PURE__*/ LT(tLe, [["render", cLe], ["__scopeId", "data-v-66896ca1
 			}, B(e.$t("cancel")), 1)
 		], 4));
 	}
-}), JLe = {}, YLe = {
+}), YLe = {}, XLe = {
 	width: "24",
 	height: "24",
 	viewBox: "0 0 24 24",
 	fill: "none",
 	xmlns: "http://www.w3.org/2000/svg"
 };
-function XLe(e, t) {
-	return L(), f("svg", YLe, [...t[0] ||= [
+function ZLe(e, t) {
+	return L(), f("svg", XLe, [...t[0] ||= [
 		p("path", {
 			d: "M14.3163 5.88986L15.9608 7.10645C16.1459 7.24337 16.0523 7.54637 15.8183 7.54783L15.3022 7.55097C15.3017 7.55097 15.3012 7.55097 15.3007 7.55097C15.168 7.55097 15.0596 7.44353 15.0588 7.31078C15.0564 6.92247 14.7399 6.60883 14.3514 6.61202C13.9631 6.61441 13.6502 6.93114 13.6526 7.31945C13.6572 8.06969 14.1652 8.70081 14.8536 8.89516V8.92919C14.8536 9.3175 15.1685 9.63231 15.5567 9.63231C15.945 9.63231 16.2598 9.3175 16.2598 8.92919V8.8937C16.5337 8.81777 16.7845 8.6717 16.9896 8.46395C17.2991 8.15055 17.468 7.73542 17.4649 7.29391V7.2895C17.4614 6.77378 17.2117 6.28272 16.7971 5.97597L15.1527 4.75942C14.9659 4.62123 15.064 4.32348 15.2967 4.32348H15.8135C15.947 4.32348 16.0555 4.43191 16.0555 4.56517C16.0555 4.95348 16.3703 5.2683 16.7586 5.2683C17.1469 5.2683 17.4617 4.95348 17.4617 4.56517C17.4617 3.81119 16.9523 3.17425 16.2597 2.97916V2.94531C16.2597 2.557 15.9449 2.24219 15.5567 2.24219C15.1684 2.24219 14.8536 2.557 14.8536 2.94531V2.97822C14.1594 3.17223 13.6484 3.80997 13.6484 4.56517C13.6485 5.08525 13.8981 5.58044 14.3163 5.88986Z",
 			fill: "currentColor"
@@ -84266,7 +84308,7 @@ function XLe(e, t) {
 		}, null, -1)
 	]]);
 }
-var ZLe = /*#__PURE__*/ LT(JLe, [["render", XLe]]), QLe = ["width", "height"], $Le = {
+var QLe = /*#__PURE__*/ LT(YLe, [["render", ZLe]]), $Le = ["width", "height"], eRe = {
 	__name: "StickerSvg",
 	props: {
 		width: {
@@ -84290,9 +84332,9 @@ var ZLe = /*#__PURE__*/ LT(JLe, [["render", XLe]]), QLe = ["width", "height"], $
 			p("path", { d: "M208 176V168C208 157.391 203.786 147.217 196.284 139.716C188.783 132.214 178.609 128 168 128C157.391 128 147.217 132.214 139.716 139.716C132.214 147.217 128 157.391 128 168V176C128 180.243 129.686 184.313 132.686 187.314C135.687 190.314 139.757 192 144 192C148.243 192 152.313 190.314 155.314 187.314C158.314 184.313 160 180.243 160 176V168C160 165.878 160.843 163.843 162.343 162.343C163.843 160.843 165.878 160 168 160C170.122 160 172.157 160.843 173.657 162.343C175.157 163.843 176 165.878 176 168V176C176 180.243 177.686 184.313 180.686 187.314C183.687 190.314 187.757 192 192 192C196.243 192 200.313 190.314 203.314 187.314C206.314 184.313 208 180.243 208 176Z" }, null, -1),
 			p("path", { d: "M320 192C324.243 192 328.313 190.314 331.314 187.314C334.314 184.313 336 180.243 336 176V168C336 165.878 336.843 163.843 338.343 162.343C339.843 160.843 341.878 160 344 160C346.122 160 348.157 160.843 349.657 162.343C351.157 163.843 352 165.878 352 168V176C352 180.243 353.686 184.313 356.686 187.314C359.687 190.314 363.757 192 368 192C372.243 192 376.313 190.314 379.314 187.314C382.314 184.313 384 180.243 384 176V168C384 157.391 379.786 147.217 372.284 139.716C364.783 132.214 354.609 128 344 128C333.391 128 323.217 132.214 315.716 139.716C308.214 147.217 304 157.391 304 168V176C304 180.243 305.686 184.313 308.686 187.314C311.687 190.314 315.757 192 320 192Z" }, null, -1),
 			p("path", { d: "M328 264V240C328 235.757 326.314 231.687 323.314 228.686C320.313 225.686 316.243 224 312 224H200C195.757 224 191.687 225.686 188.686 228.686C185.686 231.687 184 235.757 184 240V264C184 283.096 191.586 301.409 205.088 314.912C218.591 328.414 236.904 336 256 336C275.096 336 293.409 328.414 306.912 314.912C320.414 301.409 328 283.096 328 264ZM216 264V256H296V264C296 274.609 291.786 284.783 284.284 292.284C276.783 299.786 266.609 304 256 304C245.391 304 235.217 299.786 227.716 292.284C220.214 284.783 216 274.609 216 264Z" }, null, -1)
-		]], 8, QLe));
+		]], 8, $Le));
 	}
-}, eRe = ["aria-label"], tRe = { class: "tooltip" }, nRe = ["aria-label"], rRe = { class: "tooltip" }, iRe = ["aria-label"], aRe = { class: "tooltip" }, oRe = ["aria-label"], sRe = { class: "tooltip" }, cRe = ["aria-label"], lRe = { class: "tooltip" }, uRe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
+}, tRe = ["aria-label"], nRe = { class: "tooltip" }, rRe = ["aria-label"], iRe = { class: "tooltip" }, aRe = ["aria-label"], oRe = { class: "tooltip" }, sRe = ["aria-label"], cRe = { class: "tooltip" }, lRe = ["aria-label"], uRe = { class: "tooltip" }, dRe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
 	__name: "TextFormatMenu",
 	props: { inputElement: {} },
 	emits: ["format-applied"],
@@ -84402,28 +84444,28 @@ var ZLe = /*#__PURE__*/ LT(JLe, [["render", XLe]]), QLe = ["width", "height"], $
 					class: "format-btn tooltip-trigger group relative flex h-8 w-8 items-center justify-center rounded-md text-content-muted transition-all duration-150 hover:bg-surface-hover hover:text-content active:scale-95",
 					"aria-label": V(a)("formatBold") + " **text**",
 					onClick: t[0] ||= (e) => w("bold")
-				}, [_(V(afe), { class: "h-4 w-4" }), p("span", tRe, B(V(a)("formatBold") + " **text**"), 1)], 8, eRe),
+				}, [_(V(afe), { class: "h-4 w-4" }), p("span", nRe, B(V(a)("formatBold") + " **text**"), 1)], 8, tRe),
 				p("button", {
 					class: "format-btn tooltip-trigger group relative flex h-8 w-8 items-center justify-center rounded-md text-content-muted transition-all duration-150 hover:bg-surface-hover hover:text-content active:scale-95",
 					"aria-label": V(a)("formatItalic") + " _text_",
 					onClick: t[1] ||= (e) => w("italic")
-				}, [_(V(mfe), { class: "h-4 w-4" }), p("span", rRe, B(V(a)("formatItalic") + " _text_"), 1)], 8, nRe),
+				}, [_(V(mfe), { class: "h-4 w-4" }), p("span", iRe, B(V(a)("formatItalic") + " _text_"), 1)], 8, rRe),
 				p("button", {
 					class: "format-btn tooltip-trigger group relative flex h-8 w-8 items-center justify-center rounded-md text-content-muted transition-all duration-150 hover:bg-surface-hover hover:text-content active:scale-95",
 					"aria-label": V(a)("formatStrike") + " ~~text~~",
 					onClick: t[2] ||= (e) => w("strike")
-				}, [_(V(Efe), { class: "h-4 w-4" }), p("span", aRe, B(V(a)("formatStrike") + " ~~text~~"), 1)], 8, iRe),
+				}, [_(V(Efe), { class: "h-4 w-4" }), p("span", oRe, B(V(a)("formatStrike") + " ~~text~~"), 1)], 8, aRe),
 				t[6] ||= p("div", { class: "mx-0.5 h-5 w-px bg-border" }, null, -1),
 				p("button", {
 					class: "format-btn tooltip-trigger group relative flex h-8 w-8 items-center justify-center rounded-md text-content-muted transition-all duration-150 hover:bg-surface-hover hover:text-content active:scale-95",
 					"aria-label": V(a)("formatInlineCode") + " `text`",
 					onClick: t[3] ||= (e) => w("code")
-				}, [_(V(cfe), { class: "h-4 w-4" }), p("span", sRe, B(V(a)("formatInlineCode") + " `text`"), 1)], 8, oRe),
+				}, [_(V(cfe), { class: "h-4 w-4" }), p("span", cRe, B(V(a)("formatInlineCode") + " `text`"), 1)], 8, sRe),
 				p("button", {
 					class: "format-btn tooltip-trigger group relative flex h-8 w-8 items-center justify-center rounded-md text-content-muted transition-all duration-150 hover:bg-surface-hover hover:text-content active:scale-95",
 					"aria-label": V(a)("formatCodeBlock") + " ```text```",
 					onClick: t[4] ||= (e) => w("block")
-				}, [_(V(Tfe), { class: "h-4 w-4" }), p("span", lRe, B(V(a)("formatCodeBlock") + " ```text```"), 1)], 8, cRe),
+				}, [_(V(Tfe), { class: "h-4 w-4" }), p("span", uRe, B(V(a)("formatCodeBlock") + " ```text```"), 1)], 8, lRe),
 				p("div", {
 					class: "absolute -bottom-1.5 h-3 w-3 -translate-x-1/2 rotate-45 border-r border-b border-border bg-surface",
 					style: re({ left: `calc(50% + ${m.value}px)` })
@@ -84432,7 +84474,7 @@ var ZLe = /*#__PURE__*/ LT(JLe, [["render", XLe]]), QLe = ["width", "height"], $
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.0-25-gd4471fbe", dRe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.2-25-g927c6566", fRe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = vc(), n = () => {
@@ -84452,7 +84494,7 @@ var ZLe = /*#__PURE__*/ LT(JLe, [["render", XLe]]), QLe = ["width", "height"], $
 });
 //#endregion
 //#region src/utils/agentPresence.ts
-function fRe(e) {
+function pRe(e) {
 	return {
 		visible: !!e?.showOnlineStatus,
 		online: !!e?.agentOnlineStatus
@@ -84460,7 +84502,7 @@ function fRe(e) {
 }
 //#endregion
 //#region src/utils/chatHeaderStyle.ts
-function pRe(e) {
+function mRe(e) {
 	let t = e?.background?.trim(), n = e?.color?.trim();
 	if (!t && !n) return;
 	let r = n || (t && ZT("#ffffff", t) >= ZT("#000000", t) ? "#ffffff" : "#000000"), i = {
@@ -84471,11 +84513,11 @@ function pRe(e) {
 		"--color-accent": t || (ZT("#ffffff", r) >= ZT("#000000", r) ? "#ffffff" : "#000000"),
 		"--color-accent-vivid": r,
 		"--color-accent-subtle": r,
-		"--color-surface-hover": `rgba(${mRe(r)}, 0.16)`
+		"--color-surface-hover": `rgba(${hRe(r)}, 0.16)`
 	};
 	return t && (i.background = t), i;
 }
-function mRe(e) {
+function hRe(e) {
 	let t = e.replace("#", "").trim();
 	return t.length === 3 && (t = t.split("").map((e) => e + e).join("")), /^[0-9a-f]{6}$/i.test(t) ? [
 		0,
@@ -84485,7 +84527,7 @@ function mRe(e) {
 }
 //#endregion
 //#region src/utils/chatOwnBubbleStyle.ts
-function hRe(e, t = !1) {
+function gRe(e, t = !1) {
 	let n = e?.background?.trim(), r = e?.color?.trim();
 	if (!n && !r || !n && t) return;
 	let i = n ? zue(n, t) : void 0;
@@ -84495,48 +84537,51 @@ function hRe(e, t = !1) {
 }
 //#endregion
 //#region src/components/ChatRoom.vue?vue&type=script&setup=true&lang.ts
-var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { class: "flex min-w-0 flex-col justify-center" }, vRe = { class: "flex min-w-0 items-baseline gap-1" }, yRe = { class: "min-w-0 overflow-hidden text-base font-semibold text-ellipsis whitespace-nowrap text-content" }, bRe = {
+var _Re = { class: "relative h-(--imkit-header-height) shrink-0" }, vRe = {
+	"data-testid": "chat-header-avatar",
+	class: "shrink-0 @max-sm:hidden"
+}, yRe = { class: "flex min-w-0 flex-col justify-center" }, bRe = { class: "flex min-w-0 items-baseline gap-1" }, xRe = { class: "min-w-0 overflow-hidden text-base font-semibold text-ellipsis whitespace-nowrap text-content" }, SRe = {
 	key: 0,
 	class: "shrink-0 text-base font-semibold text-content"
-}, xRe = {
+}, CRe = {
 	key: 0,
 	class: "min-w-0 truncate text-xs text-content-subtle"
-}, SRe = {
+}, wRe = {
 	key: 1,
 	"data-testid": "chat-header-presence",
 	class: "flex min-w-0 items-center gap-1.5 text-xs text-content-muted"
-}, CRe = { class: "truncate" }, wRe = { class: "flex items-center gap-2" }, TRe = ["aria-label"], ERe = { class: "tooltip tooltip-below" }, DRe = ["aria-label"], ORe = { class: "tooltip tooltip-below" }, kRe = ["aria-label"], ARe = { class: "tooltip tooltip-below" }, jRe = {
+}, TRe = { class: "truncate" }, ERe = { class: "flex shrink-0 items-center gap-2" }, DRe = ["aria-label"], ORe = { class: "tooltip tooltip-below" }, kRe = ["aria-label"], ARe = { class: "tooltip tooltip-below" }, jRe = ["aria-label"], MRe = { class: "tooltip tooltip-below" }, NRe = {
 	class: "pointer-events-none sticky top-0 z-10",
 	style: {
 		height: "0",
 		overflow: "visible"
 	}
-}, MRe = {
+}, PRe = {
 	key: 0,
 	"data-testid": "chat-prepend-spinner",
 	class: "flex h-12 w-full items-center justify-center"
-}, NRe = { class: "relative border-t border-border" }, PRe = ["aria-label"], FRe = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-content" }, IRe = { class: "relative flex items-end justify-center gap-3 px-4 py-3.5" }, LRe = ["onClick"], RRe = { class: "mt-1 flex flex-1 items-center" }, zRe = { class: "text-center text-xs leading-none" }, BRe = {
+}, FRe = { class: "relative border-t border-border" }, IRe = ["aria-label"], LRe = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-content" }, RRe = { class: "relative flex items-end justify-center gap-3 px-4 py-3.5" }, zRe = ["onClick"], BRe = { class: "mt-1 flex flex-1 items-center" }, VRe = { class: "text-center text-xs leading-none" }, HRe = {
 	key: 3,
 	"data-testid": "composer-field",
 	class: "relative flex min-w-0 grow flex-col items-stretch rounded-xl bg-field px-4 py-2.5 focus-within:ring-1 focus-within:ring-border-strong"
-}, VRe = {
+}, URe = {
 	key: 0,
 	class: "absolute top-[-40px] left-1/2 flex -translate-x-1/2 gap-5"
-}, HRe = ["onClick"], URe = { class: "flex items-end gap-3" }, WRe = { class: "flex w-0 min-w-0 grow flex-col items-stretch justify-center gap-3" }, GRe = [
+}, WRe = ["onClick"], GRe = { class: "flex items-end gap-3" }, KRe = { class: "flex w-0 min-w-0 grow flex-col items-stretch justify-center gap-3" }, qRe = [
 	"contenteditable",
 	"aria-disabled",
 	"data-placeholder",
 	"aria-label"
-], KRe = {
+], JRe = {
 	key: 0,
 	class: "flex gap-3 overflow-x-auto pt-2 pr-2"
-}, qRe = {
+}, YRe = {
 	key: 0,
 	class: "relative flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-muted"
-}, JRe = ["src", "onClick"], YRe = ["onClick"], XRe = {
+}, XRe = ["src", "onClick"], ZRe = ["onClick"], QRe = {
 	key: 2,
 	class: "relative flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-muted"
-}, ZRe = ["src", "onClick"], QRe = { class: "pointer-events-none absolute inset-0 flex items-center justify-center" }, $Re = { class: "flex h-5 w-5 items-center justify-center rounded-full bg-black/60" }, eze = ["onClick"], tze = /*#__PURE__*/ LT(/* @__PURE__ */ b({
+}, $Re = ["src", "onClick"], eze = { class: "pointer-events-none absolute inset-0 flex items-center justify-center" }, tze = { class: "flex h-5 w-5 items-center justify-center rounded-full bg-black/60" }, nze = ["onClick"], rze = /*#__PURE__*/ LT(/* @__PURE__ */ b({
 	inheritAttrs: !1,
 	__name: "ChatRoom",
 	props: {
@@ -84576,17 +84621,20 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 			}
 		}), o = pD(), s = IT(), l = t, m = e, h = c(() => s.settings);
 		d9({ lockScroll: () => h.value.fullPageEnabled === !0 });
-		let { open: g } = lE({ component: lLe }), v = () => {
+		let { open: g } = lE({ component: uLe }), v = () => {
 			let { open: e } = lE({
-				component: $Ie,
+				component: eLe,
 				attrs: { fileSizeLimit: ae.value }
 			});
 			e();
 		}, y = () => {
-			let { open: e } = lE({ component: QIe });
+			let { open: e } = lE({ component: $Ie });
 			e();
-		}, x = c(() => o.rooms[o.selectedRoomId]), S = c(() => x.value ? p9(x.value) : {
-			truncatedName: "",
+		}, x = c(() => o.rooms[o.selectedRoomId]), S = c(() => x.value ? {
+			name: x.value.displayName ?? "",
+			countSuffix: p9(x.value)
+		} : {
+			name: "",
 			countSuffix: ""
 		}), C = c(() => o.selectedRoomId), w = c(() => m.isTestPreview ? `Test Bot ${(m.pinchatLink ?? "").split("_")[0]}` : x.value.displayName), E = c(() => h.value.fixedRoomEnabled || m9().has("roomId")), D = c(() => t8.value ? "dark" : "light"), O = c(() => o.isRoomInfoVisible), k = R(), A = R(), j = R((0, Hm.default)().subtract(5, "second")), M = R(!1), N = R(null), ee = R(), ne = c(() => o.replyId), ie = c(() => o.editingMessageId), ae = c(() => h.value.fileUploadSizeLimit ?? 1e8), { images: oe, imageFiles: se, videos: le, videoFiles: ue, isLoadingFiles: fe, isLoadingVideo: me, showImageLightbox: _e, selectedImageIndex: ve, showVideoLightbox: ye, selectedVideoUrl: be, onFileChange: xe, onDrop: Se, onPaste: Ce, removeImageAtIndex: we, removeVideoAtIndex: Te, openImageLightbox: Ee, openVideoLightbox: De, handleVideoLightboxOpenChange: Oe, previousImage: ke, nextImage: Ae } = dFe({
 			roomId: c(() => x.value?.id ?? ""),
@@ -84596,7 +84644,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 			onOversize: v,
 			sendFile: (e) => o.sendMessage(e),
 			fetchPresignedUrlByPath: (e) => o.fetchPresignedUrlByPath(e)
-		}), je = c(() => fe.value || me.value), Me = c(() => o.isSearchInRoomMode), Ne = c(() => s.styles), Ie = c(() => m.chatStyle), Re = c(() => pRe(Ie.value?.header)), ze = c(() => fRe(x.value?.extra)), Be = c(() => h.value.agentPresenceEnabled !== !1), Ve = c(() => hRe(Ie.value?.self, m.colorMode === "dark")), He = c(() => h.value.linePayEnabled || h.value.stripeEnabled || h.value.paypalEnabled), Ue = c(() => typeof window > "u" ? !1 : !window.matchMedia("(hover: hover) and (pointer: fine)").matches), { message: We, showStickerPanel: Ge, showEmojiPicker: Ke, stickerButtonEl: qe, emojiButtonEl: Je, showAudioInput: Ye, send: Xe, onSelectEmoji: Ze, onClickOutsideSticker: Qe, onClickOutsideEmoji: $e, toggleStickerPanel: et, toggleEmojiPicker: tt, handleImageButtonTapped: nt, onCompositionstart: rt, onCompositionend: it, onKeydownEnter: at, onBeforeInput: ot, onInput: st, onFormatApplied: ct, ensureCaretAnchor: lt } = pFe({
+		}), je = c(() => fe.value || me.value), Me = c(() => o.isSearchInRoomMode), Ne = c(() => s.styles), Ie = c(() => m.chatStyle), Re = c(() => mRe(Ie.value?.header)), ze = c(() => pRe(x.value?.extra)), Be = c(() => h.value.agentPresenceEnabled !== !1), Ve = c(() => gRe(Ie.value?.self, m.colorMode === "dark")), He = c(() => h.value.linePayEnabled || h.value.stripeEnabled || h.value.paypalEnabled), Ue = c(() => typeof window > "u" ? !1 : !window.matchMedia("(hover: hover) and (pointer: fine)").matches), { message: We, showStickerPanel: Ge, showEmojiPicker: Ke, stickerButtonEl: qe, emojiButtonEl: Je, showAudioInput: Ye, send: Xe, onSelectEmoji: Ze, onClickOutsideSticker: Qe, onClickOutsideEmoji: $e, toggleStickerPanel: et, toggleEmojiPicker: tt, handleImageButtonTapped: nt, onCompositionstart: rt, onCompositionend: it, onKeydownEnter: at, onBeforeInput: ot, onInput: st, onFormatApplied: ct, ensureCaretAnchor: lt } = pFe({
 			room: x,
 			users: c(() => o.users),
 			settings: h,
@@ -84654,7 +84702,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 				}
 			}), h.value.paymentEnabled && e.push({
 				key: "payment",
-				icon: ZLe,
+				icon: QLe,
 				iconClass: "fill-content-subtle",
 				label: "paymentCollectionTitle",
 				onClick: () => {
@@ -84697,7 +84745,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 			Dt();
 		});
 		let Mt = () => {
-			let { open: e } = lE({ component: dRe });
+			let { open: e } = lE({ component: fRe });
 			e();
 		}, Nt = c(() => x.value.memberIds.map((e) => o.users[e]?.nickname)), Pt = c(() => {
 			let e = x.value;
@@ -84705,13 +84753,13 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 			let t = e.memberIds.filter((e) => e !== Gv() && !e.endsWith("_sub"));
 			return t.length !== 0 && t.every((e) => !!o.blockedUsers?.[e]);
 		}), Ft = c(() => Pt.value ? "textareaBlockedHint" : "TypeMessage"), It = c(() => !je.value && (We.value.length > 0 || oe.value.length > 0 || le.value.length > 0)), Lt = c(() => Tt.value.filter((e) => e.type !== $.Typing).at(-1)), Rt = c(() => Lt.value?.template?.quickReply?.items ?? []), zt = c(() => Rt.value.length > 0), { open: Bt } = lE({
-			component: jLe,
+			component: MLe,
 			attrs: {
 				isLinePayEnabled: h.value.linePayEnabled,
 				isStripeEnabled: h.value.stripeEnabled,
 				isPaypalEnabled: h.value.paypalEnabled
 			}
-		}), { open: Vt } = lE({ component: dLe }), Ht = () => {
+		}), { open: Vt } = lE({ component: fLe }), Ht = () => {
 			He.value ? Bt() : Vt();
 		};
 		return (t, s) => {
@@ -84724,40 +84772,40 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 				onDragover: kt
 			}), [
 				x.value ? (L(), f(n, { key: 0 }, [
-					p("div", gRe, [_(i, {
+					p("div", _Re, [_(i, {
 						name: "header-swap",
 						mode: "out-in"
 					}, {
-						default: U(() => [Me.value ? (L(), u(qLe, { key: 0 })) : Pe((L(), f("div", {
+						default: U(() => [Me.value ? (L(), u(JLe, { key: 0 })) : Pe((L(), f("div", {
 							key: 1,
 							"data-testid": "chat-header",
-							class: "relative flex h-(--imkit-header-height) shrink-0 items-center gap-3 px-4 select-none",
+							class: "@container relative flex h-(--imkit-header-height) shrink-0 items-center gap-3 px-4 select-none",
 							style: re(Re.value ?? Ne.value.chatRoomHeader)
 						}, [
 							_(S9),
 							E.value ? d("", !0) : (L(), u(V(eO), {
 								key: 0,
 								size: 24,
-								class: "flex cursor-pointer text-content-muted sm:hidden!",
+								class: "flex shrink-0 cursor-pointer text-content-muted sm:hidden!",
 								onClick: At
 							})),
-							_(wk, {
+							p("span", vRe, [_(wk, {
 								url: x.value.isGroup ? x.value.coverUrl : x.value.avatars[0].url,
 								name: x.value.isGroup ? x.value.displayName ?? "" : x.value.avatars[0].name,
 								"is-group": x.value.isGroup,
-								class: "h-10 w-10 text-xl"
+								class: "h-10 w-10 shrink-0 text-xl"
 							}, null, 8, [
 								"url",
 								"name",
 								"is-group"
-							]),
-							p("div", _Re, [
-								p("div", vRe, [p("div", yRe, B(S.value.truncatedName), 1), S.value.countSuffix ? (L(), f("div", bRe, B(S.value.countSuffix), 1)) : d("", !0)]),
-								e.isTestPreview ? (L(), f("div", xRe, B(w.value), 1)) : d("", !0),
-								ze.value.visible && Be.value && !e.isTestPreview ? (L(), f("div", SRe, [p("span", { class: F(["h-2 w-2 shrink-0 rounded-full", ze.value.online ? "bg-accent-vivid" : "border border-current bg-transparent"]) }, null, 2), p("span", CRe, B(ze.value.online ? t.$t("online-status-online") : t.$t("online-status-offline")), 1)])) : d("", !0)
+							])]),
+							p("div", yRe, [
+								p("div", bRe, [p("div", xRe, B(S.value.name), 1), S.value.countSuffix ? (L(), f("div", SRe, B(S.value.countSuffix), 1)) : d("", !0)]),
+								e.isTestPreview ? (L(), f("div", CRe, B(w.value), 1)) : d("", !0),
+								ze.value.visible && Be.value && !e.isTestPreview ? (L(), f("div", wRe, [p("span", { class: F(["h-2 w-2 shrink-0 rounded-full", ze.value.online ? "bg-accent-vivid" : "border border-current bg-transparent"]) }, null, 2), p("span", TRe, B(ze.value.online ? t.$t("online-status-online") : t.$t("online-status-offline")), 1)])) : d("", !0)
 							]),
 							s[19] ||= p("div", { class: "grow" }, null, -1),
-							p("div", wRe, [
+							p("div", ERe, [
 								h.value.searchInRoomEnabled && !m.isTestPreview && !E.value ? (L(), f("button", {
 									key: 0,
 									type: "button",
@@ -84768,7 +84816,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 									size: 20,
 									"aria-hidden": "true",
 									class: "h-5 w-5"
-								}), p("span", ERe, B(t.$t("search")), 1)], 8, TRe)) : d("", !0),
+								}), p("span", ORe, B(t.$t("search")), 1)], 8, DRe)) : d("", !0),
 								h.value.showEndChatButton && !m.isTestPreview ? (L(), f("button", {
 									key: 1,
 									type: "button",
@@ -84778,7 +84826,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 								}, [_(V(_O), {
 									"aria-hidden": "true",
 									class: "h-5 w-5"
-								}), p("span", ORe, B(t.$t("endChat")), 1)], 8, DRe)) : d("", !0),
+								}), p("span", ARe, B(t.$t("endChat")), 1)], 8, kRe)) : d("", !0),
 								(x.value.isGroup && h.value.showGroupChatRoomInfoButton || x.value.type === V(kT).Direct && h.value.showDirectChatRoomInfoButton) && !m.isTestPreview ? (L(), f("button", {
 									key: 2,
 									"data-testid": "chat-info-button",
@@ -84792,9 +84840,9 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 										"aria-hidden": "true",
 										class: "h-5 w-5"
 									}),
-									p("span", ARe, B(t.$t("roomInfo")), 1),
+									p("span", MRe, B(t.$t("roomInfo")), 1),
 									z(t.$slots, "setting", {}, void 0, !0)
-								], 10, kRe)) : d("", !0)
+								], 10, jRe)) : d("", !0)
 							])
 						], 4)), [[
 							c,
@@ -84810,7 +84858,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 						class: "@container grow overflow-auto bg-canvas p-2",
 						style: { "overflow-anchor": "none" }
 					}, [
-						p("div", jRe, [V(yt) ? (L(), f("div", MRe, [...s[20] ||= [p("svg", {
+						p("div", NRe, [V(yt) ? (L(), f("div", PRe, [...s[20] ||= [p("svg", {
 							class: "h-6 w-6 animate-spin fill-accent-vivid text-surface-muted",
 							viewBox: "0 0 100 101",
 							fill: "none",
@@ -84862,7 +84910,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 							"onScroll"
 						])
 					], 512),
-					p("div", NRe, [
+					p("div", FRe, [
 						V(bt) ? (L(), f("button", {
 							key: 0,
 							"data-testid": "scroll-to-bottom-button",
@@ -84870,16 +84918,16 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 							"aria-label": t.$t("scrollToBottom"),
 							class: "absolute -top-12 right-3 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-panel text-content-muted shadow-raised transition hover:scale-110",
 							onClick: s[1] ||= (e) => V(Ct)({ smooth: !0 })
-						}, [_(V(ife), { class: "h-5 w-5" })], 8, PRe)) : d("", !0),
-						_(ZIe),
-						_(BLe),
+						}, [_(V(ife), { class: "h-5 w-5" })], 8, IRe)) : d("", !0),
+						_(QIe),
+						_(VLe),
 						V(gt) ? (L(), f("div", {
 							key: 1,
 							"data-testid": "latest-message-banner",
 							class: "absolute -top-10 right-0 left-0 z-10 flex h-10 cursor-pointer items-center border-t border-border bg-surface-muted px-3",
 							onClick: s[2] ||= (e) => V(Ct)()
-						}, [p("span", FRe, B(x.value.lastMessage?.bannerLabel(x.value.isGroup)), 1)])) : d("", !0),
-						p("div", IRe, [
+						}, [p("span", LRe, B(x.value.lastMessage?.bannerLabel(x.value.isGroup)), 1)])) : d("", !0),
+						p("div", RRe, [
 							!ie.value && (h.value.locationInputEnabled || h.value.audioInputEnabled || h.value.fileInputEnabled || h.value.paymentEnabled) ? (L(), f("button", {
 								key: 0,
 								ref_key: "plusButtonEl",
@@ -84899,18 +84947,18 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 								key: e.key,
 								class: "flex min-w-16 cursor-pointer flex-col items-center gap-1 rounded-md p-2 hover:bg-surface-hover",
 								onClick: e.onClick
-							}, [(L(), u(ge(e.icon), { class: F(e.iconClass) }, null, 8, ["class"])), p("div", RRe, [p("span", zRe, B(t.$t(e.label)), 1)])], 8, LRe))), 128))], 2)), [[V(F2), [() => {
+							}, [(L(), u(ge(e.icon), { class: F(e.iconClass) }, null, 8, ["class"])), p("div", BRe, [p("span", VRe, B(t.$t(e.label)), 1)])], 8, zRe))), 128))], 2)), [[V(F2), [() => {
 								M.value = !1;
 							}, { ignore: [N.value] }]]]) : d("", !0),
-							h.value.audioInputEnabled && V(Ye) ? (L(), u(WIe, { key: 2 })) : (L(), f("div", BRe, [
-								zt.value ? (L(), f("div", VRe, [(L(!0), f(n, null, pe(Rt.value, (e, t) => (L(), f("button", {
+							h.value.audioInputEnabled && V(Ye) ? (L(), u(GIe, { key: 2 })) : (L(), f("div", HRe, [
+								zt.value ? (L(), f("div", URe, [(L(!0), f(n, null, pe(Rt.value, (e, t) => (L(), f("button", {
 									key: t,
 									type: "button",
 									class: "cursor-pointer rounded-full bg-surface px-2 py-1 text-center text-xs text-content shadow-raised",
 									onClick: (t) => V(zW)(C.value, e.action)
-								}, B(e.action.label), 9, HRe))), 128))])) : d("", !0),
-								p("div", URe, [
-									p("div", WRe, [_(MIe, {
+								}, B(e.action.label), 9, WRe))), 128))])) : d("", !0),
+								p("div", GRe, [
+									p("div", KRe, [_(NIe, {
 										class: "relative flex",
 										members: Nt.value
 									}, {
@@ -84936,15 +84984,15 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 											onMouseup: s[10] ||= (e) => ee.value?.checkSelection(),
 											onKeyup: s[11] ||= (e) => ee.value?.checkSelection(),
 											onBlur: s[12] ||= (e) => ee.value?.hideMenu()
-										}, null, 42, GRe), _(uRe, {
+										}, null, 42, qRe), _(dRe, {
 											ref_key: "formatMenu",
 											ref: ee,
 											"input-element": A.value,
 											onFormatApplied: V(ct)
 										}, null, 8, ["input-element", "onFormatApplied"])]),
 										_: 1
-									}, 8, ["members"]), V(fe) || V(oe).length > 0 || V(me) || V(le).length > 0 ? (L(), f("div", KRe, [
-										V(fe) ? (L(), f("div", qRe, [_(V(gO), { class: "h-5 w-5 animate-spin text-content-subtle" })])) : d("", !0),
+									}, 8, ["members"]), V(fe) || V(oe).length > 0 || V(me) || V(le).length > 0 ? (L(), f("div", JRe, [
+										V(fe) ? (L(), f("div", YRe, [_(V(gO), { class: "h-5 w-5 animate-spin text-content-subtle" })])) : d("", !0),
 										V(oe).length > 0 ? (L(), u(a, {
 											key: 1,
 											tag: "div",
@@ -84962,16 +85010,16 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 												src: e.thumbnailUrl,
 												class: "absolute bottom-0 left-0 h-full w-full cursor-pointer rounded-lg border border-border bg-surface-muted object-cover",
 												onClick: (e) => V(Ee)(t)
-											}, null, 8, JRe), p("button", {
+											}, null, 8, XRe), p("button", {
 												class: F(["absolute -top-1.5 -right-1.5 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-black/70 text-white shadow-raised transition-[opacity,transform,background-color] duration-200 ease-out hover:scale-110 hover:bg-black/90", Ue.value ? "opacity-100" : "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"]),
 												onClick: (e) => V(we)(t)
 											}, [_(V(IO), {
 												size: 12,
 												"stroke-width": 2.5
-											})], 10, YRe)]))), 128))]),
+											})], 10, ZRe)]))), 128))]),
 											_: 1
 										})) : d("", !0),
-										V(me) ? (L(), f("div", XRe, [_(V(gO), { class: "h-5 w-5 animate-spin text-content-subtle" })])) : d("", !0),
+										V(me) ? (L(), f("div", QRe, [_(V(gO), { class: "h-5 w-5 animate-spin text-content-subtle" })])) : d("", !0),
 										V(le).length > 0 ? (L(), u(a, {
 											key: 3,
 											tag: "div",
@@ -84990,15 +85038,15 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 													src: e.thumbnailUrl,
 													class: "absolute bottom-0 left-0 h-full w-full cursor-pointer rounded-lg border border-border bg-surface-muted object-cover",
 													onClick: (e) => V(De)(t)
-												}, null, 8, ZRe),
-												p("div", QRe, [p("div", $Re, [_(V(xO), { class: "h-3 w-3 fill-white text-white" })])]),
+												}, null, 8, $Re),
+												p("div", eze, [p("div", tze, [_(V(xO), { class: "h-3 w-3 fill-white text-white" })])]),
 												p("button", {
 													class: F(["absolute -top-1.5 -right-1.5 flex h-5 w-5 cursor-pointer items-center justify-center rounded-full bg-black/70 text-white shadow-raised transition-[opacity,transform,background-color] duration-200 ease-out hover:scale-110 hover:bg-black/90", Ue.value ? "opacity-100" : "pointer-events-none opacity-0 group-hover:pointer-events-auto group-hover:opacity-100"]),
 													onClick: (e) => V(Te)(t)
 												}, [_(V(IO), {
 													size: 12,
 													"stroke-width": 2.5
-												})], 10, eze)
+												})], 10, nze)
 											]))), 128))]),
 											_: 1
 										})) : d("", !0)
@@ -85010,7 +85058,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 										class: "flex h-6 shrink-0 cursor-pointer items-center",
 										"data-testid": "sticker-button",
 										onClick: s[13] ||= Le((...e) => V(et) && V(et)(...e), ["stop"])
-									}, [_($Le, {
+									}, [_(eRe, {
 										width: 20,
 										height: 20,
 										class: "fill-content-muted"
@@ -85094,7 +85142,7 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 			], 16);
 		};
 	}
-}), [["__scopeId", "data-v-ce1ddd23"]]), O9 = {
+}), [["__scopeId", "data-v-058fcbd3"]]), O9 = {
 	name: "Toggle",
 	emits: [
 		"input",
@@ -85282,18 +85330,18 @@ var gRe = { class: "relative h-(--imkit-header-height) shrink-0" }, _Re = { clas
 			...a
 		};
 	}
-}, nze = [
+}, ize = [
 	"tabindex",
 	"aria-checked",
 	"aria-describedby",
 	"aria-labelledby"
-], rze = [
+], aze = [
 	"id",
 	"name",
 	"value",
 	"checked",
 	"disabled"
-], ize = ["innerHTML"], aze = ["checked"];
+], oze = ["innerHTML"], sze = ["checked"];
 O9.render = function(e, t, n, r, i, a) {
 	return L(), f("div", te({
 		class: e.classList.container,
@@ -85309,7 +85357,7 @@ O9.render = function(e, t, n, r, i, a) {
 		value: n.trueValue,
 		checked: e.checked,
 		disabled: n.disabled
-	}, null, 8, rze), [[je, !1]]), p("div", {
+	}, null, 8, aze), [[je, !1]]), p("div", {
 		class: F(e.classList.toggle),
 		onClick: t[0] ||= (...t) => e.handleClick && e.handleClick(...t)
 	}, [
@@ -85320,7 +85368,7 @@ O9.render = function(e, t, n, r, i, a) {
 		}, (() => [p("span", {
 			class: F(e.classList.label),
 			innerHTML: e.label
-		}, null, 10, ize)])),
+		}, null, 10, oze)])),
 		n.required ? (L(), f("input", {
 			key: 0,
 			type: "checkbox",
@@ -85340,8 +85388,8 @@ O9.render = function(e, t, n, r, i, a) {
 			"aria-hidden": "true",
 			tabindex: "-1",
 			required: ""
-		}, null, 8, aze)) : d("v-if", !0)
-	], 2)], 16, nze);
+		}, null, 8, sze)) : d("v-if", !0)
+	], 2)], 16, ize);
 }, O9.__file = "src/Toggle.vue";
 //#endregion
 //#region src/utils/tagColor.ts
@@ -85367,7 +85415,7 @@ var k9 = {
 		cCap: .11
 	}
 };
-function oze(e) {
+function cze(e) {
 	let t = e.replace("#", ""), n = t.length === 3 ? t.split("").map((e) => e + e).join("") : t, r = parseInt(n, 16);
 	return {
 		r: (r >> 16 & 255) / 255,
@@ -85375,7 +85423,7 @@ function oze(e) {
 		b: (r & 255) / 255
 	};
 }
-function sze({ r: e, g: t, b: n }) {
+function lze({ r: e, g: t, b: n }) {
 	let r = (e) => Math.round(Math.min(1, Math.max(0, e)) * 255).toString(16).padStart(2, "0");
 	return `#${r(e)}${r(t)}${r(n)}`;
 }
@@ -85385,21 +85433,21 @@ function A9(e) {
 function j9(e) {
 	return e <= .0031308 ? 12.92 * e : 1.055 * e ** (1 / 2.4) - .055;
 }
-function cze({ r: e, g: t, b: n }) {
+function uze({ r: e, g: t, b: n }) {
 	return {
 		r: A9(e),
 		g: A9(t),
 		b: A9(n)
 	};
 }
-function lze({ r: e, g: t, b: n }) {
+function dze({ r: e, g: t, b: n }) {
 	return {
 		r: j9(e),
 		g: j9(t),
 		b: j9(n)
 	};
 }
-function uze({ r: e, g: t, b: n }) {
+function fze({ r: e, g: t, b: n }) {
 	let r = .4122214708 * e + .5363325363 * t + .0514459929 * n, i = .2119034982 * e + .6806995451 * t + .1073969566 * n, a = .0883024619 * e + .2817188376 * t + .6299787005 * n, o = Math.cbrt(r), s = Math.cbrt(i), c = Math.cbrt(a);
 	return {
 		L: .2104542553 * o + .793617785 * s - .0040720468 * c,
@@ -85415,7 +85463,7 @@ function M9({ L: e, a: t, b: n }) {
 		b: -.0041960863 * o - .7034186147 * s + 1.707614701 * c
 	};
 }
-function dze({ L: e, a: t, b: n }) {
+function pze({ L: e, a: t, b: n }) {
 	let r = Math.sqrt(t * t + n * n), i = Math.atan2(n, t) * 180 / Math.PI;
 	return {
 		L: e,
@@ -85432,13 +85480,13 @@ function N9({ L: e, C: t, H: n }) {
 	};
 }
 function P9(e) {
-	return dze(uze(cze(oze(e))));
+	return pze(fze(uze(cze(e))));
 }
 function F9(e) {
 	let { r: t, g: n, b: r } = M9(e);
 	return t >= -1e-4 && t <= 1.0001 && n >= -1e-4 && n <= 1.0001 && r >= -1e-4 && r <= 1.0001;
 }
-function fze(e) {
+function mze(e) {
 	let { C: t } = e, { L: n, H: r } = e, i = N9({
 		L: n,
 		C: t,
@@ -85460,10 +85508,10 @@ function fze(e) {
 			H: r
 		});
 	}
-	return sze(lze(M9(i)));
+	return lze(dze(M9(i)));
 }
 var I9 = /^#?([0-9a-f]{3}|[0-9a-f]{6})$/i;
-function pze() {
+function hze() {
 	let e = BT.light.brand;
 	if (!e || !I9.test(e.trim())) return {
 		C: 0,
@@ -85476,7 +85524,7 @@ function pze() {
 	};
 }
 function L9(e) {
-	let { C: t, H: n } = e && I9.test(e.trim()) ? P9(e.trim()) : pze(), r = (e) => fze({
+	let { C: t, H: n } = e && I9.test(e.trim()) ? P9(e.trim()) : hze(), r = (e) => mze({
 		L: e.L,
 		C: Math.min(t * e.cFactor, e.cCap),
 		H: n
@@ -85488,7 +85536,7 @@ function L9(e) {
 		darkFg: r(k9.darkFg)
 	};
 }
-var mze = {
+var gze = {
 	red: "#e0393d",
 	orange: "#dd7a11",
 	green: "#1f9e57",
@@ -85523,7 +85571,7 @@ var mze = {
 			};
 		};
 	}));
-})))(), 1), hze = { class: "flex w-0 min-w-0 grow flex-col text-left" }, gze = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-content" }, z9 = /* @__PURE__ */ b({
+})))(), 1), _ze = { class: "flex w-0 min-w-0 grow flex-col text-left" }, vze = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-content" }, z9 = /* @__PURE__ */ b({
 	__name: "RoomCell",
 	props: { source: {} },
 	setup(e) {
@@ -85556,10 +85604,10 @@ var mze = {
 				"name",
 				"is-group"
 			]),
-			p("div", hze, [p("div", gze, B(e.source.displayName), 1)])
+			p("div", _ze, [p("div", vze, B(e.source.displayName), 1)])
 		], 2));
 	}
-}), _ze = { class: "text-xl font-semibold text-content" }, vze = { class: "text-xs text-content-muted" }, yze = { class: "flex flex-col gap-1.5" }, bze = { class: "text-xs font-semibold text-content-muted" }, xze = { class: "flex items-center gap-2 rounded-md border border-border bg-surface px-3.5 py-2.5 focus-within:border-accent focus-within:ring-2 focus-within:ring-accent-subtle" }, Sze = ["placeholder"], Cze = { class: "shrink-0 text-xs text-content-muted" }, wze = { class: "flex flex-col gap-1.5" }, Tze = { class: "text-xs font-semibold text-content-muted" }, Eze = { class: "relative" }, Dze = ["aria-label", "placeholder"], Oze = { class: "flex h-56 flex-col overflow-hidden rounded-md border border-border" }, kze = { class: "flex items-center justify-between gap-2" }, Aze = { class: "text-xs text-content-muted" }, jze = { class: "flex items-center gap-2" }, Mze = ["disabled"], B9 = /* @__PURE__ */ b({
+}), yze = { class: "text-xl font-semibold text-content" }, bze = { class: "text-xs text-content-muted" }, xze = { class: "flex flex-col gap-1.5" }, Sze = { class: "text-xs font-semibold text-content-muted" }, Cze = { class: "flex items-center gap-2 rounded-md border border-border bg-surface px-3.5 py-2.5 focus-within:border-accent focus-within:ring-2 focus-within:ring-accent-subtle" }, wze = ["placeholder"], Tze = { class: "shrink-0 text-xs text-content-muted" }, Eze = { class: "flex flex-col gap-1.5" }, Dze = { class: "text-xs font-semibold text-content-muted" }, Oze = { class: "relative" }, kze = ["aria-label", "placeholder"], Aze = { class: "flex h-56 flex-col overflow-hidden rounded-md border border-border" }, jze = { class: "flex items-center justify-between gap-2" }, Mze = { class: "text-xs text-content-muted" }, Nze = { class: "flex items-center gap-2" }, Pze = ["disabled"], B9 = /* @__PURE__ */ b({
 	__name: "UpdateFolderModal",
 	props: { folderId: {} },
 	setup(e) {
@@ -85592,23 +85640,23 @@ var mze = {
 			"overlay-transition": "vfm-fade"
 		}, {
 			default: U(() => [
-				p("div", _ze, B(i.value ? e.$t("editFolder") : e.$t("createFolder")), 1),
-				p("p", vze, B(e.$t("createFolderExplain")), 1),
-				p("label", yze, [p("span", bze, B(e.$t("folderName")), 1), p("div", xze, [Pe(p("input", {
+				p("div", yze, B(i.value ? e.$t("editFolder") : e.$t("createFolder")), 1),
+				p("p", bze, B(e.$t("createFolderExplain")), 1),
+				p("label", xze, [p("span", Sze, B(e.$t("folderName")), 1), p("div", Cze, [Pe(p("input", {
 					"onUpdate:modelValue": n[0] ||= (e) => a.value = e,
 					type: "text",
 					maxlength: "30",
 					class: "grow bg-transparent text-base text-content placeholder-content-subtle outline-none",
 					placeholder: e.$t("folderName")
-				}, null, 8, Sze), [[Ae, a.value]]), p("span", Cze, B(a.value.length) + "/30", 1)])]),
-				p("div", wze, [p("span", Tze, B(e.$t("addRoomsToFolder")), 1), p("div", Eze, [_(V(EO), { class: "pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-content-subtle" }), Pe(p("input", {
+				}, null, 8, wze), [[Ae, a.value]]), p("span", Tze, B(a.value.length) + "/30", 1)])]),
+				p("div", Eze, [p("span", Dze, B(e.$t("addRoomsToFolder")), 1), p("div", Oze, [_(V(EO), { class: "pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-content-subtle" }), Pe(p("input", {
 					"onUpdate:modelValue": n[1] ||= (e) => o.value = e,
 					type: "text",
 					"aria-label": e.$t("searchInConversation"),
 					placeholder: e.$t("searchInConversation"),
 					class: "h-10 w-full rounded-md border border-border bg-surface py-2.5 pr-3.5 pl-9 text-base text-content placeholder-content-subtle outline-none focus:border-accent focus:ring-2 focus:ring-accent-subtle"
-				}, null, 8, Dze), [[Ae, o.value]])])]),
-				p("div", Oze, [_(V(KD), {
+				}, null, 8, kze), [[Ae, o.value]])])]),
+				p("div", Aze, [_(V(KD), {
 					data: l.value,
 					"item-size": 44,
 					class: "grow overflow-auto"
@@ -85616,7 +85664,7 @@ var mze = {
 					default: U(({ item: e }) => [_(z9, { source: e }, null, 8, ["source"])]),
 					_: 1
 				}, 8, ["data"])]),
-				p("div", kze, [p("span", Aze, B(e.$t("selectedCount", { n: d.value })), 1), p("div", jze, [p("button", {
+				p("div", jze, [p("span", Mze, B(e.$t("selectedCount", { n: d.value })), 1), p("div", Nze, [p("button", {
 					class: "inline-flex h-10 cursor-pointer items-center justify-center rounded-md bg-surface-muted px-4 text-base font-medium text-content transition-colors",
 					onClick: n[2] ||= () => {
 						V(t).closeAll();
@@ -85627,24 +85675,24 @@ var mze = {
 					onClick: n[3] ||= () => {
 						m(), V(t).closeAll();
 					}
-				}, B(i.value ? e.$t("confirm") : e.$t("create")), 9, Mze)])])
+				}, B(i.value ? e.$t("confirm") : e.$t("create")), 9, Pze)])])
 			]),
 			_: 1
 		}));
 	}
-}), Nze = { class: "text-xl font-semibold text-content" }, Pze = { class: "text-xs text-content-muted" }, Fze = { class: "relative" }, Ize = ["aria-label", "placeholder"], Lze = { class: "flex flex-col overflow-hidden rounded-md border border-border" }, Rze = ["onClick"], zze = {
+}), Fze = { class: "text-xl font-semibold text-content" }, Ize = { class: "text-xs text-content-muted" }, Lze = { class: "relative" }, Rze = ["aria-label", "placeholder"], zze = { class: "flex flex-col overflow-hidden rounded-md border border-border" }, Bze = ["onClick"], Vze = {
 	key: 0,
 	class: "h-2.5 w-2.5 rounded-full bg-accent"
-}, Bze = { class: "flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-subtle text-content-muted" }, Vze = { class: "flex min-w-0 grow flex-col" }, Hze = { class: "truncate text-base text-content" }, Uze = { class: "text-xs text-content-muted" }, Wze = {
+}, Hze = { class: "flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent-subtle text-content-muted" }, Uze = { class: "flex min-w-0 grow flex-col" }, Wze = { class: "truncate text-base text-content" }, Gze = { class: "text-xs text-content-muted" }, Kze = {
 	key: 0,
 	class: "shrink-0 rounded-sm bg-accent-subtle px-2 py-0.5 text-xs font-medium text-accent-vivid"
-}, Gze = {
+}, qze = {
 	key: 0,
 	class: "h-2.5 w-2.5 rounded-full bg-accent"
-}, Kze = { class: "flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface-muted text-content-muted" }, qze = { class: "flex min-w-0 grow flex-col" }, Jze = { class: "truncate text-base text-content" }, Yze = { class: "text-xs text-content-muted" }, Xze = {
+}, Jze = { class: "flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-surface-muted text-content-muted" }, Yze = { class: "flex min-w-0 grow flex-col" }, Xze = { class: "truncate text-base text-content" }, Zze = { class: "text-xs text-content-muted" }, Qze = {
 	key: 0,
 	class: "shrink-0 rounded-sm bg-accent-subtle px-2 py-0.5 text-xs font-medium text-accent-vivid"
-}, Zze = { class: "text-base font-medium" }, Qze = { class: "mt-1 flex items-center justify-end gap-2" }, $ze = ["disabled"], V9 = "__unclassified__", H9 = /* @__PURE__ */ b({
+}, $ze = { class: "text-base font-medium" }, eBe = { class: "mt-1 flex items-center justify-end gap-2" }, tBe = ["disabled"], V9 = "__unclassified__", H9 = /* @__PURE__ */ b({
 	__name: "AddToFolderModal",
 	props: { roomId: {} },
 	setup(e) {
@@ -85687,47 +85735,47 @@ var mze = {
 			"overlay-transition": "vfm-fade"
 		}, {
 			default: U(() => [
-				p("div", Nze, B(e.$t("addToFolder")), 1),
-				p("p", Pze, B(e.$t("addToFolderExplain", {
+				p("div", Fze, B(e.$t("addToFolder")), 1),
+				p("p", Ize, B(e.$t("addToFolderExplain", {
 					room: a.value?.displayName ?? "",
 					folder: V(i).folders[o.value]?.name ?? e.$t("unclassified")
 				})), 1),
-				p("div", Fze, [_(V(EO), { class: "pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-content-subtle" }), Pe(p("input", {
+				p("div", Lze, [_(V(EO), { class: "pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-content-subtle" }), Pe(p("input", {
 					"onUpdate:modelValue": r[0] ||= (e) => s.value = e,
 					type: "text",
 					"aria-label": e.$t("searchFolder"),
 					placeholder: e.$t("searchFolder"),
 					class: "h-10 w-full rounded-md border border-border bg-surface py-2.5 pr-3.5 pl-9 text-base text-content placeholder-content-subtle outline-none focus:border-accent focus:ring-2 focus:ring-accent-subtle"
-				}, null, 8, Ize), [[Ae, s.value]])]),
-				p("div", Lze, [
+				}, null, 8, Rze), [[Ae, s.value]])]),
+				p("div", zze, [
 					(L(!0), f(n, null, pe(h.value, (t) => (L(), f("button", {
 						key: t.id,
 						type: "button",
 						class: "flex cursor-pointer items-center gap-3 border-b border-border p-2.5 text-left transition-colors last:border-b-0 hover:bg-surface-hover",
 						onClick: (e) => y(t.id)
 					}, [
-						p("span", { class: F(["flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2", l.value === t.id ? "border-accent" : "border-border"]) }, [l.value === t.id ? (L(), f("span", zze)) : d("", !0)], 2),
-						p("span", Bze, [_(V(mO), { size: 16 })]),
-						p("span", Vze, [p("span", Hze, B(t.name), 1), p("span", Uze, B(e.$t("folderConversationCount", { n: t.roomIds.length })), 1)]),
-						o.value === t.id ? (L(), f("span", Wze, B(e.$t("currentLocation")), 1)) : d("", !0)
-					], 8, Rze))), 128)),
+						p("span", { class: F(["flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2", l.value === t.id ? "border-accent" : "border-border"]) }, [l.value === t.id ? (L(), f("span", Vze)) : d("", !0)], 2),
+						p("span", Hze, [_(V(mO), { size: 16 })]),
+						p("span", Uze, [p("span", Wze, B(t.name), 1), p("span", Gze, B(e.$t("folderConversationCount", { n: t.roomIds.length })), 1)]),
+						o.value === t.id ? (L(), f("span", Kze, B(e.$t("currentLocation")), 1)) : d("", !0)
+					], 8, Bze))), 128)),
 					p("button", {
 						type: "button",
 						class: "flex cursor-pointer items-center gap-3 border-b border-border p-2.5 text-left transition-colors hover:bg-surface-hover",
 						onClick: r[1] ||= (e) => y(V9)
 					}, [
-						p("span", { class: F(["flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2", l.value === V9 ? "border-accent" : "border-border"]) }, [l.value === V9 ? (L(), f("span", Gze)) : d("", !0)], 2),
-						p("span", Kze, [_(V(bfe), { size: 16 })]),
-						p("span", qze, [p("span", Jze, B(e.$t("unclassified")), 1), p("span", Yze, B(e.$t("unclassifiedDescription")), 1)]),
-						o.value ? d("", !0) : (L(), f("span", Xze, B(e.$t("currentLocation")), 1))
+						p("span", { class: F(["flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2", l.value === V9 ? "border-accent" : "border-border"]) }, [l.value === V9 ? (L(), f("span", qze)) : d("", !0)], 2),
+						p("span", Jze, [_(V(bfe), { size: 16 })]),
+						p("span", Yze, [p("span", Xze, B(e.$t("unclassified")), 1), p("span", Zze, B(e.$t("unclassifiedDescription")), 1)]),
+						o.value ? d("", !0) : (L(), f("span", Qze, B(e.$t("currentLocation")), 1))
 					]),
 					p("button", {
 						type: "button",
 						class: "flex cursor-pointer items-center gap-2 p-2.5 text-left text-accent-vivid transition-colors hover:bg-surface-hover",
 						onClick: x
-					}, [_(V(SO), { size: 16 }), p("span", Zze, B(e.$t("createNewFolderPrompt")), 1)])
+					}, [_(V(SO), { size: 16 }), p("span", $ze, B(e.$t("createNewFolderPrompt")), 1)])
 				]),
-				p("div", Qze, [p("button", {
+				p("div", eBe, [p("button", {
 					class: "inline-flex h-10 cursor-pointer items-center justify-center rounded-md bg-surface-muted px-4 text-base font-medium text-content transition-colors",
 					onClick: r[2] ||= (e) => V(t).closeAll()
 				}, B(e.$t("cancel")), 1), p("button", {
@@ -85736,7 +85784,7 @@ var mze = {
 					onClick: r[3] ||= () => {
 						b(), V(t).closeAll();
 					}
-				}, B(l.value === V9 ? e.$t("removeFromFolder") : e.$t("moveToFolder", { name: v.value })), 9, $ze)])
+				}, B(l.value === V9 ? e.$t("removeFromFolder") : e.$t("moveToFolder", { name: v.value })), 9, tBe)])
 			]),
 			_: 1
 		}));
@@ -85787,7 +85835,7 @@ var mze = {
 			"loading"
 		]));
 	}
-}), eBe = /* @__PURE__ */ b({
+}), nBe = /* @__PURE__ */ b({
 	__name: "LeaveGroupConfirmModal",
 	props: {
 		roomId: {},
@@ -85828,7 +85876,7 @@ var mze = {
 			"loading"
 		]));
 	}
-}), tBe = /* @__PURE__ */ b({
+}), rBe = /* @__PURE__ */ b({
 	__name: "MoveOutConfirmModal",
 	props: {
 		memberIdToMoveOut: {},
@@ -85871,29 +85919,29 @@ var mze = {
 			"loading"
 		]));
 	}
-}), nBe = { class: "mb-1 flex w-full items-center justify-between text-xl font-semibold text-content" }, rBe = {
+}), iBe = { class: "mb-1 flex w-full items-center justify-between text-xl font-semibold text-content" }, aBe = {
 	key: 0,
 	class: "text-content-muted"
-}, iBe = {
+}, oBe = {
 	key: 0,
 	class: "-mt-2 text-xs text-content-muted"
-}, aBe = { key: 1 }, oBe = { class: "mb-2 block text-xs font-semibold text-content-muted" }, sBe = { class: "flex flex-wrap gap-1.5" }, cBe = ["onClick"], lBe = ["onClick"], uBe = ["onClick"], dBe = { class: "mb-2 flex items-center gap-1 text-xs font-semibold text-content-muted" }, fBe = ["placeholder", "disabled"], pBe = { class: "shrink-0 text-xs text-content-muted" }, mBe = {
+}, sBe = { key: 1 }, cBe = { class: "mb-2 block text-xs font-semibold text-content-muted" }, lBe = { class: "flex flex-wrap gap-1.5" }, uBe = ["onClick"], dBe = ["onClick"], fBe = ["onClick"], pBe = { class: "mb-2 flex items-center gap-1 text-xs font-semibold text-content-muted" }, mBe = ["placeholder", "disabled"], hBe = { class: "shrink-0 text-xs text-content-muted" }, gBe = {
 	key: 2,
 	class: "mt-3"
-}, hBe = { class: "mb-2 block text-xs font-semibold text-content-muted" }, gBe = { class: "flex flex-wrap gap-2" }, _Be = ["onClick"], vBe = { key: 3 }, yBe = { class: "mt-3 flex items-center gap-2" }, bBe = ["value"], xBe = {
+}, _Be = { class: "mb-2 block text-xs font-semibold text-content-muted" }, vBe = { class: "flex flex-wrap gap-2" }, yBe = ["onClick"], bBe = { key: 3 }, xBe = { class: "mt-3 flex items-center gap-2" }, SBe = ["value"], CBe = {
 	key: 0,
 	class: "text-xs text-danger-vivid"
-}, SBe = {
+}, wBe = {
 	key: 4,
 	class: "flex items-center gap-1 text-xs text-content-muted"
-}, CBe = { class: "flex items-center justify-end gap-2" }, wBe = ["disabled"], W9 = /* @__PURE__ */ b({
+}, TBe = { class: "flex items-center justify-end gap-2" }, EBe = ["disabled"], W9 = /* @__PURE__ */ b({
 	__name: "TagsModal",
 	props: {
 		roomId: {},
 		roomTag: {}
 	},
 	setup(e) {
-		let t = mze, r = (e) => {
+		let t = gze, r = (e) => {
 			let t = L9(e);
 			return {
 				"--tag-bg": t.lightBg,
@@ -85956,12 +86004,12 @@ var mze = {
 			"overlay-transition": "vfm-fade"
 		}, {
 			default: U(() => [
-				p("div", nBe, [p("p", null, [g(B(C.value ? e.$t("manageTag") : e.$t("editTag")) + " ", 1), C.value ? (L(), f("span", rBe, "· " + B(V(D).displayName), 1)) : d("", !0)]), p("button", {
+				p("div", iBe, [p("p", null, [g(B(C.value ? e.$t("manageTag") : e.$t("editTag")) + " ", 1), C.value ? (L(), f("span", aBe, "· " + B(V(D).displayName), 1)) : d("", !0)]), p("button", {
 					class: "flex cursor-pointer items-center justify-center",
 					onClick: i[0] ||= (e) => V(a).closeAll()
 				}, [_(V(IO), { class: "h-6 w-6" })])]),
-				C.value ? (L(), f("p", iBe, B(e.$t("tagsDialogExplain")), 1)) : d("", !0),
-				l.value.length > 0 && C.value ? (L(), f("div", aBe, [p("label", oBe, B(e.$t("appliedTagsCount", { n: l.value.length })), 1), p("div", sBe, [(L(!0), f(n, null, pe(l.value, (e) => (L(), f("div", {
+				C.value ? (L(), f("p", oBe, B(e.$t("tagsDialogExplain")), 1)) : d("", !0),
+				l.value.length > 0 && C.value ? (L(), f("div", sBe, [p("label", cBe, B(e.$t("appliedTagsCount", { n: l.value.length })), 1), p("div", lBe, [(L(!0), f(n, null, pe(l.value, (e) => (L(), f("div", {
 					key: e,
 					class: "tag-chip flex items-center gap-1 rounded-full py-1 pr-2 pl-3 text-xs font-semibold transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none",
 					style: re(r(m.value[e])),
@@ -85971,27 +86019,27 @@ var mze = {
 					p("button", {
 						class: "ml-1 cursor-pointer hover:opacity-70",
 						onClick: Le((t) => k(e), ["stop"])
-					}, [_(V(vO), { class: "h-3 w-3" })], 8, lBe),
+					}, [_(V(vO), { class: "h-3 w-3" })], 8, dBe),
 					p("button", {
 						class: "cursor-pointer hover:opacity-70",
 						onClick: Le((t) => j(e), ["stop"])
-					}, [_(V(IO), { class: "h-3 w-3" })], 8, uBe)
-				], 12, cBe))), 128))])])) : d("", !0),
-				p("div", null, [p("label", dBe, B(C.value ? e.$t("createNewTagPrompt") : e.$t("editTag")), 1), p("div", { class: F(["flex items-center gap-2 rounded-md border bg-surface px-3.5 py-2.5 focus-within:ring-2", S.value ? "border-danger focus-within:ring-danger" : "border-border focus-within:border-accent focus-within:ring-accent-subtle"]) }, [Pe(p("input", {
+					}, [_(V(IO), { class: "h-3 w-3" })], 8, fBe)
+				], 12, uBe))), 128))])])) : d("", !0),
+				p("div", null, [p("label", pBe, B(C.value ? e.$t("createNewTagPrompt") : e.$t("editTag")), 1), p("div", { class: F(["flex items-center gap-2 rounded-md border bg-surface px-3.5 py-2.5 focus-within:ring-2", S.value ? "border-danger focus-within:ring-danger" : "border-border focus-within:border-accent focus-within:ring-accent-subtle"]) }, [Pe(p("input", {
 					"onUpdate:modelValue": i[1] ||= (e) => h.value = e,
 					type: "text",
 					maxlength: "12",
 					class: "grow bg-transparent text-base text-content placeholder-content-subtle outline-none",
 					placeholder: C.value ? e.$t("createTag") : e.$t("editTag"),
 					disabled: l.value.length >= 5 && C.value
-				}, null, 8, fBe), [[Ae, h.value]]), p("span", pBe, B(h.value.length) + "/12", 1)], 2)]),
-				l.value.length < 5 || !C.value ? (L(), f("div", mBe, [p("label", hBe, B(e.$t("chooseColor")), 1), p("div", gBe, [(L(!0), f(n, null, pe(Object.keys(V(t)), (e) => (L(), f("button", {
+				}, null, 8, mBe), [[Ae, h.value]]), p("span", hBe, B(h.value.length) + "/12", 1)], 2)]),
+				l.value.length < 5 || !C.value ? (L(), f("div", gBe, [p("label", _Be, B(e.$t("chooseColor")), 1), p("div", vBe, [(L(!0), f(n, null, pe(Object.keys(V(t)), (e) => (L(), f("button", {
 					key: e,
 					class: F(["size-8 cursor-pointer rounded-md border border-border transition-all", v.value === V(t)[e] ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : ""]),
 					style: re({ backgroundColor: V(t)[e] }),
 					onClick: (n) => M(V(t)[e])
-				}, null, 14, _Be))), 128))])])) : d("", !0),
-				l.value.length < 5 || !C.value ? (L(), f("div", vBe, [p("div", yBe, [
+				}, null, 14, yBe))), 128))])])) : d("", !0),
+				l.value.length < 5 || !C.value ? (L(), f("div", bBe, [p("div", xBe, [
 					p("label", {
 						class: F(["relative size-8 flex-shrink-0 cursor-pointer overflow-hidden rounded-md border transition-all", v.value === x.value && w(x.value) ? "ring-2 ring-accent ring-offset-2 ring-offset-surface" : "border-border-strong"]),
 						style: re(w(x.value) ? { backgroundColor: x.value } : { background: "linear-gradient(135deg, #ef4444, #22c55e, #3b82f6)" })
@@ -86001,7 +86049,7 @@ var mze = {
 						class: "absolute inset-0 h-full w-full cursor-pointer opacity-0",
 						value: w(x.value) ? x.value : "#000000",
 						onInput: N
-					}, null, 40, bBe)], 6),
+					}, null, 40, SBe)], 6),
 					Pe(p("input", {
 						"onUpdate:modelValue": i[2] ||= (e) => x.value = e,
 						type: "text",
@@ -86009,50 +86057,50 @@ var mze = {
 						class: "h-9 w-24 rounded-md border border-border bg-surface px-2.5 font-mono text-base text-content placeholder-content-subtle outline-none focus:border-accent focus:ring-2 focus:ring-accent-subtle",
 						maxlength: "7"
 					}, null, 512), [[Ae, x.value]]),
-					x.value && !w(x.value) ? (L(), f("span", xBe, B(e.$t("fomatInvalid")), 1)) : d("", !0)
+					x.value && !w(x.value) ? (L(), f("span", CBe, B(e.$t("fomatInvalid")), 1)) : d("", !0)
 				])])) : d("", !0),
-				l.value.length >= 5 && C.value ? (L(), f("p", SBe, [_(V(pfe), { class: "h-4 w-4 shrink-0" }), g(" " + B(e.$t("tagLimitReached")), 1)])) : d("", !0),
-				p("div", CBe, [p("button", {
+				l.value.length >= 5 && C.value ? (L(), f("p", wBe, [_(V(pfe), { class: "h-4 w-4 shrink-0" }), g(" " + B(e.$t("tagLimitReached")), 1)])) : d("", !0),
+				p("div", TBe, [p("button", {
 					class: "inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md bg-surface-muted px-4 py-2 text-base leading-none font-medium whitespace-nowrap text-content transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0",
 					onClick: i[3] ||= (e) => C.value ? V(a).closeAll() : A()
 				}, B(e.$t("cancel")), 1), p("button", {
 					class: F(["inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md bg-accent px-4 py-2 text-base leading-none font-medium whitespace-nowrap text-white transition-colors hover:bg-accent-hover focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0", { "cursor-not-allowed": !h.value || S.value }]),
 					disabled: !h.value || S.value,
 					onClick: O
-				}, B(e.$t("save")), 11, wBe)])
+				}, B(e.$t("save")), 11, EBe)])
 			]),
 			_: 1
 		}));
 	}
-}), TBe = { class: "absolute inset-0 flex w-full flex-col bg-surface sm:relative sm:h-full sm:w-[350px] sm:max-w-[350px] sm:min-w-[350px]" }, EBe = {
+}), DBe = { class: "absolute inset-0 flex w-full flex-col bg-surface sm:relative sm:h-full sm:w-[350px] sm:max-w-[350px] sm:min-w-[350px]" }, OBe = {
 	"data-testid": "room-info-header",
 	class: "relative flex h-(--imkit-header-height) items-center gap-3 px-4"
-}, DBe = { class: "flex-1 text-base font-semibold text-content" }, OBe = ["aria-label"], kBe = { class: "flex min-h-0 flex-1 flex-col overflow-auto pb-3" }, ABe = { class: "flex flex-col items-center gap-2 px-4 pt-6 pb-3.5 text-center" }, jBe = { class: "text-xl font-bold text-content" }, MBe = {
+}, kBe = { class: "flex-1 text-base font-semibold text-content" }, ABe = ["aria-label"], jBe = { class: "flex min-h-0 flex-1 flex-col overflow-auto pb-3" }, MBe = { class: "flex flex-col items-center gap-2 px-4 pt-6 pb-3.5 text-center" }, NBe = { class: "text-xl font-bold text-content" }, PBe = {
 	key: 0,
 	class: "flex justify-center gap-2.5 px-4 pb-4"
-}, NBe = { class: "flex h-11 w-11 items-center justify-center rounded-full bg-surface-muted text-accent hover:bg-accent-subtle" }, PBe = {
+}, FBe = { class: "flex h-11 w-11 items-center justify-center rounded-full bg-surface-muted text-accent hover:bg-accent-subtle" }, IBe = {
 	key: 1,
 	class: "border-t border-border py-4"
-}, FBe = { class: "mx-4 mb-2 flex items-center justify-between gap-2" }, IBe = { class: "text-base font-semibold text-content" }, LBe = { class: "mx-4 text-xs text-accent-vivid" }, RBe = {
+}, LBe = { class: "mx-4 mb-2 flex items-center justify-between gap-2" }, RBe = { class: "text-base font-semibold text-content" }, zBe = { class: "mx-4 text-xs text-accent-vivid" }, BBe = {
 	key: 2,
 	"data-testid": "room-info-ai-summary",
 	class: "border-t border-border py-4"
-}, zBe = { class: "mx-4 mb-2 flex items-center gap-1.5" }, BBe = { class: "text-xs font-bold tracking-wider text-content-subtle uppercase" }, VBe = { class: "mx-4 text-base whitespace-pre-line text-content" }, HBe = { class: "mx-4 mt-2 text-xs text-content-subtle" }, UBe = {
+}, VBe = { class: "mx-4 mb-2 flex items-center gap-1.5" }, HBe = { class: "text-xs font-bold tracking-wider text-content-subtle uppercase" }, UBe = { class: "mx-4 text-base whitespace-pre-line text-content" }, WBe = { class: "mx-4 mt-2 text-xs text-content-subtle" }, GBe = {
 	key: 3,
 	class: "border-t border-border py-4"
-}, WBe = { class: "mx-4 mb-2 flex items-center justify-between gap-2" }, GBe = { class: "text-xs font-bold tracking-wider text-content-subtle uppercase" }, KBe = { class: "flex flex-wrap gap-2 px-4" }, qBe = ["aria-label", "onClick"], JBe = {
+}, KBe = { class: "mx-4 mb-2 flex items-center justify-between gap-2" }, qBe = { class: "text-xs font-bold tracking-wider text-content-subtle uppercase" }, JBe = { class: "flex flex-wrap gap-2 px-4" }, YBe = ["aria-label", "onClick"], XBe = {
 	key: 4,
 	class: "border-t border-border py-4"
-}, YBe = { class: "mx-4 mb-2 flex items-center text-xs font-bold tracking-wider text-content-subtle uppercase" }, XBe = { class: "flex h-7.5 w-7.5 flex-none items-center justify-center rounded-md bg-surface-muted text-accent" }, ZBe = { class: "flex-1 truncate text-base text-content" }, QBe = { class: "text-xs font-semibold text-accent-vivid" }, $Be = {
+}, ZBe = { class: "mx-4 mb-2 flex items-center text-xs font-bold tracking-wider text-content-subtle uppercase" }, QBe = { class: "flex h-7.5 w-7.5 flex-none items-center justify-center rounded-md bg-surface-muted text-accent" }, $Be = { class: "flex-1 truncate text-base text-content" }, eVe = { class: "text-xs font-semibold text-accent-vivid" }, tVe = {
 	key: 5,
 	class: "border-t border-border py-4"
-}, eVe = { class: "mx-4 mb-2 flex items-center text-xs font-bold tracking-wider text-content-subtle uppercase" }, tVe = { class: "flex min-w-0 flex-1 flex-col overflow-hidden" }, nVe = { class: "truncate text-base font-semibold text-content" }, rVe = {
+}, nVe = { class: "mx-4 mb-2 flex items-center text-xs font-bold tracking-wider text-content-subtle uppercase" }, rVe = { class: "flex min-w-0 flex-1 flex-col overflow-hidden" }, iVe = { class: "truncate text-base font-semibold text-content" }, aVe = {
 	key: 0,
 	class: "truncate text-xs text-content-subtle"
-}, iVe = ["data-testid", "aria-label"], aVe = {
+}, oVe = ["data-testid", "aria-label"], sVe = {
 	key: 6,
 	class: "border-t border-border py-4"
-}, oVe = { class: "mx-4 mb-2 flex items-center text-xs font-bold tracking-wider text-danger-vivid uppercase" }, sVe = { class: "flex h-7.5 w-7.5 flex-none items-center justify-center rounded-md bg-surface-muted text-danger-vivid" }, cVe = { class: "text-base text-danger-vivid" }, lVe = ["src"], uVe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
+}, cVe = { class: "mx-4 mb-2 flex items-center text-xs font-bold tracking-wider text-danger-vivid uppercase" }, lVe = { class: "flex h-7.5 w-7.5 flex-none items-center justify-center rounded-md bg-surface-muted text-danger-vivid" }, uVe = { class: "text-base text-danger-vivid" }, dVe = ["src"], fVe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
 	__name: "ChatRoomInfo",
 	setup(e) {
 		let t = pD(), r = IT(), i = c(() => t.rooms[t.selectedRoomId]), a = R(!0), o = c(() => t.users), s = c(() => Gv()), l = c(() => r.settings), m = c(() => l.value.roomManagementEnabled !== !1), h = c(() => r.settings.customRoomInfoIframeURL), v = c(() => {
@@ -86122,7 +86170,7 @@ var mze = {
 			e && (te.value ? A(e) : k(e));
 		}, ne = c(() => !!t.isRequesting[`/blockStatus/room/${i.value.id}`]), ie = (e) => {
 			let { open: t } = lE({
-				component: tBe,
+				component: rBe,
 				attrs: {
 					memberIdToMoveOut: e,
 					roomId: i.value.id
@@ -86131,7 +86179,7 @@ var mze = {
 			t();
 		}, ae = () => {
 			let { open: e } = lE({
-				component: eBe,
+				component: nBe,
 				attrs: {
 					roomId: i.value.id,
 					memberId: s.value
@@ -86185,23 +86233,23 @@ var mze = {
 			});
 			e();
 		};
-		return (e, t) => (L(), f("div", TBe, [p("div", EBe, [
+		return (e, t) => (L(), f("div", DBe, [p("div", OBe, [
 			_(S9),
 			_(V(eO), {
 				size: 24,
 				class: "cursor-pointer text-content-muted sm:hidden",
 				onClick: D
 			}),
-			p("div", DBe, B(e.$t("roomInfo")), 1),
+			p("div", kBe, B(e.$t("roomInfo")), 1),
 			p("button", {
 				type: "button",
 				"data-testid": "room-info-close",
 				class: "hidden cursor-pointer items-center justify-center rounded-full p-1 text-content-muted hover:bg-surface-hover sm:flex",
 				"aria-label": e.$t("close"),
 				onClick: D
-			}, [_(V(IO), { size: 20 })], 8, OBe)
-		]), p("div", kBe, [
-			p("div", ABe, [_(wk, {
+			}, [_(V(IO), { size: 20 })], 8, ABe)
+		]), p("div", jBe, [
+			p("div", MBe, [_(wk, {
 				url: i.value.isGroup ? i.value.coverUrl : i.value.avatars[0].url,
 				name: i.value.isGroup ? i.value.displayName ?? "" : i.value.avatars[0].name,
 				"is-group": i.value.isGroup,
@@ -86210,8 +86258,8 @@ var mze = {
 				"url",
 				"name",
 				"is-group"
-			]), p("h4", jBe, B(i.value.displayName), 1)]),
-			m.value ? (L(), f("div", MBe, [
+			]), p("h4", NBe, B(i.value.displayName), 1)]),
+			m.value ? (L(), f("div", PBe, [
 				p("button", {
 					type: "button",
 					"data-testid": "room-info-pin",
@@ -86237,33 +86285,33 @@ var mze = {
 					"data-testid": "room-info-search",
 					class: "flex w-15 cursor-pointer flex-col items-center gap-1.5 text-xs text-content",
 					onClick: de
-				}, [p("span", NBe, [_(V(EO), { size: 20 })]), g(" " + B(e.$t("search")), 1)])) : d("", !0),
+				}, [p("span", FBe, [_(V(EO), { size: 20 })]), g(" " + B(e.$t("search")), 1)])) : d("", !0),
 				z(e.$slots, "quickActions", {}, void 0, !0)
 			])) : d("", !0),
-			i.value.extra.bindBot && x.value ? (L(), f("div", PBe, [p("h5", FBe, [p("span", IBe, B(e.$t("chatbotSwitch")), 1), _(V(O9), {
+			i.value.extra.bindBot && x.value ? (L(), f("div", IBe, [p("h5", LBe, [p("span", RBe, B(e.$t("chatbotSwitch")), 1), _(V(O9), {
 				value: a.value,
 				classes: {
 					toggleOn: "bg-accent !border-accent",
 					toggleOff: "bg-border-strong !border-border-strong"
 				},
 				onChange: I
-			}, null, 8, ["value"])]), p("p", LBe, B(a.value ? e.$t("chatbotStateOn") : e.$t("chatbotStateOff")), 1)])) : d("", !0),
-			x.value && S.value ? (L(), f("div", RBe, [
-				p("h5", zBe, [p("span", BBe, B(e.$t("aiSummary")), 1), _(V(kO), {
+			}, null, 8, ["value"])]), p("p", zBe, B(a.value ? e.$t("chatbotStateOn") : e.$t("chatbotStateOff")), 1)])) : d("", !0),
+			x.value && S.value ? (L(), f("div", BBe, [
+				p("h5", VBe, [p("span", HBe, B(e.$t("aiSummary")), 1), _(V(kO), {
 					size: 13,
 					class: "text-accent-vivid",
 					"aria-hidden": "true"
 				})]),
-				p("p", VBe, B(S.value), 1),
-				p("p", HBe, B(e.$t("aiSummaryDisclaimer")), 1)
+				p("p", UBe, B(S.value), 1),
+				p("p", WBe, B(e.$t("aiSummaryDisclaimer")), 1)
 			])) : d("", !0),
 			z(e.$slots, "default", {}, void 0, !0),
-			x.value ? (L(), f("div", UBe, [p("h5", WBe, [p("span", GBe, B(e.$t("tag")) + "(" + B(fe.value.length) + ") ", 1), p("button", {
+			x.value ? (L(), f("div", GBe, [p("h5", KBe, [p("span", qBe, B(e.$t("tag")) + "(" + B(fe.value.length) + ") ", 1), p("button", {
 				type: "button",
 				"data-testid": "room-info-tags-manage",
 				class: "cursor-pointer text-xs font-semibold text-accent-vivid hover:underline",
 				onClick: E
-			}, B(e.$t("manageTag")), 1)]), p("div", KBe, [(L(!0), f(n, null, pe(fe.value, (t) => (L(), f("span", {
+			}, B(e.$t("manageTag")), 1)]), p("div", JBe, [(L(!0), f(n, null, pe(fe.value, (t) => (L(), f("span", {
 				key: t,
 				"data-testid": "room-info-tag",
 				class: "tag-chip flex items-center gap-1 rounded-full py-1 pr-1.5 pl-3 text-xs font-semibold",
@@ -86274,24 +86322,24 @@ var mze = {
 				class: "cursor-pointer opacity-70 hover:opacity-100",
 				"data-testid": "room-info-tag-remove",
 				onClick: (e) => T(t)
-			}, [_(V(IO), { class: "h-3 w-3" })], 8, qBe)], 4))), 128)), p("button", {
+			}, [_(V(IO), { class: "h-3 w-3" })], 8, YBe)], 4))), 128)), p("button", {
 				type: "button",
 				"data-testid": "room-info-tags-add",
 				class: "flex cursor-pointer items-center gap-1 rounded-full border border-dashed border-border px-3 py-1 text-xs font-semibold text-content-subtle hover:border-border-strong hover:text-content",
 				onClick: E
 			}, [_(V(SO), { size: 12 }), g(" " + B(e.$t("add")), 1)])])])) : d("", !0),
-			m.value && !i.value.isPinchatAi ? (L(), f("div", JBe, [p("h5", YBe, B(e.$t("roomPrefFolder")), 1), p("button", {
+			m.value && !i.value.isPinchatAi ? (L(), f("div", XBe, [p("h5", ZBe, B(e.$t("roomPrefFolder")), 1), p("button", {
 				type: "button",
 				"data-testid": "room-info-folder",
 				class: "flex min-h-11 w-full cursor-pointer items-center gap-3 px-4 py-2.5 text-left hover:bg-surface-hover",
 				onClick: ve
 			}, [
-				p("span", XBe, [_(V(mO), { size: 16 })]),
-				p("span", ZBe, B(_e.value ? _e.value.name : e.$t("unclassified")), 1),
-				p("span", QBe, B(e.$t("changeFolder")), 1)
+				p("span", QBe, [_(V(mO), { size: 16 })]),
+				p("span", $Be, B(_e.value ? _e.value.name : e.$t("unclassified")), 1),
+				p("span", eVe, B(e.$t("changeFolder")), 1)
 			])])) : d("", !0),
 			z(e.$slots, "afterChatbotSwitch", {}, void 0, !0),
-			N.value ? (L(), f("div", $Be, [p("h5", eVe, B(e.$t("members")) + "(" + B(se.value.length) + ") ", 1), (L(!0), f(n, null, pe(se.value, (t) => (L(), f("div", {
+			N.value ? (L(), f("div", tVe, [p("h5", nVe, B(e.$t("members")) + "(" + B(se.value.length) + ") ", 1), (L(!0), f(n, null, pe(se.value, (t) => (L(), f("div", {
 				key: t,
 				class: "flex min-h-13 items-center gap-2.5 px-4 py-2.5"
 			}, [
@@ -86300,7 +86348,7 @@ var mze = {
 					name: o.value[t]?.nickname,
 					class: "h-[38px] w-[38px] text-xs"
 				}, null, 8, ["url", "name"]),
-				p("div", tVe, [p("span", nVe, B(o.value[t]?.nickname), 1), o.value[t]?.city && o.value[t]?.country ? (L(), f("span", rVe, B(o.value[t]?.city) + ", " + B(o.value[t]?.country), 1)) : d("", !0)]),
+				p("div", rVe, [p("span", iVe, B(o.value[t]?.nickname), 1), o.value[t]?.city && o.value[t]?.country ? (L(), f("span", aVe, B(o.value[t]?.city) + ", " + B(o.value[t]?.country), 1)) : d("", !0)]),
 				l.value.showMemberActionMenu && !t.endsWith("_sub") && (oe(t) || b.value && t !== s.value) ? (L(), u(V(oZ), {
 					key: 0,
 					modal: !1
@@ -86311,7 +86359,7 @@ var mze = {
 							"data-testid": `member-actions-${t}`,
 							"aria-label": e.$t("more"),
 							class: "ml-auto flex h-9 w-9 cursor-pointer items-center justify-center rounded-md text-content-muted hover:bg-surface"
-						}, [_(V(iO), { size: 18 })], 8, iVe)]),
+						}, [_(V(iO), { size: 18 })], 8, oVe)]),
 						_: 2
 					}, 1024), _(V(KQ), {
 						align: "end",
@@ -86352,21 +86400,21 @@ var mze = {
 					_: 2
 				}, 1024)) : d("", !0)
 			]))), 128))])) : d("", !0),
-			ee.value ? (L(), f("div", aVe, [p("h5", oVe, B(e.$t("dangerZone")), 1), p("button", {
+			ee.value ? (L(), f("div", sVe, [p("h5", cVe, B(e.$t("dangerZone")), 1), p("button", {
 				type: "button",
 				"data-testid": "leave-group-button",
 				class: "flex min-h-11 w-full cursor-pointer items-center gap-3 px-4 py-2.5 text-left hover:bg-surface-hover",
 				onClick: ae
-			}, [p("span", sVe, [_(V(_O), { size: 16 })]), p("span", cVe, B(e.$t("leaveGroup")), 1)])])) : d("", !0),
+			}, [p("span", lVe, [_(V(_O), { size: 16 })]), p("span", uVe, B(e.$t("leaveGroup")), 1)])])) : d("", !0),
 			h.value ? (L(), f("iframe", {
 				key: 7,
 				src: v.value,
 				sandbox: "allow-scripts allow-same-origin",
 				frameborder: "0"
-			}, null, 8, lVe)) : d("", !0)
+			}, null, 8, dVe)) : d("", !0)
 		])]));
 	}
-}), [["__scopeId", "data-v-5e8ca844"]]), dVe = ["textContent"], fVe = ["textContent"], pVe = ["textContent"], G9 = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-5e8ca844"]]), pVe = ["textContent"], mVe = ["textContent"], hVe = ["textContent"], G9 = /* @__PURE__ */ b({
 	__name: "HighlightedText",
 	props: {
 		text: {},
@@ -86388,21 +86436,21 @@ var mze = {
 			key: 0,
 			class: "text-accent-vivid",
 			textContent: B(e.text)
-		}, null, 8, fVe)) : (L(), f("span", {
+		}, null, 8, mVe)) : (L(), f("span", {
 			key: 1,
 			textContent: B(e.text)
-		}, null, 8, pVe))], 64))), 128)) : (L(), f("span", {
+		}, null, 8, hVe))], 64))), 128)) : (L(), f("span", {
 			key: 0,
 			textContent: B(e.text)
-		}, null, 8, dVe));
+		}, null, 8, pVe));
 	}
-}), mVe = ["data-testid"], hVe = {
+}), gVe = ["data-testid"], _Ve = {
 	"data-testid": "folder-icon-shell",
 	class: "relative flex h-[50px]! w-[50px]! shrink-0 items-center justify-center rounded-lg bg-accent-subtle text-accent-vivid transition-colors sm:group-hover:bg-surface"
-}, gVe = { class: "flex w-0 min-w-0 grow flex-col text-left" }, _Ve = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-content" }, vVe = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-content-subtle" }, yVe = { class: "ml-auto flex shrink-0 items-center gap-1.5" }, bVe = {
+}, vVe = { class: "flex w-0 min-w-0 grow flex-col text-left" }, yVe = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-content" }, bVe = { class: "overflow-hidden text-base text-ellipsis whitespace-nowrap text-content-subtle" }, xVe = { class: "ml-auto flex shrink-0 items-center gap-1.5" }, SVe = {
 	key: 0,
 	class: "flex h-5 min-w-5 items-center justify-center rounded-full bg-danger px-1.5 text-center text-xs leading-none font-semibold text-white"
-}, xVe = /* @__PURE__ */ b({
+}, CVe = /* @__PURE__ */ b({
 	__name: "FolderCell",
 	props: { source: {} },
 	setup(e) {
@@ -86419,36 +86467,36 @@ var mze = {
 			class: "group relative flex min-h-[68px] cursor-pointer items-center gap-3 px-4 py-2.5 select-none sm:hover:bg-surface-hover",
 			onClick: m
 		}, [
-			p("div", hVe, [i.value === e.source.id ? (L(), u(V(dfe), {
+			p("div", _Ve, [i.value === e.source.id ? (L(), u(V(dfe), {
 				key: 0,
 				size: 24
 			})) : (L(), u(V(mO), {
 				key: 1,
 				size: 24
 			}))]),
-			p("div", gVe, [p("div", _Ve, [_(G9, {
+			p("div", vVe, [p("div", yVe, [_(G9, {
 				text: e.source.name,
 				highlight: r.value
-			}, null, 8, ["text", "highlight"])]), p("div", vVe, B(s.value ? t.$t("numberOfChatroom", s.value) : t.$t("no-chatroom")), 1)]),
-			p("div", yVe, [a.value > 0 ? (L(), f("div", bVe, B(a.value), 1)) : d("", !0), i.value === e.source.id ? (L(), u(V($D), {
+			}, null, 8, ["text", "highlight"])]), p("div", bVe, B(s.value ? t.$t("numberOfChatroom", s.value) : t.$t("no-chatroom")), 1)]),
+			p("div", xVe, [a.value > 0 ? (L(), f("div", SVe, B(a.value), 1)) : d("", !0), i.value === e.source.id ? (L(), u(V($D), {
 				key: 1,
 				class: "h-4 w-4 text-content-muted"
 			})) : (L(), u(V(tO), {
 				key: 2,
 				class: "h-4 w-4 text-content-muted"
 			}))])
-		], 8, mVe));
+		], 8, gVe));
 	}
-}), SVe = {
+}), wVe = {
 	"data-testid": "room-list-heading",
 	class: "flex items-center justify-between px-4 pt-3 pb-1"
-}, CVe = { class: "text-xs font-semibold text-content-subtle" }, wVe = /* @__PURE__ */ b({
+}, TVe = { class: "text-xs font-semibold text-content-subtle" }, EVe = /* @__PURE__ */ b({
 	__name: "RoomListHeadingRow",
 	props: { kind: {} },
 	emits: ["manage-folders"],
 	setup(e, { emit: t }) {
 		let n = t;
-		return (t, r) => (L(), f("div", SVe, [p("span", CVe, B(t.$t(e.kind === "folders" ? "folders" : "conversations")), 1), e.kind === "folders" ? (L(), f("button", {
+		return (t, r) => (L(), f("div", wVe, [p("span", TVe, B(t.$t(e.kind === "folders" ? "folders" : "conversations")), 1), e.kind === "folders" ? (L(), f("button", {
 			key: 0,
 			type: "button",
 			"data-testid": "manage-folders-button",
@@ -86456,7 +86504,7 @@ var mze = {
 			onClick: r[0] ||= (e) => n("manage-folders")
 		}, B(t.$t("manageFolders")), 1)) : d("", !0)]));
 	}
-}), TVe = /* @__PURE__ */ Xe((/* @__PURE__ */ Ke(((e, t) => {
+}), DVe = /* @__PURE__ */ Xe((/* @__PURE__ */ Ke(((e, t) => {
 	(function(n, r) {
 		typeof e == "object" && t !== void 0 ? t.exports = r() : typeof define == "function" && define.amd ? define(r) : (n = typeof globalThis < "u" ? globalThis : n || self).dayjs_plugin_isYesterday = r();
 	})(e, (function() {
@@ -86467,7 +86515,7 @@ var mze = {
 			};
 		};
 	}));
-})))(), 1), EVe = /* @__PURE__ */ b({
+})))(), 1), OVe = /* @__PURE__ */ b({
 	__name: "DeleteRoomModal",
 	props: { roomId: {} },
 	setup(e) {
@@ -86502,7 +86550,7 @@ var mze = {
 			"loading"
 		]));
 	}
-}), DVe = /* @__PURE__ */ b({
+}), kVe = /* @__PURE__ */ b({
 	__name: "HideRoomConfirmModal",
 	props: { roomId: {} },
 	setup(e) {
@@ -86537,41 +86585,41 @@ var mze = {
 			"loading"
 		]));
 	}
-}), OVe = {
+}), AVe = {
 	key: 0,
 	class: "relative flex items-center justify-center gap-1.5"
-}, kVe = ["data-room-id", "data-selected"], AVe = ["data-selected"], jVe = {
+}, jVe = ["data-room-id", "data-selected"], MVe = ["data-selected"], NVe = {
 	key: 0,
 	class: "absolute -right-1 -bottom-1 flex h-5 w-5 items-center justify-center rounded-lg bg-accent p-[3px] ring-2 ring-panel"
-}, MVe = { class: "flex w-0 min-w-0 grow flex-col text-left" }, NVe = { class: "flex justify-between gap-2" }, PVe = { class: "flex min-w-0 flex-1 items-center gap-1 overflow-hidden" }, FVe = { class: "relative flex-none" }, IVe = { class: "ml-auto text-xs text-content-muted" }, LVe = {
+}, PVe = { class: "flex w-0 min-w-0 grow flex-col text-left" }, FVe = { class: "flex justify-between gap-2" }, IVe = { class: "flex min-w-0 flex-1 items-center gap-1 overflow-hidden" }, LVe = { class: "relative flex-none" }, RVe = { class: "ml-auto text-xs text-content-muted" }, zVe = {
 	key: 0,
 	"data-testid": "room-link-name",
 	class: "overflow-hidden text-xs text-ellipsis whitespace-nowrap text-content-subtle"
-}, RVe = {
+}, BVe = {
 	key: 1,
 	class: "flex items-center justify-between gap-2"
-}, zVe = {
+}, VVe = {
 	key: 0,
 	"data-testid": "room-ai-summary-badge",
 	class: "mr-1 inline-flex items-center gap-0.5 align-middle text-xs font-medium text-accent-vivid"
-}, BVe = {
+}, HVe = {
 	key: 2,
 	class: "text-xs text-accent-vivid"
-}, VVe = {
+}, UVe = {
 	key: 3,
 	class: "mt-1 flex flex-wrap gap-1"
-}, HVe = {
+}, WVe = {
 	key: 4,
 	class: "text-content-subtle"
-}, UVe = 5, WVe = /* @__PURE__ */ b({
+}, GVe = 5, KVe = /* @__PURE__ */ b({
 	__name: "RoomCell",
 	props: { source: {} },
 	setup(e) {
-		Hm.default.extend(R9.default), Hm.default.extend(TVe.default);
+		Hm.default.extend(R9.default), Hm.default.extend(DVe.default);
 		let t = e, r = IT(), i = c(() => r.settings), a = c(() => r.styles), o = c(() => {
 			let e = (0, Hm.default)(m.value?.updatedAt);
 			return e.isSame((0, Hm.default)(), "day") ? e.format("H:mm") : e.isYesterday() ? "Yesterday" : e.isSame((0, Hm.default)(), "week") ? e.format("dddd") : e.isSame((0, Hm.default)(), "year") ? e.format("MMM D") : e.format("ll");
-		}), { t: s } = ze(), l = pD(), m = c(() => l.rooms[t.source.id]), h = c(() => p9(m.value)), v = c(() => {
+		}), { t: s } = ze(), l = pD(), m = c(() => l.rooms[t.source.id]), h = c(() => bIe(m.value)), v = c(() => {
 			if (l.searchKeyword.length > 0 && (l.searchType === PT.RoomName || l.searchType === PT.RoomMember)) return l.searchKeyword;
 		}), y = c(() => {
 			if (l.searchKeyword.length > 0 && (l.searchType === PT.Messages || l.searchType === PT.RoomMember)) return l.searchKeyword;
@@ -86626,14 +86674,14 @@ var mze = {
 				return;
 			}
 			let { open: e } = lE({
-				component: DVe,
+				component: kVe,
 				attrs: { roomId: t.source.id }
 			});
 			e();
 		}, ce = async () => {
 			if (I.value) return;
 			let { open: e } = lE({
-				component: EVe,
+				component: OVe,
 				attrs: { roomId: t.source.id }
 			});
 			e();
@@ -86661,7 +86709,7 @@ var mze = {
 				"--tag-fg-dark": t.darkFg
 			};
 		};
-		return (r, s) => m.value ? (L(), f("div", OVe, [D.value && !k.value ? (L(), f("div", {
+		return (r, s) => m.value ? (L(), f("div", AVe, [D.value && !k.value ? (L(), f("div", {
 			key: 0,
 			"data-testid": "folder-rail",
 			class: F(["pointer-events-none absolute inset-y-0 left-4 z-10 w-0.5 shrink-0 bg-accent-vivid opacity-40", {
@@ -86692,8 +86740,8 @@ var mze = {
 			"url",
 			"name",
 			"is-group"
-		]), A.value ? (L(), f("div", jVe, [_(V(bO), { class: "h-3 w-3 text-white" })])) : d("", !0)], 8, AVe), p("div", MVe, [
-			p("div", NVe, [p("div", PVe, [
+		]), A.value ? (L(), f("div", NVe, [_(V(bO), { class: "h-3 w-3 text-white" })])) : d("", !0)], 8, MVe), p("div", PVe, [
+			p("div", FVe, [p("div", IVe, [
 				p("div", {
 					"data-testid": "room-name",
 					class: F(["min-w-0 overflow-hidden text-base text-ellipsis whitespace-nowrap text-content", E.value ? "font-extrabold" : "font-semibold"])
@@ -86711,7 +86759,7 @@ var mze = {
 					"data-testid": "room-mute-icon",
 					class: "h-3.5 w-3.5 shrink-0 text-content-muted"
 				})) : d("", !0)
-			]), p("div", FVe, [p("div", { class: F(["text-xs whitespace-nowrap", [E.value ? "text-accent-vivid" : "text-content-subtle", {
+			]), p("div", LVe, [p("div", { class: F(["text-xs whitespace-nowrap", [E.value ? "text-accent-vivid" : "text-content-subtle", {
 				"sm:group-hover:invisible": !0,
 				invisible: ne.value
 			}]]) }, B(o.value), 3), _(V(oZ), {
@@ -86751,7 +86799,7 @@ var mze = {
 								default: U(() => [_(GQ, {
 									icon: V(Dfe),
 									label: r.$t("tag")
-								}, null, 8, ["icon", "label"]), p("span", IVe, B(z.value) + "/" + B(UVe), 1)]),
+								}, null, 8, ["icon", "label"]), p("span", RVe, B(z.value) + "/" + B(GVe), 1)]),
 								_: 1
 							}),
 							!I.value && D.value ? (L(), u(V(qQ), {
@@ -86803,11 +86851,11 @@ var mze = {
 				}, 8, ["to"])]),
 				_: 1
 			}, 8, ["open"])])]),
-			M.value ? (L(), f("div", LVe, B(M.value), 1)) : d("", !0),
-			i.value.enableReadReceipt ? (L(), f("div", RVe, [p("div", {
+			M.value ? (L(), f("div", zVe, B(M.value), 1)) : d("", !0),
+			i.value.enableReadReceipt ? (L(), f("div", BVe, [p("div", {
 				"data-testid": "room-preview",
 				class: F(["truncate text-base", E.value ? "font-semibold text-content" : "text-content-subtle"])
-			}, [C.value ? (L(), f("span", zVe, [_(V(kO), { class: "h-3 w-3" }), s[2] ||= g(" AI ", -1)])) : d("", !0), _(G9, {
+			}, [C.value ? (L(), f("span", VVe, [_(V(kO), { class: "h-3 w-3" }), s[2] ||= g(" AI ", -1)])) : d("", !0), _(G9, {
 				text: w.value ?? "",
 				highlight: y.value
 			}, null, 8, ["text", "highlight"])], 2), m.value.numberOfUnread > 0 && !T.value ? (L(), f("div", {
@@ -86816,29 +86864,29 @@ var mze = {
 				class: "flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full bg-accent px-1.5 text-center text-xs leading-none font-semibold text-white",
 				style: re(a.value.roomListUnreadBadge)
 			}, B(m.value.numberOfUnread > 99 ? "99+" : m.value.numberOfUnread), 5)) : d("", !0)])) : d("", !0),
-			m.value.isMentioned && m.value.numberOfUnread > 0 && !T.value ? (L(), f("div", BVe, B(r.$t("youWereMentioned")), 1)) : d("", !0),
-			m.value.pref?.tags ? (L(), f("div", VVe, [(L(!0), f(n, null, pe(te.value, (e) => (L(), f("div", {
+			m.value.isMentioned && m.value.numberOfUnread > 0 && !T.value ? (L(), f("div", HVe, B(r.$t("youWereMentioned")), 1)) : d("", !0),
+			m.value.pref?.tags ? (L(), f("div", UVe, [(L(!0), f(n, null, pe(te.value, (e) => (L(), f("div", {
 				key: e,
 				"data-testid": "room-tag",
 				class: "tag-chip overflow-hidden rounded-full px-3 py-1 text-xs font-semibold text-ellipsis whitespace-nowrap",
 				style: re(he((m.value.pref?.tagColors || {})[e]))
 			}, B(e), 5))), 128))])) : d("", !0),
-			k.value && V(l).searchType === V(PT).Messages ? (L(), f("div", HVe, B(r.$t("foundMessages", [V(l).searchedMessageIds.get(e.source.id)?.length ?? 0])), 1)) : d("", !0)
-		])], 42, kVe)])) : d("", !0);
+			k.value && V(l).searchType === V(PT).Messages ? (L(), f("div", WVe, B(r.$t("foundMessages", [V(l).searchedMessageIds.get(e.source.id)?.length ?? 0])), 1)) : d("", !0)
+		])], 42, jVe)])) : d("", !0);
 	}
-}), GVe = /* @__PURE__ */ b({
+}), qVe = /* @__PURE__ */ b({
 	__name: "RoomListWrapperCell",
 	props: { source: {} },
 	emits: ["manage-folders"],
 	setup(e, { emit: t }) {
 		let n = t;
-		return (t, r) => e.source instanceof V(jT) ? (L(), u(WVe, {
+		return (t, r) => e.source instanceof V(jT) ? (L(), u(KVe, {
 			key: 0,
 			source: e.source
-		}, null, 8, ["source"])) : e.source instanceof V(DT) ? (L(), u(xVe, {
+		}, null, 8, ["source"])) : e.source instanceof V(DT) ? (L(), u(CVe, {
 			key: 1,
 			source: e.source
-		}, null, 8, ["source"])) : (L(), u(wVe, {
+		}, null, 8, ["source"])) : (L(), u(EVe, {
 			key: 2,
 			kind: e.source.kind,
 			onManageFolders: r[0] ||= (e) => n("manage-folders")
@@ -86852,7 +86900,7 @@ var mze = {
 };
 //#endregion
 //#region src/composables/useRoomSearch.ts
-function KVe({ fetchTask: e }) {
+function JVe({ fetchTask: e }) {
 	let t = pD(), n = R(""), r = R(), i = R(!1), a = R(!1), o = async () => {
 		if (n.value !== t.searchKeyword) {
 			if (n.value) {
@@ -86879,7 +86927,7 @@ function KVe({ fetchTask: e }) {
 }
 //#endregion
 //#region src/composables/useRoomSort.ts
-function qVe() {
+function YVe() {
 	let e = pD(), t = R("time"), n = R(!0), r = () => "-lastMessage", i = () => +(t.value === "unread"), a = () => {
 		let t = /* @__PURE__ */ new Set();
 		for (let n of Object.values(e.rooms)) n.isPinchatAi && t.add(n.id);
@@ -86922,7 +86970,7 @@ function qVe() {
 }
 //#endregion
 //#region src/components/DeleteFolderConfirmModal.vue
-var JVe = /* @__PURE__ */ b({
+var XVe = /* @__PURE__ */ b({
 	__name: "DeleteFolderConfirmModal",
 	props: { folder: {} },
 	setup(e) {
@@ -86945,16 +86993,16 @@ var JVe = /* @__PURE__ */ b({
 			"confirm-label"
 		]));
 	}
-}), YVe = {
+}), ZVe = {
 	id: "manage-folders-title",
 	class: "text-xl font-semibold text-content"
-}, XVe = {
+}, QVe = {
 	id: "manage-folders-explanation",
 	class: "text-xs text-content-muted"
-}, ZVe = { class: "flex min-h-0 flex-col rounded-md border border-border" }, QVe = {
+}, $Ve = { class: "flex min-h-0 flex-col rounded-md border border-border" }, eHe = {
 	"data-testid": "manage-folders-list",
 	class: "min-h-0 overflow-y-auto"
-}, $Ve = { class: "flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent-subtle text-content-muted" }, eHe = { class: "flex min-w-0 grow flex-col" }, tHe = { class: "truncate text-base text-content" }, nHe = { class: "text-xs text-content-muted" }, rHe = { class: "flex shrink-0 items-center gap-1" }, iHe = ["aria-label", "onClick"], aHe = ["aria-label", "onClick"], oHe = { class: "text-base font-medium" }, sHe = { class: "mt-1 flex items-center justify-end" }, cHe = /* @__PURE__ */ b({
+}, tHe = { class: "flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent-subtle text-content-muted" }, nHe = { class: "flex min-w-0 grow flex-col" }, rHe = { class: "truncate text-base text-content" }, iHe = { class: "text-xs text-content-muted" }, aHe = { class: "flex shrink-0 items-center gap-1" }, oHe = ["aria-label", "onClick"], sHe = ["aria-label", "onClick"], cHe = { class: "text-base font-medium" }, lHe = { class: "mt-1 flex items-center justify-end" }, uHe = /* @__PURE__ */ b({
 	__name: "ManageFoldersModal",
 	setup(e) {
 		let t = vc(), r = pD(), i = c(() => r.sortedFolderIds.map((e) => r.folders[e]).filter((e) => !!e)), a = (e) => {
@@ -86965,7 +87013,7 @@ var JVe = /* @__PURE__ */ b({
 			t();
 		}, o = (e) => {
 			let { open: t } = lE({
-				component: JVe,
+				component: XVe,
 				attrs: { folder: e }
 			});
 			t();
@@ -86985,35 +87033,35 @@ var JVe = /* @__PURE__ */ b({
 			"aria-describedby": "manage-folders-explanation"
 		}, {
 			default: U(() => [
-				p("h2", YVe, B(e.$t("manageFoldersTitle")), 1),
-				p("p", XVe, B(e.$t("manageFoldersExplain")), 1),
-				p("div", ZVe, [p("div", QVe, [(L(!0), f(n, null, pe(i.value, (t) => (L(), f("div", {
+				p("h2", ZVe, B(e.$t("manageFoldersTitle")), 1),
+				p("p", QVe, B(e.$t("manageFoldersExplain")), 1),
+				p("div", $Ve, [p("div", eHe, [(L(!0), f(n, null, pe(i.value, (t) => (L(), f("div", {
 					key: t.id,
 					"data-testid": "manage-folder-row",
 					class: "flex items-center gap-3 border-b border-border p-2.5 last:border-b-0"
 				}, [
-					p("span", $Ve, [_(V(mO), { size: 18 })]),
-					p("span", eHe, [p("span", tHe, B(t.name), 1), p("span", nHe, B(t.roomIds.length ? e.$t("numberOfChatroom", t.roomIds.length) : e.$t("no-chatroom")), 1)]),
-					p("div", rHe, [p("button", {
+					p("span", tHe, [_(V(mO), { size: 18 })]),
+					p("span", nHe, [p("span", rHe, B(t.name), 1), p("span", iHe, B(t.roomIds.length ? e.$t("numberOfChatroom", t.roomIds.length) : e.$t("no-chatroom")), 1)]),
+					p("div", aHe, [p("button", {
 						type: "button",
 						"data-testid": "manage-folder-edit",
 						class: "flex h-8 w-8 cursor-pointer items-center justify-center rounded-md text-content-muted transition-colors hover:bg-surface-hover",
 						"aria-label": e.$t("editFolder"),
 						onClick: (e) => a(t)
-					}, [_(V(vO), { size: 16 })], 8, iHe), p("button", {
+					}, [_(V(vO), { size: 16 })], 8, oHe), p("button", {
 						type: "button",
 						"data-testid": "manage-folder-delete",
 						class: "flex h-8 w-8 cursor-pointer items-center justify-center rounded-md text-content-muted transition-colors hover:bg-surface-hover",
 						"aria-label": e.$t("delete"),
 						onClick: (e) => o(t)
-					}, [_(V(AO), { size: 16 })], 8, aHe)])
+					}, [_(V(AO), { size: 16 })], 8, sHe)])
 				]))), 128))]), p("button", {
 					type: "button",
 					"data-testid": "manage-folder-create",
 					class: "flex shrink-0 cursor-pointer items-center gap-2 border-t border-border p-2.5 text-left text-accent-vivid transition-colors hover:bg-surface-hover",
 					onClick: s
-				}, [_(V(SO), { size: 16 }), p("span", oHe, B(e.$t("createNewFolderPrompt")), 1)])]),
-				p("div", sHe, [p("button", {
+				}, [_(V(SO), { size: 16 }), p("span", cHe, B(e.$t("createNewFolderPrompt")), 1)])]),
+				p("div", lHe, [p("button", {
 					type: "button",
 					"data-testid": "manage-folders-done",
 					class: "inline-flex h-10 cursor-pointer items-center justify-center rounded-md bg-accent px-4 text-base font-medium text-white transition-colors hover:bg-accent-hover",
@@ -87023,26 +87071,26 @@ var JVe = /* @__PURE__ */ b({
 			_: 1
 		}));
 	}
-}), lHe = { class: "flex shrink-0 items-start justify-between gap-3 border-b border-border px-5 py-4" }, uHe = { class: "min-w-0" }, dHe = { class: "text-xl font-semibold text-content" }, fHe = { class: "mt-1 text-xs text-content-muted" }, pHe = ["aria-label"], mHe = { class: "flex min-h-0 flex-1 flex-col gap-4 overflow-hidden px-5 py-4" }, hHe = {
+}), dHe = { class: "flex shrink-0 items-start justify-between gap-3 border-b border-border px-5 py-4" }, fHe = { class: "min-w-0" }, pHe = { class: "text-xl font-semibold text-content" }, mHe = { class: "mt-1 text-xs text-content-muted" }, hHe = ["aria-label"], gHe = { class: "flex min-h-0 flex-1 flex-col gap-4 overflow-hidden px-5 py-4" }, _He = {
 	for: "mass-texting-message",
 	class: "flex shrink-0 flex-col gap-1.5"
-}, gHe = { class: "text-xs font-semibold text-content-muted" }, _He = ["placeholder"], vHe = { class: "flex min-h-0 flex-1 flex-col gap-2" }, yHe = { class: "flex shrink-0 items-center justify-between gap-3" }, bHe = {
+}, vHe = { class: "text-xs font-semibold text-content-muted" }, yHe = ["placeholder"], bHe = { class: "flex min-h-0 flex-1 flex-col gap-2" }, xHe = { class: "flex shrink-0 items-center justify-between gap-3" }, SHe = {
 	id: "mass-texting-recipients-label",
 	class: "text-xs font-semibold text-content-muted"
-}, xHe = { for: "mass-texting-search" }, SHe = { class: "flex items-center gap-3" }, CHe = ["disabled"], wHe = { class: "text-xs text-content-muted" }, THe = { class: "flex h-10 shrink-0 items-center gap-2 rounded-md border border-border bg-surface px-3 focus-within:border-accent focus-within:ring-2 focus-within:ring-accent-subtle" }, EHe = ["placeholder"], q9 = ["aria-label"], DHe = {
+}, CHe = { for: "mass-texting-search" }, wHe = { class: "flex items-center gap-3" }, THe = ["disabled"], EHe = { class: "text-xs text-content-muted" }, q9 = { class: "flex h-10 shrink-0 items-center gap-2 rounded-md border border-border bg-surface px-3 focus-within:border-accent focus-within:ring-2 focus-within:ring-accent-subtle" }, DHe = ["placeholder"], OHe = ["aria-label"], kHe = {
 	"data-testid": "mass-texting-recipient-list",
 	class: "relative flex min-h-0 flex-1 overflow-hidden rounded-md border border-border"
-}, OHe = {
+}, AHe = {
 	key: 0,
 	class: "absolute inset-0 z-10 flex flex-col gap-1 overflow-hidden bg-surface"
-}, kHe = {
+}, jHe = {
 	"data-testid": "mass-texting-footer",
 	class: "flex shrink-0 flex-wrap items-center justify-between gap-2 border-t border-border px-5 py-4"
-}, AHe = {
+}, MHe = {
 	role: "status",
 	"data-testid": "mass-texting-footer-count",
 	class: "mr-auto text-xs text-content-muted"
-}, jHe = { class: "ml-auto flex items-center gap-2" }, MHe = ["disabled"], NHe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
+}, NHe = { class: "ml-auto flex items-center gap-2" }, PHe = ["disabled"], FHe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
 	__name: "MassTextingModal",
 	setup(e) {
 		let t = vc(), r = pD(), i = R(""), a = c(() => Object.entries(r.selectedRoomIdsForCreateFolder).filter(([, e]) => !!e).map(([e]) => e)), o = (e) => r.selectedRoomIdsForCreateFolder[e], s = (e) => {
@@ -87093,27 +87141,27 @@ var JVe = /* @__PURE__ */ b({
 			onClosed: E
 		}, {
 			default: U(() => [
-				p("header", lHe, [p("div", uHe, [p("h1", dHe, B(e.$t("massTexting")), 1), p("p", fHe, B(e.$t("massTextingDescription")), 1)]), p("button", {
+				p("header", dHe, [p("div", fHe, [p("h1", pHe, B(e.$t("massTexting")), 1), p("p", mHe, B(e.$t("massTextingDescription")), 1)]), p("button", {
 					type: "button",
 					class: "inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-md text-content-muted transition-colors hover:bg-surface-hover hover:text-content focus-visible:ring-2 focus-visible:ring-accent-vivid focus-visible:outline-none",
 					"aria-label": e.$t("close"),
 					onClick: D
-				}, [_(V(IO), { size: 20 })], 8, pHe)]),
-				p("div", mHe, [p("label", hHe, [p("span", gHe, B(e.$t("messageContent")), 1), Pe(p("textarea", {
+				}, [_(V(IO), { size: 20 })], 8, hHe)]),
+				p("div", gHe, [p("label", _He, [p("span", vHe, B(e.$t("messageContent")), 1), Pe(p("textarea", {
 					id: "mass-texting-message",
 					"onUpdate:modelValue": t[0] ||= (e) => i.value = e,
 					rows: "3",
 					class: "w-full resize-none rounded-md border border-border bg-surface px-3 py-2.5 text-base text-content placeholder-content-subtle transition-colors outline-none focus-visible:border-accent focus-visible:ring-2 focus-visible:ring-accent-subtle",
 					placeholder: e.$t("inputMessage")
-				}, null, 8, _He), [[Ae, i.value]])]), p("section", vHe, [
-					p("div", yHe, [p("h2", bHe, [p("label", xHe, B(e.$t("recipientRooms")), 1)]), p("div", SHe, [p("button", {
+				}, null, 8, yHe), [[Ae, i.value]])]), p("section", bHe, [
+					p("div", xHe, [p("h2", SHe, [p("label", CHe, B(e.$t("recipientRooms")), 1)]), p("div", wHe, [p("button", {
 						type: "button",
 						"data-testid": "mass-texting-select-all",
 						class: "cursor-pointer text-xs font-semibold text-accent-vivid hover:underline disabled:cursor-not-allowed disabled:text-content-faint disabled:no-underline",
 						disabled: l.value.length === 0,
 						onClick: g
-					}, B(h.value ? V(r).searchKeyword ? e.$t("deselectAllFiltered") : e.$t("deselectAll") : V(r).searchKeyword ? e.$t("selectAllFiltered") : e.$t("selectAll")), 9, CHe), p("span", wHe, B(e.$t("selectedCount", { n: a.value.length })), 1)])]),
-					p("div", THe, [
+					}, B(h.value ? V(r).searchKeyword ? e.$t("deselectAllFiltered") : e.$t("deselectAll") : V(r).searchKeyword ? e.$t("selectAllFiltered") : e.$t("selectAll")), 9, THe), p("span", EHe, B(e.$t("selectedCount", { n: a.value.length })), 1)])]),
+					p("div", q9, [
 						_(V(EO), {
 							size: 18,
 							class: "shrink-0 text-content-subtle"
@@ -87127,7 +87175,7 @@ var JVe = /* @__PURE__ */ b({
 							onCompositionstart: t[2] ||= (e) => b.value = !0,
 							onCompositionend: t[3] ||= (e) => b.value = !1,
 							onBlur: t[4] ||= (e) => b.value = !1
-						}, null, 40, EHe), [[Ae, y.value]]),
+						}, null, 40, DHe), [[Ae, y.value]]),
 						y.value ? (L(), f("button", {
 							key: 0,
 							type: "button",
@@ -87136,9 +87184,9 @@ var JVe = /* @__PURE__ */ b({
 							onClick: t[5] ||= () => {
 								V(S).cancel({ upcomingOnly: !0 }), y.value = "", V(x)();
 							}
-						}, [_(V(IO), { size: 18 })], 8, q9)) : d("", !0)
+						}, [_(V(IO), { size: 18 })], 8, OHe)) : d("", !0)
 					]),
-					p("div", DHe, [T.value ? (L(), f("div", OHe, [(L(), f(n, null, pe(10, (e) => p("div", {
+					p("div", kHe, [T.value ? (L(), f("div", AHe, [(L(), f(n, null, pe(10, (e) => p("div", {
 						key: e,
 						class: "flex gap-3 p-2"
 					}, [...t[6] ||= [p("div", { class: "loading h-[34px] w-[34px] rounded-lg bg-surface-muted" }, null, -1), p("div", { class: "flex grow flex-col justify-center gap-2" }, [p("div", { class: "loading h-3 w-full rounded-md bg-surface-muted" }), p("div", { class: "loading h-3 w-4/5 rounded-md bg-surface-muted" })], -1)]])), 64))])) : d("", !0), _(V(KD), {
@@ -87151,7 +87199,7 @@ var JVe = /* @__PURE__ */ b({
 						_: 1
 					}, 8, ["data"])])
 				])]),
-				p("footer", kHe, [p("span", AHe, B(e.$t("selectedCount", { n: a.value.length })), 1), p("div", jHe, [p("button", {
+				p("footer", jHe, [p("span", MHe, B(e.$t("selectedCount", { n: a.value.length })), 1), p("div", NHe, [p("button", {
 					type: "button",
 					class: "inline-flex h-10 min-w-24 items-center justify-center rounded-md border border-border-strong px-4 text-base font-medium text-content-muted transition-colors hover:bg-surface-hover focus-visible:ring-2 focus-visible:ring-accent-vivid focus-visible:outline-none",
 					onClick: D
@@ -87160,16 +87208,16 @@ var JVe = /* @__PURE__ */ b({
 					class: "inline-flex h-10 min-w-24 items-center justify-center rounded-md bg-accent px-4 text-base font-semibold text-white transition-colors hover:bg-accent-hover focus-visible:ring-2 focus-visible:ring-accent-vivid focus-visible:outline-none disabled:cursor-not-allowed disabled:bg-surface-muted disabled:text-content-faint",
 					disabled: !v.value,
 					onClick: O
-				}, B(e.$t("sendMessage")), 9, MHe)])])
+				}, B(e.$t("sendMessage")), 9, PHe)])])
 			]),
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-f4f641b3"]]), PHe = { class: "relative flex h-18 items-center justify-between px-4" }, FHe = {
+}), [["__scopeId", "data-v-f4f641b3"]]), IHe = { class: "relative flex h-18 items-center justify-between px-4" }, LHe = {
 	type: "button",
 	"data-testid": "conversation-menu-trigger",
 	class: "inline-flex h-10 cursor-pointer items-center gap-2 rounded-md px-2 text-xl font-bold text-content transition-colors hover:bg-surface-hover focus-visible:ring-1 focus-visible:ring-accent focus-visible:outline-none"
-}, IHe = ["aria-label"], LHe = /* @__PURE__ */ b({
+}, RHe = ["aria-label"], zHe = /* @__PURE__ */ b({
 	__name: "RoomListToolbar",
 	props: {
 		sortType: {},
@@ -87185,12 +87233,12 @@ var JVe = /* @__PURE__ */ b({
 		let r = t, i = (e) => {
 			e.preventDefault(), t8.value = !t8.value;
 		};
-		return (t, a) => (L(), f("header", PHe, [
+		return (t, a) => (L(), f("header", IHe, [
 			_(S9),
 			z(t.$slots, "leading"),
 			_(V(oZ), { modal: !1 }, {
 				default: U(() => [_(V(sZ), { "as-child": "" }, {
-					default: U(() => [z(t.$slots, "menu-trigger", {}, () => [p("button", FHe, [g(B(t.$t("conversations")) + " ", 1), _(V($D), {
+					default: U(() => [z(t.$slots, "menu-trigger", {}, () => [p("button", LHe, [g(B(t.$t("conversations")) + " ", 1), _(V($D), {
 						class: "h-4 w-4",
 						"aria-hidden": "true"
 					})])])]),
@@ -87269,7 +87317,7 @@ var JVe = /* @__PURE__ */ b({
 					}, [_(V(SO), {
 						class: "h-5 w-5",
 						"aria-hidden": "true"
-					})], 8, IHe)]),
+					})], 8, RHe)]),
 					_: 1
 				}), _(V(KQ), { align: "end" }, {
 					default: U(() => [_(V(qQ), {
@@ -87299,26 +87347,26 @@ var JVe = /* @__PURE__ */ b({
 			z(t.$slots, "trailing")
 		]));
 	}
-}), RHe = {
+}), BHe = {
 	type: "button",
 	"data-testid": "account-menu-trigger",
 	class: "inline-flex h-10 cursor-pointer items-center gap-2 rounded-md px-2 text-content transition-colors hover:bg-surface-hover focus-visible:ring-1 focus-visible:ring-accent focus-visible:outline-none"
-}, zHe = { class: "relative flex h-18 items-center px-4" }, BHe = { class: "flex w-full items-center space-x-2" }, VHe = { class: "relative flex-1" }, HHe = { class: "absolute top-1/2 left-3 flex h-4.5 w-4.5 -translate-y-1/2 transform items-center justify-center" }, UHe = ["aria-label", "placeholder"], WHe = ["aria-label"], GHe = {
+}, VHe = { class: "relative flex h-18 items-center px-4" }, HHe = { class: "flex w-full items-center space-x-2" }, UHe = { class: "relative flex-1" }, WHe = { class: "absolute top-1/2 left-3 flex h-4.5 w-4.5 -translate-y-1/2 transform items-center justify-center" }, GHe = ["aria-label", "placeholder"], KHe = ["aria-label"], qHe = {
 	key: 0,
 	class: "mx-2 mt-2 mb-2 flex items-center gap-2 overflow-auto text-base text-content"
-}, KHe = ["onClick"], qHe = ["disabled"], JHe = { class: "flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent text-white" }, YHe = { class: "min-w-0 grow" }, XHe = { class: "block text-base text-content" }, ZHe = { class: "block text-xs text-content-muted" }, QHe = {
+}, JHe = ["onClick"], YHe = ["disabled"], XHe = { class: "flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent text-white" }, ZHe = { class: "min-w-0 grow" }, QHe = { class: "block text-base text-content" }, $He = { class: "block text-xs text-content-muted" }, eUe = {
 	key: 2,
 	class: "flex flex-col"
-}, $He = {
+}, tUe = {
 	key: 3,
 	class: "flex h-[80dvh] flex-col items-center justify-center gap-6 px-6 py-12"
-}, eUe = ["src"], tUe = {
+}, nUe = ["src"], rUe = {
 	key: 2,
 	class: "text-center text-base text-content-subtle"
-}, nUe = 100, rUe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
+}, iUe = 100, aUe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
 	__name: "RoomList",
 	setup(e) {
-		let t = pD(), r = vc(), i = IT(), a = R(), { sortType: o, isFirstLoading: s, setSortType: l } = qVe(), m = c(() => t.sortedRooms), h = c(() => t.sortedFolderIds.map((e) => t.folders[e]).filter((e) => e)), g = c(() => t.folders[t.selectedFolderId]), v = c(() => t.searchType), y = c(() => t.searchKeyword ? Object.values(PT).filter((e) => e in t.searchRooms) : []), b = c(() => t.roomTag), x = c(() => i.settings);
+		let t = pD(), r = vc(), i = IT(), a = R(), { sortType: o, isFirstLoading: s, setSortType: l } = YVe(), m = c(() => t.sortedRooms), h = c(() => t.sortedFolderIds.map((e) => t.folders[e]).filter((e) => e)), g = c(() => t.folders[t.selectedFolderId]), v = c(() => t.searchType), y = c(() => t.searchKeyword ? Object.values(PT).filter((e) => e in t.searchRooms) : []), b = c(() => t.roomTag), x = c(() => i.settings);
 		d9({ lockScroll: () => x.value.fullPageEnabled === !0 });
 		let S = c(() => Gv()), C = (e) => !e.isPinchatAi || x.value.pinchatAiEnabled === !0 && e.isPinchatAiVisibleFor(b.value), w = c(() => m.value.filter(C)), T = 0, E = null, D = "", O = R(!1), k = 0, j = async () => {
 			let e = ++k;
@@ -87343,7 +87391,7 @@ var JVe = /* @__PURE__ */ b({
 			} finally {
 				s.value = !1;
 			}
-		}, { searchKeyword: N, searchInput: ee, isCompositting: te, isAPIRequesting: P, clearSearch: ne } = KVe({ fetchTask: M }), re = c(() => {
+		}, { searchKeyword: N, searchInput: ee, isCompositting: te, isAPIRequesting: P, clearSearch: ne } = JVe({ fetchTask: M }), re = c(() => {
 			if (t.searchKeyword && r.modals.length === 0) {
 				if (v.value === PT.RoomPrefFolder && g.value) {
 					let e = [...t.searchRooms[v.value] || []], n = g.value.roomIds.map((e) => t.rooms[e]).filter((e) => !e || e.isPinchatAi || !C(e) ? !1 : !b.value || e.roomTags.includes(b.value)), r = e.findIndex((e) => e.id === g.value.id);
@@ -87397,7 +87445,7 @@ var JVe = /* @__PURE__ */ b({
 		}, Ce = (e) => {
 			let t = ve.value;
 			if (!t) return;
-			let n = e + t.clientHeight >= t.scrollHeight - nUe;
+			let n = e + t.clientHeight >= t.scrollHeight - iUe;
 			n && !xe && Se(), xe = n;
 		}, we = () => typeof window < "u" ? window.location.origin : "", Te = () => {
 			if (typeof window > "u") return;
@@ -87413,10 +87461,10 @@ var JVe = /* @__PURE__ */ b({
 			let { open: e } = lE({ component: B9 });
 			e();
 		}, je = () => {
-			let { open: e } = lE({ component: cHe });
+			let { open: e } = lE({ component: uHe });
 			e();
 		}, Me = () => {
-			let { open: e } = lE({ component: NHe });
+			let { open: e } = lE({ component: FHe });
 			e();
 		};
 		H(w, (e) => {
@@ -87452,7 +87500,7 @@ var JVe = /* @__PURE__ */ b({
 			ref_key: "headerEl",
 			ref: ye
 		}, [
-			_(LHe, {
+			_(zHe, {
 				"sort-type": V(o),
 				"show-dark-mode-switch": x.value.showDarkModeSwitch,
 				"mass-texting-enabled": x.value.massTextingEnabled,
@@ -87460,7 +87508,7 @@ var JVe = /* @__PURE__ */ b({
 				onCreateFolder: ke,
 				onMassTexting: Me
 			}, {
-				"menu-trigger": U(() => [p("button", RHe, [
+				"menu-trigger": U(() => [p("button", BHe, [
 					r[5] ||= p("span", { class: "relative flex h-7 w-7 shrink-0 overflow-hidden rounded-full" }, [p("img", {
 						class: "aspect-square h-full w-full object-contain",
 						src: "data:image/png;base64,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",
@@ -87502,8 +87550,8 @@ var JVe = /* @__PURE__ */ b({
 				"mass-texting-enabled",
 				"onSort"
 			]),
-			p("div", zHe, [_(S9), p("div", BHe, [p("div", VHe, [
-				p("div", HHe, [ie.value ? (L(), u(RT, { key: 0 })) : (L(), u(V(EO), {
+			p("div", VHe, [_(S9), p("div", HHe, [p("div", UHe, [
+				p("div", WHe, [ie.value ? (L(), u(RT, { key: 0 })) : (L(), u(V(EO), {
 					key: 1,
 					class: "h-4.5 w-4.5 text-content-subtle"
 				}))]),
@@ -87518,20 +87566,20 @@ var JVe = /* @__PURE__ */ b({
 					onCompositionstart: r[1] ||= (e) => te.value = !0,
 					onCompositionend: r[2] ||= (e) => te.value = !1,
 					onBlur: r[3] ||= (e) => te.value = !1
-				}, null, 40, UHe), [[Ae, V(N)]]),
+				}, null, 40, GHe), [[Ae, V(N)]]),
 				ae.value ? (L(), f("button", {
 					key: 0,
 					class: "absolute inset-y-0 right-3 flex items-center text-content-muted transition-colors hover:text-content focus-visible:ring-1 focus-visible:ring-accent-vivid focus-visible:outline-none",
 					type: "button",
 					"aria-label": e.$t("clearSearch"),
 					onClick: r[4] ||= (...e) => V(ne) && V(ne)(...e)
-				}, [_(V(IO), { class: "h-5 w-5" })], 8, WHe)) : d("", !0)
+				}, [_(V(IO), { class: "h-5 w-5" })], 8, KHe)) : d("", !0)
 			])])]),
-			se.value ? (L(), f("div", GHe, [(L(!0), f(n, null, pe(y.value, (n) => (L(), f("div", {
+			se.value ? (L(), f("div", qHe, [(L(!0), f(n, null, pe(y.value, (n) => (L(), f("div", {
 				key: n,
 				class: F(["cursor-pointer rounded-lg px-3 py-2 whitespace-nowrap hover:bg-surface-hover", { "bg-surface-muted font-medium text-content": n === v.value }]),
 				onClick: (e) => V(t).$patch({ searchType: n })
-			}, B(e.$t(n)), 11, KHe))), 128))])) : d("", !0),
+			}, B(e.$t(n)), 11, JHe))), 128))])) : d("", !0),
 			he.value ? (L(), f("button", {
 				key: 1,
 				"data-testid": "pinchat-ai-entry",
@@ -87539,20 +87587,20 @@ var JVe = /* @__PURE__ */ b({
 				class: "mx-2 mt-2 flex w-[calc(100%-1rem)] cursor-pointer items-center gap-3 rounded-lg bg-accent-subtle p-3 text-left transition-colors hover:bg-accent-subtle disabled:cursor-wait disabled:opacity-60",
 				disabled: z.value,
 				onClick: _e
-			}, [p("span", JHe, [_(V(kO), { class: "h-5 w-5" })]), p("span", YHe, [p("strong", XHe, B(e.$t("pinchatAiTitle")), 1), p("span", ZHe, B(e.$t("pinchatAiDescription")), 1)])], 8, qHe)) : d("", !0),
-			oe.value ? (L(), f("div", QHe, [(L(), f(n, null, pe(20, (e) => p("div", {
+			}, [p("span", XHe, [_(V(kO), { class: "h-5 w-5" })]), p("span", ZHe, [p("strong", QHe, B(e.$t("pinchatAiTitle")), 1), p("span", $He, B(e.$t("pinchatAiDescription")), 1)])], 8, YHe)) : d("", !0),
+			oe.value ? (L(), f("div", eUe, [(L(), f(n, null, pe(20, (e) => p("div", {
 				key: e,
 				class: "flex gap-3 px-4 py-2.5"
-			}, [...r[7] ||= [p("div", { class: "loading h-[50px] w-[50px] rounded-lg bg-surface" }, null, -1), p("div", { class: "flex grow flex-col justify-center gap-2" }, [p("div", { class: "loading h-5 w-full rounded-md bg-surface" }), p("div", { class: "loading h-4 w-4/5 rounded-md bg-surface" })], -1)]])), 64))])) : le.value ? (L(), f("div", $He, [ue.value ? (L(), f("img", {
+			}, [...r[7] ||= [p("div", { class: "loading h-[50px] w-[50px] rounded-lg bg-surface" }, null, -1), p("div", { class: "flex grow flex-col justify-center gap-2" }, [p("div", { class: "loading h-5 w-full rounded-md bg-surface" }), p("div", { class: "loading h-4 w-4/5 rounded-md bg-surface" })], -1)]])), 64))])) : le.value ? (L(), f("div", tUe, [ue.value ? (L(), f("img", {
 				key: 0,
 				src: x.value.noRoomsImageURL,
 				class: "h-24 w-24 object-contain"
-			}, null, 8, eUe)) : de.value ? (L(), u(V(yfe), {
+			}, null, 8, nUe)) : de.value ? (L(), u(V(yfe), {
 				key: 1,
 				class: "h-16 w-16 text-content-subtle",
 				"stroke-width": 1.25,
 				"aria-hidden": "true"
-			})) : d("", !0), fe.value ? (L(), f("p", tUe, B(x.value.noRoomsText === void 0 ? e.$t("noRoomsAvailable") : x.value.noRoomsText), 1)) : d("", !0)])) : d("", !0)
+			})) : d("", !0), fe.value ? (L(), f("p", rUe, B(x.value.noRoomsText === void 0 ? e.$t("noRoomsAvailable") : x.value.noRoomsText), 1)) : d("", !0)])) : d("", !0)
 		], 512), _(V(GD), {
 			data: re.value,
 			"scroll-ref": ve.value,
@@ -87560,7 +87608,7 @@ var JVe = /* @__PURE__ */ b({
 			"item-size": 70,
 			onScroll: Ce
 		}, {
-			default: U(({ item: e }) => [_(GVe, {
+			default: U(({ item: e }) => [_(qVe, {
 				source: e,
 				onManageFolders: je
 			}, null, 8, ["source"])]),
@@ -87571,9 +87619,9 @@ var JVe = /* @__PURE__ */ b({
 			"start-margin"
 		])], 512)], 512));
 	}
-}), [["__scopeId", "data-v-eaa0a299"]]), iUe = (e, t) => {
+}), [["__scopeId", "data-v-eaa0a299"]]), oUe = (e, t) => {
 	Sue(e), Wv(t), ode(), cIe();
-}, J9, aUe = () => (J9 ||= vte(), J9);
+}, J9, sUe = () => (J9 ||= vte(), J9);
 //#endregion
 //#region src/webviewBridge.ts
 function Y9(e) {
@@ -87588,17 +87636,17 @@ function Y9(e) {
 		console.warn(`[imkit] ${e} bridge post failed`, t);
 	}
 }
-var oUe = /* @__PURE__ */ new Set([
+var cUe = /* @__PURE__ */ new Set([
 	"TRIBO_IMKIT",
 	"FLUTTER_IMKIT",
 	"IOS_IMKIT"
 ]), X9 = (e) => typeof e == "object" && !!e, Z9 = (e) => {
 	if (!X9(e.data)) return;
 	let t = e.data;
-	if (t.type !== void 0 && (typeof t.type != "string" || !oUe.has(t.type))) return;
+	if (t.type !== void 0 && (typeof t.type != "string" || !cUe.has(t.type))) return;
 	let n = X9(t.payload) ? t.payload : {};
 	t.eventType === "HOST_CAPABILITIES" ? kCe(n) : t.eventType === "KEYBOARD_TRANSITION_END" && ACe(n);
-}, sUe = () => {
+}, lUe = () => {
 	let e = window.webkit?.messageHandlers?.IMKitBridge;
 	if (e) try {
 		e.postMessage(JSON.stringify({
@@ -87611,7 +87659,7 @@ var oUe = /* @__PURE__ */ new Set([
 		console.warn("[imkit] iOS keyboard bridge post failed", e);
 	}
 }, Q9 = null;
-function cUe() {
+function uUe() {
 	Q9?.();
 	let e = hD(), t = H(() => e.selectedRoomId, (e, t) => {
 		t && Y9({
@@ -87622,7 +87670,7 @@ function cUe() {
 			roomId: e
 		});
 	}, { immediate: !0 });
-	window.addEventListener("message", Z9), sUe();
+	window.addEventListener("message", Z9), lUe();
 	let n = () => {
 		t(), window.removeEventListener("message", Z9), Q9 === n && (Q9 = null);
 	};
@@ -87630,7 +87678,7 @@ function cUe() {
 }
 //#endregion
 //#region src/composables/useDesignPalette.ts
-function lUe(e, t) {
+function dUe(e, t) {
 	let n = null, r = null, i = () => {
 		let i = e.value;
 		if (!i) {
@@ -87646,8 +87694,8 @@ function lUe(e, t) {
 //#endregion
 //#region src/lib.ts
 var $9 = (e) => {
-	e.use(aUe()), e.use(Bv), e.use(Cte, { disableClick: !1 });
-}, uUe = { install: async (e, t) => {
+	e.use(sUe()), e.use(Bv), e.use(Cte, { disableClick: !1 });
+}, fUe = { install: async (e, t) => {
 	console.log("IMKIT version:", D9), "store" in t && console.warn("[imkit] options.store is no longer accepted; SDK owns its Pinia store internally.");
 	let { config: n } = t, r = e.config.globalProperties.$pinia, i = r ?? Da();
 	r || e.use(i);
@@ -87658,7 +87706,7 @@ var $9 = (e) => {
 	} catch (e) {
 		console.log(e);
 	}
-	iUe(n, a), Ade(i), cUe(), $9(e);
+	oUe(n, a), Ade(i), uUe(), $9(e);
 } };
 //#endregion
-export { tze as ChatRoom, uVe as ChatRoomInfo, xD as Message, Ste as ModalsContainer, rUe as RoomList, MT as User, wE as clearSignedUrlCache, uUe as default, Hv as getLocale, $9 as installAppLevel, BT as palette, Vv as setLocale, lUe as useDesignPalette, pD as useImkitStore };
+export { rze as ChatRoom, fVe as ChatRoomInfo, xD as Message, Ste as ModalsContainer, aUe as RoomList, MT as User, wE as clearSignedUrlCache, fUe as default, Hv as getLocale, $9 as installAppLevel, BT as palette, Vv as setLocale, dUe as useDesignPalette, pD as useImkitStore };

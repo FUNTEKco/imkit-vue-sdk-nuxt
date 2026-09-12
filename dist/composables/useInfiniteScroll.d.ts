@@ -20,7 +20,7 @@ export declare function useInfiniteScroll(options: UseInfiniteScrollOptions): {
             lastLoginTimeMS: number;
             lastActiveTime: string;
             lastActiveTimeMS: number;
-        };
+        } | null;
         room: string;
         key: string;
         signedUrl?: string | undefined;

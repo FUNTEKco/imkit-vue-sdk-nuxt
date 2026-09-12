@@ -1,7 +1,7 @@
 export interface ChatRoomContent {
     _id: string;
     appID: string;
-    client: MediaClient;
+    client: MediaClient | null;
     room: string;
     key: string;
     signedUrl?: string;

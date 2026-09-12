@@ -844,7 +844,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                 lastLoginTimeMS: number;
                 lastActiveTime: string;
                 lastActiveTimeMS: number;
-            };
+            } | null;
             room: string;
             key: string;
             signedUrl?: string | undefined;
@@ -880,7 +880,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
                 lastLoginTimeMS: number;
                 lastActiveTime: string;
                 lastActiveTimeMS: number;
-            };
+            } | null;
             room: string;
             key: string;
             signedUrl?: string | undefined;

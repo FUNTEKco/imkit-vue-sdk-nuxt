@@ -84474,7 +84474,7 @@ var QLe = /*#__PURE__*/ LT(YLe, [["render", ZLe]]), $Le = ["width", "height"], e
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.2-25-g927c6566", fRe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.2-12-g59ba8790", fRe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = vc(), n = () => {

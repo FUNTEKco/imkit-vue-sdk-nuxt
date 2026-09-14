@@ -84474,7 +84474,7 @@ var QLe = /*#__PURE__*/ LT(YLe, [["render", ZLe]]), $Le = ["width", "height"], e
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.2-12-g59ba8790", fRe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.2-13-g769d423b", fRe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = vc(), n = () => {
@@ -87366,67 +87366,67 @@ var XVe = /* @__PURE__ */ b({
 }, iUe = 100, aUe = /*#__PURE__*/ LT(/* @__PURE__ */ b({
 	__name: "RoomList",
 	setup(e) {
-		let t = pD(), r = vc(), i = IT(), a = R(), { sortType: o, isFirstLoading: s, setSortType: l } = YVe(), m = c(() => t.sortedRooms), h = c(() => t.sortedFolderIds.map((e) => t.folders[e]).filter((e) => e)), g = c(() => t.folders[t.selectedFolderId]), v = c(() => t.searchType), y = c(() => t.searchKeyword ? Object.values(PT).filter((e) => e in t.searchRooms) : []), b = c(() => t.roomTag), x = c(() => i.settings);
-		d9({ lockScroll: () => x.value.fullPageEnabled === !0 });
-		let S = c(() => Gv()), C = (e) => !e.isPinchatAi || x.value.pinchatAiEnabled === !0 && e.isPinchatAiVisibleFor(b.value), w = c(() => m.value.filter(C)), T = 0, E = null, D = "", O = R(!1), k = 0, j = async () => {
-			let e = ++k;
-			O.value = !0;
+		let t = pD(), r = vc(), i = IT(), a = R(), { sortType: o, isFirstLoading: s, setSortType: l } = YVe(), h = c(() => t.sortedRooms), g = c(() => t.sortedFolderIds.map((e) => t.folders[e]).filter((e) => e)), v = c(() => t.folders[t.selectedFolderId]), y = c(() => t.searchType), b = c(() => t.searchKeyword ? Object.values(PT).filter((e) => e in t.searchRooms) : []), x = c(() => t.roomTag), S = c(() => i.settings);
+		d9({ lockScroll: () => S.value.fullPageEnabled === !0 });
+		let C = c(() => Gv()), w = (e) => !e.isPinchatAi || S.value.pinchatAiEnabled === !0 && e.isPinchatAiVisibleFor(x.value), T = c(() => h.value.filter(w)), E = 0, D = null, O = "", k = R(!1), j = 0, M = async () => {
+			let e = ++j;
+			k.value = !0;
 			try {
 				await t.fetchExistingPinchatAiRoom();
 			} finally {
-				e === k && (O.value = !1);
+				e === j && (k.value = !1);
 			}
 		};
-		H(b, async () => {
-			if (x.value.pinchatAiEnabled === !0) try {
-				await j();
+		H(x, async () => {
+			if (S.value.pinchatAiEnabled === !0) try {
+				await M();
 			} catch (e) {
 				console.error("Failed to discover PinChat AI room", e);
 			}
 		});
-		let M = async () => {
+		let N = async () => {
 			s.value = !0;
 			try {
-				await t.fetchPrefs(), await t.fetchRooms(), await t.fetchRoomsInFolders(), x.value.pinchatAiEnabled === !0 && await j();
+				await t.fetchPrefs(), await t.fetchRooms(), await t.fetchRoomsInFolders(), S.value.pinchatAiEnabled === !0 && await M();
 			} finally {
 				s.value = !1;
 			}
-		}, { searchKeyword: N, searchInput: ee, isCompositting: te, isAPIRequesting: P, clearSearch: ne } = JVe({ fetchTask: M }), re = c(() => {
+		}, { searchKeyword: ee, searchInput: te, isCompositting: P, isAPIRequesting: ne, clearSearch: re } = JVe({ fetchTask: N }), ie = c(() => {
 			if (t.searchKeyword && r.modals.length === 0) {
-				if (v.value === PT.RoomPrefFolder && g.value) {
-					let e = [...t.searchRooms[v.value] || []], n = g.value.roomIds.map((e) => t.rooms[e]).filter((e) => !e || e.isPinchatAi || !C(e) ? !1 : !b.value || e.roomTags.includes(b.value)), r = e.findIndex((e) => e.id === g.value.id);
-					return r > -1 && e.splice(r + 1, 0, ...n), e.filter((e) => e instanceof jT && !e.isPinchatAi && C(e));
+				if (y.value === PT.RoomPrefFolder && v.value) {
+					let e = [...t.searchRooms[y.value] || []], n = v.value.roomIds.map((e) => t.rooms[e]).filter((e) => !e || e.isPinchatAi || !w(e) ? !1 : !x.value || e.roomTags.includes(x.value)), r = e.findIndex((e) => e.id === v.value.id);
+					return r > -1 && e.splice(r + 1, 0, ...n), e.filter((e) => e instanceof jT && !e.isPinchatAi && w(e));
 				}
-				return (t.searchRooms[v.value] || []).filter((e) => !(e instanceof jT) || C(e));
+				return (t.searchRooms[y.value] || []).filter((e) => !(e instanceof jT) || w(e));
 			}
-			let e = h.value.length > 0, n = [];
-			if (e && n.push(new K9("folders")), n.push(...h.value), e && n.push(new K9("conversations")), n.push(...w.value), g.value) {
-				let r = t.roomsInSelectedFolder.filter(C), i = h.value.findIndex((e) => e.id === g.value.id);
+			let e = g.value.length > 0, n = [];
+			if (e && n.push(new K9("folders")), n.push(...g.value), e && n.push(new K9("conversations")), n.push(...T.value), v.value) {
+				let r = t.roomsInSelectedFolder.filter(w), i = g.value.findIndex((e) => e.id === v.value.id);
 				if (i > -1) {
 					let t = i + +!!e;
 					n.splice(t + 1, 0, ...r);
 				}
 			}
 			return n;
-		}), ie = c(() => r.modals.length === 0 && (te.value || s.value || P.value && N.value.length > 0)), ae = c(() => !!N.value), oe = c(() => s.value && r.modals.length === 0 || ie.value && re.value.length === 0), se = c(() => y.value.length > 0 && r.modals.length === 0), le = c(() => !ie.value && re.value.length === 0 && r.modals.length === 0), ue = c(() => !!x.value.noRoomsImageURL), de = c(() => x.value.noRoomsImageURL === void 0), fe = c(() => !!x.value.noRoomsText || x.value.noRoomsText === void 0), z = R(!1), me = c(() => w.value.find((e) => e.isPinchatAi)), he = c(() => x.value.pinchatAiEnabled === !0 && !s.value && !O.value && !t.searchKeyword && !me.value && typeof i.callbacks?.onPinchatAiRoomRequested == "function"), ge = "";
-		H(me, async (e) => {
-			if (!(!e || e.extra.pinchatAiScope === "all" || e.extra.pinchatAiScope === "enterpoint" || e.id === ge || typeof i.callbacks?.onPinchatAiRoomRequested != "function")) {
-				ge = e.id;
+		}), ae = c(() => r.modals.length === 0 && (P.value || s.value || ne.value && ee.value.length > 0)), oe = c(() => !!ee.value), se = c(() => s.value && r.modals.length === 0 || ae.value && ie.value.length === 0), le = c(() => b.value.length > 0 && r.modals.length === 0), ue = c(() => !ae.value && ie.value.length === 0 && r.modals.length === 0), de = c(() => !!S.value.noRoomsImageURL), fe = c(() => S.value.noRoomsImageURL === void 0), z = c(() => !!S.value.noRoomsText || S.value.noRoomsText === void 0), me = R(!1), he = c(() => T.value.find((e) => e.isPinchatAi)), ge = c(() => S.value.pinchatAiEnabled === !0 && !s.value && !k.value && !t.searchKeyword && !he.value && typeof i.callbacks?.onPinchatAiRoomRequested == "function"), _e = "";
+		H(he, async (e) => {
+			if (!(!e || e.extra.pinchatAiScope === "all" || e.extra.pinchatAiScope === "enterpoint" || e.id === _e || typeof i.callbacks?.onPinchatAiRoomRequested != "function")) {
+				_e = e.id;
 				try {
 					if (!(await i.callbacks.onPinchatAiRoomRequested())?.roomId) return;
 					await t.resyncRooms();
 				} catch (e) {
-					ge = "", console.error("Failed to sync PinChat AI room", e);
+					_e = "", console.error("Failed to sync PinChat AI room", e);
 				}
 			}
 		}, { immediate: !0 });
-		let _e = async () => {
-			if (!z.value) {
-				z.value = !0;
+		let ve = async () => {
+			if (!me.value) {
+				me.value = !0;
 				try {
-					let e = me.value, n = e ? { roomId: e.id } : await i.callbacks?.onPinchatAiRoomRequested?.();
+					let e = he.value, n = e ? { roomId: e.id } : await i.callbacks?.onPinchatAiRoomRequested?.();
 					if (!n?.roomId) return;
-					e || (ge = n.roomId, await t.updateRoomPrefs({
+					e || (_e = n.roomId, await t.updateRoomPrefs({
 						roomId: n.roomId,
 						prefs: { sticky: !0 }
 					}), await t.resyncRooms()), await t.fetchExistingPinchatAiRoom(), t.$patch({
@@ -87437,39 +87437,39 @@ var XVe = /* @__PURE__ */ b({
 				} catch (e) {
 					console.error("Failed to open PinChat AI room", e);
 				} finally {
-					z.value = !1;
+					me.value = !1;
 				}
 			}
-		}, ve = R(), ye = R(), { height: be } = uo(ye), xe = !1, Se = () => {
+		}, ye = R(), be = R(), { height: xe } = uo(be), Se = !1, Ce = () => {
 			t.fetchRooms();
-		}, Ce = (e) => {
-			let t = ve.value;
+		}, we = (e) => {
+			let t = ye.value;
 			if (!t) return;
 			let n = e + t.clientHeight >= t.scrollHeight - iUe;
-			n && !xe && Se(), xe = n;
-		}, we = () => typeof window < "u" ? window.location.origin : "", Te = () => {
+			n && !Se && Ce(), Se = n;
+		}, Te = () => typeof window < "u" ? window.location.origin : "", Ee = () => {
 			if (typeof window > "u") return;
-			let e = we();
+			let e = Te();
 			e && (window.location.href = `${e}/dashboard`);
-		}, Ee = () => {
-			typeof window > "u" || (window.localStorage.removeItem("token"), window.localStorage.removeItem("account"), window.location.href = "/login");
 		}, De = () => {
-			Te();
+			typeof window > "u" || (window.localStorage.removeItem("token"), window.localStorage.removeItem("account"), window.location.href = "/login");
 		}, Oe = () => {
 			Ee();
 		}, ke = () => {
+			De();
+		}, je = () => {
 			let { open: e } = lE({ component: B9 });
 			e();
-		}, je = () => {
+		}, Me = () => {
 			let { open: e } = lE({ component: uHe });
 			e();
-		}, Me = () => {
+		}, Ne = () => {
 			let { open: e } = lE({ component: FHe });
 			e();
 		};
-		H(w, (e) => {
-			if (e.length !== 0 && x.value.autoSelectRoomWhenLoaded && !t.selectedRoomId && document.body.clientWidth > 640) {
-				if (x.value.enableReadReceipt) {
+		H(T, (e) => {
+			if (e.length !== 0 && S.value.autoSelectRoomWhenLoaded && !t.selectedRoomId && document.body.clientWidth > 640) {
+				if (S.value.enableReadReceipt) {
 					let n = Object.values(e).find((e) => e.numberOfUnread === 0);
 					n && t.$patch({ selectedRoomId: n.id });
 				} else {
@@ -87478,36 +87478,36 @@ var XVe = /* @__PURE__ */ b({
 				}
 			}
 		});
-		let Ne = () => {
-			document.hidden ? T = (0, Hm.default)().unix() : (0, Hm.default)().unix() - T > 60 && (M(), U7().connect());
+		let Fe = () => {
+			document.hidden ? E = (0, Hm.default)().unix() : (0, Hm.default)().unix() - E > 60 && (N(), U7().connect());
 		};
 		return I(() => {
-			E = H(S, () => {
-				S.value !== D && (D = S.value, M());
-			}, { immediate: !0 }), document.addEventListener("visibilitychange", Ne);
+			D = H(C, () => {
+				C.value !== O && (O = C.value, N());
+			}, { immediate: !0 }), document.addEventListener("visibilitychange", Fe);
 		}), ce(() => {
-			E &&= (E(), null), document.removeEventListener("visibilitychange", Ne);
+			D &&= (D(), null), document.removeEventListener("visibilitychange", Fe);
 		}), (e, r) => (L(), f("div", {
 			ref_key: "panelRef",
 			ref: a,
 			class: "relative h-full"
 		}, [p("div", {
 			ref_key: "scrollEl",
-			ref: ve,
+			ref: ye,
 			class: "h-full overflow-auto transition ease-in-out",
 			style: { "overflow-anchor": "none" }
 		}, [p("div", {
 			ref_key: "headerEl",
-			ref: ye
+			ref: be
 		}, [
 			_(zHe, {
 				"sort-type": V(o),
-				"show-dark-mode-switch": x.value.showDarkModeSwitch,
-				"mass-texting-enabled": x.value.massTextingEnabled,
+				"show-dark-mode-switch": S.value.showDarkModeSwitch,
+				"mass-texting-enabled": S.value.massTextingEnabled,
 				onSort: V(l),
-				onCreateFolder: ke,
-				onMassTexting: Me
-			}, {
+				onCreateFolder: je,
+				onMassTexting: Ne
+			}, m({
 				"menu-trigger": U(() => [p("button", BHe, [
 					r[5] ||= p("span", { class: "relative flex h-7 w-7 shrink-0 overflow-hidden rounded-full" }, [p("img", {
 						class: "aspect-square h-full w-full object-contain",
@@ -87520,11 +87520,14 @@ var XVe = /* @__PURE__ */ b({
 						"aria-hidden": "true"
 					})
 				])]),
-				"menu-extra": U(() => [
+				_: 2
+			}, [S.value.hostNavigationEnabled === !1 ? void 0 : {
+				name: "menu-extra",
+				fn: U(() => [
 					_(V(XQ)),
 					_(V(qQ), {
 						"data-testid": "dashboard-action",
-						onSelect: De
+						onSelect: Oe
 					}, {
 						default: U(() => [_(GQ, {
 							icon: V(hfe),
@@ -87534,7 +87537,7 @@ var XVe = /* @__PURE__ */ b({
 					}),
 					_(V(qQ), {
 						"data-testid": "logout-action",
-						onSelect: Oe
+						onSelect: ke
 					}, {
 						default: U(() => [_(GQ, {
 							icon: V(_O),
@@ -87543,74 +87546,74 @@ var XVe = /* @__PURE__ */ b({
 						_: 1
 					})
 				]),
-				_: 1
-			}, 8, [
+				key: "0"
+			}]), 1032, [
 				"sort-type",
 				"show-dark-mode-switch",
 				"mass-texting-enabled",
 				"onSort"
 			]),
 			p("div", VHe, [_(S9), p("div", HHe, [p("div", UHe, [
-				p("div", WHe, [ie.value ? (L(), u(RT, { key: 0 })) : (L(), u(V(EO), {
+				p("div", WHe, [ae.value ? (L(), u(RT, { key: 0 })) : (L(), u(V(EO), {
 					key: 1,
 					class: "h-4.5 w-4.5 text-content-subtle"
 				}))]),
 				Pe(p("input", {
 					ref_key: "searchInput",
-					ref: ee,
-					"onUpdate:modelValue": r[0] ||= (e) => A(N) ? N.value = e : null,
+					ref: te,
+					"onUpdate:modelValue": r[0] ||= (e) => A(ee) ? ee.value = e : null,
 					"data-testid": "room-search-input",
 					"aria-label": e.$t("search"),
 					class: "flex h-11 w-full rounded-full bg-field px-3 py-2 pt-2 pr-10 pl-10 text-base! text-content file:border-0 file:bg-transparent file:text-base file:font-medium placeholder:text-content-subtle focus-visible:ring-1 focus-visible:ring-border-strong focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-base",
-					placeholder: x.value.searchRoomPlaceholder || e.$t("search"),
-					onCompositionstart: r[1] ||= (e) => te.value = !0,
-					onCompositionend: r[2] ||= (e) => te.value = !1,
-					onBlur: r[3] ||= (e) => te.value = !1
-				}, null, 40, GHe), [[Ae, V(N)]]),
-				ae.value ? (L(), f("button", {
+					placeholder: S.value.searchRoomPlaceholder || e.$t("search"),
+					onCompositionstart: r[1] ||= (e) => P.value = !0,
+					onCompositionend: r[2] ||= (e) => P.value = !1,
+					onBlur: r[3] ||= (e) => P.value = !1
+				}, null, 40, GHe), [[Ae, V(ee)]]),
+				oe.value ? (L(), f("button", {
 					key: 0,
 					class: "absolute inset-y-0 right-3 flex items-center text-content-muted transition-colors hover:text-content focus-visible:ring-1 focus-visible:ring-accent-vivid focus-visible:outline-none",
 					type: "button",
 					"aria-label": e.$t("clearSearch"),
-					onClick: r[4] ||= (...e) => V(ne) && V(ne)(...e)
+					onClick: r[4] ||= (...e) => V(re) && V(re)(...e)
 				}, [_(V(IO), { class: "h-5 w-5" })], 8, KHe)) : d("", !0)
 			])])]),
-			se.value ? (L(), f("div", qHe, [(L(!0), f(n, null, pe(y.value, (n) => (L(), f("div", {
+			le.value ? (L(), f("div", qHe, [(L(!0), f(n, null, pe(b.value, (n) => (L(), f("div", {
 				key: n,
-				class: F(["cursor-pointer rounded-lg px-3 py-2 whitespace-nowrap hover:bg-surface-hover", { "bg-surface-muted font-medium text-content": n === v.value }]),
+				class: F(["cursor-pointer rounded-lg px-3 py-2 whitespace-nowrap hover:bg-surface-hover", { "bg-surface-muted font-medium text-content": n === y.value }]),
 				onClick: (e) => V(t).$patch({ searchType: n })
 			}, B(e.$t(n)), 11, JHe))), 128))])) : d("", !0),
-			he.value ? (L(), f("button", {
+			ge.value ? (L(), f("button", {
 				key: 1,
 				"data-testid": "pinchat-ai-entry",
 				type: "button",
 				class: "mx-2 mt-2 flex w-[calc(100%-1rem)] cursor-pointer items-center gap-3 rounded-lg bg-accent-subtle p-3 text-left transition-colors hover:bg-accent-subtle disabled:cursor-wait disabled:opacity-60",
-				disabled: z.value,
-				onClick: _e
+				disabled: me.value,
+				onClick: ve
 			}, [p("span", XHe, [_(V(kO), { class: "h-5 w-5" })]), p("span", ZHe, [p("strong", QHe, B(e.$t("pinchatAiTitle")), 1), p("span", $He, B(e.$t("pinchatAiDescription")), 1)])], 8, YHe)) : d("", !0),
-			oe.value ? (L(), f("div", eUe, [(L(), f(n, null, pe(20, (e) => p("div", {
+			se.value ? (L(), f("div", eUe, [(L(), f(n, null, pe(20, (e) => p("div", {
 				key: e,
 				class: "flex gap-3 px-4 py-2.5"
-			}, [...r[7] ||= [p("div", { class: "loading h-[50px] w-[50px] rounded-lg bg-surface" }, null, -1), p("div", { class: "flex grow flex-col justify-center gap-2" }, [p("div", { class: "loading h-5 w-full rounded-md bg-surface" }), p("div", { class: "loading h-4 w-4/5 rounded-md bg-surface" })], -1)]])), 64))])) : le.value ? (L(), f("div", tUe, [ue.value ? (L(), f("img", {
+			}, [...r[7] ||= [p("div", { class: "loading h-[50px] w-[50px] rounded-lg bg-surface" }, null, -1), p("div", { class: "flex grow flex-col justify-center gap-2" }, [p("div", { class: "loading h-5 w-full rounded-md bg-surface" }), p("div", { class: "loading h-4 w-4/5 rounded-md bg-surface" })], -1)]])), 64))])) : ue.value ? (L(), f("div", tUe, [de.value ? (L(), f("img", {
 				key: 0,
-				src: x.value.noRoomsImageURL,
+				src: S.value.noRoomsImageURL,
 				class: "h-24 w-24 object-contain"
-			}, null, 8, nUe)) : de.value ? (L(), u(V(yfe), {
+			}, null, 8, nUe)) : fe.value ? (L(), u(V(yfe), {
 				key: 1,
 				class: "h-16 w-16 text-content-subtle",
 				"stroke-width": 1.25,
 				"aria-hidden": "true"
-			})) : d("", !0), fe.value ? (L(), f("p", rUe, B(x.value.noRoomsText === void 0 ? e.$t("noRoomsAvailable") : x.value.noRoomsText), 1)) : d("", !0)])) : d("", !0)
+			})) : d("", !0), z.value ? (L(), f("p", rUe, B(S.value.noRoomsText === void 0 ? e.$t("noRoomsAvailable") : S.value.noRoomsText), 1)) : d("", !0)])) : d("", !0)
 		], 512), _(V(GD), {
-			data: re.value,
-			"scroll-ref": ve.value,
-			"start-margin": V(be),
+			data: ie.value,
+			"scroll-ref": ye.value,
+			"start-margin": V(xe),
 			"item-size": 70,
-			onScroll: Ce
+			onScroll: we
 		}, {
 			default: U(({ item: e }) => [_(qVe, {
 				source: e,
-				onManageFolders: je
+				onManageFolders: Me
 			}, null, 8, ["source"])]),
 			_: 1
 		}, 8, [
@@ -87619,7 +87622,7 @@ var XVe = /* @__PURE__ */ b({
 			"start-margin"
 		])], 512)], 512));
 	}
-}), [["__scopeId", "data-v-eaa0a299"]]), oUe = (e, t) => {
+}), [["__scopeId", "data-v-c5791985"]]), oUe = (e, t) => {
 	Sue(e), Wv(t), ode(), cIe();
 }, J9, sUe = () => (J9 ||= vte(), J9);
 //#endregion

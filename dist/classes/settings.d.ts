@@ -1,4 +1,6 @@
 type Settings = {
+    /** Native hosts own navigation and sign-out; browser default remains enabled. */
+    hostNavigationEnabled?: boolean;
     paymentEnabled: boolean;
     linePayEnabled: boolean;
     stripeEnabled: boolean;

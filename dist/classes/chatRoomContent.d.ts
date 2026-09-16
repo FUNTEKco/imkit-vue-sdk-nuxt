@@ -10,6 +10,9 @@ export interface ChatRoomContent {
     originalName: string;
     fileType: string;
     tags: string[];
+    messageID?: string;
+    messageCreatedAt?: string;
+    mediaIndex?: number;
     createdAt: string;
     createdAtMS: number;
     updatedAt: string;

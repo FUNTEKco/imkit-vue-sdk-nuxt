@@ -29,6 +29,9 @@ export declare function useInfiniteScroll(options: UseInfiniteScrollOptions): {
         originalName: string;
         fileType: string;
         tags: string[];
+        messageID?: string | undefined;
+        messageCreatedAt?: string | undefined;
+        mediaIndex?: number | undefined;
         createdAt: string;
         createdAtMS: number;
         updatedAt: string;

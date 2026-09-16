@@ -33,6 +33,7 @@ declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {}, {}, {
     image: IMImage | null;
     video: IMVideo | null;
     roomId: string | null;
+    mediaIndex: number;
     open: boolean;
     senderName: string | null;
     selectedMedia: ChatRoomContent | null;
@@ -42,7 +43,6 @@ declare const __VLS_export: import('vue').DefineComponent<__VLS_Props, {}, {}, {
     canNavigatePrevious: boolean | null;
     canNavigateNext: boolean | null;
     mediaItems: readonly RoomMediaItem[];
-    mediaIndex: number;
     directVideoUrl: string | null;
     showDownload: boolean;
 }, {}, {}, {}, string, import('vue').ComponentProvideOptions, false, {}, any>;

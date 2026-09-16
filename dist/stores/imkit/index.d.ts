@@ -832,6 +832,51 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             [Symbol.toPrimitive]: () => number;
             [Symbol.dispose]: () => void;
         } | null;
+        chatRoomContentPreview: {
+            _id: string;
+            appID: string;
+            client: {
+                _id: string;
+                id: string;
+                avatarUrl: string;
+                nickname: string;
+                lastLoginTime: string;
+                lastLoginTimeMS: number;
+                lastActiveTime: string;
+                lastActiveTimeMS: number;
+            } | null;
+            room: string;
+            key: string;
+            signedUrl?: string | undefined;
+            size: number;
+            mimetype: string;
+            originalName: string;
+            fileType: string;
+            tags: string[];
+            messageID?: string | undefined;
+            messageCreatedAt?: string | undefined;
+            mediaIndex?: number | undefined;
+            createdAt: string;
+            createdAtMS: number;
+            updatedAt: string;
+            updatedAtMS: number;
+            preview: {
+                _id: string;
+                key: string;
+                size: number;
+                mimetype: string;
+                originalName: string;
+                fileType: string;
+                signedUrl: string;
+            } | null;
+            __v: number;
+        }[];
+        chatRoomContentPreviewRoomId: string;
+        chatRoomContentPreviewLoading: boolean;
+        chatRoomContentPreviewOffset: number;
+        chatRoomContentPreviewTotalCount: number;
+        chatRoomContentPreviewHasMore: boolean;
+        chatRoomContentPreviewLoadingMore: boolean;
         chatRoomContentMedia: {
             _id: string;
             appID: string;
@@ -853,6 +898,9 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             originalName: string;
             fileType: string;
             tags: string[];
+            messageID?: string | undefined;
+            messageCreatedAt?: string | undefined;
+            mediaIndex?: number | undefined;
             createdAt: string;
             createdAtMS: number;
             updatedAt: string;
@@ -889,6 +937,9 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             originalName: string;
             fileType: string;
             tags: string[];
+            messageID?: string | undefined;
+            messageCreatedAt?: string | undefined;
+            mediaIndex?: number | undefined;
             createdAt: string;
             createdAtMS: number;
             updatedAt: string;
@@ -1069,6 +1120,10 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     fetchLinkPreview(this: any, url: string): Promise<import('../../classes/linkPreview').default>;
     handleLinkPreviews(this: any, messages: import('../../lib').Message[]): Promise<void>;
     fetchVideoBlob(this: any, url: string): Promise<Blob>;
+    fetchRoomContentPreview(this: any, { roomId, loadMore }: {
+        roomId: string;
+        loadMore?: boolean;
+    }): Promise<void>;
     fetchRoomContentMedia(this: any, { roomId, loadMore }: {
         roomId: string;
         loadMore?: boolean;

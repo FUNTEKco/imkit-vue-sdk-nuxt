@@ -17,4 +17,5 @@ export type RoomMediaItem = (RoomMediaMetadata & {
     video: IMVideo;
 });
 export declare function collectRoomMediaItems(messages: readonly Message[]): RoomMediaItem[];
+export declare const getRoomMediaFileId: (item: RoomMediaItem) => string | null;
 export {};

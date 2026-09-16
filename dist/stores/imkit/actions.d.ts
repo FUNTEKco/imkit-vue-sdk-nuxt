@@ -156,6 +156,10 @@ export declare const actions: {
     fetchLinkPreview(this: any, url: string): Promise<LinkPreview>;
     handleLinkPreviews(this: any, messages: Message[]): Promise<void>;
     fetchVideoBlob(this: any, url: string): Promise<Blob>;
+    fetchRoomContentPreview(this: any, { roomId, loadMore }: {
+        roomId: string;
+        loadMore?: boolean;
+    }): Promise<void>;
     fetchRoomContentMedia(this: any, { roomId, loadMore }: {
         roomId: string;
         loadMore?: boolean;

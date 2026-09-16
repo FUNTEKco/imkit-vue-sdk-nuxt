@@ -86,6 +86,13 @@ export type ImkitState = {
     lastReconnectResyncAt: number;
     trailingReconnectResyncTimer: ReturnType<typeof setTimeout> | null;
     aggregateCoalesceTimer: ReturnType<typeof setTimeout> | null;
+    chatRoomContentPreview: ChatRoomContent[];
+    chatRoomContentPreviewRoomId: string;
+    chatRoomContentPreviewLoading: boolean;
+    chatRoomContentPreviewOffset: number;
+    chatRoomContentPreviewTotalCount: number;
+    chatRoomContentPreviewHasMore: boolean;
+    chatRoomContentPreviewLoadingMore: boolean;
     chatRoomContentMedia: ChatRoomContent[];
     chatRoomContentFiles: ChatRoomContent[];
     chatRoomContentMediaRoomId: string;

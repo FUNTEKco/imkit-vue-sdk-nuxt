@@ -30474,7 +30474,10 @@ async function dD(e, { skip: t, limit: n, logLabel: r }) {
 		q: JSON.stringify(a ? {
 			members: i,
 			roomTags: a
-		} : { members: i }),
+		} : {
+			members: i,
+			roomTags: { $ne: "PINCHAT_AI" }
+		}),
 		sort: e.sortBy,
 		sortUnreadFirst: e.sortUnreadFirst
 	} });
@@ -84595,7 +84598,7 @@ var tRe = /*#__PURE__*/ zT(QLe, [["render", eRe]]), nRe = ["width", "height"], r
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.2-18-g06e9cac6", hRe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.3-15-g65d4d65b", hRe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = vc(), n = () => {

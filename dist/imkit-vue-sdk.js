@@ -84598,7 +84598,7 @@ var tRe = /*#__PURE__*/ zT(QLe, [["render", eRe]]), nRe = ["width", "height"], r
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.3-15-g65d4d65b", hRe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.3-16-g6f5b5e0e", hRe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = vc(), n = () => {
@@ -86752,7 +86752,7 @@ var yze = {
 			return e && e !== m.value.displayName ? e : "";
 		}), ee = c(() => l.sortedFolderIds), te = c(() => m.value?.roomTags?.[0] ?? ""), ne = c(() => {
 			let e = m.value.roomTags ?? [], t = m.value.pref?.tags ?? [];
-			return [...e.filter((e) => e !== te.value), ...t];
+			return [...e.filter((e) => e !== te.value && !(m.value.isPinchatAi && e === "PINCHAT_AI")), ...t];
 		}), N = () => {
 			let { open: e } = dE({
 				component: W9,

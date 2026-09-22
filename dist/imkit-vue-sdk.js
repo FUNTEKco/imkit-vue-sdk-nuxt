@@ -81251,7 +81251,7 @@ var z7 = null, B7 = null, V7 = !1, H7 = () => {
 	return t ? Math.min(e, t.height * t.scale) : e;
 }, q7 = (e) => {
 	document.documentElement.style.setProperty(W7, `${e}px`);
-}, mIe = 400, J7 = 100, Y7 = null, X7 = null, Z7 = null, Q7 = null, $7 = () => {
+}, mIe = 600, J7 = 100, Y7 = null, X7 = null, Z7 = null, Q7 = null, $7 = () => {
 	Z7 !== null && window.cancelAnimationFrame(Z7), Q7 !== null && window.clearTimeout(Q7), Z7 = null, Q7 = null, X7 = null;
 }, e9 = (e) => e instanceof HTMLElement && (e.isContentEditable || e.matches("textarea, input:not([type]), input[type=\"text\"], input[type=\"search\"], input[type=\"email\"], input[type=\"password\"], input[type=\"tel\"], input[type=\"url\"], input[type=\"number\"], [contenteditable=\"true\"], [contenteditable=\"\"]")), t9 = () => {
 	let e = document.activeElement;
@@ -81260,6 +81260,10 @@ var z7 = null, B7 = null, V7 = !1, H7 = () => {
 }, n9 = () => G7 > 0 && !x2.supported.value && window.visualViewport?.scale === 1 && (/iPad|iPhone|iPod/.test(navigator.userAgent) || navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1), r9 = () => {
 	let e = K7();
 	if (X7) {
+		if (X7.width !== window.innerWidth || !n9()) {
+			$7(), Y7 = null, q7(e);
+			return;
+		}
 		if (e >= X7.from && e - X7.from < J7) return;
 		$7(), e9(t9()) || (Y7 = null);
 	}
@@ -81273,25 +81277,19 @@ var z7 = null, B7 = null, V7 = !1, H7 = () => {
 	let t = e.composedPath()[0];
 	if (!(t instanceof Element) || !e9(t) || !n9() || !Y7 || Y7.width !== window.innerWidth) return;
 	let n = K7(), r = Y7.height;
-	if (r - n < J7) return;
-	$7();
-	let i = performance.now();
-	X7 = {
+	r - n < J7 || ($7(), X7 = {
 		from: n,
 		to: r,
-		startedAt: i
-	};
-	let a = (e) => {
-		if (Z7 = null, e9(t9())) {
+		width: window.innerWidth
+	}, Z7 = window.requestAnimationFrame(() => {
+		if (Z7 = null, e9(t9()) || !n9() || Y7?.width !== window.innerWidth) {
 			$7(), r9();
 			return;
 		}
-		let t = Math.min((e - i) / mIe, 1);
-		q7(Math.max(K7(), n + (r - n) * t)), t < 1 && (Z7 = window.requestAnimationFrame(a));
-	};
-	Z7 = window.requestAnimationFrame(a), Q7 = window.setTimeout(() => {
+		q7(r);
+	}), Q7 = window.setTimeout(() => {
 		$7(), Y7 = null, r9();
-	}, 600);
+	}, mIe));
 }, o9 = () => {
 	$7(), Y7 = null;
 }, s9 = () => {
@@ -84598,7 +84596,7 @@ var nRe = /*#__PURE__*/ zT($Le, [["render", tRe]]), rRe = ["width", "height"], i
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.3-17-g0e43fbd7", gRe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), D9 = "1.125.3-18-gab4a88a9", gRe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = vc(), n = () => {

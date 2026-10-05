@@ -29,6 +29,11 @@ export declare const actions: {
         roomTag?: string;
     }): Promise<void>;
     fetchPrefs(this: any): Promise<void>;
+    setMessageDraft(this: any, { roomId, text }: {
+        roomId: string;
+        text: string;
+    }): void;
+    flushMessageDrafts(this: any): Promise<void>;
     updatePref(this: any, { key, value }: {
         key: string;
         value: unknown;
@@ -110,8 +115,8 @@ export declare const actions: {
     deleteMessages(this: any, messageIds: string[], roomId?: any): void;
     clearChatRoom(this: any): void;
     insertMessageLinkedList(this: any, linkedList: MessageLinkedList, roomId?: string): void;
-    concateMessageLinkedList(this: any, linkedList: MessageLinkedList, roomId?: string): void;
-    unshiftMessageLinkedList(this: any, linkedList: MessageLinkedList, roomId?: string): void;
+    concateMessageLinkedList(this: any, linkedList: MessageLinkedList, roomId?: string, anchorId?: string): boolean;
+    unshiftMessageLinkedList(this: any, linkedList: MessageLinkedList, roomId?: string, anchorId?: string): boolean;
     loadMessages(this: any, { roomId, beforeMessageId, afterMessageId, targetMessageId, bypassTotalGuard }: {
         roomId: string;
         beforeMessageId?: string | null;
@@ -173,6 +178,7 @@ export declare const actions: {
         fileId: string;
     }): Promise<string>;
     fetchPresignedUrlByPath(this: any, path: string): Promise<any>;
+    navigateToLatest(this: any): void;
     navigateToMessage(this: any, messageId: string): Promise<void>;
     insertUnreadMessage(this: any, numberOfUnread: number): Promise<void>;
     removeUnreadMessage(this: any): Promise<void>;

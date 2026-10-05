@@ -45,6 +45,11 @@ export type ImkitState = {
     roomIdsInFolders: {
         [roomId: string]: boolean;
     };
+    messageDrafts: Record<string, string>;
+    messageDraftsLoaded: boolean;
+    messageDraftPrefExists: Record<string, boolean>;
+    messageDraftRevision: number;
+    messageDraftRoomRevisions: Record<string, number>;
     selectedRoomIdsForCreateFolder: {
         [roomId: string]: Date;
     };
@@ -67,6 +72,7 @@ export type ImkitState = {
     numberOfTotalMessages: Map<string, number>;
     replyId: string;
     editingMessageId: string;
+    navigationRevision: number;
     navigationTargetId: string;
     isRoomInfoVisible: boolean;
     isRoomContentVisible: boolean;

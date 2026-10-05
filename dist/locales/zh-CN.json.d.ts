@@ -1,6 +1,7 @@
 declare const _default: {
   "editMessage": "编辑消息",
   "edited": "已编辑",
+  "messageDraft": "草稿",
   "close": "关闭",
   "clear": "清除",
   "viewAvatar": "查看头像",

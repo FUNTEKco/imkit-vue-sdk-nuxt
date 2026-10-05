@@ -1,6 +1,7 @@
 declare const _default: {
   "editMessage": "Editar mensagem",
   "edited": "Editado",
+  "messageDraft": "Rascunho",
   "close": "Fechar",
   "clear": "Limpar",
   "viewAvatar": "Ver avatar",

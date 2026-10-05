@@ -3,6 +3,7 @@ declare const i18n: VueI18n.I18n<{
     'de-DE': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -286,6 +287,7 @@ declare const i18n: VueI18n.I18n<{
     'en-US': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -569,6 +571,7 @@ declare const i18n: VueI18n.I18n<{
     'es-ES': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -852,6 +855,7 @@ declare const i18n: VueI18n.I18n<{
     'fr-FR': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -1135,6 +1139,7 @@ declare const i18n: VueI18n.I18n<{
     'ja-JP': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -1418,6 +1423,7 @@ declare const i18n: VueI18n.I18n<{
     'ko-KR': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -1701,6 +1707,7 @@ declare const i18n: VueI18n.I18n<{
     'pt-PT': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -1984,6 +1991,7 @@ declare const i18n: VueI18n.I18n<{
     'ro-RO': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -2267,6 +2275,7 @@ declare const i18n: VueI18n.I18n<{
     'th-TH': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -2550,6 +2559,7 @@ declare const i18n: VueI18n.I18n<{
     'vi-VN': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -2833,6 +2843,7 @@ declare const i18n: VueI18n.I18n<{
     'zh-CN': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;
@@ -3116,6 +3127,7 @@ declare const i18n: VueI18n.I18n<{
     'zh-TW': {
         editMessage: string;
         edited: string;
+        messageDraft: string;
         close: string;
         clear: string;
         viewAvatar: string;

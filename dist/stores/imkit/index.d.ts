@@ -108,6 +108,11 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         roomIdsInFolders: {
             [roomId: string]: boolean;
         };
+        messageDrafts: Record<string, string>;
+        messageDraftsLoaded: boolean;
+        messageDraftPrefExists: Record<string, boolean>;
+        messageDraftRevision: number;
+        messageDraftRoomRevisions: Record<string, number>;
         selectedRoomIdsForCreateFolder: {
             [roomId: string]: Date;
         };
@@ -782,12 +787,12 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
             } | null;
             length: number;
             numberOfMessages: () => number;
-            concate: (linkedList: import('../../classes/messageLinkedList').default) => void;
+            concate: (linkedList: import('../../classes/messageLinkedList').default, anchorId?: string) => boolean;
             finds: (id: string) => import('../../lib').Message | undefined;
             hasSegment: (segment: unknown) => boolean;
             replace: (targetId: string, message: import('../../lib').Message) => void;
             remove: (id: string) => void;
-            unshift: (linkedList: import('../../classes/messageLinkedList').default) => void;
+            unshift: (linkedList: import('../../classes/messageLinkedList').default, anchorId?: string) => boolean;
             insert: (linkedList: import('../../classes/messageLinkedList').default) => void;
             merge: () => void;
             isValid: () => boolean;
@@ -795,6 +800,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         numberOfTotalMessages: Map<string, number> & Omit<Map<string, number>, keyof Map<any, any>>;
         replyId: string;
         editingMessageId: string;
+        navigationRevision: number;
         navigationTargetId: string;
         isRoomInfoVisible: boolean;
         isRoomContentVisible: boolean;
@@ -993,6 +999,11 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         roomTag?: string;
     }): Promise<void>;
     fetchPrefs(this: any): Promise<void>;
+    setMessageDraft(this: any, { roomId, text }: {
+        roomId: string;
+        text: string;
+    }): void;
+    flushMessageDrafts(this: any): Promise<void>;
     updatePref(this: any, { key, value }: {
         key: string;
         value: unknown;
@@ -1074,8 +1085,8 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
     deleteMessages(this: any, messageIds: string[], roomId?: any): void;
     clearChatRoom(this: any): void;
     insertMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default, roomId?: string): void;
-    concateMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default, roomId?: string): void;
-    unshiftMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default, roomId?: string): void;
+    concateMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default, roomId?: string, anchorId?: string): boolean;
+    unshiftMessageLinkedList(this: any, linkedList: import('../../classes/messageLinkedList').default, roomId?: string, anchorId?: string): boolean;
     loadMessages(this: any, { roomId, beforeMessageId, afterMessageId, targetMessageId, bypassTotalGuard }: {
         roomId: string;
         beforeMessageId?: string | null;
@@ -1137,6 +1148,7 @@ export declare const useImkitStore: import('pinia').StoreDefinition<"imkit", Imk
         fileId: string;
     }): Promise<string>;
     fetchPresignedUrlByPath(this: any, path: string): Promise<any>;
+    navigateToLatest(this: any): void;
     navigateToMessage(this: any, messageId: string): Promise<void>;
     insertUnreadMessage(this: any, numberOfUnread: number): Promise<void>;
     removeUnreadMessage(this: any): Promise<void>;

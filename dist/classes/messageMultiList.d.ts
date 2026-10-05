@@ -7,14 +7,14 @@ export default class MessageMultiList {
     length: number;
     constructor(linkedList?: MessageLinkedList | null);
     numberOfMessages(): number;
-    concate(linkedList: MessageLinkedList): void;
+    concate(linkedList: MessageLinkedList, anchorId?: string): boolean;
     private segmentContaining;
     finds(id: string): Message | undefined;
     hasSegment(segment: unknown): boolean;
     replace(targetId: string, message: Message): void;
     remove(id: string): void;
     private unlinkSegment;
-    unshift(linkedList: MessageLinkedList): void;
+    unshift(linkedList: MessageLinkedList, anchorId?: string): boolean;
     insert(linkedList: MessageLinkedList): void;
     merge(): void;
     isValid(): boolean;

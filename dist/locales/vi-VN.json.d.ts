@@ -1,6 +1,7 @@
 declare const _default: {
   "editMessage": "Chỉnh sửa tin nhắn",
   "edited": "Đã chỉnh sửa",
+  "messageDraft": "Bản nháp",
   "close": "Đóng",
   "clear": "Xóa",
   "viewAvatar": "Xem ảnh đại diện",

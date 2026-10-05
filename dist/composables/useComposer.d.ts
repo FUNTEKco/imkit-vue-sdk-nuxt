@@ -27,8 +27,10 @@ type UseComposerOptions = {
     clearReply: () => void;
     clearEditing: () => void;
     attachmentsPending: Ref<boolean>;
+    onMessageChanged?: (roomId: string, text: string) => void;
+    onUserInput?: () => void;
 };
-export declare const useComposer: ({ room, users, settings, isMobile, input, fileInput, images, imageFiles, videos, videoFiles, replyId, editingMessageId, sendMessage, editMessage, clearReply, clearEditing, attachmentsPending }: UseComposerOptions) => {
+export declare const useComposer: ({ room, users, settings, isMobile, input, fileInput, images, imageFiles, videos, videoFiles, replyId, editingMessageId, sendMessage, editMessage, clearReply, clearEditing, attachmentsPending, onMessageChanged, onUserInput }: UseComposerOptions) => {
     message: Ref<string, string>;
     isComposing: Ref<boolean, boolean>;
     showStickerPanel: Ref<boolean, boolean>;
@@ -49,7 +51,7 @@ export declare const useComposer: ({ room, users, settings, isMobile, input, fil
     onCompositionend: () => void;
     onKeydownEnter: (event: KeyboardEvent) => void;
     onBeforeInput: (e: InputEvent) => void;
-    onInput: () => void;
+    onInput: (event?: InputEvent) => void;
     onFormatApplied: () => void;
     ensureCaretAnchor: () => void;
 };

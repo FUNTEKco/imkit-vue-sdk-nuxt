@@ -1,6 +1,7 @@
 declare const _default: {
   "editMessage": "Editează mesajul",
   "edited": "Editat",
+  "messageDraft": "Ciornă",
   "close": "Închide",
   "clear": "Șterge",
   "viewAvatar": "Vezi avatarul",

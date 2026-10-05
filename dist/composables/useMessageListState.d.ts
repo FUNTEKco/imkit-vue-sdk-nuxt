@@ -19,16 +19,20 @@ type VirtualizerLike = {
     scrollTo: (offset: number) => void;
 };
 type ScrollToBottomOptions = {
-    smooth?: boolean;
+    animation?: 'entry' | 'native';
+    restartEntry?: boolean;
 };
 export type UseMessageListStateReturn = {
+    jumpToLatest: () => Promise<void>;
     isInitialLoaded: Ref<boolean>;
     isLatestMessageVisible: Ref<boolean>;
     isNearBottom: () => boolean;
     isPrepending: Ref<boolean>;
     isRequesting: ComputedRef<boolean>;
     isScrollToBottomVisible: ComputedRef<boolean>;
+    messageListKey: Ref<number>;
     onVlScroll: (offset: number) => void;
+    onVlScrollEnd: () => void;
     reloadData: (roomId: string, resetInitialLoaded?: boolean) => Promise<void>;
     scrollToBottom: (options?: ScrollToBottomOptions) => Promise<void>;
     setVl: (el: unknown) => void;

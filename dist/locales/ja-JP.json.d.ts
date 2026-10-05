@@ -1,6 +1,7 @@
 declare const _default: {
   "editMessage": "メッセージを編集",
   "edited": "編集済み",
+  "messageDraft": "下書き",
   "close": "閉じる",
   "clear": "クリア",
   "viewAvatar": "アバターを表示",

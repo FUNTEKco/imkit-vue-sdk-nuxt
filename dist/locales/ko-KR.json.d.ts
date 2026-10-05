@@ -1,6 +1,7 @@
 declare const _default: {
   "editMessage": "메시지 편집",
   "edited": "편집됨",
+  "messageDraft": "초안",
   "close": "닫기",
   "clear": "지우기",
   "viewAvatar": "아바타 보기",

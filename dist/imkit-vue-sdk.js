@@ -85040,7 +85040,7 @@ var ARe = /*#__PURE__*/ jT(DRe, [["render", kRe]]), jRe = ["width", "height"], M
 			_: 1
 		}));
 	}
-}), [["__scopeId", "data-v-aecf5c75"]]), O9 = "1.129.0-22-g6e606d64", WRe = /* @__PURE__ */ b({
+}), [["__scopeId", "data-v-aecf5c75"]]), O9 = "1.129.0-23-g3e9891cc", WRe = /* @__PURE__ */ b({
 	__name: "VersionModal",
 	setup(e) {
 		let t = mc(), n = () => {
